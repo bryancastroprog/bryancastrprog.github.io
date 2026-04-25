@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 460" role="img" aria-label="BC Studio - Build &amp; Create Studio">
+  <title>BC Studio</title>
+  <desc>Logotipo BC Studio - versión blanca para fondos oscuros</desc>
+  <g fill="none" stroke="#ffffff" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
+    <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
+  </g>
+  <circle cx="78" cy="80" r="15" fill="#ffffff" />
+  <circle cx="78" cy="190" r="15" fill="#ffffff" />
+  <text x="17" y="370" fill="#ffffff" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="100" font-weight="300" textLength="767" lengthAdjust="spacing">STUDIO</text>
+  <text x="17" y="430" fill="#ffffff" font-family="'Space Grotesk', 'Inter', sans-serif" font-size="20" font-weight="400" opacity="0.55" textLength="767" lengthAdjust="spacing">BUILD &amp; CREATE STUDIO</text>
+</svg>
