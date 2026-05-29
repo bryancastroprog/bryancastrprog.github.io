@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Librería Cayalá — Concepto de librería de doble altura con 12,500 libros expuestos en Ciudad Cayalá, Guatemala. Diseño BC Arq Studio.">
+<title>Librería Cayalá — Proyecto · BC Arq Studio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing:border-box; margin:0; padding:0; }
+html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
+
+:root {
+  --bg:      #08090a;
+  --bg-soft: #0e1012;
+  --light:   #e8e4dc;
+  --muted:   rgba(232,228,220,.58);
+  --faint:   rgba(232,228,220,.3);
+  --amber:   #b8884a;
+  --gold:    #c9a96e;
+  --gold-l:  #e2c99a;
+  --serif:   'Fraunces', Georgia, serif;
+  --sans:    'Inter', -apple-system, sans-serif;
+  --ease:    cubic-bezier(.65,0,.35,1);
+  --ease-out:cubic-bezier(.22,1,.36,1);
+}
+
+body { font-family:var(--sans); background:var(--bg); color:var(--light); font-weight:300; line-height:1.6; overflow-x:hidden; }
+img  { display:block; max-width:100%; }
+a    { color:inherit; text-decoration:none; }
+
+body::after {
+  content:''; position:fixed; inset:0; z-index:9998; pointer-events:none; opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;
+}
+
+/* NAV */
+.nav {
+  position:fixed; top:0; left:0; right:0; z-index:200;
+  display:flex; align-items:center; gap:56px; padding:22px 56px;
+  background:rgba(8,9,10,.82); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
+  border-bottom:.5px solid rgba(232,228,220,.07);
+  transition:padding .3s var(--ease), background .3s;
+}
+.nav.scrolled { padding:14px 56px; background:rgba(8,9,10,.96); }
+.nav-logo { display:flex; align-items:center; margin-right:24px; transition:opacity .2s; }
+.nav-logo:hover { opacity:.75; }
+.nav-logo-svg { height:30px; width:auto; display:block; color:var(--light); }
+.nav-menu { display:flex; gap:32px; list-style:none; font-size:12.5px; color:var(--muted); letter-spacing:.02em; }
+.nav-menu a { transition:color .25s; position:relative; padding-bottom:2px; }
+.nav-menu a::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:.5px; background:var(--gold); transition:width .3s var(--ease); }
+.nav-menu a:hover { color:var(--light); }
+.nav-menu a:hover::after { width:100%; }
+.nav-cta { margin-left:auto; padding:9px 20px; font-size:12.5px; font-weight:500; letter-spacing:.04em; color:var(--light); border:.5px solid rgba(232,228,220,.25); transition:all .25s; }
+.nav-cta:hover { background:var(--light); color:var(--bg); }
+.nav-toggle { display:none; }
+
+/* HERO */
+.hero { position:relative; height:100vh; min-height:620px; display:flex; align-items:flex-end; overflow:hidden; }
+.hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.58); transform:scale(1.04); transition:transform 8s ease-out; }
+.hero-img.loaded { transform:scale(1); }
+.hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(8,9,10,.96) 0%, rgba(8,9,10,.25) 55%, transparent 100%); }
+.hero-content { position:relative; z-index:2; padding:0 72px 80px; max-width:1000px; }
+.hero-badge { display:inline-block; margin-bottom:20px; font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--amber); border:.5px solid rgba(184,136,74,.4); padding:5px 14px; }
+.hero-title { font-family:var(--serif); font-size:clamp(60px,9vw,130px); font-weight:200; line-height:.95; letter-spacing:-.03em; color:var(--light); margin-bottom:24px; }
+.hero-title em { font-style:italic; color:var(--gold-l); }
+.hero-meta { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:48px; }
+.hero-divider { width:48px; height:.5px; background:var(--amber); margin-bottom:48px; }
+.hero-stats { display:flex; gap:56px; flex-wrap:wrap; }
+.hero-stat-num { font-family:var(--serif); font-size:36px; font-weight:300; color:var(--light); line-height:1; }
+.hero-stat-label { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+
+/* SECTIONS */
+.section { padding:120px 72px; max-width:1300px; margin:0 auto; }
+.section-label { font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:56px; padding-bottom:14px; border-bottom:.5px solid rgba(201,169,110,.2); }
+
+/* OVERVIEW */
+.overview-grid { display:grid; grid-template-columns:1fr 340px; gap:80px; align-items:start; }
+.overview-lead { font-family:var(--serif); font-size:clamp(24px,2.8vw,34px); font-weight:300; line-height:1.4; color:var(--light); margin-bottom:28px; }
+.overview-lead em { font-style:italic; color:var(--gold-l); }
+.overview-text { font-size:15px; color:var(--muted); line-height:1.85; margin-bottom:20px; }
+.overview-callout { border-left:2px solid var(--amber); padding:16px 22px; background:rgba(184,136,74,.06); margin-top:32px; font-size:14px; line-height:1.75; color:var(--muted); font-style:italic; }
+
+.spec-card { background:var(--bg-soft); border:.5px solid rgba(201,169,110,.18); padding:32px 28px; }
+.spec-title { font-size:9px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; padding-bottom:12px; border-bottom:.5px solid rgba(201,169,110,.15); }
+.spec-row { display:flex; justify-content:space-between; align-items:baseline; padding:11px 0; border-bottom:.5px solid rgba(255,255,255,.05); gap:16px; }
+.spec-row:last-child { border-bottom:none; }
+.spec-label { font-size:12px; color:var(--faint); flex-shrink:0; }
+.spec-value { font-size:13px; font-weight:500; color:var(--light); text-align:right; }
+.spec-value.gold  { color:var(--gold); font-weight:600; }
+.spec-value.amber { color:var(--amber); font-weight:600; }
+.spec-value.big   { font-size:20px; font-weight:600; }
+
+/* GALERÍA */
+.gallery-full { width:100%; padding:0 72px; }
+.gallery-hero { width:100%; max-width:1300px; margin:0 auto 4px; aspect-ratio:16/7; overflow:hidden; }
+.gallery-hero img { width:100%; height:100%; object-fit:cover; transition:transform 8s ease-out; }
+.gallery-hero:hover img { transform:scale(1.03); }
+.gallery-row { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4px; }
+.gallery-row img { width:100%; aspect-ratio:16/9; object-fit:cover; transition:filter .3s; }
+.gallery-row img:hover { filter:brightness(1.08); }
+
+/* CONCEPTO */
+.concept-strip { background:var(--bg-soft); border-top:.5px solid rgba(201,169,110,.1); border-bottom:.5px solid rgba(201,169,110,.1); padding:100px 72px; }
+.concept-inner { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center; }
+.concept-quote { font-family:var(--serif); font-size:clamp(26px,2.6vw,38px); font-weight:300; line-height:1.4; color:var(--light); }
+.concept-quote em { font-style:italic; color:var(--gold-l); }
+.concept-list { list-style:none; display:flex; flex-direction:column; gap:24px; }
+.concept-item { display:flex; gap:18px; align-items:flex-start; font-size:14px; color:var(--muted); line-height:1.65; }
+.concept-num { font-family:var(--serif); font-size:28px; font-weight:200; color:var(--amber); line-height:1; flex-shrink:0; width:32px; }
+
+/* PROGRAMA */
+.program-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(201,169,110,.1); border:.5px solid rgba(201,169,110,.1); }
+.program-cell { background:var(--bg); padding:32px 24px; }
+.program-cell-label { font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
+.program-cell-val { font-family:var(--serif); font-size:28px; font-weight:300; color:var(--light); line-height:1; }
+.program-cell-desc { font-size:12px; color:var(--faint); margin-top:8px; line-height:1.6; }
+
+/* PLANTA */
+.plan-full { max-width:1300px; margin:0 auto; }
+.plan-full img { width:100%; background:#12100d; }
+
+/* CREDITS */
+.credits { padding:80px 72px; max-width:1300px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:32px; border-top:.5px solid rgba(201,169,110,.12); }
+.credits-text { font-size:12px; color:var(--faint); line-height:1.8; }
+.credits-back { font-size:12px; font-weight:500; letter-spacing:.06em; color:var(--muted); border:.5px solid rgba(232,228,220,.18); padding:10px 24px; transition:all .25s; }
+.credits-back:hover { color:var(--light); border-color:var(--light); }
+
+/* FOOTER */
+.footer { background:var(--bg); border-top:.5px solid rgba(201,169,110,.1); padding:60px 72px 40px; }
+.footer-grid { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
+.footer-logo-svg { height:36px; width:auto; color:var(--light); margin-bottom:18px; }
+.footer-tagline { font-family:var(--serif); font-size:16px; color:var(--muted); margin-bottom:6px; }
+.footer-desc { font-size:12px; color:var(--faint); line-height:1.65; }
+.fcol-title { font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
+.fcol-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
+.fcol-list li { font-size:13px; color:var(--muted); }
+.fcol-list a:hover { color:var(--light); }
+.footer-bottom { max-width:1300px; margin:0 auto; padding-top:24px; border-top:.5px solid rgba(232,228,220,.06); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:11px; color:var(--faint); }
+
+/* REVEAL */
+.reveal { opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease-out), transform .8s var(--ease-out); }
+.reveal.visible { opacity:1; transform:none; }
+
+/* MOBILE */
+@media (max-width:900px) {
+  .nav { padding:18px 24px; gap:0; }
+  .nav-menu, .nav-cta { display:none; }
+  .nav-toggle { display:flex; flex-direction:column; gap:5px; margin-left:auto; cursor:pointer; }
+  .nav-toggle span { display:block; width:22px; height:.5px; background:var(--light); }
+  .hero-content { padding:0 28px 60px; }
+  .hero-stats { gap:32px; }
+  .section { padding:80px 28px; }
+  .gallery-full { padding:0 28px; }
+  .gallery-row { grid-template-columns:1fr; }
+  .overview-grid { grid-template-columns:1fr; gap:40px; }
+  .concept-strip { padding:72px 28px; }
+  .concept-inner { grid-template-columns:1fr; gap:48px; }
+  .program-grid { grid-template-columns:1fr 1fr; }
+  .footer { padding:48px 28px 32px; }
+  .footer-grid { grid-template-columns:1fr 1fr; gap:40px; }
+  .credits { padding:60px 28px; flex-direction:column; align-items:flex-start; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="BC Arq Studio">
+    <svg class="nav-logo-svg" viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>BC Studio</title>
+      <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
+        <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
+        <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
+      </g>
+      <circle cx="78" cy="80" r="15" fill="currentColor" />
+      <circle cx="78" cy="190" r="15" fill="currentColor" />
+    </svg>
+  </a>
+  <ul class="nav-menu">
+    <li><a href="index.html#vision">Visión</a></li>
+    <li><a href="index.html#ona">ONA</a></li>
+    <li><a href="index.html#estudio">Estudio</a></li>
+    <li><a href="diseno-estrategico.html">Diseño Estratégico</a></li>
+    <li><a href="index.html#contacto">Contacto</a></li>
+  </ul>
+  <a href="index.html#contacto" class="nav-cta">Iniciar conversación</a>
+  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="img/libreria-interior.png" alt="Librería Cayalá — Vista interior · Ciudad Cayalá Guatemala" class="hero-img" id="heroImg">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">Librería · Retail Cultural · Guatemala</div>
+    <h1 class="hero-title">Librería<br><em>Cayalá</em></h1>
+    <p class="hero-meta">Concepto de Librería · Ciudad Cayalá · Guatemala City</p>
+    <div class="hero-divider"></div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">150 m²</div>
+        <div class="hero-stat-label">Área de diseño</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">12,500</div>
+        <div class="hero-stat-label">Libros expuestos</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">Doble altura</div>
+        <div class="hero-stat-label">Concepto espacial</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OVERVIEW -->
+<div class="section reveal">
+  <div class="section-label">El proyecto</div>
+  <div class="overview-grid">
+    <div>
+      <p class="overview-lead">Una librería que transforma 150 m² en un <em>universo de doble altura</em> para 12,500 libros y sus lectores.</p>
+      <p class="overview-text">El proyecto de Librería Cayalá nació del reto de diseñar un espacio cultural de alto impacto dentro de Ciudad Cayalá — el desarrollo urbano de uso mixto más sofisticado de Guatemala. El encargo exigía crear una experiencia de librería que compitiera en presencia visual con las marcas internacionales del entorno, sin sacrificar la calidez y el recogimiento que requiere un espacio para la lectura.</p>
+      <p class="overview-text">La propuesta organiza los 150 m² en doble altura, liberando el plano de planta para la circulación y concentrando la capacidad de exposición en las paredes perimetrales que ascienden hasta el segundo nivel. Una escalera curva en madera conecta ambos niveles y actúa como elemento escultórico central del espacio.</p>
+      <p class="overview-text">La paleta de materiales — madera clara, vidrio, acero negro y concreto pulido — responde a la identidad contemporánea de Cayalá y crea un ambiente cálido y luminoso que invita a quedarse.</p>
+      <div class="overview-callout">
+        "12,500 libros expuestos no son un depósito — son una declaración. Diseñamos el espacio para que cada estante sea un horizonte y cada rincón una invitación a detenerse."
+        <br><br><strong style="color:var(--gold);font-style:normal;font-size:11px;letter-spacing:.1em;">— Bryan Castro, Director de Diseño · BC Arq Studio</strong>
+      </div>
+    </div>
+    <div class="spec-card">
+      <div class="spec-title">Ficha técnica</div>
+      <div class="spec-row"><span class="spec-label">Proyecto</span><span class="spec-value">Librería Cayalá</span></div>
+      <div class="spec-row"><span class="spec-label">Tipología</span><span class="spec-value">Librería · Retail cultural</span></div>
+      <div class="spec-row"><span class="spec-label">Ubicación</span><span class="spec-value">Ciudad Cayalá, Guatemala</span></div>
+      <div class="spec-row"><span class="spec-label">Área de diseño</span><span class="spec-value big">150 m²</span></div>
+      <div class="spec-row"><span class="spec-label">Altura</span><span class="spec-value amber">Doble altura</span></div>
+      <div class="spec-row"><span class="spec-label">Libros expuestos</span><span class="spec-value gold">12,500 vol.</span></div>
+      <div class="spec-row"><span class="spec-label">Zona de lectura</span><span class="spec-value">Integrada</span></div>
+      <div class="spec-row"><span class="spec-label">Café integrado</span><span class="spec-value">Sí</span></div>
+      <div class="spec-row"><span class="spec-label">Estado</span><span class="spec-value amber">Propuesta</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- GALERÍA HERO -->
+<div class="gallery-full reveal">
+  <div class="gallery-hero">
+    <img src="img/libreria-vista.png" alt="Librería Cayalá — Vista aérea interior doble altura">
+  </div>
+</div>
+
+<!-- CONCEPTO -->
+<div class="concept-strip reveal">
+  <div class="concept-inner">
+    <div>
+      <div class="section-label">Concepto de diseño</div>
+      <p class="concept-quote">La doble altura como <em>gesto generoso.</em> El espacio que respira para que el lector también lo haga.</p>
+    </div>
+    <ul class="concept-list">
+      <li class="concept-item">
+        <span class="concept-num">01</span>
+        <span>Doble altura perimetral: las estanterías ascienden hasta el segundo nivel aprovechando toda la altura disponible, convirtiendo los muros en paisajes de libros accesibles desde ambos pisos.</span>
+      </li>
+      <li class="concept-item">
+        <span class="concept-num">02</span>
+        <span>Escalera curva como escultura: elemento central en madera maciza que conecta niveles y define visualmente el espacio desde cualquier punto de la planta baja.</span>
+      </li>
+      <li class="concept-item">
+        <span class="concept-num">03</span>
+        <span>Planta libre en planta baja: la circulación fluida y los rincones de lectura integrados generan distintas velocidades de recorrido — el visitante que compra y el que se queda a leer.</span>
+      </li>
+      <li class="concept-item">
+        <span class="concept-num">04</span>
+        <span>Café integrado: área de café en planta baja que amplía el tiempo de permanencia y complementa la experiencia cultural sin competir con el programa principal de librería.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- GALERÍA SECUNDARIA -->
+<div class="gallery-full reveal" style="padding-top:4px;">
+  <div class="gallery-hero">
+    <img src="img/libreria-interior.png" alt="Librería Cayalá — Detalle planta baja y estanterías">
+  </div>
+</div>
+
+<!-- PROGRAMA -->
+<div class="section reveal">
+  <div class="section-label">Programa arquitectónico</div>
+  <div class="program-grid">
+    <div class="program-cell">
+      <div class="program-cell-label">Área de exposición</div>
+      <div class="program-cell-val">12,500</div>
+      <div class="program-cell-desc">Volúmenes expuestos en estanterías perimetrales de doble altura y módulos centrales de planta baja.</div>
+    </div>
+    <div class="program-cell">
+      <div class="program-cell-label">Diseño total</div>
+      <div class="program-cell-val">150 m²</div>
+      <div class="program-cell-desc">Distribuidos en planta baja y entrepiso con escalera curva, café y zonas de lectura integradas.</div>
+    </div>
+    <div class="program-cell">
+      <div class="program-cell-label">Altura libre</div>
+      <div class="program-cell-val">Doble</div>
+      <div class="program-cell-desc">Aprovechamiento total de la altura del local para maximizar capacidad de exposición y amplitud visual.</div>
+    </div>
+    <div class="program-cell">
+      <div class="program-cell-label">Ubicación</div>
+      <div class="program-cell-val">Cayalá</div>
+      <div class="program-cell-desc">Ciudad Cayalá, el desarrollo urbano de uso mixto más sofisticado de Guatemala City.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PLANTA -->
+<div class="section reveal" style="padding-top:0;">
+  <div class="section-label">Planta y vista isométrica</div>
+  <div class="plan-full">
+    <img src="img/libreria-planta.png" alt="Planta conceptual Librería Cayalá">
+  </div>
+</div>
+
+<!-- CREDITS -->
+<div class="credits reveal">
+  <div class="credits-text">
+    <strong style="color:var(--light);display:block;margin-bottom:6px;">BC ARQ STUDIO</strong>
+    Diseño arquitectónico e interiorismo<br>
+    Bryan Castro · Director de Proyecto<br>
+    Ciudad Cayalá, Guatemala
+  </div>
+  <a href="diseno-estrategico.html" class="credits-back">← Ver todos los proyectos</a>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-logo-svg" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img">
+        <title>BC Studio</title>
+        <defs><style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&amp;display=swap'); .fsvg{font-family:'Space Grotesk',sans-serif;font-weight:300;} .fsvg2{font-family:'Space Grotesk',sans-serif;font-weight:400;}</style></defs>
+        <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
+          <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
+          <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
+        </g>
+        <circle cx="78" cy="80" r="15" fill="currentColor" />
+        <circle cx="78" cy="190" r="15" fill="currentColor" />
+        <text x="17" y="370" fill="currentColor" class="fsvg" font-size="100" textLength="767" lengthAdjust="spacing">STUDIO</text>
+        <text x="17" y="430" fill="currentColor" class="fsvg2" font-size="20" opacity="0.55" textLength="767" lengthAdjust="spacing">BUILD &amp; CREATE STUDIO</text>
+      </svg>
+      <p class="footer-tagline">Del terreno al retorno.</p>
+      <p class="footer-desc">Arquitectura · Desarrollo inmobiliario · Inversión. Guatemala.</p>
+    </div>
+    <div>
+      <div class="fcol-title">Proyectos</div>
+      <ul class="fcol-list">
+        <li><a href="index.html#ona">ONA — Zona 15</a></li>
+        <li><a href="sweetpop.html">SWEETPOP — Los Angeles</a></li>
+        <li><a href="la-autoria.html">La Autoría — Huehuetenango</a></li>
+        <li><a href="libreria-cayala.html">Librería Cayalá</a></li>
+        <li><a href="diseno-estrategico.html">Diseño Estratégico</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcol-title">Estudio</div>
+      <ul class="fcol-list">
+        <li><a href="index.html#vision">Visión</a></li>
+        <li><a href="index.html#estudio">Equipo</a></li>
+        <li><a href="index.html#modelos">Modelos de trabajo</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="fcol-title">Contacto</div>
+      <ul class="fcol-list">
+        <li>info@bcarqstudio.com</li>
+        <li>bcarqstudio.com</li>
+        <li><a href="index.html#contacto" style="color:var(--gold);">Iniciar conversación →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 BC Arq Studio · Build &amp; Create Studio</span>
+    <span>Propuesta de diseño · Uso interno</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); });
+  var heroImg = document.getElementById('heroImg');
+  heroImg.addEventListener('load', function(){ this.classList.add('loaded'); });
+  if (heroImg.complete) heroImg.classList.add('loaded');
+  window.addEventListener('scroll', function(){
+    heroImg.style.transform = 'scale(1) translateY(' + (window.scrollY * 0.15) + 'px)';
+  });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold:0.1 });
+  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+})();
+</script>
+</body>
+</html>
