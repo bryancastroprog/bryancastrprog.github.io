@@ -710,15 +710,14 @@ body::after {
 <!-- ══ NAV ════════════════════════════════════════════ -->
 <nav class="nav" id="nav">
   <a href="index.html" class="nav-logo" aria-label="BC Arq Studio">
-    <svg class="nav-logo-svg" viewBox="0 0 110 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <line x1="4" y1="4" x2="23" y2="4" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
-      <line x1="4" y1="19.5" x2="23" y2="19.5" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
-      <line x1="4" y1="35" x2="23" y2="35" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
-      <path d="M23,4 C37,4 37,19.5 23,19.5" stroke="currentColor" stroke-width="4.4" fill="none"/>
-      <path d="M23,19.5 C41,19.5 41,35 23,35" stroke="currentColor" stroke-width="4.4" fill="none"/>
-      <path d="M82,4.5 A17.5,17.5,0,1,0,82,34.5" stroke="currentColor" stroke-width="4.4" fill="none" stroke-linecap="butt"/>
-      <text x="4" y="51" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="500" fill="currentColor" letter-spacing="3.5">STUDIO</text>
-      <text x="4" y="63" font-family="Space Grotesk,sans-serif" font-size="5" font-weight="300" fill="currentColor" letter-spacing="1.6" opacity="0.62">BUILD &amp; CREATE STUDIO</text>
+    <svg class="nav-logo-svg" viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" role="img">
+      <title>BC Studio</title>
+      <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
+        <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
+        <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
+      </g>
+      <circle cx="78" cy="80" r="15" fill="currentColor" />
+      <circle cx="78" cy="190" r="15" fill="currentColor" />
     </svg>
   </a>
   <ul class="nav-menu" id="navMenu">
@@ -1122,15 +1121,23 @@ body::after {
 <footer class="footer">
   <div class="footer-grid">
     <div>
-      <svg class="footer-logo-svg" viewBox="0 0 110 70" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="4" y1="4" x2="23" y2="4" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
-        <line x1="4" y1="19.5" x2="23" y2="19.5" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
-        <line x1="4" y1="35" x2="23" y2="35" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
-        <path d="M23,4 C37,4 37,19.5 23,19.5" stroke="currentColor" stroke-width="4.4" fill="none"/>
-        <path d="M23,19.5 C41,19.5 41,35 23,35" stroke="currentColor" stroke-width="4.4" fill="none"/>
-        <path d="M82,4.5 A17.5,17.5,0,1,0,82,34.5" stroke="currentColor" stroke-width="4.4" fill="none" stroke-linecap="butt"/>
-        <text x="4" y="51" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="500" fill="currentColor" letter-spacing="3.5">STUDIO</text>
-        <text x="4" y="63" font-family="Space Grotesk,sans-serif" font-size="5" font-weight="300" fill="currentColor" letter-spacing="1.6" opacity="0.62">BUILD &amp; CREATE STUDIO</text>
+      <svg class="footer-logo-svg" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BC Studio">
+        <title>BC Studio</title>
+        <defs>
+          <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&amp;display=swap');
+            .ftr-svg-text { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 300; }
+            .ftr-svg-tag  { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 400; }
+          </style>
+        </defs>
+        <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
+          <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
+          <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
+        </g>
+        <circle cx="78" cy="80" r="15" fill="currentColor" />
+        <circle cx="78" cy="190" r="15" fill="currentColor" />
+        <text x="17" y="370" fill="currentColor" class="ftr-svg-text" font-size="100" textLength="767" lengthAdjust="spacing">STUDIO</text>
+        <text x="17" y="430" fill="currentColor" class="ftr-svg-tag" font-size="20" opacity="0.55" textLength="767" lengthAdjust="spacing">BUILD &amp; CREATE STUDIO</text>
       </svg>
       <p class="footer-tagline">Del terreno al retorno.</p>
       <p class="footer-desc">Estudio de arquitectura, desarrollo inmobiliario e inversión. Guatemala.</p>
