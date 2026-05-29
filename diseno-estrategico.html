@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Diseño de oficinas, clínicas, comercios, restaurantes, hoteles y remodelaciones en Guatemala. BC Arq Studio — Diseño estratégico que mejora tu operación y eleva el valor de tu proyecto.">
+<meta name="keywords" content="arquitectura Guatemala, diseño de oficinas Guatemala, diseño de clínicas Guatemala, diseño comercial Guatemala, diseño interior Guatemala, remodelaciones corporativas Guatemala, arquitecto Guatemala, diseño de restaurantes Guatemala, diseño de hoteles Guatemala">
+<meta name="theme-color" content="#0a0a0a">
+<title>Diseño Estratégico — BC Arq Studio · Oficinas, Clínicas, Comercios, Restaurantes</title>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Diseño Estratégico para negocios — BC Arq Studio">
+<meta property="og:description" content="Diseñamos oficinas, clínicas, comercios y espacios gastronómicos que mejoran la operación, elevan la percepción de marca y aumentan el valor del inmueble.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bcarqstudio.com/diseno-estrategico">
+
+<link rel="canonical" href="https://bcarqstudio.com/diseno-estrategico">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET + VARIABLES ──────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+:root {
+  --bg-dark:          #0a0a0a;
+  --bg-dark-soft:     #1a1814;
+  --bg-light:         #f4f2ed;
+  --bg-light-alt:     #fafaf6;
+  --text-light:       #e8e6e1;
+  --text-light-muted: rgba(232, 230, 225, 0.65);
+  --text-light-faint: rgba(232, 230, 225, 0.45);
+  --text-dark:        #0a0a0a;
+  --text-dark-muted:  rgba(10, 10, 10, 0.7);
+  --accent-earth:     #8b6f47;
+  --accent-gold:      #c9b896;
+  --border-ld:        rgba(232, 230, 225, 0.1);
+  --border-ld-strong: rgba(232, 230, 225, 0.2);
+  --border-dl:        rgba(10, 10, 10, 0.12);
+  --font-serif:       'Fraunces', Georgia, serif;
+  --font-sans:        'Inter', -apple-system, sans-serif;
+  --ease:             cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg-dark);
+  color: var(--text-light);
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+
+/* ── NAVEGACIÓN ─────────────────────────────────────── */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  display: flex; justify-content: flex-start; align-items: center; gap: 60px;
+  padding: 20px 56px;
+  background: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid rgba(232, 230, 225, 0.08);
+  z-index: 100;
+  transition: padding 0.3s var(--ease);
+}
+.nav.scrolled { padding: 14px 56px; }
+.nav-logo {
+  display: flex; align-items: center; height: auto; min-height: 32px;
+  color: var(--text-light); transition: all 0.3s ease; margin-right: 30px;
+}
+.nav-logo:hover { transform: translateY(-2px); }
+.nav-logo-svg {
+  height: 32px; width: auto; display: block;
+  filter: drop-shadow(0 2px 8px rgba(232, 230, 225, 0.3));
+  transition: all 0.3s ease;
+}
+.nav-logo:hover .nav-logo-svg { filter: drop-shadow(0 4px 16px rgba(201, 184, 150, 0.5)); }
+.nav-menu {
+  display: flex; gap: 36px; list-style: none;
+  font-size: 13px; color: var(--text-light-muted); letter-spacing: 0.02em;
+}
+.nav-menu a { transition: color 0.3s ease; position: relative; }
+.nav-menu a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 0.5px; background: var(--accent-gold);
+  transition: width 0.3s var(--ease);
+}
+.nav-menu a:hover { color: var(--text-light); }
+.nav-menu a:hover::after { width: 100%; }
+.nav-menu a.active { color: var(--accent-gold); }
+.nav-menu a.active::after { width: 100%; }
+.nav-cta {
+  padding: 10px 20px; font-size: 13px; font-weight: 500;
+  color: var(--text-light); border: 0.5px solid rgba(232, 230, 225, 0.3);
+  letter-spacing: 0.02em; transition: all 0.3s ease; margin-left: auto;
+}
+.nav-cta:hover { background: var(--text-light); color: var(--bg-dark); border-color: var(--text-light); }
+.nav-toggle {
+  display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px;
+}
+.nav-toggle span { width: 24px; height: 1px; background: var(--text-light); transition: all 0.3s ease; }
+
+/* ── HERO ───────────────────────────────────────────── */
+.hero {
+  min-height: 100vh; padding: 180px 56px 120px;
+  position: relative; overflow: hidden;
+  display: flex; align-items: center;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse at 70% 40%, rgba(139, 111, 71, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(201, 184, 150, 0.05) 0%, transparent 50%),
+    var(--bg-dark);
+}
+.hero-grid {
+  position: absolute; inset: 0; opacity: 0.05; pointer-events: none;
+}
+.hero-grid svg { width: 100%; height: 100%; }
+.hero-content { max-width: 860px; position: relative; z-index: 2; }
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 0.3em; color: var(--accent-earth);
+  margin-bottom: 40px; text-transform: uppercase;
+  display: flex; align-items: center; gap: 16px;
+  opacity: 0; animation: fadeUp 0.8s var(--ease) 0.2s forwards;
+}
+.hero-eyebrow::before {
+  content: ''; width: 24px; height: 0.5px; background: var(--accent-earth);
+}
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: clamp(42px, 7vw, 88px);
+  font-weight: 300; line-height: 1.0; letter-spacing: -0.03em;
+  margin-bottom: 40px; color: var(--text-light);
+  opacity: 0; animation: fadeUp 1s var(--ease) 0.4s forwards;
+}
+.hero-title em { font-style: italic; color: var(--accent-gold); font-weight: 300; }
+.hero-sub {
+  font-size: clamp(16px, 1.8vw, 20px);
+  color: rgba(232, 230, 225, 0.7); max-width: 720px;
+  margin-bottom: 60px; line-height: 1.6;
+  opacity: 0; animation: fadeUp 1s var(--ease) 0.6s forwards;
+}
+.hero-actions {
+  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 1s var(--ease) 0.8s forwards;
+}
+.btn-primary {
+  padding: 20px 40px; font-size: 14px; font-weight: 500;
+  background: var(--text-light); color: var(--bg-dark);
+  letter-spacing: 0.05em; transition: all 0.3s var(--ease);
+  border: 0.5px solid var(--text-light);
+}
+.btn-primary:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-2px); }
+.btn-whatsapp {
+  display: flex; align-items: center; gap: 10px;
+  padding: 20px 32px; font-size: 14px; font-weight: 500;
+  color: var(--text-light); border: 0.5px solid rgba(232, 230, 225, 0.25);
+  letter-spacing: 0.03em; transition: all 0.3s ease;
+}
+.btn-whatsapp:hover { border-color: #25D366; color: #25D366; }
+.btn-whatsapp svg { width: 18px; height: 18px; flex-shrink: 0; }
+.btn-link {
+  padding: 20px 0; font-size: 14px;
+  color: rgba(232, 230, 225, 0.8);
+  border-bottom: 0.5px solid rgba(232, 230, 225, 0.3);
+  letter-spacing: 0.03em; transition: all 0.3s ease;
+}
+.btn-link:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+.btn-gold {
+  padding: 16px 28px; font-size: 13px; font-weight: 500;
+  background: var(--accent-gold); color: var(--bg-dark);
+  letter-spacing: 0.05em; transition: all 0.3s var(--ease);
+}
+.btn-gold:hover { background: var(--text-light); transform: translateY(-2px); }
+
+/* ── SECCIONES BASE ─────────────────────────────────── */
+.section { padding: 160px 56px; position: relative; overflow: hidden; }
+.section-light { background: var(--bg-light); color: var(--text-dark); }
+.section-dark { background: var(--bg-dark); }
+.section-dark-soft { background: var(--bg-dark-soft); }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+.section-eyebrow {
+  font-size: 11px; letter-spacing: 0.3em;
+  color: var(--accent-earth); margin-bottom: 24px; text-transform: uppercase;
+}
+.section-eyebrow.gold { color: var(--accent-gold); }
+.section-divider {
+  width: 40px; height: 0.5px;
+  background: var(--text-dark); margin-bottom: 32px;
+}
+.section-divider.light { background: var(--text-light); }
+.section-divider.gold { background: var(--accent-gold); }
+
+/* ── SERVICIOS ──────────────────────────────────────── */
+.services-header {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 80px; align-items: end; margin-bottom: 80px;
+}
+.services-title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 300; line-height: 1.08;
+  letter-spacing: -0.02em; color: var(--text-light);
+}
+.services-title em { font-style: italic; color: var(--accent-gold); }
+.services-sub {
+  font-size: 18px; color: var(--text-light-muted);
+  line-height: 1.65; max-width: 600px; align-self: end;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 2px; background: rgba(232, 230, 225, 0.07);
+  border: 0.5px solid rgba(232, 230, 225, 0.07);
+}
+.service-card {
+  background: var(--bg-dark);
+  padding: 44px 32px;
+  transition: background 0.4s ease;
+  position: relative;
+}
+.service-card:hover { background: #111; }
+.service-card::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 32px; right: 32px;
+  height: 0.5px; background: var(--accent-earth);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.service-card:hover::after { transform: scaleX(1); }
+.service-num {
+  font-size: 10px; color: rgba(232, 230, 225, 0.3);
+  letter-spacing: 0.3em; text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.service-icon {
+  width: 40px; height: 40px; margin-bottom: 24px;
+  color: var(--accent-earth); opacity: 0.8;
+}
+.service-name {
+  font-family: var(--font-serif);
+  font-size: 22px; font-weight: 300;
+  letter-spacing: -0.01em; margin-bottom: 12px;
+  color: var(--text-light); line-height: 1.2;
+}
+.service-desc {
+  font-size: 13px; color: var(--text-light-muted);
+  line-height: 1.65;
+}
+
+/* ── ¿POR QUÉ DISEÑO ESTRATÉGICO? ──────────────────── */
+.why-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 120px; align-items: center;
+}
+.why-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 300; line-height: 1.08;
+  letter-spacing: -0.025em; margin-bottom: 40px;
+  color: var(--text-dark);
+}
+.why-title .muted { color: rgba(10, 10, 10, 0.3); }
+.why-title em { font-style: italic; color: var(--accent-earth); }
+.why-text {
+  font-size: 17px; color: var(--text-dark-muted);
+  line-height: 1.75;
+}
+.why-text p { margin-bottom: 20px; }
+.why-text p:last-child { margin-bottom: 0; color: var(--text-dark); font-weight: 400; }
+.why-pillars {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 2px; background: rgba(10, 10, 10, 0.1);
+}
+.pillar {
+  background: var(--bg-light);
+  padding: 36px 28px;
+  transition: background 0.3s ease;
+}
+.pillar:hover { background: var(--bg-light-alt); }
+.pillar-icon {
+  width: 28px; height: 2px; background: var(--accent-earth);
+  margin-bottom: 20px;
+}
+.pillar-title {
+  font-family: var(--font-serif); font-size: 20px;
+  font-weight: 400; margin-bottom: 12px;
+  letter-spacing: -0.01em; color: var(--text-dark);
+}
+.pillar-text {
+  font-size: 13px; color: var(--text-dark-muted);
+  line-height: 1.65;
+}
+
+/* ── PROYECTOS ──────────────────────────────────────── */
+.projects-header {
+  display: grid; grid-template-columns: 1fr 2fr;
+  gap: 80px; align-items: end; margin-bottom: 64px;
+}
+.projects-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 300; line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+.projects-title em { font-style: italic; color: var(--accent-gold); }
+.projects-sub {
+  font-size: 17px; color: var(--text-light-muted);
+  line-height: 1.65; max-width: 560px; align-self: end;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+}
+.project-item {
+  position: relative; overflow: hidden;
+  background: #111;
+  cursor: default;
+}
+.project-item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 1.2s var(--ease);
+  filter: brightness(0.75);
+}
+.project-item:hover img { transform: scale(1.05); filter: brightness(0.85); }
+.project-item-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  border: 0.5px dashed rgba(232, 230, 225, 0.15);
+}
+.project-ph-label {
+  font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(232, 230, 225, 0.2);
+}
+.project-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(10, 10, 10, 0.85));
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px;
+}
+.project-type {
+  font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--accent-gold); margin-bottom: 6px;
+}
+.project-name {
+  font-family: var(--font-serif); font-size: 22px;
+  font-weight: 300; color: var(--text-light);
+  letter-spacing: -0.01em; margin-bottom: 6px;
+}
+.project-desc {
+  font-size: 12px; color: rgba(232, 230, 225, 0.6); line-height: 1.5;
+}
+/* Grid layout */
+.project-item.span-8 { grid-column: span 8; grid-row: span 2; }
+.project-item.span-4 { grid-column: span 4; grid-row: span 2; }
+.project-item.span-6 { grid-column: span 6; grid-row: span 2; }
+
+/* ── PROCESO ─────────────────────────────────────────── */
+.process-header { text-align: center; margin-bottom: 96px; }
+.process-title {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 300; line-height: 1.08;
+  letter-spacing: -0.02em; margin-bottom: 20px;
+  color: var(--text-dark);
+}
+.process-title em { font-style: italic; color: var(--accent-earth); }
+.process-sub {
+  font-size: 17px; color: var(--text-dark-muted);
+  max-width: 560px; margin: 0 auto; line-height: 1.6;
+}
+.process-steps {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  position: relative;
+}
+.process-steps::before {
+  content: '';
+  position: absolute; top: 56px; left: 10%; right: 10%;
+  height: 0.5px; background: rgba(10, 10, 10, 0.15);
+}
+.process-step { padding: 0 24px; position: relative; }
+.process-dot {
+  width: 16px; height: 16px;
+  border: 1px solid var(--accent-earth);
+  background: var(--bg-light);
+  border-radius: 50%;
+  margin: 48px auto 40px;
+  position: relative; z-index: 1;
+  transition: background 0.3s ease;
+}
+.process-step:hover .process-dot { background: var(--accent-earth); }
+.process-step-num {
+  font-size: 9px; color: var(--accent-earth);
+  letter-spacing: 0.3em; text-transform: uppercase;
+  text-align: center; margin-bottom: 12px;
+}
+.process-step-title {
+  font-family: var(--font-serif); font-size: 20px;
+  font-weight: 400; letter-spacing: -0.01em;
+  text-align: center; margin-bottom: 12px;
+  color: var(--text-dark);
+}
+.process-step-text {
+  font-size: 13px; color: var(--text-dark-muted);
+  line-height: 1.65; text-align: center;
+}
+
+/* ── CONTACTO ────────────────────────────────────────── */
+.contact-section { background: var(--bg-dark-soft); }
+.contact-bg-circles {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  pointer-events: none; opacity: 0.35;
+}
+.contact-grid {
+  max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 120px; align-items: start;
+}
+.contact-title {
+  font-family: var(--font-serif);
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 300; line-height: 1.05;
+  letter-spacing: -0.03em; margin-bottom: 32px;
+}
+.contact-title em { font-style: italic; color: var(--accent-gold); }
+.contact-text {
+  font-size: 17px; color: var(--text-light-muted);
+  line-height: 1.7; margin-bottom: 16px;
+}
+.contact-text-small {
+  font-size: 14px; color: var(--text-light-faint); line-height: 1.65;
+  margin-bottom: 48px;
+}
+.contact-info { display: flex; flex-direction: column; gap: 16px; }
+.contact-info-item {}
+.contact-info-label {
+  font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--accent-gold); margin-bottom: 4px;
+}
+.contact-info-value {
+  font-size: 15px; color: var(--text-light-muted);
+}
+.contact-wa {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-top: 32px; padding: 14px 24px;
+  border: 0.5px solid #25D366; color: #25D366;
+  font-size: 13px; font-weight: 500; letter-spacing: 0.03em;
+  transition: all 0.3s ease;
+}
+.contact-wa:hover { background: rgba(37, 211, 102, 0.08); }
+.contact-wa svg { width: 18px; height: 18px; }
+/* Form */
+.contact-form {
+  background: rgba(232, 230, 225, 0.03);
+  border: 0.5px solid rgba(232, 230, 225, 0.1);
+  padding: 56px 48px;
+}
+.contact-form-eyebrow {
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--accent-gold); margin-bottom: 8px;
+}
+.contact-form-title {
+  font-family: var(--font-serif); font-size: 26px;
+  font-weight: 300; margin-bottom: 40px; letter-spacing: -0.01em;
+}
+.form-group { margin-bottom: 24px; }
+.form-label {
+  display: block; font-size: 11px; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--text-light-faint);
+  margin-bottom: 8px;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%; padding: 14px 0;
+  background: transparent; border: none;
+  border-bottom: 0.5px solid rgba(232, 230, 225, 0.2);
+  color: var(--text-light); font-family: var(--font-sans);
+  font-size: 15px; font-weight: 300;
+  transition: border-color 0.3s ease; outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-bottom-color: var(--accent-gold);
+}
+.form-input::placeholder, .form-textarea::placeholder {
+  color: rgba(232, 230, 225, 0.2);
+}
+.form-select { cursor: pointer; }
+.form-select option { background: #1a1a1a; color: var(--text-light); }
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.form-submit {
+  width: 100%; padding: 20px;
+  background: var(--text-light); color: var(--bg-dark);
+  font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; cursor: pointer;
+  transition: all 0.3s var(--ease); margin-top: 8px;
+  border: 0.5px solid var(--text-light);
+}
+.form-submit:hover { background: var(--accent-gold); border-color: var(--accent-gold); }
+.form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.form-error-msg {
+  display: none; margin-top: 12px;
+  font-size: 12px; color: #e87b7b; text-align: center;
+}
+.form-success {
+  display: none; text-align: center; padding: 40px 0;
+}
+.form-success-icon { font-size: 32px; color: var(--accent-gold); margin-bottom: 20px; }
+.form-success-title { font-family: var(--font-serif); font-size: 28px; margin-bottom: 12px; }
+.form-success-text { font-size: 15px; color: var(--text-light-muted); line-height: 1.6; }
+
+/* ── FOOTER ─────────────────────────────────────────── */
+.footer {
+  background: var(--bg-dark); color: var(--text-light);
+  padding: 80px 56px 56px;
+  border-top: 0.5px solid rgba(232, 230, 225, 0.08);
+}
+.footer-grid {
+  max-width: 1200px; margin: 0 auto 64px;
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 80px;
+}
+.footer-logo-svg { height: 40px; width: auto; color: var(--text-light); }
+.footer-tagline {
+  font-family: var(--font-serif); font-size: 18px;
+  color: var(--text-light-muted); margin: 20px 0 8px;
+  letter-spacing: -0.01em;
+}
+.footer-desc { font-size: 13px; color: var(--text-light-faint); line-height: 1.65; }
+.footer-col-title {
+  font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--accent-gold); margin-bottom: 24px;
+}
+.footer-col-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-col-list li { font-size: 14px; color: var(--text-light-muted); }
+.footer-col-list a { transition: color 0.3s ease; }
+.footer-col-list a:hover { color: var(--text-light); }
+.footer-col-list .accent { color: var(--accent-gold); }
+.footer-col-list .accent:hover { color: var(--text-light); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 32px; border-top: 0.5px solid rgba(232, 230, 225, 0.08);
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; color: var(--text-light-faint);
+}
+
+/* ── ANIMACIONES ─────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+.reveal {
+  opacity: 0; transform: translateY(40px);
+  transition: opacity 1s var(--ease), transform 1s var(--ease);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .nav { padding: 16px 32px; }
+  .nav.scrolled { padding: 12px 32px; }
+  .nav-menu { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-cta { display: none; }
+  .hero { padding: 140px 32px 80px; }
+  .section { padding: 100px 32px; }
+  .services-header { grid-template-columns: 1fr; gap: 24px; }
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; gap: 60px; }
+  .projects-header { grid-template-columns: 1fr; gap: 24px; }
+  .projects-grid { grid-auto-rows: 180px; }
+  .project-item.span-8 { grid-column: span 12; }
+  .project-item.span-4 { grid-column: span 6; }
+  .project-item.span-6 { grid-column: span 6; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .process-steps::before { display: none; }
+  .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 48px; }
+}
+@media (max-width: 768px) {
+  .hero { padding: 120px 24px 64px; }
+  .section { padding: 80px 24px; }
+  .services-grid { grid-template-columns: 1fr; }
+  .why-pillars { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 32px 24px; }
+  .footer { padding: 56px 24px 40px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════
+     NAVEGACIÓN
+════════════════════════════════════════════════════ -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="nav-logo" aria-label="BC Arq Studio">
+    <svg class="nav-logo-svg" viewBox="0 0 110 70" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <line x1="4" y1="4" x2="23" y2="4" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
+      <line x1="4" y1="19.5" x2="23" y2="19.5" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
+      <line x1="4" y1="35" x2="23" y2="35" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
+      <path d="M23,4 C37,4 37,19.5 23,19.5" stroke="currentColor" stroke-width="4.4" fill="none"/>
+      <path d="M23,19.5 C41,19.5 41,35 23,35" stroke="currentColor" stroke-width="4.4" fill="none"/>
+      <path d="M82,4.5 A17.5,17.5,0,1,0,82,34.5" stroke="currentColor" stroke-width="4.4" fill="none" stroke-linecap="butt"/>
+      <text x="4" y="51" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="500" fill="currentColor" letter-spacing="3.5">STUDIO</text>
+      <text x="4" y="63" font-family="Space Grotesk,sans-serif" font-size="5" font-weight="300" fill="currentColor" letter-spacing="1.6" opacity="0.62">BUILD &amp; CREATE STUDIO</text>
+    </svg>
+  </a>
+  <ul class="nav-menu" id="navMenu">
+    <li><a href="index.html#vision">Visión</a></li>
+    <li><a href="index.html#ona">ONA</a></li>
+    <li><a href="index.html#estudio">Estudio</a></li>
+    <li><a href="index.html#modelos">Modelos</a></li>
+    <li><a href="diseno-estrategico.html" class="active">Diseño Estratégico</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="#contacto" class="nav-cta">Agendar consulta</a>
+  <div class="nav-toggle" id="navToggle">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+
+<!-- ════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════ -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-grid">
+    <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
+      <g stroke="#e8e6e1" stroke-width="0.3" fill="none">
+        <line x1="0" y1="100" x2="1440" y2="100"/>
+        <line x1="0" y1="200" x2="1440" y2="200"/>
+        <line x1="0" y1="300" x2="1440" y2="300"/>
+        <line x1="0" y1="400" x2="1440" y2="400"/>
+        <line x1="0" y1="500" x2="1440" y2="500"/>
+        <line x1="160" y1="0" x2="160" y2="600"/>
+        <line x1="320" y1="0" x2="320" y2="600"/>
+        <line x1="480" y1="0" x2="480" y2="600"/>
+        <line x1="640" y1="0" x2="640" y2="600"/>
+        <line x1="800" y1="0" x2="800" y2="600"/>
+        <line x1="960" y1="0" x2="960" y2="600"/>
+        <line x1="1120" y1="0" x2="1120" y2="600"/>
+        <line x1="1280" y1="0" x2="1280" y2="600"/>
+      </g>
+    </svg>
+  </div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Diseño Estratégico · BC Arq Studio</div>
+    <h1 class="hero-title">
+      Diseño estratégico<br>para negocios que<br>quieren <em>crecer.</em>
+    </h1>
+    <p class="hero-sub">
+      Diseñamos oficinas, clínicas, comercios, espacios gastronómicos, hoteles y proyectos arquitectónicos enfocados en mejorar la operación, elevar la percepción de marca y aumentar el valor del inmueble.
+    </p>
+    <div class="hero-actions">
+      <a href="#contacto" class="btn-primary">Agendar una consulta →</a>
+      <a href="https://wa.me/50254131753?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20dise%C3%B1o%20estrat%C3%A9gico." target="_blank" rel="noopener" class="btn-whatsapp">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     SERVICIOS
+════════════════════════════════════════════════════ -->
+<section class="section section-dark reveal" id="servicios">
+  <div class="section-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-eyebrow">01 — Servicios</div>
+        <div class="section-divider light"></div>
+        <h2 class="services-title">Lo que<br><em>diseñamos</em><br>para ti.</h2>
+      </div>
+      <p class="services-sub">Cada proyecto es distinto. Trabajamos desde el diagnóstico inicial hasta el acompañamiento en ejecución, adaptándonos al tipo de negocio, al presupuesto y a los objetivos reales del cliente.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- 01 -->
+      <div class="service-card">
+        <div class="service-num">01</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="4" y="8" width="32" height="26" rx="0.5"/>
+          <line x1="4" y1="16" x2="36" y2="16"/>
+          <line x1="16" y1="8" x2="16" y2="34"/>
+          <rect x="20" y="22" width="10" height="12" rx="0.5"/>
+        </svg>
+        <div class="service-name">Oficinas corporativas</div>
+        <div class="service-desc">Espacios de trabajo que reflejan la cultura de tu empresa, optimizan la circulación y elevan la productividad del equipo.</div>
+      </div>
+
+      <!-- 02 -->
+      <div class="service-card">
+        <div class="service-num">02</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="6" y="4" width="28" height="34" rx="0.5"/>
+          <line x1="12" y1="12" x2="28" y2="12"/>
+          <line x1="12" y1="18" x2="28" y2="18"/>
+          <circle cx="20" cy="27" r="4"/>
+          <line x1="20" y1="23" x2="20" y2="31"/>
+          <line x1="16" y1="27" x2="24" y2="27"/>
+        </svg>
+        <div class="service-name">Clínicas médicas y odontológicas</div>
+        <div class="service-desc">Diseño funcional que cumple normativas sanitarias, transmite confianza al paciente y mejora el flujo de atención.</div>
+      </div>
+
+      <!-- 03 -->
+      <div class="service-card">
+        <div class="service-num">03</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="4" y="14" width="32" height="22" rx="0.5"/>
+          <path d="M4 14 L20 4 L36 14"/>
+          <rect x="15" y="22" width="10" height="14"/>
+          <line x1="15" y1="22" x2="25" y2="36"/>
+        </svg>
+        <div class="service-name">Diseño comercial y retail</div>
+        <div class="service-desc">Locales y tiendas diseñadas para convertir visitas en ventas: circulación estratégica, exhibición de producto y experiencia de marca.</div>
+      </div>
+
+      <!-- 04 -->
+      <div class="service-card">
+        <div class="service-num">04</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <ellipse cx="20" cy="28" rx="14" ry="8"/>
+          <path d="M6 28 Q20 8 34 28"/>
+          <line x1="20" y1="20" x2="20" y2="12"/>
+          <circle cx="20" cy="10" r="3"/>
+        </svg>
+        <div class="service-name">Restaurantes y gastronomía</div>
+        <div class="service-desc">Ambientes que refuerzan el concepto gastronómico, optimizan la operación de cocina y sala, y generan experiencias memorables.</div>
+      </div>
+
+      <!-- 05 -->
+      <div class="service-card">
+        <div class="service-num">05</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="4" y="18" width="32" height="18"/>
+          <rect x="10" y="10" width="20" height="8"/>
+          <line x1="4" y1="36" x2="36" y2="36"/>
+          <line x1="14" y1="26" x2="14" y2="36"/>
+          <line x1="26" y1="26" x2="26" y2="36"/>
+          <rect x="17" y="22" width="6" height="6"/>
+        </svg>
+        <div class="service-name">Hoteles y hospitalidad</div>
+        <div class="service-desc">Proyectos de hospitalidad con identidad clara, eficiencia operativa y estándares de experiencia que aumentan la ocupación y el ADR.</div>
+      </div>
+
+      <!-- 06 -->
+      <div class="service-card">
+        <div class="service-num">06</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="6" y="6" width="28" height="28" rx="0.5"/>
+          <line x1="6" y1="18" x2="34" y2="18"/>
+          <line x1="18" y1="6" x2="18" y2="34"/>
+          <circle cx="26" cy="12" r="3"/>
+          <rect x="8" y="22" width="6" height="8"/>
+        </svg>
+        <div class="service-name">Diseño interior</div>
+        <div class="service-desc">Interiorismo estratégico: paleta de materiales, iluminación, mobiliario y acabados alineados con la identidad del negocio.</div>
+      </div>
+
+      <!-- 07 -->
+      <div class="service-card">
+        <div class="service-num">07</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M6 34 L6 12 L20 6 L34 12 L34 34"/>
+          <line x1="6" y1="34" x2="34" y2="34"/>
+          <rect x="14" y="22" width="12" height="12"/>
+          <path d="M10 16 L16 12 M24 12 L30 16"/>
+          <line x1="20" y1="8" x2="20" y2="34"/>
+        </svg>
+        <div class="service-name">Remodelaciones</div>
+        <div class="service-desc">Transformamos espacios existentes: readecuación de plantas, actualización de acabados e intervenciones quirúrgicas sin detener la operación.</div>
+      </div>
+
+      <!-- 08 -->
+      <div class="service-card">
+        <div class="service-num">08</div>
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.2">
+          <rect x="4" y="6" width="32" height="28" rx="0.5"/>
+          <line x1="10" y1="12" x2="30" y2="12"/>
+          <line x1="10" y1="18" x2="22" y2="18"/>
+          <line x1="10" y1="24" x2="26" y2="24"/>
+          <line x1="10" y1="28" x2="20" y2="28"/>
+          <line x1="28" y1="20" x2="34" y2="14" stroke-dasharray="2 2"/>
+          <circle cx="34" cy="13" r="2"/>
+        </svg>
+        <div class="service-name">Planificación y documentación</div>
+        <div class="service-desc">Planos arquitectónicos, memorias de cálculo, documentación para permisos municipales y expediente técnico completo para construcción.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     ¿POR QUÉ DISEÑO ESTRATÉGICO?
+════════════════════════════════════════════════════ -->
+<section class="section section-light reveal" id="por-que">
+  <div class="section-inner">
+    <div class="why-grid">
+      <div>
+        <div class="section-eyebrow">02 — Fundamento</div>
+        <div class="section-divider"></div>
+        <h2 class="why-title">
+          El diseño no es <span class="muted">solo</span><br>
+          una cuestión de<br>
+          <em>estética.</em>
+        </h2>
+        <div class="why-text">
+          <p>Un espacio mal diseñado genera fricción invisible: clientes incómodos que no regresan, empleados que pierden tiempo en circulaciones deficientes, operaciones que se complican porque nadie pensó en el flujo real del negocio.</p>
+          <p>El diseño estratégico parte de entender cómo funciona tu negocio antes de decidir cómo se ve. Analizamos la operación, el flujo de personas, la identidad de marca y el presupuesto disponible.</p>
+          <p>El resultado no es solo un espacio bonito. Es un activo que trabaja para ti.</p>
+        </div>
+      </div>
+
+      <div class="why-pillars">
+        <div class="pillar">
+          <div class="pillar-icon"></div>
+          <div class="pillar-title">Productividad</div>
+          <div class="pillar-text">Espacios diseñados para el flujo real de trabajo reducen tiempos muertos y mejoran la coordinación entre equipos.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon"></div>
+          <div class="pillar-title">Experiencia del cliente</div>
+          <div class="pillar-text">Un espacio que comunica correctamente genera confianza, aumenta el tiempo de permanencia y eleva el ticket promedio.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon"></div>
+          <div class="pillar-title">Valor del inmueble</div>
+          <div class="pillar-text">Una intervención bien ejecutada puede incrementar entre 15 y 40% el valor de renta o venta de un local comercial u oficina.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon"></div>
+          <div class="pillar-title">Percepción de marca</div>
+          <div class="pillar-text">El espacio físico es el primer touchpoint tangible de tu marca. La coherencia entre diseño e identidad convierte visitas en clientes recurrentes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     PROYECTOS
+════════════════════════════════════════════════════ -->
+<section class="section section-dark-soft reveal" id="proyectos">
+  <div class="section-inner">
+    <div class="projects-header">
+      <div>
+        <div class="section-eyebrow gold">03 — Proyectos</div>
+        <div class="section-divider gold"></div>
+        <h2 class="projects-title">El trabajo<br>en <em>imágenes.</em></h2>
+      </div>
+      <p class="projects-sub">Una selección de proyectos que ilustran cómo abordamos cada tipo de espacio. Cada uno comenzó con un diagnóstico honesto del negocio.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- Proyecto 1: ONA — imagen real -->
+      <div class="project-item span-8">
+        <img src="img/ona-fachada-organica.jpg" alt="ONA — Residencial Zona 15" loading="lazy">
+        <div class="project-overlay">
+          <div class="project-type">Residencial · Zona 15, Guatemala</div>
+          <div class="project-name">ONA</div>
+          <div class="project-desc">Proyecto residencial vertical de 18,792 m². Diseño enfocado en eficiencia estructural y calidad de vida.</div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2: ONA Lobby -->
+      <div class="project-item span-4">
+        <img src="img/ona-lobby.jpg" alt="ONA Lobby" loading="lazy">
+        <div class="project-overlay">
+          <div class="project-type">Diseño Interior</div>
+          <div class="project-name">ONA — Lobby</div>
+          <div class="project-desc">Área social y lobby de ingreso.</div>
+        </div>
+      </div>
+
+      <!-- Proyecto 3: Rooftop -->
+      <div class="project-item span-4">
+        <img src="img/ona-rooftop-yoga.jpg" alt="ONA Rooftop" loading="lazy">
+        <div class="project-overlay">
+          <div class="project-type">Áreas Comunes</div>
+          <div class="project-name">ONA — Rooftop</div>
+          <div class="project-desc">Deck de yoga y áreas de bienestar.</div>
+        </div>
+      </div>
+
+      <!-- Proyecto 4: Placeholder — Oficinas -->
+      <div class="project-item span-4">
+        <div class="project-item-placeholder">
+          <div class="project-ph-label">Próximamente · Oficinas</div>
+        </div>
+        <div class="project-overlay">
+          <div class="project-type">Oficinas Corporativas</div>
+          <div class="project-name">Proyecto en proceso</div>
+        </div>
+      </div>
+
+      <!-- Proyecto 5: Planta -->
+      <div class="project-item span-6">
+        <img src="img/ona-planta-amplia.jpg" alt="Planta arquitectónica" loading="lazy">
+        <div class="project-overlay">
+          <div class="project-type">Planificación</div>
+          <div class="project-name">ONA — Planta tipo</div>
+          <div class="project-desc">Eficiencia del 91.9% en área vendible.</div>
+        </div>
+      </div>
+
+      <!-- Proyecto 6: Placeholder — Clínica -->
+      <div class="project-item span-6">
+        <div class="project-item-placeholder">
+          <div class="project-ph-label">Próximamente · Clínica</div>
+        </div>
+        <div class="project-overlay">
+          <div class="project-type">Clínica Médica</div>
+          <div class="project-name">Proyecto en proceso</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     PROCESO
+════════════════════════════════════════════════════ -->
+<section class="section section-light reveal" id="proceso">
+  <div class="section-inner">
+    <div class="process-header">
+      <div class="section-eyebrow">04 — Proceso</div>
+      <div class="section-divider" style="margin:0 auto 32px"></div>
+      <h2 class="process-title">Cómo <em>trabajamos</em></h2>
+      <p class="process-sub">Un proceso claro que elimina la incertidumbre. Sabes exactamente en qué etapa está tu proyecto y qué viene después.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <div class="process-step-num">Paso 01</div>
+        <div class="process-step-title">Reunión inicial</div>
+        <div class="process-step-text">Escuchamos tu proyecto, el negocio que opera o va a operar en el espacio, y los objetivos reales —operativos, comerciales y de imagen.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <div class="process-step-num">Paso 02</div>
+        <div class="process-step-title">Diagnóstico del proyecto</div>
+        <div class="process-step-text">Analizamos el espacio existente o el terreno, identificamos restricciones técnicas, normativas y de presupuesto. Entregamos un diagnóstico honesto antes de cualquier compromiso.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <div class="process-step-num">Paso 03</div>
+        <div class="process-step-title">Concepto de diseño</div>
+        <div class="process-step-text">Desarrollamos una propuesta conceptual: distribución, materialidad, identidad visual del espacio y estimación de costo. Presentamos antes de avanzar.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <div class="process-step-num">Paso 04</div>
+        <div class="process-step-title">Planos y documentación</div>
+        <div class="process-step-text">Planos arquitectónicos, de instalaciones, renders, especificaciones de materiales y documentación completa para obtener permisos y licitar con contratistas.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-dot"></div>
+        <div class="process-step-num">Paso 05</div>
+        <div class="process-step-title">Acompañamiento en ejecución</div>
+        <div class="process-step-text">Supervisión de obra, resolución de imprevistos en campo y control de que lo construido corresponde exactamente a lo diseñado.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     CONTACTO
+════════════════════════════════════════════════════ -->
+<section class="section contact-section reveal" id="contacto">
+  <svg class="contact-bg-circles" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#c9b896" stroke-width="0.4" fill="none">
+      <circle cx="200" cy="400" r="400"/>
+      <circle cx="200" cy="400" r="280"/>
+      <circle cx="200" cy="400" r="160"/>
+      <circle cx="200" cy="400" r="60"/>
+    </g>
+  </svg>
+
+  <div class="contact-grid">
+    <div>
+      <div class="section-eyebrow gold">05 — Contacto</div>
+      <div class="section-divider gold"></div>
+      <h2 class="contact-title">
+        Hablemos de<br>tu <em>proyecto.</em>
+      </h2>
+      <p class="contact-text">En una primera reunión evaluamos juntos el espacio, el negocio y los objetivos. Sin compromiso. Sin presentaciones de venta.</p>
+      <p class="contact-text-small">Respondemos en menos de 24 horas hábiles. Cada consulta se atiende personalmente.</p>
+
+      <div class="contact-info">
+        <div class="contact-info-item">
+          <div class="contact-info-label">Email</div>
+          <div class="contact-info-value">info@bcarqstudio.com</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Web</div>
+          <div class="contact-info-value">bcarqstudio.com</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Ubicación</div>
+          <div class="contact-info-value">Ciudad de Guatemala</div>
+        </div>
+      </div>
+
+      <a href="https://wa.me/50254131753?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20servicios%20de%20dise%C3%B1o%20estrat%C3%A9gico." target="_blank" rel="noopener" class="contact-wa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Escribir por WhatsApp
+      </a>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <input type="hidden" name="_subject" value="Consulta Diseño Estratégico — BC Arq Studio">
+      <div id="formBody">
+        <div class="contact-form-eyebrow">Formulario de contacto</div>
+        <h3 class="contact-form-title">Cuéntanos tu proyecto</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="name">Nombre</label>
+            <input type="text" id="name" name="name" class="form-input" required placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="empresa">Empresa</label>
+            <input type="text" id="empresa" name="empresa" class="form-input" placeholder="Tu empresa">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" class="form-input" required placeholder="tu@empresa.com">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+502 0000 0000">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="tipo">Tipo de proyecto</label>
+          <select id="tipo" name="project_type" class="form-select" required>
+            <option value="">Selecciona una opción</option>
+            <option value="oficinas">Oficinas corporativas</option>
+            <option value="clinica">Clínica médica u odontológica</option>
+            <option value="comercial">Diseño comercial y retail</option>
+            <option value="restaurante">Restaurante o espacio gastronómico</option>
+            <option value="hotel">Hotel o proyecto de hospitalidad</option>
+            <option value="interior">Diseño interior</option>
+            <option value="remodelacion">Remodelación</option>
+            <option value="documentacion">Planificación y documentación para construcción</option>
+            <option value="otro">Otro / Consulta general</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="message">Mensaje</label>
+          <textarea id="message" name="message" class="form-textarea" required placeholder="Cuéntanos brevemente tu proyecto: tipo de espacio, m² aproximados y qué buscas lograr."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit" id="formSubmitBtn">Enviar mensaje →</button>
+        <div class="form-error-msg" id="formError">Hubo un error al enviar. Escríbenos directamente a info@bcarqstudio.com</div>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">✦</div>
+        <div class="form-success-title">Mensaje recibido</div>
+        <p class="form-success-text">Te respondemos en menos de 24 horas hábiles.<br>Revisa también tu carpeta de spam.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <svg class="footer-logo-svg" viewBox="0 0 110 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line x1="4" y1="4" x2="23" y2="4" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
+        <line x1="4" y1="19.5" x2="23" y2="19.5" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
+        <line x1="4" y1="35" x2="23" y2="35" stroke="currentColor" stroke-width="4.4" stroke-linecap="square"/>
+        <path d="M23,4 C37,4 37,19.5 23,19.5" stroke="currentColor" stroke-width="4.4" fill="none"/>
+        <path d="M23,19.5 C41,19.5 41,35 23,35" stroke="currentColor" stroke-width="4.4" fill="none"/>
+        <path d="M82,4.5 A17.5,17.5,0,1,0,82,34.5" stroke="currentColor" stroke-width="4.4" fill="none" stroke-linecap="butt"/>
+        <text x="4" y="51" font-family="Space Grotesk,sans-serif" font-size="8.5" font-weight="500" fill="currentColor" letter-spacing="3.5">STUDIO</text>
+        <text x="4" y="63" font-family="Space Grotesk,sans-serif" font-size="5" font-weight="300" fill="currentColor" letter-spacing="1.6" opacity="0.62">BUILD &amp; CREATE STUDIO</text>
+      </svg>
+      <p class="footer-tagline">Del terreno al retorno.</p>
+      <p class="footer-desc">Estudio de arquitectura, desarrollo inmobiliario e inversión. Guatemala.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Diseño Estratégico</div>
+      <ul class="footer-col-list">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#por-que">¿Por qué diseño estratégico?</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#proceso">Proceso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">BC Arq Studio</div>
+      <ul class="footer-col-list">
+        <li><a href="index.html#vision">Visión</a></li>
+        <li><a href="index.html#ona">Proyecto ONA</a></li>
+        <li><a href="index.html#estudio">El estudio</a></li>
+        <li><a href="index.html#modelos">Modelos de trabajo</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contacto</div>
+      <ul class="footer-col-list">
+        <li>info@bcarqstudio.com</li>
+        <li>bcarqstudio.com</li>
+        <li><a href="#contacto" class="accent">Agendar consulta →</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 BC Arq Studio · Build &amp; Create Studio · Ciudad de Guatemala</span>
+    <span>Diseño estratégico · Arquitectura · Desarrollo inmobiliario</span>
+  </div>
+</footer>
+
+
+<script>
+// Nav scroll
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Mobile menu
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+navToggle.addEventListener('click', () => {
+  const open = navMenu.style.display === 'flex';
+  navMenu.style.display = open ? 'none' : 'flex';
+  if (!open) {
+    Object.assign(navMenu.style, {
+      position: 'absolute', top: '100%', left: '0', right: '0',
+      flexDirection: 'column', background: 'rgba(10,10,10,0.97)',
+      padding: '24px', gap: '16px',
+      borderBottom: '0.5px solid rgba(232,230,225,0.1)'
+    });
+  }
+});
+document.querySelectorAll('.nav-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth <= 1024) navMenu.style.display = 'none';
+  });
+});
+
+// Reveal on scroll
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
+    const target = document.querySelector(href);
+    if (target) { e.preventDefault(); window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' }); }
+  });
+});
+
+// Form — Formspree
+const FORMSPREE_ID = 'xbdbdlay';
+const form = document.getElementById('contactForm');
+const formBody = document.getElementById('formBody');
+const formSuccess = document.getElementById('formSuccess');
+const formError = document.getElementById('formError');
+const submitBtn = document.getElementById('formSubmitBtn');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  if (FORMSPREE_ID === 'TU_FORM_ID') {
+    alert('Escríbenos directamente a info@bcarqstudio.com');
+    return;
+  }
+  submitBtn.textContent = 'Enviando…';
+  submitBtn.disabled = true;
+  formError.style.display = 'none';
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+      method: 'POST', body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) { formBody.style.display = 'none'; formSuccess.style.display = 'block'; }
+    else throw new Error();
+  } catch {
+    submitBtn.textContent = 'Enviar mensaje →';
+    submitBtn.disabled = false;
+    formError.style.display = 'block';
+  }
+});
+</script>
+</body>
+</html>
