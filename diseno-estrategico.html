@@ -756,6 +756,21 @@ body::after {
   .intro-stat { padding: 32px 0; border-right: none; border-bottom: .5px solid rgba(10,10,10,.1); }
   .type-item { flex: 0 0 100%; }
 }
+
+/* ============================================================
+   WHATSAPP FLOTANTE
+   ============================================================ */
+.wa-float {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90;
+  width: 52px; height: 52px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  background: #0a0a0a; color: #c9b896;
+  border: 0.5px solid rgba(201, 184, 150, 0.5);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+.wa-float:hover { background: #c9b896; color: #0a0a0a; transform: translateY(-2px); }
+.wa-float svg { width: 24px; height: 24px; }
 </style>
 </head>
 <body>
@@ -774,11 +789,10 @@ body::after {
     </svg>
   </a>
   <ul class="nav-menu" id="navMenu">
-    <li><a href="index.html#vision">Visión</a></li>
-    <li><a href="index.html#ona">ONA</a></li>
-    <li><a href="index.html#estudio">Estudio</a></li>
-    <li><a href="index.html#modelos">Modelos</a></li>
-    <li><a href="diseno-estrategico.html" class="active">Diseño Estratégico</a></li>
+    <li><a href="index.html#servicios">Servicios</a></li>
+    <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+    <li><a href="diseno-estrategico.html" class="active">Diseño para negocios</a></li>
+    <li><a href="index.html#proyectos">Proyectos</a></li>
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Agendar consulta</a>
@@ -821,7 +835,7 @@ body::after {
     </div>
     <div class="intro-stat">
       <div class="intro-stat-v">91.9%</div>
-      <div class="intro-stat-k">Eficiencia estructural — Proyecto ONA</div>
+      <div class="intro-stat-k">Eficiencia de planta — Proyecto ONA</div>
     </div>
     <div class="intro-stat">
       <div class="intro-stat-v">+30%</div>
@@ -966,7 +980,7 @@ body::after {
       <div class="proj-overlay">
         <div class="proj-type">Arquitectura Residencial · Guatemala</div>
         <div class="proj-name">ONA</div>
-        <div class="proj-desc">Residencial vertical de 18,792 m² en Vista Hermosa I. Diseñado con 91.9% de eficiencia estructural. Anteproyecto aprobado.</div>
+        <div class="proj-desc">Residencial vertical de 18,792 m² en Vista Hermosa I. Diseñado con 91.9% de eficiencia de planta (área vendible sobre construida). Anteproyecto aprobado.</div>
       </div>
     </div>
     <div class="proj c4">
@@ -1268,6 +1282,11 @@ body::after {
   </div>
 </footer>
 
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/50254131753?text=Hola%2C%20me%20interesa%20conocer%20sus%20servicios%20de%20dise%C3%B1o%20estrat%C3%A9gico." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.46A11.27 11.27 0 0 0 12.04.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.36 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg>
+</a>
 
 <script>
 // ── Nav scroll ───────────────────────────────────────

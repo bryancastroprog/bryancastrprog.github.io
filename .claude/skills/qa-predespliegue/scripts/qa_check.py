@@ -23,7 +23,7 @@ PAGE_IMG_BLOCK_MB = 5    # peso total de imágenes locales por página
 TITLE_RANGE = (30, 65)
 DESC_RANGE = (70, 160)
 LEAK_PATTERNS = [r"uso interno", r"confidencial", r"lorem ipsum"]          # sin distinguir mayúsculas
-PLACEHOLDERS = [r"\bTU_FORM_ID\b", r"\bGOOGLE_CALENDAR_LINK\b", r"\bTODO\b", r"\bXXX\b", r"\bFIXME\b"]  # exactos
+PLACEHOLDERS = [r"\bTU_FORM_ID\b", r"\bGOOGLE_CALENDAR_LINK\b", r"\bTODO\b", r"\bXXX\b", r"\bFIXME\b", r"\[DATO PENDIENTE"]  # exactos
 
 
 class Page(HTMLParser):
