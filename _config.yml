@@ -1,0 +1,8 @@
+# GitHub Pages (Jekyll) — solo se usa para excluir archivos internos del sitio publicado.
+# Sin esto, CLAUDE.md y docs/*.md se publicarían como páginas en bcarqstudio.com.
+exclude:
+  - CLAUDE.md
+  - docs/
+  - .claude/
+  - .qa-shots/
+  - node_modules/
