@@ -139,17 +139,21 @@ def check(file):
     if p.h1 != 1:
         add("BLOQUEANTE" if p.h1 == 0 else "ADVERTENCIA", "seo", f"{p.h1} etiquetas <h1> (debe haber exactamente 1)")
     canon = [l for l in p.links if (l.get("rel") or "").lower() == "canonical"]
-    if not canon:
+    noindex = "noindex" in p.meta.get("robots", "")
+    if noindex:
+        pass  # páginas noindex (p. ej. 404) no necesitan canonical, OG ni JSON-LD
+    elif not canon:
         add("ADVERTENCIA", "seo", "Falta <link rel=canonical>")
     else:
         href = canon[0].get("href", "")
         if not href.startswith(f"https://{DOMAIN}"):
             add("ADVERTENCIA", "seo", f"canonical no absoluto con https://{DOMAIN}: {href}")
     for og in ("og:title", "og:description", "og:image", "og:url"):
-        if og not in p.meta:
+        if og not in p.meta and not noindex:
             add("ADVERTENCIA", "seo", f"Falta {og}")
     if not p.jsonld:
-        add("ADVERTENCIA", "seo", "Sin datos estructurados JSON-LD")
+        if not noindex:
+            add("ADVERTENCIA", "seo", "Sin datos estructurados JSON-LD")
     else:
         for block in p.jsonld:
             try:

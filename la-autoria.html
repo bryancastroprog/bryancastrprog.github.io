@@ -6,6 +6,64 @@
 <meta name="description" content="La Autoría — Restaurante de cocina guatemalteca contemporánea en Huehuetenango, Guatemala. Diseño BC Arq Studio.">
 <title>La Autoría — Proyecto · BC Arq Studio</title>
 
+<link rel="canonical" href="https://bcarqstudio.com/la-autoria.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="BC Arquitectura">
+<meta property="og:url" content="https://bcarqstudio.com/la-autoria.html">
+<meta property="og:title" content="La Autoría — Proyecto · BC Arq Studio">
+<meta property="og:description" content="La Autoría — Restaurante de cocina guatemalteca contemporánea en Huehuetenango, Guatemala. Diseño BC Arq Studio.">
+<meta property="og:image" content="https://bcarqstudio.com/img/restaurante-interior-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "La Autoría",
+    "description": "La Autoría — Restaurante de cocina guatemalteca contemporánea en Huehuetenango, Guatemala. Diseño BC Arq Studio.",
+    "url": "https://bcarqstudio.com/la-autoria.html",
+    "image": "https://bcarqstudio.com/img/restaurante-interior-og.jpg",
+    "creator": {
+      "@id": "https://bcarqstudio.com/#organizacion"
+    },
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Huehuetenango, Guatemala"
+    },
+    "creativeWorkStatus": "Construido",
+    "inLanguage": "es",
+    "dateCreated": "2025"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://bcarqstudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Diseño estratégico",
+        "item": "https://bcarqstudio.com/diseno-estrategico.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "La Autoría",
+        "item": "https://bcarqstudio.com/la-autoria.html"
+      }
+    ]
+  }
+]
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -31,7 +89,8 @@ html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
 }
 
 body { font-family:var(--sans); background:var(--bg); color:var(--light); font-weight:300; line-height:1.6; overflow-x:hidden; }
-img  { display:block; max-width:100%; }
+img { display:block; max-width:100%; height:auto; }
+button.nav-toggle { background:none; border:0; padding:0; font:inherit; color:inherit; }
 a    { color:inherit; text-decoration:none; }
 
 body::after {
@@ -184,7 +243,7 @@ body::after {
       <circle cx="78" cy="190" r="15" fill="currentColor" />
     </svg>
   </a>
-  <ul class="nav-menu">
+  <ul class="nav-menu" id="navMenu">
     <li><a href="index.html#vision">Visión</a></li>
     <li><a href="index.html#ona">ONA</a></li>
     <li><a href="index.html#estudio">Estudio</a></li>
@@ -192,12 +251,12 @@ body::after {
     <li><a href="index.html#contacto">Contacto</a></li>
   </ul>
   <a href="index.html#contacto" class="nav-cta">Iniciar conversación</a>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="img/restaurante-interior.png" alt="La Autoría — Salón principal · Huehuetenango Guatemala" class="hero-img" id="heroImg">
+  <img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="La Autoría — Salón principal · Huehuetenango Guatemala" class="hero-img" fetchpriority="high" decoding="async" id="heroImg">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Restaurante · Concepto Gastronómico · Guatemala</div>
@@ -255,7 +314,7 @@ body::after {
 <!-- COCINA ABIERTA -->
 <div class="gallery-full reveal">
   <div class="gallery-hero">
-    <img src="img/cocina.png" alt="La Autoría — Cocina abierta de fuego · Miami">
+    <img src="img/cocina.webp" srcset="img/cocina-960.webp 960w, img/cocina.webp 1344w" sizes="(max-width: 900px) 100vw, 50vw" width="1344" height="768" alt="La Autoría — Cocina abierta de fuego · Huehuetenango, Guatemala" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -290,7 +349,7 @@ body::after {
 <!-- SALÓN -->
 <div class="gallery-full reveal" style="padding-top:4px;">
   <div class="gallery-hero">
-    <img src="img/restaurante-interior.png" alt="La Autoría — Salón de comensales · Wynwood Miami">
+    <img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="(max-width: 900px) 100vw, 50vw" width="1344" height="768" alt="La Autoría — Salón de comensales · Huehuetenango, Guatemala" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -382,7 +441,7 @@ body::after {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 BC Arq Studio · Build &amp; Create Studio</span>
+    <span>© 2026 BC Arq Studio · Build &amp; Create Studio</span>
     <span>Proyecto confidencial · Uso interno</span>
   </div>
 </footer>
@@ -390,6 +449,23 @@ body::after {
 <script>
 (function(){
   var nav = document.getElementById('nav');
+  // Menú móvil
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', function(){
+    var open = menu.style.display === 'flex';
+    menu.style.display = open ? 'none' : 'flex';
+    toggle.setAttribute('aria-expanded', String(!open));
+    if (!open) Object.assign(menu.style, {
+      position:'absolute', top:'100%', left:'0', right:'0',
+      flexDirection:'column', background:'rgba(10,10,10,.97)',
+      padding:'28px 32px', gap:'18px',
+      borderBottom:'.5px solid rgba(232,230,225,.08)'
+    });
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){
+    if (window.innerWidth <= 900) { menu.style.display = 'none'; toggle.setAttribute('aria-expanded', 'false'); }
+  }); });
   window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); });
 
   var heroImg = document.getElementById('heroImg');

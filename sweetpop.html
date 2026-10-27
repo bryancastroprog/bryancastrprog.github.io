@@ -6,6 +6,64 @@
 <meta name="description" content="SWEETPOP — Kiosco de dulces y golosinas de especialidad en Westfield Century City, Los Angeles. Diseño BC Arq Studio.">
 <title>SWEETPOP — Proyecto · BC Arq Studio</title>
 
+<link rel="canonical" href="https://bcarqstudio.com/sweetpop.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="BC Arquitectura">
+<meta property="og:url" content="https://bcarqstudio.com/sweetpop.html">
+<meta property="og:title" content="SWEETPOP — Proyecto · BC Arq Studio">
+<meta property="og:description" content="SWEETPOP — Kiosco de dulces y golosinas de especialidad en Westfield Century City, Los Angeles. Diseño BC Arq Studio.">
+<meta property="og:image" content="https://bcarqstudio.com/img/sweetpop-perspectiva-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "SWEETPOP",
+    "description": "SWEETPOP — Kiosco de dulces y golosinas de especialidad en Westfield Century City, Los Angeles. Diseño BC Arq Studio.",
+    "url": "https://bcarqstudio.com/sweetpop.html",
+    "image": "https://bcarqstudio.com/img/sweetpop-perspectiva-og.jpg",
+    "creator": {
+      "@id": "https://bcarqstudio.com/#organizacion"
+    },
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Westfield Century City, Los Angeles, CA"
+    },
+    "creativeWorkStatus": "Construido",
+    "inLanguage": "es",
+    "dateCreated": "2024"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://bcarqstudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Diseño estratégico",
+        "item": "https://bcarqstudio.com/diseno-estrategico.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "SWEETPOP",
+        "item": "https://bcarqstudio.com/sweetpop.html"
+      }
+    ]
+  }
+]
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -39,7 +97,8 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
 }
-img { display: block; max-width: 100%; }
+img { display:block; max-width:100%; height:auto; }
+button.nav-toggle { background:none; border:0; padding:0; font:inherit; color:inherit; }
 a   { color: inherit; text-decoration: none; }
 
 /* grain */
@@ -311,8 +370,9 @@ body::after {
   .nav-menu, .nav-cta { display:none; }
   .nav-toggle { display:flex; flex-direction:column; gap:5px; margin-left:auto; cursor:pointer; }
   .nav-toggle span { display:block; width:22px; height:.5px; background:var(--light); }
-  .hero-content { padding:0 28px 60px; }
-  .hero-stats { gap:32px; }
+  .hero-content { padding:0 28px 60px; max-width:100%; }
+  .hero-title { font-size:clamp(48px,15vw,72px); }
+  .hero-stats { gap:32px; flex-wrap:wrap; }
   .section { padding:80px 28px; }
   .gallery-full { padding:0 28px; }
   .gallery-row { grid-template-columns:1fr; }
@@ -342,7 +402,7 @@ body::after {
       <circle cx="78" cy="190" r="15" fill="currentColor" />
     </svg>
   </a>
-  <ul class="nav-menu">
+  <ul class="nav-menu" id="navMenu">
     <li><a href="index.html#vision">Visión</a></li>
     <li><a href="index.html#ona">ONA</a></li>
     <li><a href="index.html#estudio">Estudio</a></li>
@@ -350,12 +410,12 @@ body::after {
     <li><a href="index.html#contacto">Contacto</a></li>
   </ul>
   <a href="index.html#contacto" class="nav-cta">Iniciar conversación</a>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="img/sweetpop-perspectiva.png" alt="SWEETPOP Candy Boutique · Westfield Century City" class="hero-img" id="heroImg">
+  <img src="img/sweetpop-perspectiva.webp" srcset="img/sweetpop-perspectiva-960.webp 960w, img/sweetpop-perspectiva.webp 1920w" sizes="100vw" width="1920" height="1047" alt="SWEETPOP Candy Boutique · Westfield Century City" class="hero-img" fetchpriority="high" decoding="async" id="heroImg">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Retail · Diseño Comercial · USA</div>
@@ -411,7 +471,7 @@ body::after {
 <!-- GALLERY 1 — perspectiva principal -->
 <div class="gallery-full reveal">
   <div class="gallery-hero">
-    <img src="img/sweetpop-frontal.png" alt="SWEETPOP — Vista frontal">
+    <img src="img/sweetpop-frontal.webp" srcset="img/sweetpop-frontal-960.webp 960w, img/sweetpop-frontal.webp 1920w" sizes="(max-width: 900px) 100vw, 50vw" width="1920" height="1047" alt="SWEETPOP — Vista frontal" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -446,7 +506,7 @@ body::after {
 <!-- GALLERY 2 — candy variant -->
 <div class="gallery-full reveal" style="padding-top:4px;">
   <div class="gallery-hero">
-    <img src="img/sweetpop-candy.png" alt="SWEETPOP — Vista candy boutique">
+    <img src="img/sweetpop-candy.webp" srcset="img/sweetpop-candy-960.webp 960w, img/sweetpop-candy.webp 1920w" sizes="(max-width: 900px) 100vw, 50vw" width="1920" height="1047" alt="SWEETPOP — Vista candy boutique" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -481,8 +541,8 @@ body::after {
 <div class="section reveal" style="padding-top:0;">
   <div class="section-label">Planta arquitectónica</div>
   <div class="plan-grid">
-    <img src="img/sweetpop-planta.png" alt="Planta conceptual SWEETPOP — Español" class="plan-img">
-    <img src="img/sweetpop-planta-en.png" alt="Architectural floor plan SWEETPOP — English" class="plan-img">
+    <img src="img/sweetpop-planta.webp" srcset="img/sweetpop-planta-960.webp 960w, img/sweetpop-planta.webp 2560w" sizes="(max-width: 900px) 100vw, 50vw" width="2560" height="1395" alt="Planta conceptual SWEETPOP — Español" class="plan-img" loading="lazy" decoding="async">
+    <img src="img/sweetpop-planta-en.webp" srcset="img/sweetpop-planta-en-960.webp 960w, img/sweetpop-planta-en.webp 2560w" sizes="(max-width: 900px) 100vw, 50vw" width="2560" height="1396" alt="Architectural floor plan SWEETPOP — English" class="plan-img" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -547,7 +607,7 @@ body::after {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2024 BC Arq Studio · Build &amp; Create Studio</span>
+    <span>© 2026 BC Arq Studio · Build &amp; Create Studio</span>
     <span>Proyecto confidencial · Uso interno</span>
   </div>
 </footer>
@@ -556,6 +616,23 @@ body::after {
 (function(){
   // nav scroll
   var nav = document.getElementById('nav');
+  // Menú móvil
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', function(){
+    var open = menu.style.display === 'flex';
+    menu.style.display = open ? 'none' : 'flex';
+    toggle.setAttribute('aria-expanded', String(!open));
+    if (!open) Object.assign(menu.style, {
+      position:'absolute', top:'100%', left:'0', right:'0',
+      flexDirection:'column', background:'rgba(10,10,10,.97)',
+      padding:'28px 32px', gap:'18px',
+      borderBottom:'.5px solid rgba(232,230,225,.08)'
+    });
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){
+    if (window.innerWidth <= 900) { menu.style.display = 'none'; toggle.setAttribute('aria-expanded', 'false'); }
+  }); });
   window.addEventListener('scroll', function(){
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });

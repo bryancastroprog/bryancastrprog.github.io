@@ -9,7 +9,8 @@ Objetivo del sitio: **captar consultas calificadas** de empresas (diseño de esp
 - Hosting: **GitHub Pages** desde la rama `main` del repo `bryancastroprog/bryancastrprog.github.io`. Dominio propio vía `CNAME` → `bcarqstudio.com`.
 - **Todo push a `main` se publica en producción en minutos.** No hay entorno de staging.
 - Servicios externos: Google Fonts (Fraunces, Inter, Space Grotesk), Formspree (`FORMSPREE_ID = 'xbdbdlay'`, envía a info@bcarqstudio.com), Google Calendar (agenda), WhatsApp (`wa.me/50254131753`), imágenes de Unsplash en `diseno-estrategico.html`.
-- Imágenes en `img/`. Los originales PNG pesan 6–9 MB: no enlazarlos directamente en páginas nuevas (ver skill `seo-tecnico`).
+- Imágenes en `img/`. Los originales PNG (6–9 MB) se conservan como fuente pero **no se publican** (`_config.yml` los excluye): las páginas usan `<nombre>.webp` + `<nombre>-960.webp` con `srcset`, y `<nombre>-og.jpg` para Open Graph. Toda imagen nueva pasa por `optimizar_imagenes.py`.
+- Archivos SEO: `robots.txt`, `sitemap.xml` (actualizar al crear o renombrar páginas), `404.html`, `favicon.svg`.
 
 ## Páginas actuales
 

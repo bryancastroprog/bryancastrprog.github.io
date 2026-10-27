@@ -6,6 +6,64 @@
 <meta name="description" content="Aesthetica Medica — Consultorio de cirugía plástica y medicina estética de 320 m² en Zona 16, Guatemala City. Diseño BC Arq Studio.">
 <title>Aesthetica Medica — Proyecto · BC Arq Studio</title>
 
+<link rel="canonical" href="https://bcarqstudio.com/aesthetica-medica.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="BC Arquitectura">
+<meta property="og:url" content="https://bcarqstudio.com/aesthetica-medica.html">
+<meta property="og:title" content="Aesthetica Medica — Proyecto · BC Arq Studio">
+<meta property="og:description" content="Aesthetica Medica — Consultorio de cirugía plástica y medicina estética de 320 m² en Zona 16, Guatemala City. Diseño BC Arq Studio.">
+<meta property="og:image" content="https://bcarqstudio.com/img/clinica-render-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Aesthetica Medica",
+    "description": "Aesthetica Medica — Consultorio de cirugía plástica y medicina estética de 320 m² en Zona 16, Guatemala City. Diseño BC Arq Studio.",
+    "url": "https://bcarqstudio.com/aesthetica-medica.html",
+    "image": "https://bcarqstudio.com/img/clinica-render-og.jpg",
+    "creator": {
+      "@id": "https://bcarqstudio.com/#organizacion"
+    },
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Zona 16, Ciudad de Guatemala"
+    },
+    "creativeWorkStatus": "Propuesta",
+    "inLanguage": "es",
+    "dateCreated": "2025"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://bcarqstudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Diseño estratégico",
+        "item": "https://bcarqstudio.com/diseno-estrategico.html"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Aesthetica Medica",
+        "item": "https://bcarqstudio.com/aesthetica-medica.html"
+      }
+    ]
+  }
+]
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,7 +88,8 @@ html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
 }
 
 body { font-family:var(--sans); background:var(--bg); color:var(--light); font-weight:300; line-height:1.6; overflow-x:hidden; }
-img  { display:block; max-width:100%; }
+img { display:block; max-width:100%; height:auto; }
+button.nav-toggle { background:none; border:0; padding:0; font:inherit; color:inherit; }
 a    { color:inherit; text-decoration:none; }
 
 body::after {
@@ -183,7 +242,7 @@ body::after {
       <circle cx="78" cy="190" r="15" fill="currentColor" />
     </svg>
   </a>
-  <ul class="nav-menu">
+  <ul class="nav-menu" id="navMenu">
     <li><a href="index.html#vision">Visión</a></li>
     <li><a href="index.html#ona">ONA</a></li>
     <li><a href="index.html#estudio">Estudio</a></li>
@@ -191,12 +250,12 @@ body::after {
     <li><a href="index.html#contacto">Contacto</a></li>
   </ul>
   <a href="index.html#contacto" class="nav-cta">Iniciar conversación</a>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="img/clinica-render.png" alt="Aesthetica Medica — Recepción luxury Zona 16 Guatemala City" class="hero-img" id="heroImg">
+  <img src="img/clinica-render.webp" srcset="img/clinica-render-960.webp 960w, img/clinica-render.webp 1920w" sizes="100vw" width="1920" height="1047" alt="Aesthetica Medica — Recepción luxury Zona 16 Guatemala City" class="hero-img" fetchpriority="high" decoding="async" id="heroImg">
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <div class="hero-badge">Medicina Estética · Cirugía Plástica · Guatemala</div>
@@ -253,7 +312,7 @@ body::after {
 <!-- GALERÍA HERO -->
 <div class="gallery-full reveal">
   <div class="gallery-hero">
-    <img src="img/clinica-isometrico.png" alt="Aesthetica Medica — Planta isométrica con flujos de circulación">
+    <img src="img/clinica-isometrico.webp" srcset="img/clinica-isometrico-960.webp 960w, img/clinica-isometrico.webp 2560w" sizes="100vw" width="2560" height="1396" alt="Aesthetica Medica — Planta isométrica con flujos de circulación" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -317,7 +376,7 @@ body::after {
 <div class="section reveal" style="padding-top:0;">
   <div class="section-label">Planta general y esquema de circulación</div>
   <div class="plan-full">
-    <img src="img/clinica-planta.png" alt="Planta general Aesthetica Medica con esquema de circulación">
+    <img src="img/clinica-planta.webp" srcset="img/clinica-planta-960.webp 960w, img/clinica-planta.webp 2560w" sizes="100vw" width="2560" height="1396" alt="Planta general Aesthetica Medica con esquema de circulación" loading="lazy" decoding="async">
   </div>
 </div>
 
@@ -380,7 +439,7 @@ body::after {
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 BC Arq Studio · Build &amp; Create Studio</span>
+    <span>© 2026 BC Arq Studio · Build &amp; Create Studio</span>
     <span>Propuesta de diseño · Zona 16, Guatemala City</span>
   </div>
 </footer>
@@ -388,6 +447,23 @@ body::after {
 <script>
 (function(){
   var nav = document.getElementById('nav');
+  // Menú móvil
+  var toggle = document.getElementById('navToggle');
+  var menu = document.getElementById('navMenu');
+  toggle.addEventListener('click', function(){
+    var open = menu.style.display === 'flex';
+    menu.style.display = open ? 'none' : 'flex';
+    toggle.setAttribute('aria-expanded', String(!open));
+    if (!open) Object.assign(menu.style, {
+      position:'absolute', top:'100%', left:'0', right:'0',
+      flexDirection:'column', background:'rgba(10,10,10,.97)',
+      padding:'28px 32px', gap:'18px',
+      borderBottom:'.5px solid rgba(232,230,225,.08)'
+    });
+  });
+  menu.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){
+    if (window.innerWidth <= 900) { menu.style.display = 'none'; toggle.setAttribute('aria-expanded', 'false'); }
+  }); });
   window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); });
   var heroImg = document.getElementById('heroImg');
   heroImg.addEventListener('load', function(){ this.classList.add('loaded'); });

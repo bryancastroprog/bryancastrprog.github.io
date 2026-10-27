@@ -5,6 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="BC Arquitectura. Estudio de arquitectura, desarrollo inmobiliario e inversión. Del terreno al retorno.">
 <meta name="theme-color" content="#0a0a0a">
+<link rel="canonical" href="https://bcarqstudio.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="BC Arquitectura">
+<meta property="og:url" content="https://bcarqstudio.com/">
+<meta property="og:title" content="BC Arquitectura — Del terreno al retorno">
+<meta property="og:description" content="BC Arquitectura. Estudio de arquitectura, desarrollo inmobiliario e inversión. Del terreno al retorno.">
+<meta property="og:image" content="https://bcarqstudio.com/img/ona-fachada-atardecer-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://bcarqstudio.com/#organizacion",
+  "name": "BC Arquitectura",
+  "alternateName": "BC Arq Studio",
+  "description": "BC Arquitectura. Estudio de arquitectura, desarrollo inmobiliario e inversión. Del terreno al retorno.",
+  "url": "https://bcarqstudio.com/",
+  "logo": "https://bcarqstudio.com/favicon.svg",
+  "image": "https://bcarqstudio.com/img/ona-fachada-atardecer-og.jpg",
+  "email": "info@bcarqstudio.com",
+  "telephone": "+502 5413 1753",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad de Guatemala",
+    "addressCountry": "GT"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Guatemala"
+  },
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Bryan Castro",
+    "jobTitle": "Arquitecto y desarrollador inmobiliario"
+  },
+  "knowsAbout": [
+    "Arquitectura",
+    "Desarrollo inmobiliario",
+    "Estructuración de inversión inmobiliaria"
+  ]
+}
+</script>
 <title>BC Arquitectura — Del terreno al retorno</title>
 
 <!-- ============ FUENTES (Fraunces serif editorial + Inter sans) ============ -->
@@ -490,7 +537,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .studio-photo-img {
   aspect-ratio: 4/5; background: #d8d4cb;
-  background-image: url('bryan-castro.jpg');
+  background-image: url('img/bryan-castro.jpg');
   background-size: cover; background-position: center top;
   position: relative; overflow: hidden;
 }
@@ -939,7 +986,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .nav { padding: 16px 32px; }
   .nav.scrolled { padding: 12px 32px; }
   .nav-menu { display: none; }
-  .nav-toggle { display: flex; }
+  .nav-toggle { display: flex; margin-left: auto; }
   .nav-cta { display: none; }
 
   .section { padding: 100px 32px; }
@@ -1037,7 +1084,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <circle cx="78" cy="190" r="15" fill="currentColor" />
     </svg>
   </a>
-  <ul class="nav-menu">
+  <ul class="nav-menu" id="navMenu">
     <li><a href="#vision">Visión</a></li>
     <li><a href="#ona">ONA</a></li>
     <li><a href="#estudio">Estudio</a></li>
@@ -1047,9 +1094,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <li><a href="#contacto">Contacto</a></li>
   </ul>
   <a href="#contacto" class="nav-cta">Iniciar conversación</a>
-  <div class="nav-toggle" id="navToggle">
-    <span></span><span></span><span></span>
-  </div>
+  <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
 </nav>
 
 <!-- ============================================================
@@ -1256,39 +1301,39 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     </div>
     <div class="gallery-grid">
       <div class="gallery-item gallery-item-1">
-        <img src="ona-rooftop-pergolas.jpg" alt="ONA rooftop pergolas atardecer" loading="lazy" onerror="this.onerror=null;this.src='img/ona-rooftop-pergolas.jpg';">
+        <img src="img/ona-rooftop-pergolas.jpg" alt="ONA rooftop pergolas atardecer" width="1365" height="768" loading="lazy" decoding="async">
         <div class="gallery-caption">Rooftop · Pérgolas iluminadas</div>
       </div>
       <div class="gallery-item gallery-item-2">
-        <img src="ona-fachada-organica.jpg" alt="Fachada orgánica vista contrapicada" loading="lazy" onerror="this.onerror=null;this.src='img/ona-fachada-organica.jpg';">
+        <img src="img/ona-fachada-organica.jpg" alt="Fachada orgánica vista contrapicada" width="1365" height="768" loading="lazy" decoding="async">
         <div class="gallery-caption">Fachada · Detalle vertical</div>
       </div>
       <div class="gallery-item gallery-item-3">
-        <img src="ona-fachada-atardecer.jpg" alt="Torre ONA atardecer" loading="lazy" onerror="this.onerror=null;this.src='img/ona-fachada-atardecer.jpg';">
+        <img src="img/ona-fachada-atardecer.jpg" alt="Torre ONA atardecer" width="1365" height="768" loading="lazy" decoding="async">
         <div class="gallery-caption">Volumetría · Atardecer</div>
       </div>
       <div class="gallery-item gallery-item-4">
-        <img src="ona-lobby.jpg" alt="Lobby principal ONA" loading="lazy" onerror="this.onerror=null;this.src='img/ona-lobby.jpg';">
+        <img src="img/ona-lobby.jpg" alt="Lobby principal ONA" width="1365" height="768" loading="lazy" decoding="async">
         <div class="gallery-caption">Acceso principal</div>
       </div>
       <div class="gallery-item gallery-item-5">
-        <img src="ona-rooftop-yoga.jpg" alt="Rooftop yoga deck" loading="lazy" onerror="this.onerror=null;this.src='img/ona-rooftop-yoga.jpg';">
+        <img src="img/ona-rooftop-yoga.jpg" alt="Rooftop yoga deck" width="1365" height="768" loading="lazy" decoding="async">
         <div class="gallery-caption">Amenidad · Yoga deck</div>
       </div>
       <div class="gallery-item gallery-item-6">
-        <img src="ona-planta-tipo.jpg" alt="Planta arquitectónica tipo" loading="lazy" onerror="this.onerror=null;this.src='img/ona-planta-tipo.jpg';">
+        <img src="img/ona-planta-tipo.jpg" alt="Planta arquitectónica tipo" width="1266" height="832" loading="lazy" decoding="async">
         <div class="gallery-caption">Planta tipo</div>
       </div>
       <div class="gallery-item gallery-item-7">
-        <img src="ona-planta-amplia.jpg" alt="Planta arquitectónica amplia" loading="lazy" onerror="this.onerror=null;this.src='img/ona-planta-amplia.jpg';">
+        <img src="img/ona-planta-amplia.jpg" alt="Planta arquitectónica amplia" width="1024" height="1039" loading="lazy" decoding="async">
         <div class="gallery-caption">Planta · Distribución amplia</div>
       </div>
       <div class="gallery-item gallery-item-8">
-        <img src="ona-planta-jardin.jpg" alt="Planta con jardín integrado" loading="lazy" onerror="this.onerror=null;this.src='img/ona-planta-jardin.jpg';">
+        <img src="img/ona-planta-jardin.jpg" alt="Planta con jardín integrado" width="1076" height="976" loading="lazy" decoding="async">
         <div class="gallery-caption">Planta · Jardín integrado</div>
       </div>
       <div class="gallery-item gallery-item-9">
-        <img src="ona-fachada-detalle.jpg" alt="Detalle arquitectónico fachada" loading="lazy" onerror="this.onerror=null;this.src='img/ona-fachada-detalle.jpg';">
+        <img src="img/ona-fachada-detalle.jpg" alt="Detalle arquitectónico fachada" width="1365" height="768" loading="lazy" decoding="async">
         <div class="gallery-caption">Carácter arquitectónico</div>
       </div>
     </div>
@@ -1494,7 +1539,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
       <div class="contact-info">
         <div class="contact-info-item">
           <div class="contact-info-label">Email</div>
-          <div class="contact-info-value">info@bcarqstudio.com</div>
+          <div class="contact-info-value"><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></div>
         </div>
         <div class="contact-info-item">
           <div class="contact-info-label">Web</div>
@@ -1611,7 +1656,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     <div>
       <div class="footer-col-title">Contacto</div>
       <ul class="footer-col-list">
-        <li>info@bcarqstudio.com</li>
+        <li><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></li>
         <li>bcarqstudio.com</li>
         <li><a href="#contacto" class="accent">Iniciar conversación →</a></li>
       </ul>
@@ -1655,7 +1700,9 @@ window.addEventListener('scroll', () => {
 const navToggle = document.getElementById('navToggle');
 const navMenu = document.querySelector('.nav-menu');
 navToggle.addEventListener('click', () => {
-  if (navMenu.style.display === 'flex') {
+  const open = navMenu.style.display === 'flex';
+  navToggle.setAttribute('aria-expanded', String(!open));
+  if (open) {
     navMenu.style.display = 'none';
   } else {
     navMenu.style.display = 'flex';
@@ -1676,6 +1723,7 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
   link.addEventListener('click', () => {
     if (window.innerWidth <= 1024) {
       navMenu.style.display = 'none';
+      navToggle.setAttribute('aria-expanded', 'false');
     }
   });
 });
@@ -1757,18 +1805,6 @@ form.addEventListener('submit', async function(e) {
   }
 });
 
-
-// ============================================================
-// FALLBACK RUTAS IMAGEN BRYAN: prueba raíz y luego /img/
-// ============================================================
-(function() {
-  const studioPhoto = document.querySelector('.studio-photo-img');
-  if (!studioPhoto) return;
-  const test = new Image();
-  test.onload = function() { studioPhoto.style.backgroundImage = "url('bryan-castro.jpg')"; };
-  test.onerror = function() { studioPhoto.style.backgroundImage = "url('img/bryan-castro.jpg')"; };
-  test.src = 'bryan-castro.jpg';
-})();
 
 </script>
 
