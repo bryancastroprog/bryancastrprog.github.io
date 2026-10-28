@@ -360,7 +360,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
   .section { padding: 88px 0; }
   .brand span { display: none; }
-  .hero-body { padding-top: 120px; padding-bottom: 32px; }
+  .hero-body { padding-top: 120px; padding-bottom: 40px; }
+  /* En móvil la sección Proyectos sigue al hero: el índice sobra y choca con WhatsApp */
+  #heroIndex, #heroOpen { display: none; }
+  .hero::after { background: linear-gradient(180deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.6) 30%, rgba(14,13,11,0.62) 60%, rgba(14,13,11,0.92) 100%); }
   .hero-sub { font-size: 16px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .work { grid-template-columns: 1fr; gap: 36px; }

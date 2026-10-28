@@ -319,7 +319,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
   .section { padding: 88px 0; }
   .brand span { display: none; }
-  .hero-body { padding-top: 120px; padding-bottom: 32px; }
+  .hero-body { padding-top: 120px; padding-bottom: 40px; }
+  /* En móvil la sección Proyectos sigue al hero: el índice sobra y choca con WhatsApp */
+  #heroIndex, #heroOpen { display: none; }
+  .hero::after { background: linear-gradient(180deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.6) 30%, rgba(14,13,11,0.62) 60%, rgba(14,13,11,0.92) 100%); }
   .hero-sub { font-size: 16px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .work { grid-template-columns: 1fr; gap: 36px; }
@@ -675,9 +678,9 @@ def testimonio(link=True):
 </section>"""
 
 HERO_PROJECTS = [
+    ('edificio-w-aerea', 'webp', 1920, 1080, 'Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 'Edificio W · San Pedro Sula', 'En aprobación', 'edificio-w.html'),
     ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · 3 sedes', 'Construido', 'kishi-books.html'),
     ('navante-lampara', 'webp', 1920, 1407, 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 'Navante · Oficina', 'Construido', 'navante.html'),
-    ('edificio-w-aerea', 'webp', 1920, 1080, 'Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 'Edificio W · San Pedro Sula', 'En aprobación', 'edificio-w.html'),
     ('ona-fachada-atardecer', 'jpg', 1365, 768, 'Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala', 'ONA · Zona 15', 'En desarrollo', '#ona'),
     ('restaurante-interior', 'webp', 1344, 768, 'Salón del restaurante La Autoría con cocina de fuego, Huehuetenango', 'La Autoría · Salón', 'Diseño completado', 'la-autoria.html'),
 ]
@@ -700,7 +703,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
   <div class="hero-body">
     <div class="wrap hero-grid">
       <div>
-        <h1 class="hero-kicker">Arquitectura y prefactibilidad inmobiliaria en Guatemala</h1>
+        <h1 class="hero-kicker">Arquitectura, diseño comercial y prefactibilidad en Guatemala y Honduras</h1>
         <p class="hero-slogan">Del terreno <span>al retorno.</span></p>
         <p class="hero-sub">Te decimos qué puedes construir en tu terreno y si los números cierran. Después lo diseñamos y lo desarrollamos contigo.</p>
         <div class="hero-actions">
@@ -712,7 +715,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <ol class="hero-index" id="heroIndex" aria-label="Elegir proyecto">
           {hero_btns}
         </ol>
-        <a href="#ona" class="hero-open" id="heroOpen">Ver proyecto →</a>
+        <a href="edificio-w.html" class="hero-open" id="heroOpen">Ver proyecto →</a>
       </div>
     </div>
   </div>
@@ -731,8 +734,13 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       <p class="sec-lead">Mobiliario comercial, oficinas, comercio, uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
-      <a href="kishi-books.html" class="work-card full">
-        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='100vw')}</div>
+      <a href="edificio-w.html" class="work-card full">
+        <div class="work-img">{img('edificio-w-aerea', 'Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras', 1920, 1080, sizes='100vw')}</div>
+        <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
+        <p class="work-info">Uso mixto · 8 apartamentos + 2 locales · 591.86 m² · San Pedro Sula, Honduras</p>
+      </a>
+      <a href="kishi-books.html" class="work-card half">
+        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido · 3 sedes</span></div>
         <p class="work-info">Mobiliario comercial · Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula · Diseño y ejecución · 2024–2026</p>
       </a>
@@ -745,11 +753,6 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Petshop GT</span><span class="status">Diseño aprobado</span></div>
         <p class="work-info">Tienda de mascotas · 70 m² · Vista Hermosa, Zona 15</p>
-      </a>
-      <a href="edificio-w.html" class="work-card half">
-        <div class="work-img">{img('edificio-w-aerea', 'Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
-        <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
-        <p class="work-info">Uso mixto · 8 apartamentos + 2 locales · 591.86 m² · San Pedro Sula, Honduras</p>
       </a>
       <a href="#ona" class="work-card half">
         <div class="work-img">{img('ona-fachada-atardecer', 'Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala', 1365, 768, webp=False)}</div>
@@ -942,7 +945,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="studio-bio">
           <p>Bryan Castro es arquitecto y desarrollador inmobiliario. Fundó {BRAND} con una convicción simple: la arquitectura sin lectura financiera es decoración cara, y el desarrollo inmobiliario sin diseño estratégico es capital subutilizado.</p>
           <p>El estudio opera bajo esa premisa. Cada proyecto se origina, diseña y desarrolla con un criterio único: maximizar el valor del activo desde el primer trazo.</p>
-          <p>ONA es la primera materialización de ese criterio. Otros proyectos están en camino.</p>
+          <p>Ese criterio ya está construido: tres kioscos para Kishi Books, la oficina de Navante y proyectos en desarrollo en Guatemala y Honduras, como ONA y Edificio W.</p>
         </div>
         <dl class="studio-meta">
           <div><dt class="mono">Disciplinas</dt><dd>Arquitectura · Desarrollo inmobiliario · Estructuración de inversión</dd></div>
