@@ -419,7 +419,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
      ============================================================ -->
 <section class="hero" id="inicio" aria-label="Proyectos destacados">
   <div class="hero-media" id="heroMedia">
-    <img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Edificio W, uso mixto en esquina, San Pedro Sula, Honduras" class="on" fetchpriority="high" decoding="async">
+    <img src="img/kishi-books-escalera.webp" srcset="img/kishi-books-escalera-960.webp 960w, img/kishi-books-escalera.webp 1920w" sizes="100vw" width="1920" height="1442" alt="Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala" class="on" fetchpriority="high" decoding="async">
+    <img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Edificio W, uso mixto en esquina, San Pedro Sula, Honduras" loading="lazy" decoding="async">
     <img src="img/ona-fachada-atardecer.jpg" width="1365" height="768" alt="Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala" loading="lazy" decoding="async">
     <img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="Salón del restaurante La Autoría con cocina de fuego, Huehuetenango" loading="lazy" decoding="async">
   </div>
@@ -436,9 +437,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       </div>
       <div>
         <ol class="hero-index" id="heroIndex" aria-label="Elegir proyecto">
-          <li><button type="button" aria-pressed="true" data-i="0" data-href="edificio-w.html"><span class="n">01</span><span class="name">Edificio W · San Pedro Sula</span><span class="st">En aprobación</span></button></li>
-          <li><button type="button" aria-pressed="false" data-i="1" data-href="#ona"><span class="n">02</span><span class="name">ONA · Zona 15</span><span class="st">En desarrollo</span></button></li>
-          <li><button type="button" aria-pressed="false" data-i="2" data-href="la-autoria.html"><span class="n">03</span><span class="name">La Autoría · Salón</span><span class="st">Diseño completado</span></button></li>
+          <li><button type="button" aria-pressed="true" data-i="0" data-href="kishi-books.html"><span class="n">01</span><span class="name">Kishi Books · Peri Roosevelt</span><span class="st">Construido</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="1" data-href="edificio-w.html"><span class="n">02</span><span class="name">Edificio W · San Pedro Sula</span><span class="st">En aprobación</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="2" data-href="#ona"><span class="n">03</span><span class="name">ONA · Zona 15</span><span class="st">En desarrollo</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="3" data-href="la-autoria.html"><span class="n">04</span><span class="name">La Autoría · Salón</span><span class="st">Diseño completado</span></button></li>
         </ol>
         <a href="#ona" class="hero-open" id="heroOpen">Ver proyecto →</a>
       </div>
@@ -453,12 +455,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="mono sec-label">Proyectos · 03</span>
+        <span class="mono sec-label">Proyectos · 04</span>
         <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
       </div>
-      <p class="sec-lead">Uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Mobiliario comercial, uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
+      <a href="kishi-books.html" class="work-card half">
+        <div class="work-img"><img src="img/kishi-books-escalera.webp" srcset="img/kishi-books-escalera-960.webp 960w, img/kishi-books-escalera.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Kiosco de madera curvada de Kishi Books, Peri Roosevelt" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
+        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución</p>
+      </a>
       <a href="edificio-w.html" class="work-card half">
         <div class="work-img"><img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1080" alt="Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras" loading="lazy" decoding="async"></div>
         <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
@@ -469,7 +476,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <div class="work-meta"><span class="work-name">ONA</span><span class="status">En fase de desarrollo</span></div>
         <p class="work-info">Residencial vertical · 18,792 m² · Zona 15, Vista Hermosa I</p>
       </a>
-      <a href="la-autoria.html" class="work-card full">
+      <a href="la-autoria.html" class="work-card half">
         <div class="work-img"><img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="Salón del restaurante La Autoría, Huehuetenango" loading="lazy" decoding="async"></div>
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
@@ -791,6 +798,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <h4 class="mono">Proyectos</h4>
         <ul>
           <li><a href="#ona">ONA</a></li>
+          <li><a href="kishi-books.html">Kishi Books</a></li>
           <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>

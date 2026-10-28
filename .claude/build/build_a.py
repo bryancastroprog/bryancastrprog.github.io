@@ -427,6 +427,7 @@ def footer(p):
         <h4 class="mono">Proyectos</h4>
         <ul>
           <li><a href="{p}#ona">ONA</a></li>
+          <li><a href="kishi-books.html">Kishi Books</a></li>
           <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>
@@ -639,6 +640,7 @@ home_ld = {
     "knowsAbout": ["Arquitectura", "Prefactibilidad inmobiliaria", "Desarrollo inmobiliario", "Diseño interior", "Remodelaciones", "Mobiliario a la medida", "Estructuración de inversión inmobiliaria"]}
 
 HERO_PROJECTS = [
+    ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · Peri Roosevelt', 'Construido', 'kishi-books.html'),
     ('edificio-w-aerea', 'webp', 1920, 1080, 'Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 'Edificio W · San Pedro Sula', 'En aprobación', 'edificio-w.html'),
     ('ona-fachada-atardecer', 'jpg', 1365, 768, 'Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala', 'ONA · Zona 15', 'En desarrollo', '#ona'),
     ('restaurante-interior', 'webp', 1344, 768, 'Salón del restaurante La Autoría con cocina de fuego, Huehuetenango', 'La Autoría · Salón', 'Diseño completado', 'la-autoria.html'),
@@ -687,12 +689,17 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="mono sec-label">Proyectos · 03</span>
+        <span class="mono sec-label">Proyectos · 04</span>
         <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
       </div>
-      <p class="sec-lead">Uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Mobiliario comercial, uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
+      <a href="kishi-books.html" class="work-card half">
+        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
+        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución</p>
+      </a>
       <a href="edificio-w.html" class="work-card half">
         <div class="work-img">{img('edificio-w-aerea', 'Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
@@ -703,7 +710,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="work-meta"><span class="work-name">ONA</span><span class="status">En fase de desarrollo</span></div>
         <p class="work-info">Residencial vertical · 18,792 m² · Zona 15, Vista Hermosa I</p>
       </a>
-      <a href="la-autoria.html" class="work-card full">
+      <a href="la-autoria.html" class="work-card half">
         <div class="work-img">{img('restaurante-interior', 'Salón del restaurante La Autoría, Huehuetenango', 1344, 768, sizes='100vw')}</div>
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
@@ -1441,4 +1448,4 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
 WPAGE = WPAGE.replace('</style>', W_CSS + '</style>', 1)
 open('edificio-w.html', 'w', encoding='utf-8').write(WPAGE)
 exec(open(os.path.join('.claude', 'build', 'paginas_a.py'), encoding='utf-8').read())
-print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE))
+print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE))

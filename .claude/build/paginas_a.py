@@ -177,9 +177,14 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
         <span class="mono sec-label">Proyectos</span>
         <h2 class="sec-title">Trabajo <span>relacionado.</span></h2>
       </div>
-      <p class="sec-lead">Gastronomía y comercio a nivel de calle. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Mobiliario comercial, gastronomía y comercio a nivel de calle. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
+      <a href="kishi-books.html" class="work-card full">
+        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='100vw')}</div>
+        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
+        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución · Peri Roosevelt</p>
+      </a>
       <a href="la-autoria.html" class="work-card half">
         <div class="work-img">{img('restaurante-interior', 'Salón del restaurante La Autoría, Huehuetenango', 1344, 768, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
@@ -392,3 +397,138 @@ LPAGE = head(L_TITLE, L_DESC, L_URL, 'img/restaurante-interior-og.jpg', l_ld) + 
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 LPAGE = LPAGE.replace('</style>', W_CSS + PAGE_A_CSS + '</style>', 1)
 open('la-autoria.html', 'w', encoding='utf-8').write(LPAGE)
+
+# ================================================================== KISHI BOOKS (mobiliario construido)
+K_URL = SITE + 'kishi-books.html'
+K_TITLE = 'Kishi Books, kiosco de madera curvada | Build &amp; Create Studio'
+K_DESC = 'Kishi Books: kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.'
+k_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kishi Books · Kiosco de madera curvada", "description": K_DESC.replace('&amp;', '&'),
+     "url": K_URL, "image": SITE + "img/kishi-books-escalera-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Construido", "contentLocation": {"@type": "Place", "name": "Peri Roosevelt, Ciudad de Guatemala"}},
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE},
+        {"@type": "ListItem", "position": 2, "name": "Proyectos", "item": SITE + "#proyectos"},
+        {"@type": "ListItem", "position": 3, "name": "Kishi Books", "item": K_URL}]}]
+
+def kfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
+    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1442, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
+
+KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books junto a la escalera del atrio, Peri Roosevelt', 1920, 1442, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Mobiliario comercial · Librería · Peri Roosevelt, Ciudad de Guatemala</p>
+        <h1 class="hero-slogan">Kishi <span>Books.</span></h1>
+        <p class="hero-sub">Kiosco de madera curvada de estilo natural: un mueble que acompaña la escalera del atrio, exhibe libros por ambos lados y convierte los peldaños en lugares para leer.</p>
+        <div class="hero-actions">
+          <a href="diseno-estrategico.html?tipo=mobiliario%20estrat%C3%A9gico#contacto-d" class="btn btn-light">Diseñemos tu mobiliario →</a>
+          <a href="#galeria" class="link">Ver fotografías</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Construido</dd></div>
+          <div><dt>Medidas</dt><dd>1.40 × 9 m</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño y ejecución</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIFRAS Y CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Ancho</dt><dd>1.40<small> m</small></dd></div>
+      <div><dt class="mono">Largo</dt><dd>9<small> m</small></dd></div>
+      <div><dt class="mono">Alcance</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Diseño y ejecución</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">Un mueble que <b>sigue la escalera.</b></h2>
+      <div class="thesis-text">
+        <p>El kiosco ocupa el borde de la escalera del atrio y la convierte en parte del recorrido de la librería. La madera curvada sube con los peldaños y se abre en asientos con cojines para quedarse a leer.</p>
+        <p>Una línea de luz continua recorre el perfil del mueble y lo hace visible desde todo el centro comercial. Las estanterías exhiben libros hacia el pasillo y hacia el recorrido interior, con una sección en verde que marca su propia zona.</p>
+        <p><strong>Diseño y ejecución de {BRAND}: del concepto a la pieza instalada.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (fotografías del mueble construido)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Fotografías del proyecto construido</span>
+        <h2 class="sec-title">Madera curvada, <span>luz continua.</span></h2>
+      </div>
+      <p class="sec-lead">Un kiosco de 9 metros resuelto como una sola pieza: estructura, exhibición, asiento e iluminación en el mismo mueble.</p>
+    </div>
+    <div class="gal">
+      {kfig('kishi-books-vista-general', 'Vista general del kiosco Kishi Books en el atrio de Peri Roosevelt', 'Vista general', 'Kiosco junto a la escalera', 'w12', '100vw')}
+      {kfig('kishi-books-escalera-interior', 'Recorrido interior del kiosco con asiento de lectura y estantería verde', 'Recorrido interior', 'Asiento de lectura y estantería', 'w7')}
+      {kfig('kishi-books-pasillo', 'Pasillo central entre los dos muebles curvos de Kishi Books', 'Pasillo central', 'Exhibición por ambos lados', 'w5')}
+      {kfig('kishi-books-baranda', 'Kiosco Kishi Books con iluminación lineal junto a la baranda del atrio', 'Línea de luz', 'Perfil iluminado', 'w5')}
+      {kfig('kishi-books-conjunto', 'Kiosco Kishi Books con la escalera y los asientos de lectura', 'Conjunto', 'Escalera, asientos y exhibición', 'w7')}
+    </div>
+    <p class="gal-note">Fotografías del mueble construido e instalado.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Decisiones de diseño</span>
+        <h2 class="sec-title">Una pieza, <span>cuatro funciones.</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>Acompaña el desnivel.</b> La madera sigue la escalera y aprovecha los peldaños como asientos de lectura.</span></li>
+      <li><span class="n">02</span><span><b>Exhibe por ambos lados.</b> Estanterías hacia el pasillo del centro comercial y hacia el recorrido interior del kiosco.</span></li>
+      <li><span class="n">03</span><span><b>Luz como dibujo.</b> Una línea de luz continua sigue el perfil curvo y convierte el mueble en una señal visible a distancia.</span></li>
+      <li><span class="n">04</span><span><b>Material natural.</b> Madera curvada de estilo natural como lenguaje principal, con zonas de color para ordenar la exhibición.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Proyecto</dt><dd>Kishi Books</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Tipología</dt><dd>Kiosco de librería · Mobiliario comercial</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Ubicación</dt><dd>Peri Roosevelt, Ciudad de Guatemala</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Medidas</dt><dd>1.40 × 9 m</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Material</dt><dd>Madera curvada, estilo natural</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Alcance de {BRAND}</dt><dd>Diseño y ejecución</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Construido</dd></div>
+    </dl>
+    <div class="cta-row">
+      <a href="diseno-estrategico.html?tipo=mobiliario%20estrat%C3%A9gico#contacto-d" class="btn btn-dark">Diseñemos tu mobiliario →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+KPAGE = KPAGE.replace('</style>', W_CSS + PAGE_A_CSS + '</style>', 1)
+open('kishi-books.html', 'w', encoding='utf-8').write(KPAGE)

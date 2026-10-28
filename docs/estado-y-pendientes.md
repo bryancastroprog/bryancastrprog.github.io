@@ -12,7 +12,7 @@ Producción (`main` → bcarqstudio.com): **sin cambios**. Nada se ha publicado.
 | 3 | `fase-3-conversion` | Página de prefactibilidad, formularios calificados, WhatsApp flotante |
 | 4 | `fase-4-direccion-a` | Dirección visual A (Obra primero) en home y prefactibilidad, home en 7 bloques, marca **Build & Create Studio**, radio de imagen 10 px, etiqueta «Diseño completado» |
 
-Portafolio confirmado por el cliente (29-oct): **Edificio W** (San Pedro Sula, Honduras · Anteproyecto en aprobación · ficha `edificio-w.html` con datos del PDF del cliente), **ONA** (En fase de desarrollo) y **La Autoría** (Diseño completado). **Retirados a pedido del cliente**: Barnes & Noble Guatemala, SweetPop y Aesthetica Medica (este último, proyecto y cliente ficticios). Sus URLs (`libreria-cayala.html`, `sweetpop.html`, `aesthetica-medica.html`) son páginas puente (noindex, redirigen a `index.html#proyectos`). Detalle Aesthetica Medica: proyecto y cliente ficticios; `aesthetica-medica.html` es página puente (noindex, redirige a `index.html#proyectos`); imágenes `img/clinica-*` conservadas pero sin uso. Ningún proyecto está marcado como construido. El cliente tiene proyectos nuevos por incorporar.
+Portafolio confirmado por el cliente (29-oct): **Edificio W** (San Pedro Sula, Honduras · Anteproyecto en aprobación · ficha `edificio-w.html` con datos del PDF del cliente), **ONA** (En fase de desarrollo) y **La Autoría** (Diseño completado). **Retirados a pedido del cliente**: Barnes & Noble Guatemala, SweetPop y Aesthetica Medica (este último, proyecto y cliente ficticios). Sus URLs (`libreria-cayala.html`, `sweetpop.html`, `aesthetica-medica.html`) son páginas puente (noindex, redirigen a `index.html#proyectos`). Detalle Aesthetica Medica: proyecto y cliente ficticios; `aesthetica-medica.html` es página puente (noindex, redirige a `index.html#proyectos`); imágenes `img/clinica-*` conservadas pero sin uso. **Kishi Books** (28-oct): primer proyecto **Construido** — kiosco de librería en madera curvada, 1.40 × 9 m, Peri Roosevelt, diseño y ejecución; ficha `kishi-books.html` con 6 fotografías reales.
 
 Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79hHi
 
@@ -22,6 +22,7 @@ Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79
 
 1. Diagnóstico de terreno: plazo, precio o «desde Q…», si se acredita al anteproyecto, cobertura geográfica, alcance de los 6 entregables.
 3–5. Resuelto en el rediseño (30-oct): Diseño para negocios ya no usa fotos de stock como proyectos ni las cifras sin fuente («15+ años», «+30 %», «15–40 %»); La Autoría ya no muestra «Proyecto confidencial · Uso interno». Si alguna cifra tiene fuente, se puede volver a incluir.
+5. Kishi Books: año de ejecución y confirmación de que se puede nombrar la marca. Testimonio del cliente si es posible.
 6. Aviso legal de inversión en ONA: validar con abogado.
 8. Opcional, alto impacto: 2–3 testimonios reales, perfiles reales de LinkedIn/Instagram, número de colegiado.
 
