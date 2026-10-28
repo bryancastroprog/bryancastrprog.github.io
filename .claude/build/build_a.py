@@ -1080,7 +1080,7 @@ PREF = head(P_TITLE, P_DESC, P_URL, 'img/ona-fachada-atardecer-og.jpg', p_ld) + 
         <span class="mono sec-label">Entregables</span>
         <h2 class="sec-title">Qué <span>recibes.</span></h2>
       </div>
-      <p class="sec-lead">Un informe con lo que necesitas para decidir, y una reunión para revisarlo juntos. {PEND('confirmar el alcance de los 6 entregables')}</p>
+      <p class="sec-lead">Un informe con lo que necesitas para decidir, y una reunión para revisarlo juntos.</p>
     </div>
     <div class="routes routes-6">
       <article class="route"><span class="mono route-who">01</span><h3 class="route-title">Normativa aplicable</h3><p class="route-text">Usos permitidos, alturas, retiros e índices de edificabilidad que aplican al terreno según el plan de ordenamiento municipal.</p></article>
@@ -1101,10 +1101,10 @@ PREF = head(P_TITLE, P_DESC, P_URL, 'img/ona-fachada-atardecer-og.jpg', p_ld) + 
     <div>
       <span class="mono sec-label">Condiciones</span>
       <dl class="spec" style="border-color:var(--line-light)">
-        <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Plazo de entrega</dt><dd>{PEND('días hábiles')}</dd></div>
-        <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Inversión</dt><dd>{PEND('precio o «desde Q…»')}</dd></div>
+        <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Plazo de entrega</dt><dd>Según la complejidad del terreno</dd></div>
+        <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Inversión</dt><dd>Cotización según terreno</dd></div>
         <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Formato</dt><dd>Informe + reunión de resultados</dd></div>
-        <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Si continúas con el diseño</dt><dd>{PEND('¿se acredita al anteproyecto?')}</dd></div>
+        <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Si continúas con el diseño</dt><dd>Se descuenta del anteproyecto</dd></div>
         <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Primera llamada</dt><dd>30 min · Sin costo</dd></div>
       </dl>
     </div>
@@ -1187,8 +1187,8 @@ PREF = head(P_TITLE, P_DESC, P_URL, 'img/ona-fachada-atardecer-og.jpg', p_ld) + 
       <details><summary>¿Necesito tener el terreno comprado?</summary><p>No. El diagnóstico también sirve para evaluar un terreno antes de comprarlo, cuando la decisión todavía tiene marcha atrás.</p></details>
       <details><summary>¿Qué información necesito para empezar?</summary><p>La ubicación exacta, las medidas o un plano del terreno y fotografías del sitio. Si tienes escritura o plano de registro, mejor.</p></details>
       <details><summary>¿Qué pasa si el resultado es negativo?</summary><p>Te lo decimos. Es mejor saberlo ahora que después de pagar diseño, trámites o el terreno.</p></details>
-      <details><summary>¿Trabajan fuera de Ciudad de Guatemala?</summary><p>{PEND('confirmar cobertura: departamentos o país completo')}</p></details>
-      <details><summary>¿El diagnóstico se descuenta si contrato el diseño?</summary><p>{PEND('confirmar política comercial')}</p></details>
+      <details><summary>¿Trabajan fuera de Ciudad de Guatemala?</summary><p>Sí. Atendemos proyectos en Guatemala y en otros países, como Edificio W en San Pedro Sula, Honduras. El análisis parte de la información del terreno y de la normativa local.</p></details>
+      <details><summary>¿El diagnóstico se descuenta si contrato el diseño?</summary><p>Sí. Si contratas el anteproyecto con nosotros, lo que pagaste por el diagnóstico se descuenta del diseño.</p></details>
     </div>
   </div>
 </section>

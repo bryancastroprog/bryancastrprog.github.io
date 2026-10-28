@@ -20,7 +20,7 @@ Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79
 
 0. Edificio W, cifras por conciliar: (a) huella 192.54 + área verde 97.18 = 289.72 m² > lote 228.76 m² (no publicada la relación 2:1); (b) área rentable 507.51 m² vs. suma de unidades 451.16 m² (8 aptos + 2 locales); (c) nivel 2: 183.20 − 13.82 = 169.38 m² < 176.58 m² de sus 4 apartamentos. La planta baja trae el logo antiguo «BC Arquitectura».
 
-1. Diagnóstico de terreno: plazo, precio o «desde Q…», si se acredita al anteproyecto, cobertura geográfica, alcance de los 6 entregables.
+1. Resuelto (28-oct): Diagnóstico de terreno sin precio ni plazo publicados («Cotización según terreno», «Según la complejidad del terreno»), se descuenta del anteproyecto, cobertura internacional; 6 entregables sin cambios.
 3–5. Resuelto en el rediseño (30-oct): Diseño para negocios ya no usa fotos de stock como proyectos ni las cifras sin fuente («15+ años», «+30 %», «15–40 %»); La Autoría ya no muestra «Proyecto confidencial · Uso interno». Si alguna cifra tiene fuente, se puede volver a incluir.
 5. Opcional: medidas del kiosco de Plaza Girasoles; zona o edificio de Navante; confirmar programa de Petshop GT (recepción, estancias, tienda, grooming); testimonios de Kishi Books y Navante.
 5b. Resuelto: testimonio de Ady Hernández, fundadora de Kishi Books, aprobado por ella.
