@@ -698,7 +698,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       <a href="kishi-books.html" class="work-card half">
         <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
-        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución</p>
+        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución · 2024</p>
       </a>
       <a href="edificio-w.html" class="work-card half">
         <div class="work-img">{img('edificio-w-aerea', 'Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>

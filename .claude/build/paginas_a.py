@@ -183,7 +183,7 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
       <a href="kishi-books.html" class="work-card full">
         <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='100vw')}</div>
         <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
-        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución · Peri Roosevelt</p>
+        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución · Peri Roosevelt · 2024</p>
       </a>
       <a href="la-autoria.html" class="work-card half">
         <div class="work-img">{img('restaurante-interior', 'Salón del restaurante La Autoría, Huehuetenango', 1344, 768, sizes='(max-width: 640px) 100vw, 50vw')}</div>
@@ -401,11 +401,11 @@ open('la-autoria.html', 'w', encoding='utf-8').write(LPAGE)
 # ================================================================== KISHI BOOKS (mobiliario construido)
 K_URL = SITE + 'kishi-books.html'
 K_TITLE = 'Kishi Books, kiosco de madera curvada | Build &amp; Create Studio'
-K_DESC = 'Kishi Books: kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.'
+K_DESC = 'Kishi Books (2024): kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.'
 k_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kishi Books · Kiosco de madera curvada", "description": K_DESC.replace('&amp;', '&'),
      "url": K_URL, "image": SITE + "img/kishi-books-escalera-og.jpg", "creator": ORG, "inLanguage": "es",
-     "creativeWorkStatus": "Construido", "contentLocation": {"@type": "Place", "name": "Peri Roosevelt, Ciudad de Guatemala"}},
+     "creativeWorkStatus": "Construido", "dateCreated": "2024", "contentLocation": {"@type": "Place", "name": "Peri Roosevelt, Ciudad de Guatemala"}},
     {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE},
         {"@type": "ListItem", "position": 2, "name": "Proyectos", "item": SITE + "#proyectos"},
@@ -434,7 +434,7 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
       </div>
       <div>
         <dl class="spec">
-          <div><dt>Estado</dt><dd>Construido</dd></div>
+          <div><dt>Estado</dt><dd>Construido · 2024</dd></div>
           <div><dt>Medidas</dt><dd>1.40 × 9 m</dd></div>
           <div><dt>Alcance</dt><dd>Diseño y ejecución</dd></div>
         </dl>
@@ -520,6 +520,7 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
       <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Medidas</dt><dd>1.40 × 9 m</dd></div>
       <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Material</dt><dd>Madera curvada, estilo natural</dd></div>
       <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Alcance de {BRAND}</dt><dd>Diseño y ejecución</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Año</dt><dd>2024</dd></div>
       <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Construido</dd></div>
     </dl>
     <div class="cta-row">
