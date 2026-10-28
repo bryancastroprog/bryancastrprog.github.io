@@ -70,7 +70,7 @@ SVC_WORK = {
     'Oficinas corporativas': _lk('navante.html', 'Navante') + _lk('anker-logistics.html', 'Anker Logistics'),
     'Diseño comercial y retail': _lk('kishi-books.html', 'Kishi Books') + _lk('petshop-gt.html', 'Petshop GT'),
     'Restaurantes y gastronomía': _lk('la-autoria.html', 'La Autoría') + _lk('once-once.html', 'Once Once'),
-    'Diseño interior': _lk('remodelacion-el-prado.html', 'El Prado') + _lk('la-autoria.html', 'La Autoría'),
+    'Diseño interior': _lk('navante.html', 'Navante') + _lk('anker-logistics.html', 'Anker Logistics') + _lk('remodelacion-el-prado.html', 'El Prado') + _lk('la-autoria.html', 'La Autoría'),
     'Remodelaciones': _lk('once-once.html', 'Once Once') + _lk('remodelacion-el-prado.html', 'El Prado'),
     'Mobiliario estratégico': _lk('kishi-books.html', 'Kishi Books'),
 }
