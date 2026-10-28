@@ -1,7 +1,7 @@
 # Estado del proyecto y pendientes
 
 Última actualización: 28-oct-2026 · Rama de trabajo: `fase-4-direccion-a` (incluye las fases 1–3)
-Producción (`main` → bcarqstudio.com): **sin cambios**. Nada se ha publicado.
+Producción (`main` → bcarqstudio.com): **publicado el 28-oct-2026** (PR #1 rediseño completo, PR #2 «Reuniones con cita en Zona 10»).
 
 ## Hecho
 
@@ -37,3 +37,23 @@ Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79
 ## Cómo retomar
 
 En una sesión nueva con este repositorio: «Lee `docs/estado-y-pendientes.md` y continúa desde la rama `fase-4-direccion-a`». `CLAUDE.md` y las Skills se cargan solos.
+
+## Google (28-oct-2026)
+
+Hecho:
+- Search Console: propiedad Dominio `bcarqstudio.com` verificada; sitemap enviado; indexación solicitada para home, prefactibilidad, diseño para negocios, Kishi Books, Navante, Anker y Edificio W. Línea base: 16 clics en 3 meses, 1 página indexada.
+- Google Business Profile: ficha verificada renombrada de «ASTRO Desarrollos» a «Build & Create Studio»; categorías, descripción, teléfono, web, área de servicio (sin dirección pública), servicios y fotos cargados.
+
+Pendiente del cliente:
+1. Reseñas en Google: Ady Hernández (Kishi Books), Navante, Anker, Once Once, El Prado. Meta: 5 en 2 semanas.
+2. Usuario de Instagram (y LinkedIn) para enlazarlos en el pie y en JSON-LD `sameAs`.
+3. Una publicación semanal en el perfil de Google.
+4. ID de Google Analytics 4 (G-XXXXXXX) para medir formularios, WhatsApp y agenda.
+5. Quitar del perfil de Google los renders generados con IA (Petshop GT, Edificio W).
+
+Siguiente trabajo técnico (rama `fase-5-seo`):
+1. Página «Diseño de oficinas en Guatemala» (Navante, Anker).
+2. Página «Kioscos y locales en centros comerciales» (Kishi Books, testimonio de Ady).
+3. Página «Remodelaciones e interiores» (Once Once, El Prado).
+4. Revisar Search Console a las 2 semanas: páginas indexadas y primeras búsquedas.
+5. Opcional: validación legal del aviso de inversión de ONA.
