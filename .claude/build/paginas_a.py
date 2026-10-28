@@ -867,3 +867,126 @@ PPAGE = head(P_TITLE, P_DESC, P_URL, 'img/petshop-gt-recepcion-og.jpg', p_ld) + 
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 PPAGE = PPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
 open('petshop-gt.html', 'w', encoding='utf-8').write(PPAGE)
+
+# ================================================================== CASA MILPAS ALTAS (diseño completado)
+M_URL = SITE + 'casa-milpas-altas.html'
+M_TITLE = 'Casa Milpas Altas, Sacatepéquez | Build &amp; Create Studio'
+M_DESC = 'Casa Milpas Altas: vivienda de 120 m² en San Miguel Milpas Altas, Sacatepéquez. Concepto ecosistema cuántico. Diseño arquitectónico e interiorismo, 2024.'
+m_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Casa Milpas Altas · Ecosistema cuántico", "description": M_DESC,
+     "url": M_URL, "image": SITE + "img/casa-milpas-altas-fachada-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Diseño completado", "dateCreated": "2024",
+     "contentLocation": {"@type": "Place", "name": "San Miguel Milpas Altas, Sacatepéquez, Guatemala"}},
+    crumbs("Casa Milpas Altas", M_URL)]
+
+MPAGE = head(M_TITLE, M_DESC, M_URL, 'img/casa-milpas-altas-fachada-og.jpg', m_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('casa-milpas-altas-fachada', 'Render de Casa Milpas Altas con muros curvos, cúpula geodésica y terrazas de piedra en el bosque', 1920, 1080, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Vivienda · San Miguel Milpas Altas, Sacatepéquez</p>
+        <h1 class="hero-slogan">Casa <span>Milpas Altas.</span></h1>
+        <p class="hero-sub">Una casa de 120 m² en una ladera boscosa, pensada como un ecosistema: el lugar donde sus dueños viven y cultivan lo que llevarán a su restaurante.</p>
+        <div class="hero-actions">
+          <a href="index.html#contacto" class="btn btn-light">Diseñemos tu casa →</a>
+          <a href="#galeria" class="link">Ver el diseño</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Diseño completado · 2024</dd></div>
+          <div><dt>Área</dt><dd>120 m²</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño arquitectónico e interiorismo</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIFRAS Y CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Área</dt><dd>120<small> m²</small></dd></div>
+      <div><dt class="mono">Año</dt><dd>2024</dd></div>
+      <div><dt class="mono">Concepto</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Ecosistema cuántico</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">Todo lo que se crea aquí <b>se expande.</b></h2>
+      <div class="thesis-text">
+        <p>Los propietarios eligieron este terreno en San Miguel Milpas Altas para sembrar los cultivos que llevarán a su restaurante. La casa nace de esa decisión: no es solo un lugar para vivir, es parte del ciclo que va de la tierra a la mesa.</p>
+        <p>De ahí el concepto <strong>ecosistema cuántico</strong>: un espacio donde lo que se siembra, se cocina y se vive se expande hacia todo lo demás. La casa se asienta en la ladera con terrazas de piedra, muros curvos de textura natural y una cúpula geodésica que lleva la luz al centro de la vida diaria.</p>
+        <p><strong>Diseño arquitectónico e interiorismo de {BRAND}.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (renders del diseño completado)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Diseño completado</span>
+        <h2 class="sec-title">Piedra, bosque <span>y luz cenital.</span></h2>
+      </div>
+      <p class="sec-lead">La casa sigue la pendiente del terreno y se abre al bosque; adentro, la cúpula ordena la sala, el comedor y la cocina.</p>
+    </div>
+    <div class="gal">
+      {pfig('casa-milpas-altas-terrazas', 'Render de las terrazas de piedra y los muros curvos de Casa Milpas Altas en la ladera', 'Terrazas en la ladera', 'Muros de piedra y jardín', 'w12', '100vw')}
+      {pfig('casa-milpas-altas-sala-cupula', 'Render de la sala y comedor de Casa Milpas Altas bajo la cúpula geodésica', 'Bajo la cúpula', 'Sala y comedor', 'w7')}
+      {pfig('casa-milpas-altas-comedor', 'Render del comedor y la cocina de Casa Milpas Altas abiertos al bosque', 'Comedor y cocina', 'Ventanales al bosque', 'w5')}
+    </div>
+    <p class="gal-note">Renders del diseño completado.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Decisiones de diseño</span>
+        <h2 class="sec-title">Cuatro decisiones, <span>120 m².</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>La casa sigue la pendiente.</b> Terrazas y muros de piedra escalonan la ladera y dejan espacio para jardines y cultivos.</span></li>
+      <li><span class="n">02</span><span><b>Luz desde el centro.</b> Una cúpula geodésica con tragaluz corona la sala y el comedor, el corazón de la casa.</span></li>
+      <li><span class="n">03</span><span><b>Formas orgánicas.</b> Muros curvos de textura natural y cubiertas que se doblan como el terreno.</span></li>
+      <li><span class="n">04</span><span><b>Abierta al bosque.</b> Ventanales de piso a techo conectan el interior con el paisaje y los cultivos.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      {ficha([('Proyecto', 'Casa Milpas Altas'), ('Tipología', 'Vivienda unifamiliar'), ('Ubicación', 'San Miguel Milpas Altas, Sacatepéquez, Guatemala'), ('Área', '120 m²'),
+              ('Concepto', 'Ecosistema cuántico'), (f'Alcance de {BRAND}', 'Diseño arquitectónico e interiorismo'), ('Año', '2024'), ('Estado', 'Diseño completado')])}
+    </dl>
+    <div class="cta-row">
+      <a href="index.html#contacto" class="btn btn-dark">Diseñemos tu casa →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+MPAGE = MPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+open('casa-milpas-altas.html', 'w', encoding='utf-8').write(MPAGE)
