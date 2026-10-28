@@ -527,6 +527,8 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
         {kfig('kishi-books-pasillo', 'Pasillo central entre los dos muebles curvos de Kishi Books', 'Pasillo central', 'Exhibición por ambos lados', 'w5')}
         {kfig('kishi-books-baranda', 'Kiosco Kishi Books con iluminación lineal junto a la baranda del atrio', 'Línea de luz', 'Perfil iluminado', 'w5')}
         {kfig('kishi-books-conjunto', 'Kiosco Kishi Books con la escalera y los asientos de lectura', 'Conjunto', 'Escalera, asientos y exhibición', 'w7')}
+        <figure class="w6 tall"><div class="frame">{img('kishi-books-lectura', 'Lector sentado en los peldaños de madera del kiosco Kishi Books, Peri Roosevelt', 1200, 1598, sizes='(max-width: 640px) 50vw, 50vw')}</div><figcaption><strong>En uso</strong><span class="mono">Los peldaños como asiento de lectura</span></figcaption></figure>
+        <figure class="w6 tall"><div class="frame">{img('kishi-books-exhibicion-lineal', 'Visitantes revisando libros en la exhibición lineal iluminada de Kishi Books', 1200, 1598, sizes='(max-width: 640px) 50vw, 50vw')}</div><figcaption><strong>Inauguración</strong><span class="mono">Exhibición lineal iluminada</span></figcaption></figure>
       </div>
     </article>
 
@@ -569,9 +571,14 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
 </section>
 
 <!-- ============================================================
+     TESTIMONIO
+     ============================================================ -->
+{testimonio(link=False)}
+
+<!-- ============================================================
      CONCEPTO
      ============================================================ -->
-<section class="section on-dark-2" id="concepto">
+<section class="section on-dark" id="concepto">
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -609,7 +616,7 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
 </section>
 </main>
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
-KPAGE = KPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+KPAGE = KPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + TESTI_CSS + '</style>', 1)
 open('kishi-books.html', 'w', encoding='utf-8').write(KPAGE)
 
 # ================================================================== NAVANTE (oficina construida)

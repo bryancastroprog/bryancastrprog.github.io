@@ -23,6 +23,7 @@ Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79
 1. Diagnóstico de terreno: plazo, precio o «desde Q…», si se acredita al anteproyecto, cobertura geográfica, alcance de los 6 entregables.
 3–5. Resuelto en el rediseño (30-oct): Diseño para negocios ya no usa fotos de stock como proyectos ni las cifras sin fuente («15+ años», «+30 %», «15–40 %»); La Autoría ya no muestra «Proyecto confidencial · Uso interno». Si alguna cifra tiene fuente, se puede volver a incluir.
 5. Opcional: medidas del kiosco de Plaza Girasoles; zona o edificio de Navante; confirmar programa de Petshop GT (recepción, estancias, tienda, grooming); testimonios de Kishi Books y Navante.
+5b. Testimonio Kishi Books (home y ficha): nombre y cargo de la clienta, y su aprobación escrita del texto. Marcado [DATO PENDIENTE].
 6. Aviso legal de inversión en ONA: validar con abogado.
 8. Opcional, alto impacto: 2–3 testimonios reales, perfiles reales de LinkedIn/Instagram, número de colegiado.
 

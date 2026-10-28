@@ -389,6 +389,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   .hero-media img { transform: none; }
 }
+
+/* ===== TESTIMONIO ===== */
+.testi { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
+.testi-img { margin: 0; overflow: hidden; border-radius: var(--radius); }
+.testi-img img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.testi blockquote { margin: 0; }
+.testi blockquote p { margin: 18px 0 0; font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.4vw, 50px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; }
+.testi blockquote p em { font-style: normal; font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.testi .by { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.testi .by img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius); }
+.testi .by .mono { color: var(--gold); }
+@media (max-width: 900px) { .testi { grid-template-columns: 1fr; gap: 36px; } }
 </style>
 </head>
 <body>
@@ -493,6 +505,23 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIO
+     ============================================================ -->
+<section class="section on-dark-2" id="testimonio">
+  <div class="wrap testi">
+    <figure class="testi-img"><img src="img/kishi-books-inauguracion.webp" srcset="img/kishi-books-inauguracion-960.webp 960w, img/kishi-books-inauguracion.webp 1920w" sizes="(max-width: 900px) 100vw, 40vw" width="1920" height="1442" alt="Inauguración del kiosco Kishi Books en Peri Roosevelt con Bryan Castro" loading="lazy" decoding="async"></figure>
+    <div>
+      <span class="mono sec-label">Testimonio · Cliente desde 2024</span>
+      <blockquote>
+        <p>«Gracias a un diseño bien implementado y ejecutado, hemos logrado posicionar <em>Kishi Books</em> en más centros comerciales del país. Ya vamos por nuestro cuarto proyecto con BC Studio.»</p>
+        <footer class="by"><img src="img/kishi-books-clienta-avatar.webp" width="320" height="320" alt="Clienta de Kishi Books" loading="lazy" decoding="async"><div><strong><span class="pending">[DATO PENDIENTE: nombre de la clienta]</span></strong><br><span class="mono"><span class="pending">[DATO PENDIENTE: cargo]</span> · Kishi Books</span></div></footer>
+      </blockquote>
+        <div class="cta-row"><a href="kishi-books.html" class="link">Ver el proyecto Kishi Books</a></div>
     </div>
   </div>
 </section>

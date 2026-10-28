@@ -641,6 +641,39 @@ home_ld = {
     "founder": {"@type": "Person", "name": "Bryan Castro", "jobTitle": "Arquitecto y desarrollador inmobiliario", "image": SITE + "img/bryan-castro-frontal.webp"},
     "knowsAbout": ["Arquitectura", "Prefactibilidad inmobiliaria", "Desarrollo inmobiliario", "Diseño interior", "Remodelaciones", "Mobiliario a la medida", "Estructuración de inversión inmobiliaria"]}
 
+# ================================================================== TESTIMONIO (Kishi Books)
+# Texto propuesto por el estudio: publicar solo con la aprobación escrita de la clienta.
+TESTI_QUOTE = 'Gracias a un diseño bien implementado y ejecutado, hemos logrado posicionar <em>Kishi Books</em> en más centros comerciales del país. Ya vamos por nuestro cuarto proyecto con BC Studio.'
+TESTI_NAME = '<span class="pending">[DATO PENDIENTE: nombre de la clienta]</span>'
+TESTI_ROLE = '<span class="pending">[DATO PENDIENTE: cargo]</span> · Kishi Books'
+TESTI_CSS = """
+/* ===== TESTIMONIO ===== */
+.testi { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
+.testi-img { margin: 0; overflow: hidden; border-radius: var(--radius); }
+.testi-img img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.testi blockquote { margin: 0; }
+.testi blockquote p { margin: 18px 0 0; font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.4vw, 50px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; }
+.testi blockquote p em { font-style: normal; font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.testi .by { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.testi .by img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius); }
+.testi .by .mono { color: var(--gold); }
+@media (max-width: 900px) { .testi { grid-template-columns: 1fr; gap: 36px; } }
+"""
+def testimonio(link=True):
+    more = '\n        <div class="cta-row"><a href="kishi-books.html" class="link">Ver el proyecto Kishi Books</a></div>' if link else ''
+    return f"""<section class="section on-dark-2" id="testimonio">
+  <div class="wrap testi">
+    <figure class="testi-img">{img('kishi-books-inauguracion', 'Inauguración del kiosco Kishi Books en Peri Roosevelt con Bryan Castro', 1920, 1442, sizes='(max-width: 900px) 100vw, 40vw')}</figure>
+    <div>
+      <span class="mono sec-label">Testimonio · Cliente desde 2024</span>
+      <blockquote>
+        <p>«{TESTI_QUOTE}»</p>
+        <footer class="by"><img src="img/kishi-books-clienta-avatar.webp" width="320" height="320" alt="Clienta de Kishi Books" loading="lazy" decoding="async"><div><strong>{TESTI_NAME}</strong><br><span class="mono">{TESTI_ROLE}</span></div></footer>
+      </blockquote>{more}
+    </div>
+  </div>
+</section>"""
+
 HERO_PROJECTS = [
     ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · 3 sedes', 'Construido', 'kishi-books.html'),
     ('navante-lampara', 'webp', 1920, 1407, 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 'Navante · Oficina', 'Construido', 'navante.html'),
@@ -731,6 +764,11 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     TESTIMONIO
+     ============================================================ -->
+{testimonio()}
 
 <!-- ============================================================
      03 · SERVICIOS — TRES PUNTOS DE PARTIDA
@@ -976,6 +1014,7 @@ heroBtns.forEach((b, i) => {
 // Precarga discreta del resto de imágenes del hero cuando la página termina de cargar
 window.addEventListener('load', () => heroImgs.forEach(im => { im.loading = 'eager'; }));
 ''' + FORM_JS)
+HOME = HOME.replace('</style>\n</head>', TESTI_CSS + '</style>\n</head>', 1)
 open('index.html', 'w', encoding='utf-8').write(HOME)
 
 # ================================================================== PREFACTIBILIDAD
