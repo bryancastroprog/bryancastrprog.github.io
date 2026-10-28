@@ -643,7 +643,7 @@ home_ld = {
 
 # ================================================================== TESTIMONIO (Kishi Books)
 # Texto aprobado por la clienta (Ady Hernández, fundadora de Kishi Books).
-TESTI_QUOTE = 'Gracias a un diseño bien implementado y ejecutado, hemos logrado posicionar <em>Kishi Books</em> en más centros comerciales del país. Ya vamos por nuestro cuarto proyecto con BC Studio.'
+TESTI_QUOTE = 'Gracias al diseño bien implementado, hemos logrado transmitir con mayor fuerza <em>la esencia de la marca</em>, abriéndonos puertas en más centros comerciales del país. Vamos por nuestra cuarta tienda.'
 TESTI_NAME = 'Ady Hernández'
 TESTI_ROLE = 'Fundadora · Kishi Books'
 TESTI_CSS = """
