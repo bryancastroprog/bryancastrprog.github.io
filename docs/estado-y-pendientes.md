@@ -21,16 +21,13 @@ Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79
 0. Edificio W, cifras por conciliar: (a) huella 192.54 + área verde 97.18 = 289.72 m² > lote 228.76 m² (no publicada la relación 2:1); (b) área rentable 507.51 m² vs. suma de unidades 451.16 m² (8 aptos + 2 locales); (c) nivel 2: 183.20 − 13.82 = 169.38 m² < 176.58 m² de sus 4 apartamentos. La planta baja trae el logo antiguo «BC Arquitectura».
 
 1. Diagnóstico de terreno: plazo, precio o «desde Q…», si se acredita al anteproyecto, cobertura geográfica, alcance de los 6 entregables.
-3. Fotos de Unsplash en «Trabajo reciente» de Diseño para negocios: ¿proyectos reales?
-4. Cifras «15+ años», «+30 %», «15–40 %»: fuente.
-5. «Proyecto confidencial / Uso interno» en La Autoría: ¿se retira?
+3–5. Resuelto en el rediseño (30-oct): Diseño para negocios ya no usa fotos de stock como proyectos ni las cifras sin fuente («15+ años», «+30 %», «15–40 %»); La Autoría ya no muestra «Proyecto confidencial · Uso interno». Si alguna cifra tiene fuente, se puede volver a incluir.
 6. Aviso legal de inversión en ONA: validar con abogado.
 8. Opcional, alto impacto: 2–3 testimonios reales, perfiles reales de LinkedIn/Instagram, número de colegiado.
 
 ## Siguiente trabajo técnico
 
-1. Rediseñar `diseno-estrategico.html` y las 4 fichas de proyecto en la dirección A (generador: mismo CSS que `index.html`).
-2. Quitar «Fundación 2025» del bloque de cifras de la home.
+1–2. Hecho: todas las páginas en la dirección A; «Fundación 2025» retirado de la home.
 3. Compactar en móvil el índice de proyectos del hero.
 4. Con los datos del cliente: cerrar la Fase 3 de contenido y abrir el PR hacia `main`.
 5. Tras publicar: Google Analytics 4 con eventos de formulario/WhatsApp/agenda, Search Console + sitemap, Google Business Profile.

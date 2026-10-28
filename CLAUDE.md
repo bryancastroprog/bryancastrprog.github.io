@@ -8,7 +8,7 @@ Objetivo del sitio: **captar consultas calificadas** de empresas (diseño de esp
 - HTML estático puro. Sin framework, sin build, sin `package.json`. Cada página es un `.html` autocontenido con su `<style>` y `<script>` en línea.
 - Hosting: **GitHub Pages** desde la rama `main` del repo `bryancastroprog/bryancastrprog.github.io`. Dominio propio vía `CNAME` → `bcarqstudio.com`.
 - **Todo push a `main` se publica en producción en minutos.** No hay entorno de staging.
-- Servicios externos: Google Fonts (Fraunces, Inter, Space Grotesk), Formspree (`FORMSPREE_ID = 'xbdbdlay'`, envía a info@bcarqstudio.com), Google Calendar (agenda), WhatsApp (`wa.me/50254131753`), imágenes de Unsplash en `diseno-estrategico.html`.
+- Servicios externos: Google Fonts (Fraunces, Inter, Space Grotesk), Formspree (`FORMSPREE_ID = 'xbdbdlay'`, envía a info@bcarqstudio.com), Google Calendar (agenda), WhatsApp (`wa.me/50254131753`).
 - Imágenes en `img/`. Los originales PNG (6–9 MB) se conservan como fuente pero **no se publican** (`_config.yml` los excluye): las páginas usan `<nombre>.webp` + `<nombre>-960.webp` con `srcset`, y `<nombre>-og.jpg` para Open Graph. Toda imagen nueva pasa por `optimizar_imagenes.py`.
 - Archivos SEO: `robots.txt`, `sitemap.xml` (actualizar al crear o renombrar páginas), `404.html`, `favicon.svg`.
 
@@ -16,13 +16,15 @@ Objetivo del sitio: **captar consultas calificadas** de empresas (diseño de esp
 
 | Archivo | Rol |
 |---|---|
-| `index.html` | Home: tesis, ONA, estudio, modelos de trabajo, agenda, contacto |
-| `diseno-estrategico.html` | Servicios de diseño para negocios + grilla de proyectos + formulario |
-| `aesthetica-medica.html`, `la-autoria.html`, `libreria-cayala.html`, `sweetpop.html` | Fichas de proyecto (misma plantilla) |
+| `index.html` | Home: hero con índice de proyectos, proyectos, servicios, proceso, diferencial y ONA, estudio, contacto |
+| `prefactibilidad-inmobiliaria.html` | Servicio de diagnóstico de terreno (con capa de movimiento) |
+| `diseno-estrategico.html` | Diseño para negocios: servicios, fundamento, proyectos relacionados, proceso, contacto |
+| `edificio-w.html`, `la-autoria.html` | Fichas de proyecto |
+| `aesthetica-medica.html`, `libreria-cayala.html`, `sweetpop.html` | Páginas puente (noindex, redirigen a Proyectos): proyectos retirados |
 
 ## Generador de páginas (dirección visual A)
 
-`index.html`, `prefactibilidad-inmobiliaria.html` y `edificio-w.html` se generan con `python3 .claude/build/build_a.py` (CSS compartido, cabecera, pie y formularios). **Editar el generador, no el HTML de salida**, y volver a ejecutarlo. La capa de movimiento de prefactibilidad está en `.claude/build/motion_pref.py`. Las demás páginas (`diseno-estrategico.html`, `la-autoria.html`) todavía son HTML manual con el diseño anterior.
+Todas las páginas de contenido (`index.html`, `prefactibilidad-inmobiliaria.html`, `diseno-estrategico.html`, `edificio-w.html`, `la-autoria.html`) se generan con `python3 .claude/build/build_a.py` (CSS compartido, cabecera, pie y formularios). **Editar el generador, no el HTML de salida**, y volver a ejecutarlo. Diseño para negocios y La Autoría están en `.claude/build/paginas_a.py`; la capa de movimiento de prefactibilidad, en `.claude/build/motion_pref.py`.
 
 ## Reglas obligatorias
 

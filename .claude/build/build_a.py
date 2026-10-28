@@ -811,8 +811,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       </div>
     </div>
 
-    <dl class="figures">
-      <div><dt class="mono">Fundación</dt><dd>2025</dd></div>
+    <dl class="figures" style="grid-template-columns:repeat(3,minmax(0,1fr))">
       <div><dt class="mono">m² en desarrollo · ONA</dt><dd>18,792</dd></div>
       <div><dt class="mono">Eficiencia de planta · ONA</dt><dd>91.9<small>%</small></dd></div>
       <div><dt class="mono">Líneas de negocio</dt><dd>3</dd></div>
@@ -1441,4 +1440,5 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 WPAGE = WPAGE.replace('</style>', W_CSS + '</style>', 1)
 open('edificio-w.html', 'w', encoding='utf-8').write(WPAGE)
-print('ok', len(HOME), len(PREF), len(WPAGE))
+exec(open(os.path.join('.claude', 'build', 'paginas_a.py'), encoding='utf-8').read())
+print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE))
