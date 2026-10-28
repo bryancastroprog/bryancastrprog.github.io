@@ -9,3 +9,5 @@ exclude:
   # Originales PNG (6–9 MB): se conservan en el repo como fuente, pero el sitio usa las versiones .webp
   - img/*.png
   - img/placeholder.txt
+  # Originales de alta resolución (renders y planos): fuente, no se publican
+  - img/originales/

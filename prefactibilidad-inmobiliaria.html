@@ -183,6 +183,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: var(--radius); }
 .work-card.big .work-img { aspect-ratio: 16 / 10.6; }
 .work-card.half .work-img { aspect-ratio: 16 / 10; }
+.work-card.full { grid-column: span 12; }
+.work-card.full .work-img { aspect-ratio: 21 / 8; }
 .work-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .work-card:hover .work-img img { transform: scale(1.04); }
 .work-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -334,7 +336,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .step, .step + .step { padding: 32px 24px 32px 0; border-right: 0; border-bottom: 1px solid var(--line-light); }
   .step:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-light); }
   .work-card, .work-card.big, .work-card.half { grid-column: span 6; }
-  .work-card.big { grid-column: span 12; }
+  .work-card.big, .work-card.full { grid-column: span 12; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1280px) { .menu-cta { display: none; } }
@@ -346,8 +348,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .hero-sub { font-size: 16px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .work { grid-template-columns: 1fr; gap: 36px; }
-  .work-card, .work-card.big, .work-card.half { grid-column: auto; }
-  .work-card.big .work-img, .work-card.half .work-img { aspect-ratio: 4 / 3; }
+  .work-card, .work-card.big, .work-card.half, .work-card.full { grid-column: auto; }
+  .work-card.big .work-img, .work-card.half .work-img, .work-card.full .work-img { aspect-ratio: 4 / 3; }
   .steps { grid-template-columns: 1fr; }
   .step:nth-child(even) { padding-left: 0; border-left: 0; }
   .figures { grid-template-columns: 1fr 1fr; gap: 0 16px; }
@@ -541,7 +543,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
           <div><dt>m² construidos</dt><dd>18,792</dd></div>
           <div><dt>m² vendibles</dt><dd>17,267</dd></div>
           <div><dt>Eficiencia de planta</dt><dd>91.9%</dd></div>
-          <div><dt>Fase</dt><dd>Anteproyecto aprobado</dd></div>
+          <div><dt>Fase</dt><dd>En fase de desarrollo</dd></div>
         </dl>
         <a href="index.html#ona" class="link">Ver el proyecto ONA →</a>
       </div>
@@ -668,6 +670,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <h4 class="mono">Proyectos</h4>
         <ul>
           <li><a href="index.html#ona">ONA</a></li>
+          <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>
       </div>

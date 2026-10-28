@@ -36,10 +36,16 @@
     "addressLocality": "Ciudad de Guatemala",
     "addressCountry": "GT"
   },
-  "areaServed": {
-    "@type": "Country",
-    "name": "Guatemala"
-  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Guatemala"
+    },
+    {
+      "@type": "Country",
+      "name": "Honduras"
+    }
+  ],
   "foundingDate": "2025",
   "founder": {
     "@type": "Person",
@@ -182,6 +188,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: var(--radius); }
 .work-card.big .work-img { aspect-ratio: 16 / 10.6; }
 .work-card.half .work-img { aspect-ratio: 16 / 10; }
+.work-card.full { grid-column: span 12; }
+.work-card.full .work-img { aspect-ratio: 21 / 8; }
 .work-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .work-card:hover .work-img img { transform: scale(1.04); }
 .work-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
@@ -333,7 +341,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .step, .step + .step { padding: 32px 24px 32px 0; border-right: 0; border-bottom: 1px solid var(--line-light); }
   .step:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-light); }
   .work-card, .work-card.big, .work-card.half { grid-column: span 6; }
-  .work-card.big { grid-column: span 12; }
+  .work-card.big, .work-card.full { grid-column: span 12; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1280px) { .menu-cta { display: none; } }
@@ -345,8 +353,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .hero-sub { font-size: 16px; }
   .hero-actions .btn { width: 100%; justify-content: center; }
   .work { grid-template-columns: 1fr; gap: 36px; }
-  .work-card, .work-card.big, .work-card.half { grid-column: auto; }
-  .work-card.big .work-img, .work-card.half .work-img { aspect-ratio: 4 / 3; }
+  .work-card, .work-card.big, .work-card.half, .work-card.full { grid-column: auto; }
+  .work-card.big .work-img, .work-card.half .work-img, .work-card.full .work-img { aspect-ratio: 4 / 3; }
   .steps { grid-template-columns: 1fr; }
   .step:nth-child(even) { padding-left: 0; border-left: 0; }
   .figures { grid-template-columns: 1fr 1fr; gap: 0 16px; }
@@ -391,7 +399,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
      ============================================================ -->
 <section class="hero" id="inicio" aria-label="Proyectos destacados">
   <div class="hero-media" id="heroMedia">
-    <img src="img/ona-fachada-atardecer.jpg" width="1365" height="768" alt="Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala" class="on" fetchpriority="high" decoding="async">
+    <img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Edificio W, uso mixto en esquina, San Pedro Sula, Honduras" class="on" fetchpriority="high" decoding="async">
+    <img src="img/ona-fachada-atardecer.jpg" width="1365" height="768" alt="Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala" loading="lazy" decoding="async">
     <img src="img/ona-rooftop-pergolas.jpg" width="1365" height="768" alt="Rooftop de ONA con pérgolas iluminadas" loading="lazy" decoding="async">
     <img src="img/ona-lobby.jpg" width="1365" height="768" alt="Lobby principal de ONA" loading="lazy" decoding="async">
     <img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="Salón del restaurante La Autoría con cocina de fuego, Huehuetenango" loading="lazy" decoding="async">
@@ -409,10 +418,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       </div>
       <div>
         <ol class="hero-index" id="heroIndex" aria-label="Elegir proyecto">
-          <li><button type="button" aria-pressed="true" data-i="0" data-href="#ona"><span class="n">01</span><span class="name">ONA · Fachada</span><span class="st">Anteproyecto</span></button></li>
-          <li><button type="button" aria-pressed="false" data-i="1" data-href="#ona"><span class="n">02</span><span class="name">ONA · Rooftop</span><span class="st">Anteproyecto</span></button></li>
-          <li><button type="button" aria-pressed="false" data-i="2" data-href="#ona"><span class="n">03</span><span class="name">ONA · Lobby</span><span class="st">Anteproyecto</span></button></li>
-          <li><button type="button" aria-pressed="false" data-i="3" data-href="la-autoria.html"><span class="n">04</span><span class="name">La Autoría · Salón</span><span class="st">Diseño completado</span></button></li>
+          <li><button type="button" aria-pressed="true" data-i="0" data-href="edificio-w.html"><span class="n">01</span><span class="name">Edificio W · San Pedro Sula</span><span class="st">En aprobación</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="1" data-href="#ona"><span class="n">02</span><span class="name">ONA · Fachada</span><span class="st">En desarrollo</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="2" data-href="#ona"><span class="n">03</span><span class="name">ONA · Rooftop</span><span class="st">En desarrollo</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="3" data-href="#ona"><span class="n">04</span><span class="name">ONA · Lobby</span><span class="st">En desarrollo</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="4" data-href="la-autoria.html"><span class="n">05</span><span class="name">La Autoría · Salón</span><span class="st">Diseño completado</span></button></li>
         </ol>
         <a href="#ona" class="hero-open" id="heroOpen">Ver proyecto →</a>
       </div>
@@ -427,19 +437,24 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="mono sec-label">Proyectos · 02</span>
+        <span class="mono sec-label">Proyectos · 03</span>
         <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
       </div>
-      <p class="sec-lead">Residencial vertical y gastronomía en Guatemala. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
-      <a href="#ona" class="work-card big">
+      <a href="edificio-w.html" class="work-card half">
+        <div class="work-img"><img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1080" alt="Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
+        <p class="work-info">Uso mixto · 8 apartamentos + 2 locales · 591.86 m² · San Pedro Sula, Honduras</p>
+      </a>
+      <a href="#ona" class="work-card half">
         <div class="work-img"><img src="img/ona-fachada-atardecer.jpg" width="1365" height="768" alt="Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala" loading="lazy" decoding="async"></div>
-        <div class="work-meta"><span class="work-name">ONA</span><span class="status">Anteproyecto aprobado</span></div>
+        <div class="work-meta"><span class="work-name">ONA</span><span class="status">En fase de desarrollo</span></div>
         <p class="work-info">Residencial vertical · 18,792 m² · Zona 15, Vista Hermosa I</p>
       </a>
-      <a href="la-autoria.html" class="work-card">
-        <div class="work-img"><img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="(max-width: 640px) 100vw, 33vw" width="1344" height="768" alt="Salón del restaurante La Autoría, Huehuetenango" loading="lazy" decoding="async"></div>
+      <a href="la-autoria.html" class="work-card full">
+        <div class="work-img"><img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="Salón del restaurante La Autoría, Huehuetenango" loading="lazy" decoding="async"></div>
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
       </a>
@@ -552,7 +567,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
           <div><dt>m² construidos</dt><dd>18,792</dd></div>
           <div><dt>m² vendibles</dt><dd>17,267</dd></div>
           <div><dt>Eficiencia de planta (vendible/construido)</dt><dd>91.9%</dd></div>
-          <div><dt>Fase actual</dt><dd>Anteproyecto aprobado</dd></div>
+          <div><dt>Fase actual</dt><dd>En fase de desarrollo</dd></div>
           <div><dt>Estructura de inversión</dt><dd>En estructuración final</dd></div>
         </dl>
         <a href="#contacto" class="btn btn-light">Unirme a la lista de inversionistas →</a>
@@ -733,6 +748,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <h4 class="mono">Proyectos</h4>
         <ul>
           <li><a href="#ona">ONA</a></li>
+          <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>
       </div>
