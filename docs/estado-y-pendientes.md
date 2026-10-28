@@ -12,7 +12,7 @@ Producción (`main` → bcarqstudio.com): **sin cambios**. Nada se ha publicado.
 | 3 | `fase-3-conversion` | Página de prefactibilidad, formularios calificados, WhatsApp flotante |
 | 4 | `fase-4-direccion-a` | Dirección visual A (Obra primero) en home y prefactibilidad, home en 7 bloques, marca **Build & Create Studio**, radio de imagen 10 px, etiqueta «Diseño completado» |
 
-Estados confirmados por el cliente (28-oct): Aesthetica Medica, La Autoría y SweetPop = **Diseño completado** (entregados, no construidos). Librería · Avia = **Propuesta**. ONA = **Anteproyecto aprobado**. Ningún proyecto está marcado como construido.
+Estados confirmados por el cliente (28-oct): La Autoría y SweetPop = **Diseño completado** (entregados, no construidos). **Aesthetica Medica retirado**: proyecto y cliente ficticios; `aesthetica-medica.html` es página puente (noindex, redirige a `index.html#proyectos`); imágenes `img/clinica-*` conservadas pero sin uso. Librería · Avia = **Propuesta**. ONA = **Anteproyecto aprobado**. Ningún proyecto está marcado como construido.
 
 Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79hHi
 

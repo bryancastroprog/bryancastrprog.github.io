@@ -125,6 +125,14 @@ def check(file):
     def add(level, cat, msg):
         issues.append({"file": rel, "level": level, "cat": cat, "msg": msg})
 
+    # --- Página puente (URL antigua que redirige): solo se revisan sus enlaces
+    if 'http-equiv="refresh"' in raw and "noindex" in p.meta.get("robots", ""):
+        for a in p.anchors:
+            href = a.get("href") or ""
+            if is_local(href) and local_path(href, file) and not os.path.exists(local_path(href, file)):
+                add("BLOQUEANTE", "links", f"La página puente apunta a un recurso inexistente: {href}")
+        return issues
+
     # --- SEO on-page
     t = " ".join(p.title.split())
     if not t:
