@@ -172,6 +172,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .spec-card h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; }
 .spec-card p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
 .spec-card .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
+.spec-work { display: flex; gap: 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); color: var(--on-dark); }
+.spec-work img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius-sm); flex: none; }
+.spec-work > span { display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.spec-work .mono { font-size: 12px; color: var(--on-dark-muted); letter-spacing: 0.04em; }
+.spec-work:hover strong, .spec-work:focus-visible strong { color: var(--gold); }
 
 /* ---------- PROCESO ---------- */
 .steps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line-light); counter-reset: s; }
@@ -434,6 +439,7 @@ def footer(p):
           <li><a href="navante.html">Navante</a></li>
           <li><a href="petshop-gt.html">Petshop GT</a></li>
           <li><a href="casa-milpas-altas.html">Casa Milpas Altas</a></li>
+          <li><a href="once-once.html">Once Once</a></li>
           <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>
@@ -823,11 +829,12 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
           <p>Paleta de materiales, iluminación, mobiliario y acabados alineados con tu identidad.</p>
           <span class="link">Cotizar diseño interior →</span>
         </a>
-        <a href="?tipo=remodelación#contacto" class="spec-card">
+        <div class="spec-card">
           <h3>Remodelaciones</h3>
           <p>Transformamos espacios existentes con una intervención precisa y eficiente.</p>
-          <span class="link">Cotizar remodelación →</span>
-        </a>
+          <a href="once-once.html" class="spec-work"><img src="img/once-once-barra-logo-960.webp" width="960" height="1705" alt="Barra remodelada del restaurante Once Once" loading="lazy" decoding="async"><span><strong>Once Once</strong><span class="mono">Barra de restaurante · Construido 2024</span></span></a>
+          <a href="?tipo=remodelación#contacto" class="link">Cotizar remodelación →</a>
+        </div>
         <a href="?tipo=mobiliario-estratégico#contacto" class="spec-card">
           <h3>Mobiliario estratégico</h3>
           <p>Mobiliario diseñado a la medida de tu operación: exhibición, atención y almacenaje pensados para cómo funciona tu espacio.</p>
@@ -1509,4 +1516,4 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
 WPAGE = WPAGE.replace('</style>', W_CSS + '</style>', 1)
 open('edificio-w.html', 'w', encoding='utf-8').write(WPAGE)
 exec(open(os.path.join('.claude', 'build', 'paginas_a.py'), encoding='utf-8').read())
-print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE), len(MPAGE))
+print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE), len(MPAGE), len(OPAGE))

@@ -64,8 +64,11 @@ PAGE_A_CSS = """
 }
 """
 
+# Proyecto construido que respalda cada servicio (enlace bajo la descripción)
+SVC_WORK = {'Remodelaciones': '<a href="once-once.html" class="link" style="display:inline-block;margin-top:14px;font-size:13px">Ver remodelación Once Once →</a>'}
+
 svc_html = '\n'.join(
-    f'      <article class="svc"><span class="mono n">{i + 1:02d}</span><h3>{n}</h3><p>{t}</p></article>'
+    f'      <article class="svc"><span class="mono n">{i + 1:02d}</span><h3>{n}</h3><p>{t}</p>{SVC_WORK.get(n, "")}</article>'
     for i, (n, t) in enumerate(SERVICES))
 
 D_FORM = '''<form class="form" id="contactForm" novalidate>
@@ -990,3 +993,100 @@ MPAGE = head(M_TITLE, M_DESC, M_URL, 'img/casa-milpas-altas-fachada-og.jpg', m_l
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 MPAGE = MPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
 open('casa-milpas-altas.html', 'w', encoding='utf-8').write(MPAGE)
+
+# ================================================================== ONCE ONCE (remodelación construida)
+O_URL = SITE + 'once-once.html'
+O_TITLE = 'Once Once, remodelación de restaurante | Build &amp; Create Studio'
+O_DESC = 'Once Once: remodelación interior de la barra de un restaurante en Guatemala. Diseño, ejecución y mobiliario de Build & Create Studio, construida en 2024.'
+o_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Once Once · Remodelación de barra", "description": O_DESC,
+     "url": O_URL, "image": SITE + "img/once-once-barra-logo-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Construido", "dateCreated": "2024"},
+    crumbs("Once Once", O_URL)]
+
+OPAGE = head(O_TITLE, O_DESC, O_URL, 'img/once-once-barra-logo-og.jpg', o_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('once-once-barra-logo', 'Barra de concreto iluminada del restaurante Once Once con el logotipo 11:11', 1200, 2131, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Remodelación interior · Restaurante</p>
+        <h1 class="hero-slogan">Once <span>Once.</span></h1>
+        <p class="hero-sub">Remodelación de la barra de un restaurante: una pieza de concreto con luz indirecta que se vuelve el centro del lugar, bajo un techo de madera y caña con lámparas tejidas.</p>
+        <div class="hero-actions">
+          <a href="index.html?tipo=remodelaci%C3%B3n#contacto" class="btn btn-light">Cotiza tu remodelación →</a>
+          <a href="#galeria" class="link">Ver fotografías</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Construido · 2024</dd></div>
+          <div><dt>Tipo</dt><dd>Remodelación interior</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño, ejecución y mobiliario</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <div class="thesis" style="margin-top:0">
+      <h2 class="thesis-quote">Una barra que <b>se vuelve el lugar.</b></h2>
+      <div class="thesis-text">
+        <p>La remodelación concentra la intervención donde más pesa: la barra. Un volumen de concreto con luz indirecta en todo su frente ordena el espacio y lleva la marca 11:11 a la vista de cada mesa.</p>
+        <p>Alrededor, el techo de madera y caña, las lámparas tejidas y los bancos de madera mantienen el carácter cálido del restaurante.</p>
+        <p><strong>Diseño, ejecución y mobiliario de {BRAND}.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (fotografías de obra construida)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Fotografías del proyecto construido</span>
+        <h2 class="sec-title">Concreto, luz <span>y madera.</span></h2>
+      </div>
+      <p class="sec-lead">Una sola pieza de concreto con luz indirecta, mobiliario de madera y lámparas tejidas.</p>
+    </div>
+    <div class="gal">
+      {vfig('once-once-barra-logo', 'Barra de Once Once con el logotipo 11:11 y bancos de madera', 'Frente de barra', 'Marca 11:11 en el volumen')}
+      {vfig('once-once-terraza', 'Vista de la barra de Once Once desde la terraza con techo de madera y caña', 'Vista general', 'Techo de madera y caña')}
+      {vfig('once-once-barra-lateral', 'Lateral de la barra de concreto de Once Once con luz indirecta y lámpara tejida', 'Lateral', 'Luz indirecta y lámparas tejidas')}
+    </div>
+    <p class="gal-note">Fotografías del proyecto construido.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      {ficha([('Proyecto', 'Once Once'), ('Tipología', 'Restaurante · Barra'), ('Tipo de intervención', 'Remodelación interior'),
+              (f'Alcance de {BRAND}', 'Diseño, ejecución y mobiliario'), ('Año', '2024'), ('Estado', 'Construido')])}
+    </dl>
+    <div class="cta-row">
+      <a href="index.html?tipo=remodelaci%C3%B3n#contacto" class="btn btn-dark">Cotiza tu remodelación →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+OPAGE = OPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+open('once-once.html', 'w', encoding='utf-8').write(OPAGE)
