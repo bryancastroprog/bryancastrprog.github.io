@@ -57,6 +57,9 @@
     "Arquitectura",
     "Prefactibilidad inmobiliaria",
     "Desarrollo inmobiliario",
+    "Diseño interior",
+    "Remodelaciones",
+    "Mobiliario a la medida",
     "Estructuración de inversión inmobiliaria"
   ]
 }
@@ -212,6 +215,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .route ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--on-dark); }
 .route li::before { content: '—'; color: var(--gold); margin-right: 10px; }
 .route .link { margin-top: auto; align-self: flex-start; }
+.specialties { margin-top: 72px; }
+.spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.spec-card { display: flex; flex-direction: column; gap: 12px; padding: 28px; border: 1px solid var(--line-dark); border-radius: var(--radius); transition: border-color 0.3s, background 0.3s; }
+.spec-card:hover, .spec-card:focus-visible { border-color: var(--gold); background: var(--ink-2); }
+.spec-card h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; }
+.spec-card p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
+.spec-card .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
 
 /* ---------- PROCESO ---------- */
 .steps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line-light); counter-reset: s; }
@@ -345,7 +355,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 @media (max-width: 1100px) {
   .hero-grid, .thesis, .ona, .studio, .contact, .sec-head { grid-template-columns: 1fr; }
-  .routes, .models { grid-template-columns: 1fr; }
+  .routes, .models, .spec-grid { grid-template-columns: 1fr; }
   .route, .route + .route { padding: 36px 0; border-right: 0; border-bottom: 1px solid var(--line-dark); }
   .steps { grid-template-columns: 1fr 1fr; }
   .step, .step + .step { padding: 32px 24px 32px 0; border-right: 0; border-bottom: 1px solid var(--line-light); }
@@ -492,7 +502,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <span class="mono route-who">Tengo un negocio</span>
         <h3 class="route-title">Diseño de oficinas, clínicas y comercios</h3>
         <p class="route-text">El espacio donde operas es tu primer argumento de ventas. Diseñamos desde cómo funciona tu negocio.</p>
-        <ul><li>Oficinas y clínicas</li><li>Retail y restaurantes</li><li>Interiorismo y remodelaciones</li></ul>
+        <ul><li>Oficinas y clínicas</li><li>Retail y restaurantes</li><li>Diseño interior, remodelaciones y mobiliario</li></ul>
         <a href="diseno-estrategico.html" class="link">Ver diseño para negocios →</a>
       </article>
       <article class="route">
@@ -502,6 +512,27 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <ul><li>Anteproyecto con pro forma</li><li>Alianzas de co-desarrollo</li><li>Lista de interés de proyectos propios</li></ul>
         <a href="#modelos" class="link">Ver modelos de trabajo →</a>
       </article>
+    </div>
+
+    <div class="specialties">
+      <span class="mono sec-label">También diseñamos</span>
+      <div class="spec-grid">
+        <a href="?tipo=diseño-interior#contacto" class="spec-card">
+          <h3>Diseño interior</h3>
+          <p>Paleta de materiales, iluminación, mobiliario y acabados alineados con tu identidad.</p>
+          <span class="link">Cotizar diseño interior →</span>
+        </a>
+        <a href="?tipo=remodelación#contacto" class="spec-card">
+          <h3>Remodelaciones</h3>
+          <p>Transformamos espacios existentes con una intervención precisa y eficiente.</p>
+          <span class="link">Cotizar remodelación →</span>
+        </a>
+        <a href="?tipo=mobiliario-estratégico#contacto" class="spec-card">
+          <h3>Mobiliario estratégico</h3>
+          <p>Mobiliario diseñado a la medida de tu operación: exhibición, atención y almacenaje pensados para cómo funciona tu espacio.</p>
+          <span class="link">Cotizar mobiliario →</span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -692,6 +723,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
               <option value="diagnostico-terreno">Diagnóstico de terreno / prefactibilidad</option>
               <option value="diseño-estratégico">Diseño estratégico para desarrolladores</option>
               <option value="diseño-comercial">Diseño de oficinas, clínicas o comercios</option>
+              <option value="diseño-interior">Diseño interior</option>
+              <option value="remodelación">Remodelación</option>
+              <option value="mobiliario-estratégico">Mobiliario estratégico</option>
               <option value="co-desarrollo">Co-desarrollo integral (tengo un terreno)</option>
               <option value="inversión">Inversión en proyectos propios</option>
               <option value="otro">Otro / Conversación inicial</option>
