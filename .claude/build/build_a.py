@@ -453,6 +453,7 @@ def footer(p):
           <li><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></li>
           <li><a href="{WA}" target="_blank" rel="noopener">WhatsApp +502 5413 1753</a></li>
           <li><a href="{CAL}" target="_blank" rel="noopener">Agendar llamada</a></li>
+          <li>Reuniones con cita en Zona 10</li>
         </ul>
       </div>
     </div>
@@ -1013,7 +1014,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       <dl class="channels">
         <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
         <div><dt class="mono">WhatsApp</dt><dd><a href="{WA}" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
-        <div><dt class="mono">Base</dt><dd>Ciudad de Guatemala</dd></div>
+        <div><dt class="mono">Reuniones</dt><dd>Con cita en Zona 10, Ciudad de Guatemala</dd></div>
         <div><dt class="mono">Respuesta</dt><dd>Menos de 24 horas hábiles</dd></div>
       </dl>
     </div>
