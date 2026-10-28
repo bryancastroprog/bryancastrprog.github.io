@@ -177,13 +177,23 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
         <span class="mono sec-label">Proyectos</span>
         <h2 class="sec-title">Trabajo <span>relacionado.</span></h2>
       </div>
-      <p class="sec-lead">Mobiliario comercial, gastronomía y comercio a nivel de calle. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Mobiliario comercial, oficinas, gastronomía y comercio a nivel de calle. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
-      <a href="kishi-books.html" class="work-card full">
-        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='100vw')}</div>
-        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
-        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución · Peri Roosevelt · 2024</p>
+      <a href="kishi-books.html" class="work-card half">
+        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido · 3 sedes</span></div>
+        <p class="work-info">Mobiliario comercial · 3 kioscos de librería · Diseño y ejecución · 2024–2026</p>
+      </a>
+      <a href="navante.html" class="work-card half">
+        <div class="work-img">{img('navante-estaciones', 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 1200, 2131, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
+        <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
+      </a>
+      <a href="petshop-gt.html" class="work-card full">
+        <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='100vw')}</div>
+        <div class="work-meta"><span class="work-name">Petshop GT</span><span class="status">Diseño aprobado</span></div>
+        <p class="work-info">Tienda de mascotas · 70 m² · Vista Hermosa, Zona 15</p>
       </a>
       <a href="la-autoria.html" class="work-card half">
         <div class="work-img">{img('restaurante-interior', 'Salón del restaurante La Autoría, Huehuetenango', 1344, 768, sizes='(max-width: 640px) 100vw, 50vw')}</div>
@@ -398,18 +408,51 @@ LPAGE = head(L_TITLE, L_DESC, L_URL, 'img/restaurante-interior-og.jpg', l_ld) + 
 LPAGE = LPAGE.replace('</style>', W_CSS + PAGE_A_CSS + '</style>', 1)
 open('la-autoria.html', 'w', encoding='utf-8').write(LPAGE)
 
-# ================================================================== KISHI BOOKS (mobiliario construido)
-K_URL = SITE + 'kishi-books.html'
-K_TITLE = 'Kishi Books, kiosco de madera curvada | Build &amp; Create Studio'
-K_DESC = 'Kishi Books (2024): kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.'
-k_ld = [
-    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kishi Books · Kiosco de madera curvada", "description": K_DESC.replace('&amp;', '&'),
-     "url": K_URL, "image": SITE + "img/kishi-books-escalera-og.jpg", "creator": ORG, "inLanguage": "es",
-     "creativeWorkStatus": "Construido", "dateCreated": "2024", "contentLocation": {"@type": "Place", "name": "Peri Roosevelt, Ciudad de Guatemala"}},
-    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+# ================================================================== FOTOS VERTICALES (fichas de obra construida)
+TALL_CSS = """
+/* ===== GALERIA VERTICAL (fotografías de obra) ===== */
+.gal .w3 { grid-column: span 3; }
+.gal .w6 { grid-column: span 6; }
+.gal .tall img { aspect-ratio: 3 / 4; }
+.sede + .sede { margin-top: 120px; }
+.sede-meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 28px; padding: 16px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+.sede-meta div { display: flex; gap: 10px; align-items: baseline; }
+.sede-meta dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-muted); }
+.sede-meta dd { margin: 0; color: var(--on-dark); font-size: 15px; }
+@media (max-width: 1100px) { .gal .w3 { grid-column: span 6; } }
+@media (max-width: 640px) { .gal .w3, .gal .w6 { grid-column: span 6; } .sede + .sede { margin-top: 80px; } }
+"""
+
+def vfig(stem, alt, title, sub, cls='w4 tall', sizes='(max-width: 1100px) 50vw, 33vw'):
+    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1200, 2131, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
+
+def sede_meta(*pairs):
+    return '<dl class="sede-meta">' + ''.join(f'<div><dt>{a}</dt><dd>{b}</dd></div>' for a, b in pairs) + '</dl>'
+
+def ficha(rows):
+    return ''.join(f'<div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">{a}</dt><dd>{b}</dd></div>' for a, b in rows)
+
+def crumbs(name, url):
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
         {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE},
         {"@type": "ListItem", "position": 2, "name": "Proyectos", "item": SITE + "#proyectos"},
-        {"@type": "ListItem", "position": 3, "name": "Kishi Books", "item": K_URL}]}]
+        {"@type": "ListItem", "position": 3, "name": name, "item": url}]}
+
+# ================================================================== KISHI BOOKS (3 sedes construidas)
+K_URL = SITE + 'kishi-books.html'
+K_TITLE = 'Kishi Books, 3 kioscos de librería | Build &amp; Create Studio'
+K_DESC = 'Kishi Books: tres kioscos de librería en madera curvada en Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula. Diseño y ejecución, 2024–2026.'
+KISHI_SEDES = [
+    ("Kishi Books · Peri Roosevelt", "Peri Roosevelt, Ciudad de Guatemala", "2024", "img/kishi-books-escalera-og.jpg"),
+    ("Kishi Books · Naranjo Mall", "Naranjo Mall", "2025", SITE + "img/kishi-books-naranjo-vista-general.webp"),
+    ("Kishi Books · Plaza Girasoles", "Plaza Girasoles, Chiquimula", "2026", "img/kishi-books-chiquimula-vista-frontal-og.jpg"),
+]
+k_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kishi Books · Kioscos de librería", "description": K_DESC,
+     "url": K_URL, "image": SITE + "img/kishi-books-escalera-og.jpg", "creator": ORG, "inLanguage": "es", "creativeWorkStatus": "Construido",
+     "hasPart": [{"@type": "CreativeWork", "name": n, "dateCreated": y, "creativeWorkStatus": "Construido", "creator": ORG,
+                  "image": im if im.startswith('http') else SITE + im, "contentLocation": {"@type": "Place", "name": p}} for n, p, y, im in KISHI_SEDES]},
+    crumbs("Kishi Books", K_URL)]
 
 def kfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
     return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1442, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
@@ -424,18 +467,18 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
   <div class="hero-body">
     <div class="wrap hero-grid">
       <div>
-        <p class="hero-kicker">Mobiliario comercial · Librería · Peri Roosevelt, Ciudad de Guatemala</p>
+        <p class="hero-kicker">Mobiliario comercial · Librería · 3 sedes construidas</p>
         <h1 class="hero-slogan">Kishi <span>Books.</span></h1>
-        <p class="hero-sub">Kiosco de madera curvada de estilo natural: un mueble que acompaña la escalera del atrio, exhibe libros por ambos lados y convierte los peldaños en lugares para leer.</p>
+        <p class="hero-sub">Tres kioscos de madera curvada para la misma marca: Peri Roosevelt, Naranjo Mall y Plaza Girasoles en Chiquimula. Un mismo lenguaje adaptado a cada planta, con diseño y ejecución de cada pieza.</p>
         <div class="hero-actions">
           <a href="diseno-estrategico.html?tipo=mobiliario%20estrat%C3%A9gico#contacto-d" class="btn btn-light">Diseñemos tu mobiliario →</a>
-          <a href="#galeria" class="link">Ver fotografías</a>
+          <a href="#sedes" class="link">Ver las 3 sedes</a>
         </div>
       </div>
       <div>
         <dl class="spec">
-          <div><dt>Estado</dt><dd>Construido · 2024</dd></div>
-          <div><dt>Medidas</dt><dd>1.40 × 9 m</dd></div>
+          <div><dt>Estado</dt><dd>3 sedes construidas</dd></div>
+          <div><dt>Periodo</dt><dd>2024 – 2026</dd></div>
           <div><dt>Alcance</dt><dd>Diseño y ejecución</dd></div>
         </dl>
       </div>
@@ -449,41 +492,79 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
 <section class="section on-dark-2" id="proyecto">
   <div class="wrap">
     <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
-      <div><dt class="mono">Ancho</dt><dd>1.40<small> m</small></dd></div>
-      <div><dt class="mono">Largo</dt><dd>9<small> m</small></dd></div>
+      <div><dt class="mono">Sedes construidas</dt><dd>3</dd></div>
+      <div><dt class="mono">Kiosco más largo</dt><dd>9<small> m</small></dd></div>
       <div><dt class="mono">Alcance</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Diseño y ejecución</dd></div>
     </dl>
     <div class="thesis" style="margin-top:96px">
-      <h2 class="thesis-quote">Un mueble que <b>sigue la escalera.</b></h2>
+      <h2 class="thesis-quote">Un sistema que <b>viaja de sede en sede.</b></h2>
       <div class="thesis-text">
-        <p>El kiosco ocupa el borde de la escalera del atrio y la convierte en parte del recorrido de la librería. La madera curvada sube con los peldaños y se abre en asientos con cojines para quedarse a leer.</p>
-        <p>Una línea de luz continua recorre el perfil del mueble y lo hace visible desde todo el centro comercial. Las estanterías exhiben libros hacia el pasillo y hacia el recorrido interior, con una sección en verde que marca su propia zona.</p>
-        <p><strong>Diseño y ejecución de {BRAND}: del concepto a la pieza instalada.</strong></p>
+        <p>Kishi Books trabajó con nosotros su kiosco de Peri Roosevelt en 2024 y volvió para Naranjo Mall en 2025 y Plaza Girasoles en 2026. Cada sede parte del mismo lenguaje: madera curvada de estilo natural, una línea de luz continua y exhibición por ambos lados.</p>
+        <p>Lo que cambia es la planta. En Peri Roosevelt el mueble sigue la escalera del atrio; en Naranjo Mall se concentra en islas escalonadas de 2 × 4 m; en Plaza Girasoles se abre en un pasillo curvo que invita a entrar.</p>
+        <p><strong>Diseño y ejecución de {BRAND} en las tres sedes: del concepto a la pieza instalada.</strong></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     GALERIA (fotografías del mueble construido)
+     SEDES (fotografías de obra construida)
      ============================================================ -->
-<section class="section on-dark" id="galeria">
+<section class="section on-dark" id="sedes">
   <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <span class="mono sec-label">Fotografías del proyecto construido</span>
-        <h2 class="sec-title">Madera curvada, <span>luz continua.</span></h2>
+    <article class="sede" id="peri-roosevelt">
+      <div class="sec-head">
+        <div>
+          <span class="mono sec-label">Sede 01 · 2024</span>
+          <h2 class="sec-title">Peri Roosevelt, <span>sigue la escalera.</span></h2>
+        </div>
+        <p class="sec-lead">Un kiosco de 9 metros resuelto como una sola pieza: estructura, exhibición, asiento e iluminación en el mismo mueble.</p>
       </div>
-      <p class="sec-lead">Un kiosco de 9 metros resuelto como una sola pieza: estructura, exhibición, asiento e iluminación en el mismo mueble.</p>
-    </div>
-    <div class="gal">
-      {kfig('kishi-books-vista-general', 'Vista general del kiosco Kishi Books en el atrio de Peri Roosevelt', 'Vista general', 'Kiosco junto a la escalera', 'w12', '100vw')}
-      {kfig('kishi-books-escalera-interior', 'Recorrido interior del kiosco con asiento de lectura y estantería verde', 'Recorrido interior', 'Asiento de lectura y estantería', 'w7')}
-      {kfig('kishi-books-pasillo', 'Pasillo central entre los dos muebles curvos de Kishi Books', 'Pasillo central', 'Exhibición por ambos lados', 'w5')}
-      {kfig('kishi-books-baranda', 'Kiosco Kishi Books con iluminación lineal junto a la baranda del atrio', 'Línea de luz', 'Perfil iluminado', 'w5')}
-      {kfig('kishi-books-conjunto', 'Kiosco Kishi Books con la escalera y los asientos de lectura', 'Conjunto', 'Escalera, asientos y exhibición', 'w7')}
-    </div>
-    <p class="gal-note">Fotografías del mueble construido e instalado.</p>
+      {sede_meta(('Ubicación', 'Peri Roosevelt, Ciudad de Guatemala'), ('Medidas', '1.40 × 9 m'), ('Año', '2024'))}
+      <div class="gal">
+        {kfig('kishi-books-vista-general', 'Vista general del kiosco Kishi Books en el atrio de Peri Roosevelt', 'Vista general', 'Kiosco junto a la escalera', 'w12', '100vw')}
+        {kfig('kishi-books-escalera-interior', 'Recorrido interior del kiosco con asiento de lectura y estantería verde', 'Recorrido interior', 'Asiento de lectura y estantería', 'w7')}
+        {kfig('kishi-books-pasillo', 'Pasillo central entre los dos muebles curvos de Kishi Books', 'Pasillo central', 'Exhibición por ambos lados', 'w5')}
+        {kfig('kishi-books-baranda', 'Kiosco Kishi Books con iluminación lineal junto a la baranda del atrio', 'Línea de luz', 'Perfil iluminado', 'w5')}
+        {kfig('kishi-books-conjunto', 'Kiosco Kishi Books con la escalera y los asientos de lectura', 'Conjunto', 'Escalera, asientos y exhibición', 'w7')}
+      </div>
+    </article>
+
+    <article class="sede" id="naranjo-mall">
+      <div class="sec-head">
+        <div>
+          <span class="mono sec-label">Sede 02 · 2025</span>
+          <h2 class="sec-title">Naranjo Mall, <span>islas escalonadas.</span></h2>
+        </div>
+        <p class="sec-lead">Un kiosco compacto de 2 × 4 m en el centro del pasillo: niveles de exhibición iluminados que se leen desde cualquier ángulo.</p>
+      </div>
+      {sede_meta(('Ubicación', 'Naranjo Mall'), ('Medidas', '2 × 4 m'), ('Año', '2025'))}
+      <div class="gal">
+        {vfig('kishi-books-naranjo-vista-general', 'Kiosco Kishi Books en el pasillo central de Naranjo Mall', 'Vista general', 'Kiosco en el pasillo')}
+        {vfig('kishi-books-naranjo-mesa-exhibicion', 'Isla de exhibición escalonada con iluminación lineal, Kishi Books Naranjo Mall', 'Isla central', 'Niveles iluminados')}
+        {vfig('kishi-books-naranjo-isla', 'Mueble de exhibición curvo de Kishi Books en Naranjo Mall', 'Exhibición perimetral', 'Esquinas curvas')}
+      </div>
+    </article>
+
+    <article class="sede" id="plaza-girasoles">
+      <div class="sec-head">
+        <div>
+          <span class="mono sec-label">Sede 03 · 2026</span>
+          <h2 class="sec-title">Plaza Girasoles, <span>un pasillo curvo.</span></h2>
+        </div>
+        <p class="sec-lead">Dos brazos de madera curvada forman un recorrido interior: el cliente entra al kiosco en lugar de mirarlo desde fuera.</p>
+      </div>
+      {sede_meta(('Ubicación', 'Plaza Girasoles, Chiquimula'), ('Año', '2026'))}
+      <div class="gal">
+        {vfig('kishi-books-chiquimula-pasillo', 'Pasillo curvo entre los muebles de madera de Kishi Books, Plaza Girasoles, Chiquimula', 'Pasillo curvo', 'Recorrido interior')}
+        {vfig('kishi-books-chiquimula-recorrido', 'Recorrido del kiosco Kishi Books con luz lineal en la base, Chiquimula', 'Recorrido', 'Luz lineal en la base')}
+        {vfig('kishi-books-chiquimula-esquina', 'Esquina del kiosco Kishi Books con el logotipo de la marca, Chiquimula', 'Remate con marca', 'Identidad en el mueble')}
+        {vfig('kishi-books-chiquimula-vista-frontal', 'Vista frontal del kiosco Kishi Books en Plaza Girasoles, Chiquimula', 'Vista frontal', 'Exhibición escalonada')}
+        {vfig('kishi-books-chiquimula-isla', 'Isla de exhibición de Kishi Books con la mascota de la marca, Chiquimula', 'Isla de acceso', 'Señal visible a distancia')}
+        {vfig('kishi-books-chiquimula-remate', 'Remate curvo del kiosco Kishi Books con exhibición en niveles, Chiquimula', 'Remate curvo', 'Exhibición en niveles')}
+      </div>
+    </article>
+    <p class="gal-note">Fotografías de los kioscos construidos e instalados.</p>
   </div>
 </section>
 
@@ -495,14 +576,14 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
     <div class="sec-head">
       <div>
         <span class="mono sec-label">Decisiones de diseño</span>
-        <h2 class="sec-title">Una pieza, <span>cuatro funciones.</span></h2>
+        <h2 class="sec-title">Un lenguaje, <span>tres plantas.</span></h2>
       </div>
     </div>
     <ol class="concepts">
-      <li><span class="n">01</span><span><b>Acompaña el desnivel.</b> La madera sigue la escalera y aprovecha los peldaños como asientos de lectura.</span></li>
-      <li><span class="n">02</span><span><b>Exhibe por ambos lados.</b> Estanterías hacia el pasillo del centro comercial y hacia el recorrido interior del kiosco.</span></li>
+      <li><span class="n">01</span><span><b>Se adapta al lugar.</b> Escalera, pasillo central o recorrido interior: el mueble responde a la planta de cada centro comercial.</span></li>
+      <li><span class="n">02</span><span><b>Exhibe por ambos lados.</b> Estanterías hacia el pasillo y hacia el interior del kiosco, sin espaldas muertas.</span></li>
       <li><span class="n">03</span><span><b>Luz como dibujo.</b> Una línea de luz continua sigue el perfil curvo y convierte el mueble en una señal visible a distancia.</span></li>
-      <li><span class="n">04</span><span><b>Material natural.</b> Madera curvada de estilo natural como lenguaje principal, con zonas de color para ordenar la exhibición.</span></li>
+      <li><span class="n">04</span><span><b>Marca reconocible.</b> La madera curvada de estilo natural se repite en las tres sedes y se vuelve parte de la identidad de la marca.</span></li>
     </ol>
   </div>
 </section>
@@ -514,14 +595,11 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
   <div class="wrap">
     <span class="mono sec-label">Ficha técnica</span>
     <dl class="spec" style="border-color:var(--line-light)">
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Proyecto</dt><dd>Kishi Books</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Tipología</dt><dd>Kiosco de librería · Mobiliario comercial</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Ubicación</dt><dd>Peri Roosevelt, Ciudad de Guatemala</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Medidas</dt><dd>1.40 × 9 m</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Material</dt><dd>Madera curvada, estilo natural</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Alcance de {BRAND}</dt><dd>Diseño y ejecución</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Año</dt><dd>2024</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Construido</dd></div>
+      {ficha([('Cliente', 'Kishi Books'), ('Tipología', 'Kioscos de librería · Mobiliario comercial'),
+              ('Sede 01', 'Peri Roosevelt, Ciudad de Guatemala · 1.40 × 9 m · 2024'),
+              ('Sede 02', 'Naranjo Mall · 2 × 4 m · 2025'),
+              ('Sede 03', 'Plaza Girasoles, Chiquimula · 2026'),
+              ('Material', 'Madera curvada, estilo natural'), (f'Alcance de {BRAND}', 'Diseño y ejecución'), ('Estado', 'Construido · 3 sedes')])}
     </dl>
     <div class="cta-row">
       <a href="diseno-estrategico.html?tipo=mobiliario%20estrat%C3%A9gico#contacto-d" class="btn btn-dark">Diseñemos tu mobiliario →</a>
@@ -531,5 +609,254 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
 </section>
 </main>
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
-KPAGE = KPAGE.replace('</style>', W_CSS + PAGE_A_CSS + '</style>', 1)
+KPAGE = KPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
 open('kishi-books.html', 'w', encoding='utf-8').write(KPAGE)
+
+# ================================================================== NAVANTE (oficina construida)
+N_URL = SITE + 'navante.html'
+N_TITLE = 'Navante, diseño de oficina de 96 m² | Build &amp; Create Studio'
+N_DESC = 'Navante: oficina de 96 m² para una empresa de logística marítima y aérea. Diseño interior, ejecución y mobiliario de Build & Create Studio, construida en 2026.'
+n_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Navante · Oficina", "description": N_DESC,
+     "url": N_URL, "image": SITE + "img/navante-estaciones-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Construido", "dateCreated": "2026"},
+    crumbs("Navante", N_URL)]
+
+NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-estaciones-og.jpg', n_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('navante-estaciones', 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 1200, 2131, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Oficina corporativa · Logística marítima y aérea</p>
+        <h1 class="hero-slogan">Navante <span>Oficina.</span></h1>
+        <p class="hero-sub">Oficina de 96 m² para una empresa de logística marítima y aérea: estaciones de trabajo abiertas, salas privadas en vidrio y luz que dibuja el espacio. Diseño interior, ejecución y mobiliario.</p>
+        <div class="hero-actions">
+          <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-light">Diseñemos tu oficina →</a>
+          <a href="#galeria" class="link">Ver fotografías</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Construido · 2026</dd></div>
+          <div><dt>Área</dt><dd>96 m²</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño interior, ejecución y mobiliario</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIFRAS Y CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Área</dt><dd>96<small> m²</small></dd></div>
+      <div><dt class="mono">Año</dt><dd>2026</dd></div>
+      <div><dt class="mono">Alcance</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Llave en mano</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">Una oficina que <b>se mueve como su negocio.</b></h2>
+      <div class="thesis-text">
+        <p>Navante es una empresa de logística marítima y aérea. Su oficina reúne en 96 m² un área de trabajo abierta, salas privadas para llamadas y reuniones, y una cocineta para el equipo.</p>
+        <p>Las luminarias lineales curvas recorren el techo y ordenan las zonas de trabajo. El color marca cada función: turquesa en el almacenamiento, naranja en la cocineta, amarillo en el acceso. Las salas privadas se cierran con vidrio y perfil negro para no perder luz ni amplitud.</p>
+        <p><strong>Diseño interior, ejecución y mobiliario de {BRAND}: un solo responsable de principio a fin.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (fotografías de obra construida)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Fotografías del proyecto construido</span>
+        <h2 class="sec-title">Luz, color <span>y vidrio.</span></h2>
+      </div>
+      <p class="sec-lead">96 m² con área abierta, salas privadas y cocineta, resueltos con un mismo sistema de luz y mobiliario.</p>
+    </div>
+    <div class="gal">
+      {vfig('navante-acceso', 'Acceso a la oficina de Navante con puerta de vidrio y muro amarillo', 'Acceso', 'Vidrio y perfil negro', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
+      {vfig('navante-estaciones', 'Estaciones de trabajo de Navante bajo luminarias lineales curvas', 'Estaciones de trabajo', 'Luz lineal curva', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
+      {vfig('navante-cocineta', 'Cocineta de Navante con salpicadero naranja y gabinetes blancos', 'Cocineta', 'Color por función', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
+      {vfig('navante-area-abierta', 'Área abierta de la oficina de Navante con salas privadas en vidrio', 'Área abierta', 'Salas privadas en vidrio', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
+    </div>
+    <p class="gal-note">Fotografías de la oficina construida.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Decisiones de diseño</span>
+        <h2 class="sec-title">Cuatro decisiones, <span>96 m².</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>Luz que ordena.</b> Luminarias lineales curvas suspendidas sobre cada grupo de trabajo, en lugar de una retícula uniforme.</span></li>
+      <li><span class="n">02</span><span><b>Color por función.</b> Turquesa, naranja y amarillo identifican almacenamiento, cocineta y acceso sin necesidad de señalética.</span></li>
+      <li><span class="n">03</span><span><b>Privacidad sin perder luz.</b> Salas cerradas con vidrio y perfil negro: espacios privados que no cortan la luz ni la amplitud.</span></li>
+      <li><span class="n">04</span><span><b>Mobiliario integrado.</b> Estaciones, gabinetes y cocineta definidos junto con el diseño interior, como un solo proyecto.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      {ficha([('Cliente', 'Navante'), ('Giro', 'Logística marítima y aérea'), ('Tipología', 'Oficina corporativa'), ('Área', '96 m²'),
+              (f'Alcance de {BRAND}', 'Diseño interior, ejecución y mobiliario'), ('Año', '2026'), ('Estado', 'Construido')])}
+    </dl>
+    <div class="cta-row">
+      <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-dark">Diseñemos tu oficina →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+NPAGE = NPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+open('navante.html', 'w', encoding='utf-8').write(NPAGE)
+
+# ================================================================== PETSHOP GT (diseño aprobado)
+P_URL = SITE + 'petshop-gt.html'
+P_TITLE = 'Petshop GT, diseño de tienda de mascotas | Build &amp; Create Studio'
+P_DESC = 'Petshop GT: diseño de tienda de mascotas de 70 m² en Vista Hermosa, Zona 15, Ciudad de Guatemala. Tienda, recepción, estancias y grooming. Diseño aprobado.'
+p_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Petshop GT · Tienda de mascotas", "description": P_DESC,
+     "url": P_URL, "image": SITE + "img/petshop-gt-recepcion-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Diseño aprobado", "contentLocation": {"@type": "Place", "name": "Vista Hermosa, Zona 15, Ciudad de Guatemala"}},
+    crumbs("Petshop GT", P_URL)]
+
+def pfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
+    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1080, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
+
+PPAGE = head(P_TITLE, P_DESC, P_URL, 'img/petshop-gt-recepcion-og.jpg', p_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT con mostrador curvo y estancias en vidrio', 1920, 1080, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Comercio · Tienda de mascotas · Vista Hermosa, Zona 15</p>
+        <h1 class="hero-slogan">Petshop <span>GT.</span></h1>
+        <p class="hero-sub">Tienda de mascotas de 70 m² pensada como un espacio de bienestar: recepción, tienda, estancias en vidrio y grooming bajo un mismo lenguaje de madera, verde y luz.</p>
+        <div class="hero-actions">
+          <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-light">Diseñemos tu local →</a>
+          <a href="#galeria" class="link">Ver el diseño</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Diseño aprobado</dd></div>
+          <div><dt>Área</dt><dd>70 m²</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIFRAS Y CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Área</dt><dd>70<small> m²</small></dd></div>
+      <div><dt class="mono">Zonas</dt><dd>4</dd></div>
+      <div><dt class="mono">Estado</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Diseño aprobado</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">Una tienda que se siente <b>como un spa.</b></h2>
+      <div class="thesis-text">
+        <p>El concepto parte del bienestar animal: madera natural, verde profundo, blanco y plantas como base de todo el local. La mascota y su dueño entran a un espacio tranquilo, no a una bodega de productos.</p>
+        <p>En 70 m² conviven cuatro zonas: recepción con mostrador curvo, estancias en vidrio a la vista, tienda con exhibición a ambos lados y un área de grooming con baño elevado.</p>
+        <p><strong>Diseño de {BRAND}, aprobado por el cliente.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (renders del diseño aprobado)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Diseño aprobado</span>
+        <h2 class="sec-title">Madera, verde <span>y bienestar.</span></h2>
+      </div>
+      <p class="sec-lead">Un mismo lenguaje recorre las cuatro zonas: madera natural, verde, luz lineal y vegetación.</p>
+    </div>
+    <div class="gal">
+      {pfig('petshop-gt-estancias', 'Render del recorrido de Petshop GT con estancias en vidrio para mascotas', 'Recorrido', 'Estancias en vidrio a la vista', 'w12', '100vw')}
+      {pfig('petshop-gt-tienda', 'Render de la tienda de Petshop GT con estanterías de producto a ambos lados', 'Tienda', 'Exhibición a ambos lados', 'w7')}
+      {pfig('petshop-gt-grooming', 'Render del área de grooming de Petshop GT con baño elevado', 'Grooming', 'Baño elevado y repisas', 'w5')}
+      {pfig('petshop-gt-concepto', 'Moodboard de Petshop GT con madera, verde, blanco y terrazo', 'Concepto', 'Paleta y materiales', 'w12', '100vw')}
+    </div>
+    <p class="gal-note">Renders del diseño aprobado.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Decisiones de diseño</span>
+        <h2 class="sec-title">Cuatro zonas, <span>70 m².</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>Recepción curva.</b> Un mostrador blanco de líneas suaves recibe y ordena el recorrido hacia el resto del local.</span></li>
+      <li><span class="n">02</span><span><b>Estancias a la vista.</b> Módulos en vidrio con estructura de madera: las mascotas quedan visibles y el local se siente abierto.</span></li>
+      <li><span class="n">03</span><span><b>Tienda en pasillo.</b> Estanterías a ambos lados aprovechan cada metro lineal para producto.</span></li>
+      <li><span class="n">04</span><span><b>Grooming integrado.</b> Baño elevado con escalones para la mascota, azulejo blanco y almacenamiento en verde.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      {ficha([('Cliente', 'Petshop GT'), ('Tipología', 'Tienda de mascotas'), ('Ubicación', 'Vista Hermosa, Zona 15, Ciudad de Guatemala'), ('Área', '70 m²'),
+              (f'Alcance de {BRAND}', 'Diseño'), ('Estado', 'Diseño aprobado')])}
+    </dl>
+    <div class="cta-row">
+      <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-dark">Diseñemos tu local →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+PPAGE = PPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+open('petshop-gt.html', 'w', encoding='utf-8').write(PPAGE)

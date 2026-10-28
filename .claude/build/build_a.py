@@ -428,6 +428,8 @@ def footer(p):
         <ul>
           <li><a href="{p}#ona">ONA</a></li>
           <li><a href="kishi-books.html">Kishi Books</a></li>
+          <li><a href="navante.html">Navante</a></li>
+          <li><a href="petshop-gt.html">Petshop GT</a></li>
           <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>
@@ -640,7 +642,8 @@ home_ld = {
     "knowsAbout": ["Arquitectura", "Prefactibilidad inmobiliaria", "Desarrollo inmobiliario", "Diseño interior", "Remodelaciones", "Mobiliario a la medida", "Estructuración de inversión inmobiliaria"]}
 
 HERO_PROJECTS = [
-    ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · Peri Roosevelt', 'Construido', 'kishi-books.html'),
+    ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · 3 sedes', 'Construido', 'kishi-books.html'),
+    ('navante-estaciones', 'webp', 1200, 2131, 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 'Navante · Oficina', 'Construido', 'navante.html'),
     ('edificio-w-aerea', 'webp', 1920, 1080, 'Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 'Edificio W · San Pedro Sula', 'En aprobación', 'edificio-w.html'),
     ('ona-fachada-atardecer', 'jpg', 1365, 768, 'Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala', 'ONA · Zona 15', 'En desarrollo', '#ona'),
     ('restaurante-interior', 'webp', 1344, 768, 'Salón del restaurante La Autoría con cocina de fuego, Huehuetenango', 'La Autoría · Salón', 'Diseño completado', 'la-autoria.html'),
@@ -689,16 +692,26 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="mono sec-label">Proyectos · 04</span>
+        <span class="mono sec-label">Proyectos · 06</span>
         <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
       </div>
-      <p class="sec-lead">Mobiliario comercial, uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Mobiliario comercial, oficinas, comercio, uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
-      <a href="kishi-books.html" class="work-card half">
-        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
-        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido</span></div>
-        <p class="work-info">Mobiliario comercial · Kiosco de 1.40 × 9 m · Diseño y ejecución · 2024</p>
+      <a href="kishi-books.html" class="work-card full">
+        <div class="work-img">{img('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, sizes='100vw')}</div>
+        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido · 3 sedes</span></div>
+        <p class="work-info">Mobiliario comercial · Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula · Diseño y ejecución · 2024–2026</p>
+      </a>
+      <a href="navante.html" class="work-card half">
+        <div class="work-img">{img('navante-estaciones', 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 1200, 2131, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
+        <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
+      </a>
+      <a href="petshop-gt.html" class="work-card half">
+        <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Petshop GT</span><span class="status">Diseño aprobado</span></div>
+        <p class="work-info">Tienda de mascotas · 70 m² · Vista Hermosa, Zona 15</p>
       </a>
       <a href="edificio-w.html" class="work-card half">
         <div class="work-img">{img('edificio-w-aerea', 'Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
@@ -710,7 +723,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="work-meta"><span class="work-name">ONA</span><span class="status">En fase de desarrollo</span></div>
         <p class="work-info">Residencial vertical · 18,792 m² · Zona 15, Vista Hermosa I</p>
       </a>
-      <a href="la-autoria.html" class="work-card half">
+      <a href="la-autoria.html" class="work-card full">
         <div class="work-img">{img('restaurante-interior', 'Salón del restaurante La Autoría, Huehuetenango', 1344, 768, sizes='100vw')}</div>
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
@@ -1448,4 +1461,4 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
 WPAGE = WPAGE.replace('</style>', W_CSS + '</style>', 1)
 open('edificio-w.html', 'w', encoding='utf-8').write(WPAGE)
 exec(open(os.path.join('.claude', 'build', 'paginas_a.py'), encoding='utf-8').read())
-print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE))
+print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE))

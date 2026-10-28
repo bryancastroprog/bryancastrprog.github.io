@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Kishi Books, kiosco de madera curvada | Build &amp; Create Studio</title>
-<meta name="description" content="Kishi Books (2024): kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.">
+<title>Kishi Books, 3 kioscos de librería | Build &amp; Create Studio</title>
+<meta name="description" content="Kishi Books: tres kioscos de librería en madera curvada en Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula. Diseño y ejecución, 2024–2026.">
 <meta name="theme-color" content="#0e0d0b">
 <link rel="canonical" href="https://bcarqstudio.com/kishi-books.html">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -12,8 +12,8 @@
 <meta property="og:locale" content="es_GT">
 <meta property="og:site_name" content="Build &amp; Create Studio">
 <meta property="og:url" content="https://bcarqstudio.com/kishi-books.html">
-<meta property="og:title" content="Kishi Books, kiosco de madera curvada | Build &amp; Create Studio">
-<meta property="og:description" content="Kishi Books (2024): kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.">
+<meta property="og:title" content="Kishi Books, 3 kioscos de librería | Build &amp; Create Studio">
+<meta property="og:description" content="Kishi Books: tres kioscos de librería en madera curvada en Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula. Diseño y ejecución, 2024–2026.">
 <meta property="og:image" content="https://bcarqstudio.com/img/kishi-books-escalera-og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -23,8 +23,8 @@
   {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
-    "name": "Kishi Books · Kiosco de madera curvada",
-    "description": "Kishi Books (2024): kiosco de librería en madera curvada de 1.40 × 9 m en Peri Roosevelt, Ciudad de Guatemala. Diseño y ejecución de Build & Create Studio.",
+    "name": "Kishi Books · Kioscos de librería",
+    "description": "Kishi Books: tres kioscos de librería en madera curvada en Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula. Diseño y ejecución, 2024–2026.",
     "url": "https://bcarqstudio.com/kishi-books.html",
     "image": "https://bcarqstudio.com/img/kishi-books-escalera-og.jpg",
     "creator": {
@@ -32,11 +32,50 @@
     },
     "inLanguage": "es",
     "creativeWorkStatus": "Construido",
-    "dateCreated": "2024",
-    "contentLocation": {
-      "@type": "Place",
-      "name": "Peri Roosevelt, Ciudad de Guatemala"
-    }
+    "hasPart": [
+      {
+        "@type": "CreativeWork",
+        "name": "Kishi Books · Peri Roosevelt",
+        "dateCreated": "2024",
+        "creativeWorkStatus": "Construido",
+        "creator": {
+          "@id": "https://bcarqstudio.com/#organizacion"
+        },
+        "image": "https://bcarqstudio.com/img/kishi-books-escalera-og.jpg",
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Peri Roosevelt, Ciudad de Guatemala"
+        }
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Kishi Books · Naranjo Mall",
+        "dateCreated": "2025",
+        "creativeWorkStatus": "Construido",
+        "creator": {
+          "@id": "https://bcarqstudio.com/#organizacion"
+        },
+        "image": "https://bcarqstudio.com/img/kishi-books-naranjo-vista-general.webp",
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Naranjo Mall"
+        }
+      },
+      {
+        "@type": "CreativeWork",
+        "name": "Kishi Books · Plaza Girasoles",
+        "dateCreated": "2026",
+        "creativeWorkStatus": "Construido",
+        "creator": {
+          "@id": "https://bcarqstudio.com/#organizacion"
+        },
+        "image": "https://bcarqstudio.com/img/kishi-books-chiquimula-vista-frontal-og.jpg",
+        "contentLocation": {
+          "@type": "Place",
+          "name": "Plaza Girasoles, Chiquimula"
+        }
+      }
+    ]
   },
   {
     "@context": "https://schema.org",
@@ -473,6 +512,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   .svc-grid, .pillars, .program { grid-template-columns: 1fr; }
   .svc:nth-child(even) { padding-left: 0; border-left: 0; }
 }
+
+/* ===== GALERIA VERTICAL (fotografías de obra) ===== */
+.gal .w3 { grid-column: span 3; }
+.gal .w6 { grid-column: span 6; }
+.gal .tall img { aspect-ratio: 3 / 4; }
+.sede + .sede { margin-top: 120px; }
+.sede-meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 28px; padding: 16px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+.sede-meta div { display: flex; gap: 10px; align-items: baseline; }
+.sede-meta dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-muted); }
+.sede-meta dd { margin: 0; color: var(--on-dark); font-size: 15px; }
+@media (max-width: 1100px) { .gal .w3 { grid-column: span 6; } }
+@media (max-width: 640px) { .gal .w3, .gal .w6 { grid-column: span 6; } .sede + .sede { margin-top: 80px; } }
 </style>
 </head>
 <body>
@@ -506,18 +557,18 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   <div class="hero-body">
     <div class="wrap hero-grid">
       <div>
-        <p class="hero-kicker">Mobiliario comercial · Librería · Peri Roosevelt, Ciudad de Guatemala</p>
+        <p class="hero-kicker">Mobiliario comercial · Librería · 3 sedes construidas</p>
         <h1 class="hero-slogan">Kishi <span>Books.</span></h1>
-        <p class="hero-sub">Kiosco de madera curvada de estilo natural: un mueble que acompaña la escalera del atrio, exhibe libros por ambos lados y convierte los peldaños en lugares para leer.</p>
+        <p class="hero-sub">Tres kioscos de madera curvada para la misma marca: Peri Roosevelt, Naranjo Mall y Plaza Girasoles en Chiquimula. Un mismo lenguaje adaptado a cada planta, con diseño y ejecución de cada pieza.</p>
         <div class="hero-actions">
           <a href="diseno-estrategico.html?tipo=mobiliario%20estrat%C3%A9gico#contacto-d" class="btn btn-light">Diseñemos tu mobiliario →</a>
-          <a href="#galeria" class="link">Ver fotografías</a>
+          <a href="#sedes" class="link">Ver las 3 sedes</a>
         </div>
       </div>
       <div>
         <dl class="spec">
-          <div><dt>Estado</dt><dd>Construido · 2024</dd></div>
-          <div><dt>Medidas</dt><dd>1.40 × 9 m</dd></div>
+          <div><dt>Estado</dt><dd>3 sedes construidas</dd></div>
+          <div><dt>Periodo</dt><dd>2024 – 2026</dd></div>
           <div><dt>Alcance</dt><dd>Diseño y ejecución</dd></div>
         </dl>
       </div>
@@ -531,41 +582,79 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 <section class="section on-dark-2" id="proyecto">
   <div class="wrap">
     <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
-      <div><dt class="mono">Ancho</dt><dd>1.40<small> m</small></dd></div>
-      <div><dt class="mono">Largo</dt><dd>9<small> m</small></dd></div>
+      <div><dt class="mono">Sedes construidas</dt><dd>3</dd></div>
+      <div><dt class="mono">Kiosco más largo</dt><dd>9<small> m</small></dd></div>
       <div><dt class="mono">Alcance</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Diseño y ejecución</dd></div>
     </dl>
     <div class="thesis" style="margin-top:96px">
-      <h2 class="thesis-quote">Un mueble que <b>sigue la escalera.</b></h2>
+      <h2 class="thesis-quote">Un sistema que <b>viaja de sede en sede.</b></h2>
       <div class="thesis-text">
-        <p>El kiosco ocupa el borde de la escalera del atrio y la convierte en parte del recorrido de la librería. La madera curvada sube con los peldaños y se abre en asientos con cojines para quedarse a leer.</p>
-        <p>Una línea de luz continua recorre el perfil del mueble y lo hace visible desde todo el centro comercial. Las estanterías exhiben libros hacia el pasillo y hacia el recorrido interior, con una sección en verde que marca su propia zona.</p>
-        <p><strong>Diseño y ejecución de Build &amp; Create Studio: del concepto a la pieza instalada.</strong></p>
+        <p>Kishi Books trabajó con nosotros su kiosco de Peri Roosevelt en 2024 y volvió para Naranjo Mall en 2025 y Plaza Girasoles en 2026. Cada sede parte del mismo lenguaje: madera curvada de estilo natural, una línea de luz continua y exhibición por ambos lados.</p>
+        <p>Lo que cambia es la planta. En Peri Roosevelt el mueble sigue la escalera del atrio; en Naranjo Mall se concentra en islas escalonadas de 2 × 4 m; en Plaza Girasoles se abre en un pasillo curvo que invita a entrar.</p>
+        <p><strong>Diseño y ejecución de Build &amp; Create Studio en las tres sedes: del concepto a la pieza instalada.</strong></p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     GALERIA (fotografías del mueble construido)
+     SEDES (fotografías de obra construida)
      ============================================================ -->
-<section class="section on-dark" id="galeria">
+<section class="section on-dark" id="sedes">
   <div class="wrap">
-    <div class="sec-head">
-      <div>
-        <span class="mono sec-label">Fotografías del proyecto construido</span>
-        <h2 class="sec-title">Madera curvada, <span>luz continua.</span></h2>
+    <article class="sede" id="peri-roosevelt">
+      <div class="sec-head">
+        <div>
+          <span class="mono sec-label">Sede 01 · 2024</span>
+          <h2 class="sec-title">Peri Roosevelt, <span>sigue la escalera.</span></h2>
+        </div>
+        <p class="sec-lead">Un kiosco de 9 metros resuelto como una sola pieza: estructura, exhibición, asiento e iluminación en el mismo mueble.</p>
       </div>
-      <p class="sec-lead">Un kiosco de 9 metros resuelto como una sola pieza: estructura, exhibición, asiento e iluminación en el mismo mueble.</p>
-    </div>
-    <div class="gal">
-      <figure class="w12"><div class="frame"><img src="img/kishi-books-vista-general.webp" srcset="img/kishi-books-vista-general-960.webp 960w, img/kishi-books-vista-general.webp 1920w" sizes="100vw" width="1920" height="1442" alt="Vista general del kiosco Kishi Books en el atrio de Peri Roosevelt" loading="lazy" decoding="async"></div><figcaption><strong>Vista general</strong><span class="mono">Kiosco junto a la escalera</span></figcaption></figure>
-      <figure class="w7"><div class="frame"><img src="img/kishi-books-escalera-interior.webp" srcset="img/kishi-books-escalera-interior-960.webp 960w, img/kishi-books-escalera-interior.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Recorrido interior del kiosco con asiento de lectura y estantería verde" loading="lazy" decoding="async"></div><figcaption><strong>Recorrido interior</strong><span class="mono">Asiento de lectura y estantería</span></figcaption></figure>
-      <figure class="w5"><div class="frame"><img src="img/kishi-books-pasillo.webp" srcset="img/kishi-books-pasillo-960.webp 960w, img/kishi-books-pasillo.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Pasillo central entre los dos muebles curvos de Kishi Books" loading="lazy" decoding="async"></div><figcaption><strong>Pasillo central</strong><span class="mono">Exhibición por ambos lados</span></figcaption></figure>
-      <figure class="w5"><div class="frame"><img src="img/kishi-books-baranda.webp" srcset="img/kishi-books-baranda-960.webp 960w, img/kishi-books-baranda.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Kiosco Kishi Books con iluminación lineal junto a la baranda del atrio" loading="lazy" decoding="async"></div><figcaption><strong>Línea de luz</strong><span class="mono">Perfil iluminado</span></figcaption></figure>
-      <figure class="w7"><div class="frame"><img src="img/kishi-books-conjunto.webp" srcset="img/kishi-books-conjunto-960.webp 960w, img/kishi-books-conjunto.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Kiosco Kishi Books con la escalera y los asientos de lectura" loading="lazy" decoding="async"></div><figcaption><strong>Conjunto</strong><span class="mono">Escalera, asientos y exhibición</span></figcaption></figure>
-    </div>
-    <p class="gal-note">Fotografías del mueble construido e instalado.</p>
+      <dl class="sede-meta"><div><dt>Ubicación</dt><dd>Peri Roosevelt, Ciudad de Guatemala</dd></div><div><dt>Medidas</dt><dd>1.40 × 9 m</dd></div><div><dt>Año</dt><dd>2024</dd></div></dl>
+      <div class="gal">
+        <figure class="w12"><div class="frame"><img src="img/kishi-books-vista-general.webp" srcset="img/kishi-books-vista-general-960.webp 960w, img/kishi-books-vista-general.webp 1920w" sizes="100vw" width="1920" height="1442" alt="Vista general del kiosco Kishi Books en el atrio de Peri Roosevelt" loading="lazy" decoding="async"></div><figcaption><strong>Vista general</strong><span class="mono">Kiosco junto a la escalera</span></figcaption></figure>
+        <figure class="w7"><div class="frame"><img src="img/kishi-books-escalera-interior.webp" srcset="img/kishi-books-escalera-interior-960.webp 960w, img/kishi-books-escalera-interior.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Recorrido interior del kiosco con asiento de lectura y estantería verde" loading="lazy" decoding="async"></div><figcaption><strong>Recorrido interior</strong><span class="mono">Asiento de lectura y estantería</span></figcaption></figure>
+        <figure class="w5"><div class="frame"><img src="img/kishi-books-pasillo.webp" srcset="img/kishi-books-pasillo-960.webp 960w, img/kishi-books-pasillo.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Pasillo central entre los dos muebles curvos de Kishi Books" loading="lazy" decoding="async"></div><figcaption><strong>Pasillo central</strong><span class="mono">Exhibición por ambos lados</span></figcaption></figure>
+        <figure class="w5"><div class="frame"><img src="img/kishi-books-baranda.webp" srcset="img/kishi-books-baranda-960.webp 960w, img/kishi-books-baranda.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Kiosco Kishi Books con iluminación lineal junto a la baranda del atrio" loading="lazy" decoding="async"></div><figcaption><strong>Línea de luz</strong><span class="mono">Perfil iluminado</span></figcaption></figure>
+        <figure class="w7"><div class="frame"><img src="img/kishi-books-conjunto.webp" srcset="img/kishi-books-conjunto-960.webp 960w, img/kishi-books-conjunto.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Kiosco Kishi Books con la escalera y los asientos de lectura" loading="lazy" decoding="async"></div><figcaption><strong>Conjunto</strong><span class="mono">Escalera, asientos y exhibición</span></figcaption></figure>
+      </div>
+    </article>
+
+    <article class="sede" id="naranjo-mall">
+      <div class="sec-head">
+        <div>
+          <span class="mono sec-label">Sede 02 · 2025</span>
+          <h2 class="sec-title">Naranjo Mall, <span>islas escalonadas.</span></h2>
+        </div>
+        <p class="sec-lead">Un kiosco compacto de 2 × 4 m en el centro del pasillo: niveles de exhibición iluminados que se leen desde cualquier ángulo.</p>
+      </div>
+      <dl class="sede-meta"><div><dt>Ubicación</dt><dd>Naranjo Mall</dd></div><div><dt>Medidas</dt><dd>2 × 4 m</dd></div><div><dt>Año</dt><dd>2025</dd></div></dl>
+      <div class="gal">
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-naranjo-vista-general.webp" srcset="img/kishi-books-naranjo-vista-general-960.webp 960w, img/kishi-books-naranjo-vista-general.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Kiosco Kishi Books en el pasillo central de Naranjo Mall" loading="lazy" decoding="async"></div><figcaption><strong>Vista general</strong><span class="mono">Kiosco en el pasillo</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-naranjo-mesa-exhibicion.webp" srcset="img/kishi-books-naranjo-mesa-exhibicion-960.webp 960w, img/kishi-books-naranjo-mesa-exhibicion.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Isla de exhibición escalonada con iluminación lineal, Kishi Books Naranjo Mall" loading="lazy" decoding="async"></div><figcaption><strong>Isla central</strong><span class="mono">Niveles iluminados</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-naranjo-isla.webp" srcset="img/kishi-books-naranjo-isla-960.webp 960w, img/kishi-books-naranjo-isla.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Mueble de exhibición curvo de Kishi Books en Naranjo Mall" loading="lazy" decoding="async"></div><figcaption><strong>Exhibición perimetral</strong><span class="mono">Esquinas curvas</span></figcaption></figure>
+      </div>
+    </article>
+
+    <article class="sede" id="plaza-girasoles">
+      <div class="sec-head">
+        <div>
+          <span class="mono sec-label">Sede 03 · 2026</span>
+          <h2 class="sec-title">Plaza Girasoles, <span>un pasillo curvo.</span></h2>
+        </div>
+        <p class="sec-lead">Dos brazos de madera curvada forman un recorrido interior: el cliente entra al kiosco en lugar de mirarlo desde fuera.</p>
+      </div>
+      <dl class="sede-meta"><div><dt>Ubicación</dt><dd>Plaza Girasoles, Chiquimula</dd></div><div><dt>Año</dt><dd>2026</dd></div></dl>
+      <div class="gal">
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-chiquimula-pasillo.webp" srcset="img/kishi-books-chiquimula-pasillo-960.webp 960w, img/kishi-books-chiquimula-pasillo.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Pasillo curvo entre los muebles de madera de Kishi Books, Plaza Girasoles, Chiquimula" loading="lazy" decoding="async"></div><figcaption><strong>Pasillo curvo</strong><span class="mono">Recorrido interior</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-chiquimula-recorrido.webp" srcset="img/kishi-books-chiquimula-recorrido-960.webp 960w, img/kishi-books-chiquimula-recorrido.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Recorrido del kiosco Kishi Books con luz lineal en la base, Chiquimula" loading="lazy" decoding="async"></div><figcaption><strong>Recorrido</strong><span class="mono">Luz lineal en la base</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-chiquimula-esquina.webp" srcset="img/kishi-books-chiquimula-esquina-960.webp 960w, img/kishi-books-chiquimula-esquina.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Esquina del kiosco Kishi Books con el logotipo de la marca, Chiquimula" loading="lazy" decoding="async"></div><figcaption><strong>Remate con marca</strong><span class="mono">Identidad en el mueble</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-chiquimula-vista-frontal.webp" srcset="img/kishi-books-chiquimula-vista-frontal-960.webp 960w, img/kishi-books-chiquimula-vista-frontal.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Vista frontal del kiosco Kishi Books en Plaza Girasoles, Chiquimula" loading="lazy" decoding="async"></div><figcaption><strong>Vista frontal</strong><span class="mono">Exhibición escalonada</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-chiquimula-isla.webp" srcset="img/kishi-books-chiquimula-isla-960.webp 960w, img/kishi-books-chiquimula-isla.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Isla de exhibición de Kishi Books con la mascota de la marca, Chiquimula" loading="lazy" decoding="async"></div><figcaption><strong>Isla de acceso</strong><span class="mono">Señal visible a distancia</span></figcaption></figure>
+        <figure class="w4 tall"><div class="frame"><img src="img/kishi-books-chiquimula-remate.webp" srcset="img/kishi-books-chiquimula-remate-960.webp 960w, img/kishi-books-chiquimula-remate.webp 1200w" sizes="(max-width: 1100px) 50vw, 33vw" width="1200" height="2131" alt="Remate curvo del kiosco Kishi Books con exhibición en niveles, Chiquimula" loading="lazy" decoding="async"></div><figcaption><strong>Remate curvo</strong><span class="mono">Exhibición en niveles</span></figcaption></figure>
+      </div>
+    </article>
+    <p class="gal-note">Fotografías de los kioscos construidos e instalados.</p>
   </div>
 </section>
 
@@ -577,14 +666,14 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
     <div class="sec-head">
       <div>
         <span class="mono sec-label">Decisiones de diseño</span>
-        <h2 class="sec-title">Una pieza, <span>cuatro funciones.</span></h2>
+        <h2 class="sec-title">Un lenguaje, <span>tres plantas.</span></h2>
       </div>
     </div>
     <ol class="concepts">
-      <li><span class="n">01</span><span><b>Acompaña el desnivel.</b> La madera sigue la escalera y aprovecha los peldaños como asientos de lectura.</span></li>
-      <li><span class="n">02</span><span><b>Exhibe por ambos lados.</b> Estanterías hacia el pasillo del centro comercial y hacia el recorrido interior del kiosco.</span></li>
+      <li><span class="n">01</span><span><b>Se adapta al lugar.</b> Escalera, pasillo central o recorrido interior: el mueble responde a la planta de cada centro comercial.</span></li>
+      <li><span class="n">02</span><span><b>Exhibe por ambos lados.</b> Estanterías hacia el pasillo y hacia el interior del kiosco, sin espaldas muertas.</span></li>
       <li><span class="n">03</span><span><b>Luz como dibujo.</b> Una línea de luz continua sigue el perfil curvo y convierte el mueble en una señal visible a distancia.</span></li>
-      <li><span class="n">04</span><span><b>Material natural.</b> Madera curvada de estilo natural como lenguaje principal, con zonas de color para ordenar la exhibición.</span></li>
+      <li><span class="n">04</span><span><b>Marca reconocible.</b> La madera curvada de estilo natural se repite en las tres sedes y se vuelve parte de la identidad de la marca.</span></li>
     </ol>
   </div>
 </section>
@@ -596,14 +685,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   <div class="wrap">
     <span class="mono sec-label">Ficha técnica</span>
     <dl class="spec" style="border-color:var(--line-light)">
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Proyecto</dt><dd>Kishi Books</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Tipología</dt><dd>Kiosco de librería · Mobiliario comercial</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Ubicación</dt><dd>Peri Roosevelt, Ciudad de Guatemala</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Medidas</dt><dd>1.40 × 9 m</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Material</dt><dd>Madera curvada, estilo natural</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Alcance de Build &amp; Create Studio</dt><dd>Diseño y ejecución</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Año</dt><dd>2024</dd></div>
-      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Construido</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Cliente</dt><dd>Kishi Books</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Tipología</dt><dd>Kioscos de librería · Mobiliario comercial</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Sede 01</dt><dd>Peri Roosevelt, Ciudad de Guatemala · 1.40 × 9 m · 2024</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Sede 02</dt><dd>Naranjo Mall · 2 × 4 m · 2025</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Sede 03</dt><dd>Plaza Girasoles, Chiquimula · 2026</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Material</dt><dd>Madera curvada, estilo natural</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Alcance de Build &amp; Create Studio</dt><dd>Diseño y ejecución</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Construido · 3 sedes</dd></div>
     </dl>
     <div class="cta-row">
       <a href="diseno-estrategico.html?tipo=mobiliario%20estrat%C3%A9gico#contacto-d" class="btn btn-dark">Diseñemos tu mobiliario →</a>
@@ -637,6 +719,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
         <ul>
           <li><a href="index.html#ona">ONA</a></li>
           <li><a href="kishi-books.html">Kishi Books</a></li>
+          <li><a href="navante.html">Navante</a></li>
+          <li><a href="petshop-gt.html">Petshop GT</a></li>
           <li><a href="edificio-w.html">Edificio W</a></li>
           <li><a href="la-autoria.html">La Autoría</a></li>
         </ul>

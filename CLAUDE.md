@@ -19,12 +19,12 @@ Objetivo del sitio: **captar consultas calificadas** de empresas (diseño de esp
 | `index.html` | Home: hero con índice de proyectos, proyectos, servicios, proceso, diferencial y ONA, estudio, contacto |
 | `prefactibilidad-inmobiliaria.html` | Servicio de diagnóstico de terreno (con capa de movimiento) |
 | `diseno-estrategico.html` | Diseño para negocios: servicios, fundamento, proyectos relacionados, proceso, contacto |
-| `kishi-books.html`, `edificio-w.html`, `la-autoria.html` | Fichas de proyecto (Kishi Books: construido) |
+| `kishi-books.html`, `navante.html`, `petshop-gt.html`, `edificio-w.html`, `la-autoria.html` | Fichas de proyecto (Kishi Books y Navante: construidos) |
 | `aesthetica-medica.html`, `libreria-cayala.html`, `sweetpop.html` | Páginas puente (noindex, redirigen a Proyectos): proyectos retirados |
 
 ## Generador de páginas (dirección visual A)
 
-Todas las páginas de contenido (`index.html`, `prefactibilidad-inmobiliaria.html`, `diseno-estrategico.html`, `edificio-w.html`, `la-autoria.html`, `kishi-books.html`) se generan con `python3 .claude/build/build_a.py` (CSS compartido, cabecera, pie y formularios). **Editar el generador, no el HTML de salida**, y volver a ejecutarlo. Diseño para negocios, La Autoría y Kishi Books están en `.claude/build/paginas_a.py`; la capa de movimiento de prefactibilidad, en `.claude/build/motion_pref.py`.
+Todas las páginas de contenido (`index.html`, `prefactibilidad-inmobiliaria.html`, `diseno-estrategico.html`, `edificio-w.html`, `la-autoria.html`, `kishi-books.html`, `navante.html`, `petshop-gt.html`) se generan con `python3 .claude/build/build_a.py` (CSS compartido, cabecera, pie y formularios). **Editar el generador, no el HTML de salida**, y volver a ejecutarlo. Diseño para negocios, La Autoría, Kishi Books, Navante y Petshop GT están en `.claude/build/paginas_a.py`; la capa de movimiento de prefactibilidad, en `.claude/build/motion_pref.py`.
 
 ## Reglas obligatorias
 

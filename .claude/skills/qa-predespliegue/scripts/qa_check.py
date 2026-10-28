@@ -8,6 +8,7 @@ Sin argumentos revisa todos los *.html del repo (excepto node_modules y .git).
 Sale con código 1 si encuentra BLOQUEANTES; 0 si solo hay advertencias.
 Solo usa la librería estándar.
 """
+import fnmatch
 import json
 import os
 import re
@@ -274,10 +275,17 @@ def site_checks(files):
             slug = relp[:-len("index.html")] if relp.endswith("index.html") else relp
             if not any(l.rstrip("/").endswith(slug.rstrip("/").replace(".html", "")) or l.endswith(slug) for l in locs):
                 add("ADVERTENCIA", "seo", f"{relp} no aparece en sitemap.xml")
+    # Peso publicado: respeta los "exclude" de _config.yml (originales, docs, etc.)
+    patterns = [".git", ".git/"]
+    cfg = os.path.join(ROOT, "_config.yml")
+    if os.path.exists(cfg):
+        patterns += [l.strip()[2:].strip() for l in open(cfg, encoding="utf-8") if l.strip().startswith("- ")]
+    def published(rel):
+        return not any(fnmatch.fnmatch(rel, p) or (p.endswith("/") and (rel + "/").startswith(p)) or rel.startswith(p.rstrip("/") + "/") for p in patterns)
     total = 0
     for dp, dn, fn in os.walk(ROOT):
-        dn[:] = [d for d in dn if d not in (".git", "node_modules", ".claude")]
-        total += sum(os.path.getsize(os.path.join(dp, x)) for x in fn)
+        dn[:] = [d for d in dn if published(os.path.relpath(os.path.join(dp, d), ROOT).replace(os.sep, "/"))]
+        total += sum(os.path.getsize(os.path.join(dp, x)) for x in fn if published(os.path.relpath(os.path.join(dp, x), ROOT).replace(os.sep, "/")))
     if total > 300 * 1024 * 1024:
         add("BLOQUEANTE", "perf", f"Repositorio publicado de {total/1048576:.0f} MB (GitHub Pages recomienda < 1 GB; objetivo < 100 MB)")
     elif total > 60 * 1024 * 1024:
