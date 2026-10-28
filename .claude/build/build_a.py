@@ -643,7 +643,7 @@ home_ld = {
 
 HERO_PROJECTS = [
     ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · 3 sedes', 'Construido', 'kishi-books.html'),
-    ('navante-estaciones', 'webp', 1200, 2131, 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 'Navante · Oficina', 'Construido', 'navante.html'),
+    ('navante-lampara', 'webp', 1920, 1407, 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 'Navante · Oficina', 'Construido', 'navante.html'),
     ('edificio-w-aerea', 'webp', 1920, 1080, 'Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 'Edificio W · San Pedro Sula', 'En aprobación', 'edificio-w.html'),
     ('ona-fachada-atardecer', 'jpg', 1365, 768, 'Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala', 'ONA · Zona 15', 'En desarrollo', '#ona'),
     ('restaurante-interior', 'webp', 1344, 768, 'Salón del restaurante La Autoría con cocina de fuego, Huehuetenango', 'La Autoría · Salón', 'Diseño completado', 'la-autoria.html'),
@@ -704,7 +704,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <p class="work-info">Mobiliario comercial · Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula · Diseño y ejecución · 2024–2026</p>
       </a>
       <a href="navante.html" class="work-card half">
-        <div class="work-img">{img('navante-estaciones', 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 1200, 2131, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-img">{img('navante-lampara', 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 1920, 1407, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
         <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
       </a>

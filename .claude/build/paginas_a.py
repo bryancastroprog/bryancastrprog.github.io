@@ -186,7 +186,7 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
         <p class="work-info">Mobiliario comercial · 3 kioscos de librería · Diseño y ejecución · 2024–2026</p>
       </a>
       <a href="navante.html" class="work-card half">
-        <div class="work-img">{img('navante-estaciones', 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 1200, 2131, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-img">{img('navante-lampara', 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 1920, 1407, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
         <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
       </a>
@@ -618,17 +618,17 @@ N_TITLE = 'Navante, diseño de oficina de 96 m² | Build &amp; Create Studio'
 N_DESC = 'Navante: oficina de 96 m² para una empresa de logística marítima y aérea. Diseño interior, ejecución y mobiliario de Build & Create Studio, construida en 2026.'
 n_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Navante · Oficina", "description": N_DESC,
-     "url": N_URL, "image": SITE + "img/navante-estaciones-og.jpg", "creator": ORG, "inLanguage": "es",
+     "url": N_URL, "image": SITE + "img/navante-lampara-og.jpg", "creator": ORG, "inLanguage": "es",
      "creativeWorkStatus": "Construido", "dateCreated": "2026"},
     crumbs("Navante", N_URL)]
 
-NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-estaciones-og.jpg', n_ld) + nav('Proyectos', 'index.html') + f"""
+NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-og.jpg', n_ld) + nav('Proyectos', 'index.html') + f"""
 <main>
 <!-- ============================================================
      HERO
      ============================================================ -->
 <section class="hero" id="inicio">
-  <div class="hero-media">{img('navante-estaciones', 'Oficina de Navante con estaciones de trabajo y luminarias lineales curvas', 1200, 2131, lazy=False, cls='on')}</div>
+  <div class="hero-media">{img('navante-lampara', 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 1920, 1407, lazy=False, cls='on')}</div>
   <div class="hero-body">
     <div class="wrap hero-grid">
       <div>
