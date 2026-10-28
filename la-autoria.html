@@ -2,408 +2,712 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="La Autoría — Restaurante de cocina guatemalteca contemporánea en Huehuetenango, Guatemala. Diseño BC Arq Studio.">
-<title>La Autoría — Proyecto · BC Arq Studio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>La Autoría, restaurante en Huehuetenango | Build &amp; Create Studio</title>
+<meta name="description" content="La Autoría: diseño de restaurante de cocina guatemalteca contemporánea en Huehuetenango. 240 m², 74 comensales y cocina de fuego abierta al salón.">
+<meta name="theme-color" content="#0e0d0b">
+<link rel="canonical" href="https://bcarqstudio.com/la-autoria.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="Build &amp; Create Studio">
+<meta property="og:url" content="https://bcarqstudio.com/la-autoria.html">
+<meta property="og:title" content="La Autoría, restaurante en Huehuetenango | Build &amp; Create Studio">
+<meta property="og:description" content="La Autoría: diseño de restaurante de cocina guatemalteca contemporánea en Huehuetenango. 240 m², 74 comensales y cocina de fuego abierta al salón.">
+<meta property="og:image" content="https://bcarqstudio.com/img/restaurante-interior-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "La Autoría",
+    "description": "La Autoría: diseño de restaurante de cocina guatemalteca contemporánea en Huehuetenango. 240 m², 74 comensales y cocina de fuego abierta al salón.",
+    "url": "https://bcarqstudio.com/la-autoria.html",
+    "image": "https://bcarqstudio.com/img/restaurante-interior-og.jpg",
+    "creator": {
+      "@id": "https://bcarqstudio.com/#organizacion"
+    },
+    "dateCreated": "2025",
+    "inLanguage": "es",
+    "creativeWorkStatus": "Diseño completado",
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Huehuetenango, Guatemala"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://bcarqstudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Proyectos",
+        "item": "https://bcarqstudio.com/#proyectos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "La Autoría",
+        "item": "https://bcarqstudio.com/la-autoria.html"
+      }
+    ]
+  }
+]
+</script>
 
+<!-- ============ FUENTES (Archivo ancho variable + JetBrains Mono para datos) ============ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;0,9..144,400;1,9..144,200;1,9..144,300&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* ============================================================
+   DIRECCION A — OBRA PRIMERO
+   Imagen a sangre, tipografía ancha (Archivo) y datos en mono.
+   ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-
 :root {
-  --bg:      #0a0806;
-  --bg-soft: #100d0a;
-  --cream:   #f4f0e8;
-  --light:   #ede8df;
-  --muted:   rgba(237,232,223,.58);
-  --faint:   rgba(237,232,223,.3);
-  --ember:   #c4622d;
-  --gold:    #c9a96e;
-  --gold-l:  #e2c99a;
-  --serif:   'Fraunces', Georgia, serif;
-  --sans:    'Inter', -apple-system, sans-serif;
-  --ease:    cubic-bezier(.65,0,.35,1);
-  --ease-out:cubic-bezier(.22,1,.36,1);
+  --ink: #0e0d0b;
+  --ink-2: #181613;
+  --paper: #f3f1ec;
+  --paper-2: #e8e4da;
+  --on-dark: #f3f1ec;
+  --on-dark-muted: #bdb7ab;
+  --on-light: #141311;
+  --on-light-muted: #4f4a41;
+  --gold: #d8c7a3;
+  --bronze: #6f5c3c;
+  --line-dark: rgba(243, 241, 236, 0.16);
+  --line-light: rgba(20, 19, 17, 0.14);
+  --font: 'Archivo', 'Arial Narrow', Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --wrap: 1320px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  color-scheme: dark;
 }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); font-weight: 400; background: var(--ink); color: var(--on-dark); line-height: 1.55; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.wide { font-stretch: 125%; }
 
-body { font-family:var(--sans); background:var(--bg); color:var(--light); font-weight:300; line-height:1.6; overflow-x:hidden; }
-img  { display:block; max-width:100%; }
-a    { color:inherit; text-decoration:none; }
-
-body::after {
-  content:''; position:fixed; inset:0; z-index:9998; pointer-events:none; opacity:.025;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size:200px 200px;
-}
-
-/* ── NAV ──────────────────────────────────────────────────── */
+/* ============================================================
+   CABECERA
+   ============================================================ */
 .nav {
-  position:fixed; top:0; left:0; right:0; z-index:200;
-  display:flex; align-items:center; gap:56px; padding:22px 56px;
-  background:rgba(10,8,6,.82); backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px);
-  border-bottom:.5px solid rgba(237,232,223,.07);
-  transition:padding .3s var(--ease), background .3s;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(180deg, rgba(14, 13, 11, 0.55), rgba(14, 13, 11, 0));
 }
-.nav.scrolled { padding:14px 56px; background:rgba(10,8,6,.96); }
-.nav-logo { display:flex; align-items:center; margin-right:24px; transition:opacity .2s; }
-.nav-logo:hover { opacity:.75; }
-.nav-logo-svg { height:30px; width:auto; display:block; color:var(--light); }
-.nav-menu { display:flex; gap:32px; list-style:none; font-size:12.5px; color:var(--muted); letter-spacing:.02em; }
-.nav-menu a { transition:color .25s; position:relative; padding-bottom:2px; }
-.nav-menu a::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:.5px; background:var(--gold); transition:width .3s var(--ease); }
-.nav-menu a:hover { color:var(--light); }
-.nav-menu a:hover::after { width:100%; }
-.nav-cta { margin-left:auto; padding:9px 20px; font-size:12.5px; font-weight:500; letter-spacing:.04em; color:var(--light); border:.5px solid rgba(237,232,223,.25); transition:all .25s; }
-.nav-cta:hover { background:var(--light); color:var(--bg); }
-.nav-toggle { display:none; }
+.nav.scrolled, .nav.solid { background: rgba(14, 13, 11, 0.94); border-bottom-color: var(--line-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav-inner { display: flex; align-items: center; gap: 40px; height: 76px; }
+.brand { display: flex; align-items: center; gap: 14px; color: var(--on-dark); }
+.brand svg { height: 24px; width: auto; }
+.brand span { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; font-stretch: 110%; white-space: nowrap; }
+.nav-menu { display: flex; gap: 28px; list-style: none; margin-left: auto; }
+.nav-menu a { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--on-dark-muted); transition: color 0.3s; }
+.nav-menu a:hover, .nav-menu a[aria-current="page"] { color: var(--on-dark); }
+.nav-cta { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 12px 18px; background: var(--on-dark); color: var(--ink); white-space: nowrap; transition: background 0.3s; }
+.nav-cta:hover { background: var(--gold); }
+.nav-toggle { display: none; width: 44px; height: 44px; margin-left: auto; position: relative; }
+.nav-toggle span { position: absolute; left: 11px; right: 11px; height: 1.5px; background: var(--on-dark); transition: transform 0.3s, opacity 0.3s; }
+.nav-toggle span:nth-child(1) { top: 16px; } .nav-toggle span:nth-child(2) { top: 22px; } .nav-toggle span:nth-child(3) { top: 28px; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
-/* ── HERO ────────────────────────────────────────────────── */
-.hero { position:relative; height:100vh; min-height:620px; display:flex; align-items:flex-end; overflow:hidden; }
-.hero-img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:brightness(.6); transform:scale(1.04); transition:transform 8s ease-out; }
-.hero-img.loaded { transform:scale(1); }
-.hero-overlay { position:absolute; inset:0; background:linear-gradient(to top, rgba(10,8,6,.95) 0%, rgba(10,8,6,.3) 55%, transparent 100%); }
-.hero-content { position:relative; z-index:2; padding:0 72px 80px; max-width:1000px; }
-.hero-badge { display:inline-block; margin-bottom:20px; font-size:10px; font-weight:600; letter-spacing:.2em; text-transform:uppercase; color:var(--ember); border:.5px solid rgba(196,98,45,.4); padding:5px 14px; }
-.hero-title { font-family:var(--serif); font-size:clamp(80px,12vw,160px); font-weight:200; line-height:.9; letter-spacing:-.04em; color:var(--light); margin-bottom:24px; }
-.hero-title em { font-style:italic; color:var(--gold-l); }
-.hero-meta { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:48px; }
-.hero-divider { width:48px; height:.5px; background:var(--ember); margin-bottom:48px; }
-.hero-stats { display:flex; gap:56px; }
-.hero-stat-num { font-family:var(--serif); font-size:36px; font-weight:300; color:var(--light); line-height:1; }
-.hero-stat-label { font-size:10px; letter-spacing:.18em; text-transform:uppercase; color:var(--muted); margin-top:6px; }
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero { position: relative; min-height: max(640px, min(100svh, 920px)); display: flex; align-items: flex-end; overflow: hidden; background: var(--ink-2); color: var(--on-dark); }
+.hero-media { position: absolute; inset: 0; }
+.hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); transition: opacity 1s ease, transform 7s ease; }
+.hero-media img.on { opacity: 1; transform: scale(1); }
+.hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(14,13,11,0.72) 0%, rgba(14,13,11,0.38) 45%, rgba(14,13,11,0) 70%), linear-gradient(180deg, rgba(14,13,11,0.5) 0%, rgba(14,13,11,0) 24%, rgba(14,13,11,0.15) 50%, rgba(14,13,11,0.9) 100%); }
+.hero-body { position: relative; z-index: 2; width: 100%; padding-top: 140px; padding-bottom: 48px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 48px; align-items: end; }
+.hero-kicker { font-family: var(--mono); font-size: 13px; font-weight: 500; text-shadow: 0 1px 12px rgba(0,0,0,0.5); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; }
+.hero-slogan { font-weight: 800; font-stretch: 125%; font-size: clamp(52px, 8.8vw, 138px); line-height: 0.86; letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance; }
+.hero-slogan span { display: block; font-weight: 300; font-stretch: 62%; color: var(--gold); }
+.hero-sub { font-size: 18px; line-height: 1.55; color: rgba(243, 241, 236, 0.9); max-width: 48ch; margin-top: 26px; }
+.hero-actions { display: flex; gap: 14px 28px; align-items: center; flex-wrap: wrap; margin-top: 32px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; letter-spacing: 0.03em; padding: 17px 24px; transition: background 0.3s, color 0.3s, transform 0.3s; }
+.btn-light { background: var(--on-dark); color: var(--ink); }
+.btn-light:hover { background: var(--gold); transform: translateY(-2px); }
+.btn-dark { background: var(--ink); color: var(--on-dark); }
+.btn-dark:hover { background: var(--bronze); transform: translateY(-2px); }
+.link { font-size: 14px; font-weight: 500; padding: 6px 0; border-bottom: 1px solid currentColor; transition: color 0.3s; }
+.on-dark .link:hover, .hero .link:hover { color: var(--gold); }
+.on-light .link:hover { color: var(--bronze); }
+.hero-index { text-shadow: 0 1px 10px rgba(0,0,0,0.45); list-style: none; border-top: 1px solid rgba(243, 241, 236, 0.35); }
+.hero-index button { width: 100%; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; text-align: left; padding: 14px 0; border-bottom: 1px solid rgba(243, 241, 236, 0.35); color: rgba(243, 241, 236, 0.75); transition: color 0.3s, padding 0.3s; }
+.hero-index .n, .hero-index .st { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+.hero-index .name { font-size: 15px; font-weight: 500; }
+.hero-index button[aria-pressed="true"], .hero-index button:hover, .hero-index button:focus-visible { color: var(--on-dark); padding-left: 8px; }
+.hero-index button[aria-pressed="true"] .name { font-weight: 700; font-stretch: 125%; }
+.hero-open { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--gold); }
+.hero-open:hover { color: var(--on-dark); }
 
-/* ── SECTIONS ────────────────────────────────────────────── */
-.section { padding:120px 72px; max-width:1300px; margin:0 auto; }
-.section-label { font-size:10px; font-weight:600; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:56px; padding-bottom:14px; border-bottom:.5px solid rgba(201,169,110,.2); }
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+.section { padding: 128px 0; }
+.on-dark { background: var(--ink); color: var(--on-dark); }
+.on-dark-2 { background: var(--ink-2); color: var(--on-dark); }
+.on-light { background: var(--paper); color: var(--on-light); }
+.on-light-2 { background: var(--paper-2); color: var(--on-light); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: end; margin-bottom: 64px; }
+.sec-label { display: block; margin-bottom: 18px; }
+.on-dark .sec-label, .on-dark-2 .sec-label { color: var(--gold); }
+.on-light .sec-label, .on-light-2 .sec-label { color: var(--bronze); }
+.sec-title { font-weight: 800; font-stretch: 125%; font-size: clamp(40px, 6vw, 88px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance; }
+.sec-title span { display: block; font-weight: 300; font-stretch: 62%; }
+.on-dark .sec-title span, .on-dark-2 .sec-title span { color: var(--gold); }
+.on-light .sec-title span, .on-light-2 .sec-title span { color: var(--bronze); }
+.sec-lead { font-size: 18px; line-height: 1.6; max-width: 52ch; }
+.on-dark .sec-lead, .on-dark-2 .sec-lead { color: var(--on-dark-muted); }
+.on-light .sec-lead, .on-light-2 .sec-lead { color: var(--on-light-muted); }
 
-/* ── OVERVIEW ────────────────────────────────────────────── */
-.overview-grid { display:grid; grid-template-columns:1fr 340px; gap:80px; align-items:start; }
-.overview-lead { font-family:var(--serif); font-size:clamp(24px,2.8vw,34px); font-weight:300; line-height:1.4; color:var(--light); margin-bottom:28px; }
-.overview-lead em { font-style:italic; color:var(--gold-l); }
-.overview-text { font-size:15px; color:var(--muted); line-height:1.85; margin-bottom:20px; }
-.overview-callout { border-left:2px solid var(--ember); padding:16px 22px; background:rgba(196,98,45,.06); margin-top:32px; font-size:14px; line-height:1.75; color:var(--muted); font-style:italic; }
+/* ---------- PROYECTOS ---------- */
+.work { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px 24px; }
+.work-card { grid-column: span 4; display: flex; flex-direction: column; gap: 16px; }
+.work-card.big { grid-column: span 8; }
+.work-card.half { grid-column: span 6; }
+.work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: var(--radius); }
+.work-card.big .work-img { aspect-ratio: 16 / 10.6; }
+.work-card.half .work-img { aspect-ratio: 16 / 10; }
+.work-card.full { grid-column: span 12; }
+.work-card.full .work-img { aspect-ratio: 21 / 8; }
+.work-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.work-card:hover .work-img img { transform: scale(1.04); }
+.work-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.work-name { font-size: 24px; font-weight: 700; font-stretch: 112%; letter-spacing: -0.01em; }
+.work-card.big .work-name { font-size: 32px; }
+.work-info { color: var(--on-light-muted); }
+.status { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 9px; border-radius: 3px; border: 1px solid var(--line-light); color: var(--on-light); white-space: nowrap; }
+.status.built { background: var(--on-light); color: var(--paper); border-color: var(--on-light); }
 
-.spec-card { background:#100d0a; border:.5px solid rgba(201,169,110,.18); padding:32px 28px; }
-.spec-title { font-size:9px; font-weight:700; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); margin-bottom:24px; padding-bottom:12px; border-bottom:.5px solid rgba(201,169,110,.15); }
-.spec-row { display:flex; justify-content:space-between; align-items:baseline; padding:11px 0; border-bottom:.5px solid rgba(255,255,255,.05); gap:16px; }
-.spec-row:last-child { border-bottom:none; }
-.spec-label { font-size:12px; color:var(--faint); flex-shrink:0; }
-.spec-value { font-size:13px; font-weight:500; color:var(--light); text-align:right; }
-.spec-value.gold  { color:var(--gold); font-weight:600; }
-.spec-value.ember { color:var(--ember); font-weight:600; }
-.spec-value.big   { font-size:20px; font-weight:600; }
+/* ---------- SERVICIOS ---------- */
+.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-dark); }
+.route { display: flex; flex-direction: column; gap: 18px; padding: 40px 32px 44px 0; border-right: 1px solid var(--line-dark); transition: background 0.4s; }
+.route + .route { padding-left: 32px; }
+.route:last-child { border-right: 0; }
+.route.lead-route { border-top: 2px solid var(--gold); margin-top: -1px; }
+.route-who { color: var(--gold); }
+.route-title { font-size: clamp(26px, 2.4vw, 34px); font-weight: 700; font-stretch: 112%; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+.route-text { color: var(--on-dark-muted); font-size: 16px; line-height: 1.6; }
+.route ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--on-dark); }
+.route li::before { content: '—'; color: var(--gold); margin-right: 10px; }
+.route .link { margin-top: auto; align-self: flex-start; }
+.specialties { margin-top: 72px; }
+.spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.spec-card { display: flex; flex-direction: column; gap: 12px; padding: 28px; border: 1px solid var(--line-dark); border-radius: var(--radius); transition: border-color 0.3s, background 0.3s; }
+.spec-card:hover, .spec-card:focus-visible { border-color: var(--gold); background: var(--ink-2); }
+.spec-card h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; }
+.spec-card p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
+.spec-card .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
+.spec-work { display: flex; gap: 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); color: var(--on-dark); }
+.spec-work-2 { border-top: 0; margin-top: -12px; }
+.spec-work img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius-sm); flex: none; }
+.spec-work > span { display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.spec-work .mono { font-size: 12px; color: var(--on-dark-muted); letter-spacing: 0.04em; }
+.spec-work:hover strong, .spec-work:focus-visible strong { color: var(--gold); }
 
-/* ── GALERÍA ─────────────────────────────────────────────── */
-.gallery-full { width:100%; padding:0 72px; }
-.gallery-hero { width:100%; max-width:1300px; margin:0 auto 4px; aspect-ratio:16/7; overflow:hidden; }
-.gallery-hero img { width:100%; height:100%; object-fit:cover; transition:transform 8s ease-out; }
-.gallery-hero:hover img { transform:scale(1.03); }
-.gallery-row { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4px; }
-.gallery-row img { width:100%; aspect-ratio:16/9; object-fit:cover; transition:filter .3s; }
-.gallery-row img:hover { filter:brightness(1.08); }
+/* ---------- PROCESO ---------- */
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line-light); counter-reset: s; }
+.step { padding: 36px 28px 36px 0; border-right: 1px solid var(--line-light); }
+.step + .step { padding-left: 28px; }
+.step:last-child { border-right: 0; }
+.step-n { font-size: 64px; font-weight: 200; font-stretch: 62%; line-height: 1; color: var(--bronze); margin-bottom: 22px; }
+.step-name { font-size: 22px; font-weight: 700; font-stretch: 112%; line-height: 1.15; margin-bottom: 12px; }
+.step-text { font-size: 15px; color: var(--on-light-muted); line-height: 1.6; margin-bottom: 18px; }
+.step-deliv { font-size: 14px; line-height: 1.5; }
+.step-deliv b { display: block; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bronze); margin-bottom: 4px; }
+.cta-row { display: flex; gap: 16px 32px; align-items: center; flex-wrap: wrap; margin-top: 56px; }
 
-/* ── CONCEPTO ────────────────────────────────────────────── */
-.concept-strip { background:#0d0a07; border-top:.5px solid rgba(201,169,110,.1); border-bottom:.5px solid rgba(201,169,110,.1); padding:100px 72px; }
-.concept-inner { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center; }
-.concept-quote { font-family:var(--serif); font-size:clamp(26px,2.6vw,38px); font-weight:300; line-height:1.4; color:var(--light); }
-.concept-quote em { font-style:italic; color:var(--gold-l); }
-.concept-list { list-style:none; display:flex; flex-direction:column; gap:24px; }
-.concept-item { display:flex; gap:18px; align-items:flex-start; font-size:14px; color:var(--muted); line-height:1.65; }
-.concept-num { font-family:var(--serif); font-size:28px; font-weight:200; color:var(--ember); line-height:1; flex-shrink:0; width:32px; }
+/* ---------- DIFERENCIAL / ONA ---------- */
+.thesis { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+.thesis-quote { font-weight: 300; font-stretch: 75%; font-size: clamp(36px, 4.6vw, 68px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; }
+.thesis-quote b { font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.thesis-text { color: var(--on-dark-muted); font-size: 17px; line-height: 1.65; display: flex; flex-direction: column; gap: 16px; }
+.thesis-text strong { color: var(--on-dark); font-weight: 500; }
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 96px 0 0; border-top: 1px solid var(--line-dark); }
+.figures div { padding: 26px 20px 0 0; }
+.figures dt { color: var(--on-dark-muted); margin-bottom: 12px; }
+.figures dd { font-size: clamp(34px, 4vw, 60px); font-weight: 300; font-stretch: 75%; line-height: 1; font-variant-numeric: tabular-nums; }
+.figures dd small { font-size: 0.5em; color: var(--gold); }
+.ona { margin-top: 96px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; }
+.ona-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; grid-auto-rows: 150px; }
+.ona-gallery figure { overflow: hidden; background: var(--ink); border-radius: var(--radius-sm); }
+.ona-gallery figure.g1, .ona-gallery figure.g5, .ona-gallery figure.g6 { border-radius: var(--radius); }
+.ona-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.ona-gallery figure:hover img { transform: scale(1.04); }
+.g1 { grid-column: span 6; grid-row: span 2; } .g2, .g3, .g4 { grid-column: span 2; } .g5, .g6 { grid-column: span 3; grid-row: span 2; }
+.ona-name { font-size: clamp(64px, 9vw, 128px); font-weight: 800; font-stretch: 125%; line-height: 0.85; letter-spacing: -0.03em; }
+.ona-tag { color: var(--gold); margin: 14px 0 26px; }
+.ona-text { color: var(--on-dark-muted); font-size: 16px; line-height: 1.65; margin-bottom: 28px; }
+.spec { border-top: 1px solid var(--line-dark); margin-bottom: 28px; }
+.spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; }
+.spec dt { color: var(--on-dark-muted); }
+.spec dd { text-align: right; }
+.disclaimer { font-size: 13px; color: var(--on-dark-muted); line-height: 1.55; margin-top: 18px; max-width: 52ch; }
+.models { margin-top: 96px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.model { border: 1px solid var(--line-dark); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.model h3 { font-size: 20px; font-weight: 700; font-stretch: 112%; }
+.model .who { color: var(--gold); }
+.model p { font-size: 15px; color: var(--on-dark-muted); line-height: 1.6; }
+.model .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
 
-/* ── PROGRAMA ────────────────────────────────────────────── */
-.program-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(201,169,110,.1); border:.5px solid rgba(201,169,110,.1); }
-.program-cell { background:var(--bg); padding:32px 24px; }
-.program-cell-label { font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:12px; }
-.program-cell-val { font-family:var(--serif); font-size:28px; font-weight:300; color:var(--light); line-height:1; }
-.program-cell-desc { font-size:12px; color:var(--faint); margin-top:8px; line-height:1.6; }
+/* ---------- ESTUDIO ---------- */
+.studio { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; }
+.studio-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: var(--radius); }
+.studio-photo figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 14px; }
+.studio-photo figcaption strong { font-size: 18px; font-weight: 700; font-stretch: 112%; }
+.studio-photo figcaption span { color: var(--bronze); }
+.studio-quote { font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 36px; text-wrap: balance; }
+.studio-bio { font-size: 17px; color: var(--on-light-muted); line-height: 1.7; display: flex; flex-direction: column; gap: 16px; max-width: 62ch; }
+.studio-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line-light); }
+.studio-meta dt { color: var(--bronze); margin-bottom: 8px; }
+.studio-meta dd { font-size: 15px; line-height: 1.6; }
 
-/* ── PLANTA ──────────────────────────────────────────────── */
-.plan-full { max-width:1300px; margin:0 auto; }
-.plan-full img { width:100%; object-fit:cover; background:#1a1510; }
+/* ---------- CONTACTO ---------- */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+.agenda { border: 1px solid var(--line-dark); padding: 32px; margin: 40px 0 32px; }
+.agenda h3 { font-size: 24px; font-weight: 700; font-stretch: 112%; margin: 10px 0 12px; }
+.host { display: flex; align-items: center; gap: 16px; margin: 20px 0 4px; }
+.host img { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius); flex-shrink: 0; }
+.host strong { display: block; font-size: 17px; font-weight: 700; font-stretch: 112%; }
+.host span { color: var(--gold); }
+.host-photo { margin: 36px 0 0; max-width: 360px; }
+.host-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); }
+.host-photo figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; }
+.host-photo figcaption strong { font-weight: 700; font-stretch: 112%; }
+.host-photo figcaption span { color: var(--gold); }
+.agenda p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
+.agenda ul { list-style: none; margin: 18px 0 24px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.agenda li::before { content: '—'; color: var(--gold); margin-right: 10px; }
+.channels { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.channels dt { color: var(--gold); margin-bottom: 6px; }
+.channels dd { font-size: 16px; }
+.channels a:hover { color: var(--gold); }
+.form { background: var(--ink-2); border: 1px solid var(--line-dark); padding: 40px; }
+.form-title { font-size: 26px; font-weight: 700; font-stretch: 112%; margin: 10px 0 28px; }
+.field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.field label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-dark-muted); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; font-size: 16px; color: var(--on-dark); background: transparent; border: 0; border-bottom: 1px solid rgba(243, 241, 236, 0.32); padding: 10px 0; border-radius: 0; }
+.field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23d8c7a3' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right center; padding-right: 24px; }
+.field select option { background: var(--ink); color: var(--on-dark); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(243, 241, 236, 0.5); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-bottom-color: var(--gold); }
+.field textarea { min-height: 96px; resize: vertical; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.form-submit { width: 100%; justify-content: center; margin-top: 8px; }
+.form-error { display: none; margin-top: 14px; font-size: 14px; color: #f0a58f; }
+.form-success { display: none; padding: 24px 0; }
+.form-success h3 { font-size: 26px; font-weight: 700; font-stretch: 112%; margin-bottom: 10px; }
+.form-success p { color: var(--on-dark-muted); }
 
-/* ── CREDITS ─────────────────────────────────────────────── */
-.credits { padding:80px 72px; max-width:1300px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:32px; border-top:.5px solid rgba(201,169,110,.12); }
-.credits-text { font-size:12px; color:var(--faint); line-height:1.8; }
-.credits-back { font-size:12px; font-weight:500; letter-spacing:.06em; color:var(--muted); border:.5px solid rgba(237,232,223,.18); padding:10px 24px; transition:all .25s; }
-.credits-back:hover { color:var(--light); border-color:var(--light); }
+/* ---------- PIE ---------- */
+.footer { background: var(--ink); color: var(--on-dark); border-top: 1px solid var(--line-dark); padding: 72px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 40px; margin-bottom: 56px; }
+.footer-brand svg { height: 40px; width: auto; color: var(--on-dark); margin-bottom: 18px; }
+.footer-brand p { color: var(--on-dark-muted); font-size: 15px; max-width: 34ch; }
+.footer-brand .slogan { font-weight: 800; font-stretch: 125%; text-transform: uppercase; font-size: 15px; color: var(--on-dark); margin-bottom: 6px; }
+.footer h4 { color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+.footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: var(--on-dark-muted); }
+.footer ul a:hover { color: var(--on-dark); }
+.footer-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-dark); color: var(--on-dark-muted); font-size: 13px; }
 
-/* ── FOOTER ──────────────────────────────────────────────── */
-.footer { background:var(--bg); border-top:.5px solid rgba(201,169,110,.1); padding:60px 72px 40px; }
-.footer-grid { max-width:1300px; margin:0 auto; display:grid; grid-template-columns:2fr 1fr 1fr 1fr; gap:60px; margin-bottom:60px; }
-.footer-logo-svg { height:36px; width:auto; color:var(--light); margin-bottom:18px; }
-.footer-tagline { font-family:var(--serif); font-size:16px; color:var(--muted); margin-bottom:6px; }
-.footer-desc { font-size:12px; color:var(--faint); line-height:1.65; }
-.fcol-title { font-size:9px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); margin-bottom:18px; }
-.fcol-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
-.fcol-list li { font-size:13px; color:var(--muted); }
-.fcol-list a:hover { color:var(--light); }
-.footer-bottom { max-width:1300px; margin:0 auto; padding-top:24px; border-top:.5px solid rgba(237,232,223,.06); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font-size:11px; color:var(--faint); }
+/* ---------- WHATSAPP FLOTANTE ---------- */
+.wa-float { position: fixed; z-index: 90; right: max(20px, env(safe-area-inset-right, 0px)); bottom: max(20px, env(safe-area-inset-bottom, 0px)); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--on-dark); color: var(--ink); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35); transition: background 0.3s, transform 0.3s; }
+.wa-float:hover { background: var(--gold); transform: translateY(-2px); }
+.wa-float svg { width: 26px; height: 26px; }
 
-/* ── REVEAL ──────────────────────────────────────────────── */
-.reveal { opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease-out), transform .8s var(--ease-out); }
-.reveal.visible { opacity:1; transform:none; }
+/* ---------- PENDIENTES (solo vista previa: bloquean publicación) ---------- */
+.pending { display: inline-block; border: 1px dashed currentColor; padding: 3px 9px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; line-height: 1.5; }
+.on-dark .pending, .on-dark-2 .pending { color: var(--gold); }
+.on-light .pending, .on-light-2 .pending { color: var(--bronze); }
 
-/* ── MOBILE ──────────────────────────────────────────────── */
-@media (max-width:900px) {
-  .nav { padding:18px 24px; gap:0; }
-  .nav-menu, .nav-cta { display:none; }
-  .nav-toggle { display:flex; flex-direction:column; gap:5px; margin-left:auto; cursor:pointer; }
-  .nav-toggle span { display:block; width:22px; height:.5px; background:var(--light); }
-  .hero-content { padding:0 28px 60px; }
-  .hero-stats { gap:32px; }
-  .section { padding:80px 28px; }
-  .gallery-full { padding:0 28px; }
-  .gallery-row { grid-template-columns:1fr; }
-  .overview-grid { grid-template-columns:1fr; gap:40px; }
-  .concept-strip { padding:72px 28px; }
-  .concept-inner { grid-template-columns:1fr; gap:48px; }
-  .program-grid { grid-template-columns:1fr 1fr; }
-  .footer { padding:48px 28px 32px; }
-  .footer-grid { grid-template-columns:1fr 1fr; gap:40px; }
-  .credits { padding:60px 28px; flex-direction:column; align-items:flex-start; }
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1560px) and (min-width: 1280px) {
+  .brand span { display: none; }
+  .nav-inner { gap: 28px; }
+  .nav-menu { gap: 22px; }
+}
+@media (max-width: 1279px) {
+  .nav-menu, .nav-inner > .nav-cta { display: none; }
+  .nav-toggle { display: block; }
+  .nav-menu.open { display: flex; position: fixed; inset: 76px 0 0; flex-direction: column; gap: 0; margin: 0; padding: 16px max(24px, env(safe-area-inset-left, 0px)) 40px; background: var(--ink); overflow-y: auto; }
+  .nav-menu.open a { display: block; font-size: 22px; font-weight: 700; font-stretch: 112%; letter-spacing: 0; text-transform: none; color: var(--on-dark); padding: 18px 0; border-bottom: 1px solid var(--line-dark); }
+  .nav-menu.open .menu-cta a { margin-top: 24px; border: 0; background: var(--on-dark); color: var(--ink); text-align: center; font-size: 16px; padding: 18px; }
+}
+@media (max-width: 1100px) {
+  .hero-grid, .thesis, .ona, .studio, .contact, .sec-head { grid-template-columns: 1fr; }
+  .routes, .models, .spec-grid { grid-template-columns: 1fr; }
+  .route, .route + .route { padding: 36px 0; border-right: 0; border-bottom: 1px solid var(--line-dark); }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step, .step + .step { padding: 32px 24px 32px 0; border-right: 0; border-bottom: 1px solid var(--line-light); }
+  .step:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-light); }
+  .work-card, .work-card.big, .work-card.half { grid-column: span 6; }
+  .work-card.big, .work-card.full { grid-column: span 12; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1280px) { .menu-cta { display: none; } }
+@media (max-width: 640px) {
+  .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .section { padding: 88px 0; }
+  .brand span { display: none; }
+  .hero-body { padding-top: 120px; padding-bottom: 40px; }
+  /* En móvil la sección Proyectos sigue al hero: el índice sobra y choca con WhatsApp */
+  #heroIndex, #heroOpen { display: none; }
+  .hero::after { background: linear-gradient(180deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.6) 30%, rgba(14,13,11,0.62) 60%, rgba(14,13,11,0.92) 100%); }
+  .hero-sub { font-size: 16px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .work { grid-template-columns: 1fr; gap: 36px; }
+  .work-card, .work-card.big, .work-card.half, .work-card.full { grid-column: auto; }
+  .work-card.big .work-img, .work-card.half .work-img, .work-card.full .work-img { aspect-ratio: 4 / 3; }
+  .steps { grid-template-columns: 1fr; }
+  .step:nth-child(even) { padding-left: 0; border-left: 0; }
+  .figures { grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .figures div { padding-bottom: 20px; }
+  .ona-gallery { grid-auto-rows: 110px; }
+  .row, .channels, .studio-meta { grid-template-columns: 1fr; }
+  .form, .agenda { padding: 26px 20px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .hero-media img { transform: none; }
+}
+
+/* ---------- FICHA DE PROYECTO ---------- */
+.p-figures { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 0; }
+.gal { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px; }
+.gal figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.gal .frame { overflow: hidden; border-radius: var(--radius); background: var(--ink-2); }
+.gal img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; transition: transform 1.2s var(--ease); }
+.gal figure:hover img { transform: scale(1.03); }
+.gal figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--on-dark-muted); font-size: 14px; }
+.gal figcaption strong { color: var(--on-dark); font-weight: 600; }
+.gal .w7 { grid-column: span 7; } .gal .w5 { grid-column: span 5; } .gal .w4 { grid-column: span 4; } .gal .w12 { grid-column: span 12; }
+.gal .w12 img { aspect-ratio: 21 / 9; }
+.gal-note { margin-top: 18px; font-size: 13px; color: var(--on-dark-muted); }
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.plan { margin: 0; background: #fff; border: 1px solid var(--line-light); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.plan img { width: 100%; height: auto; border-radius: var(--radius-sm); }
+.plan figcaption { color: var(--on-light-muted); }
+.types-row { margin-top: 72px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.types { list-style: none; border-top: 1px solid var(--line-light); }
+.types li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line-light); }
+.types .t { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--bronze); color: var(--bronze); font-weight: 700; border-radius: 3px; }
+.types b { display: block; font-size: 17px; font-weight: 700; font-stretch: 112%; }
+.types small { color: var(--on-light-muted); }
+.types .m { font-size: clamp(26px, 3vw, 38px); font-weight: 300; font-stretch: 75%; font-variant-numeric: tabular-nums; }
+.types .m sub { font-size: 14px; vertical-align: baseline; color: var(--on-light-muted); }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid var(--line-dark); padding-top: 24px; }
+.trio dt { color: var(--gold); margin-bottom: 8px; }
+.trio dd { font-size: 17px; }
+.eff { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; }
+.eff-n { font-size: clamp(72px, 11vw, 160px); font-weight: 300; font-stretch: 75%; line-height: 0.9; color: var(--bronze); }
+.eff-n small { font-size: 0.35em; }
+.bar { display: flex; height: 56px; border-radius: var(--radius-sm); overflow: hidden; font-size: 13px; font-weight: 600; }
+.bar span { display: flex; align-items: center; padding: 0 16px; }
+.bar .a { flex: 89.6; background: var(--on-light); color: var(--paper); }
+.bar .b { flex: 10.4; background: var(--paper-2); color: var(--on-light); justify-content: center; padding: 0 4px; }
+.bar-legend { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 14px; color: var(--on-light-muted); font-size: 15px; }
+.bar-legend b { color: var(--on-light); }
+@media (max-width: 1100px) {
+  .p-figures { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gal .w7, .gal .w5, .gal .w4 { grid-column: span 6; }
+  .plans, .eff, .trio, .types-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .p-figures { grid-template-columns: 1fr 1fr; }
+  .gal .w7, .gal .w5, .gal .w4, .gal .w12 { grid-column: span 12; }
+  .gal .w12 img { aspect-ratio: 16 / 10; }
+}
+
+/* ---------- DISEÑO PARA NEGOCIOS / FICHA DE PROYECTO ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-dark); }
+.svc { padding: 32px 28px 36px 0; border-bottom: 1px solid var(--line-dark); display: flex; flex-direction: column; gap: 10px; }
+.svc:nth-child(3n+2), .svc:nth-child(3n) { padding-left: 28px; border-left: 1px solid var(--line-dark); }
+.svc .n { color: var(--gold); }
+.svc h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; line-height: 1.15; }
+.svc p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
+.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 64px; border-top: 1px solid var(--line-light); padding-top: 28px; }
+.pillars h3 { font-size: 19px; font-weight: 700; font-stretch: 112%; margin-bottom: 8px; }
+.pillars p { color: var(--on-light-muted); font-size: 15px; line-height: 1.6; }
+.quote-band { text-align: left; }
+.quote-band p { font-weight: 300; font-stretch: 75%; font-size: clamp(30px, 4.2vw, 60px); line-height: 1.05; letter-spacing: -0.02em; max-width: 22ch; text-wrap: balance; }
+.quote-band p em { font-style: normal; font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.quote-band .by { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.quote-band .by img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius); }
+.quote-band .by span { color: var(--gold); }
+.concepts { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 1px solid var(--line-dark); }
+.concepts li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 12px; padding: 24px 0; border-bottom: 1px solid var(--line-dark); color: var(--on-dark-muted); font-size: 16px; line-height: 1.6; }
+.concepts li b { color: var(--on-dark); font-weight: 600; }
+.concepts .n { color: var(--gold); font-size: 30px; font-weight: 200; font-stretch: 62%; line-height: 1; }
+.program { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.program div { border: 1px solid var(--line-light); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.program .m { font-size: 40px; font-weight: 300; font-stretch: 75%; line-height: 1; color: var(--bronze); }
+.program h3 { font-size: 18px; font-weight: 700; font-stretch: 112%; }
+.program p { color: var(--on-light-muted); font-size: 14px; line-height: 1.55; }
+@media (max-width: 1100px) {
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .svc:nth-child(3n+2), .svc:nth-child(3n) { padding-left: 0; border-left: 0; }
+  .svc:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-dark); }
+  .pillars, .program { grid-template-columns: 1fr 1fr; }
+  .concepts { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .svc-grid, .pillars, .program { grid-template-columns: 1fr; }
+  .svc:nth-child(even) { padding-left: 0; border-left: 0; }
 }
 </style>
 </head>
 <body>
+<!-- ============================================================
+     CABECERA
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Build &amp; Create Studio — Inicio"><svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"><path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245"/><path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245"/></g><circle cx="78" cy="80" r="15" fill="currentColor"/><circle cx="78" cy="190" r="15" fill="currentColor"/></svg><span>Build &amp; Create Studio</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+      <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
+      <li><a href="index.html#proyectos" aria-current="page">Proyectos</a></li>
+      <li><a href="index.html#ona">ONA</a></li>
+      <li><a href="index.html#estudio">Estudio</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+      <li class="menu-cta"><a href="prefactibilidad-inmobiliaria.html#solicitar">Solicitar diagnóstico de terreno</a></li>
+    </ul>
+    <a href="prefactibilidad-inmobiliaria.html#solicitar" class="nav-cta">Diagnóstico de terreno</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-<!-- NAV -->
-<nav class="nav" id="nav">
-  <a href="index.html" class="nav-logo" aria-label="BC Arq Studio">
-    <svg class="nav-logo-svg" viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" role="img">
-      <title>BC Studio</title>
-      <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
-        <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
-        <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
-      </g>
-      <circle cx="78" cy="80" r="15" fill="currentColor" />
-      <circle cx="78" cy="190" r="15" fill="currentColor" />
-    </svg>
-  </a>
-  <ul class="nav-menu">
-    <li><a href="index.html#vision">Visión</a></li>
-    <li><a href="index.html#ona">ONA</a></li>
-    <li><a href="index.html#estudio">Estudio</a></li>
-    <li><a href="diseno-estrategico.html">Diseño Estratégico</a></li>
-    <li><a href="index.html#contacto">Contacto</a></li>
-  </ul>
-  <a href="index.html#contacto" class="nav-cta">Iniciar conversación</a>
-  <div class="nav-toggle" id="navToggle"><span></span><span></span><span></span></div>
-</nav>
-
-<!-- HERO -->
-<section class="hero">
-  <img src="img/restaurante-interior.png" alt="La Autoría — Salón principal · Huehuetenango Guatemala" class="hero-img" id="heroImg">
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <div class="hero-badge">Restaurante · Concepto Gastronómico · Guatemala</div>
-    <h1 class="hero-title">La Auto<em>ría</em></h1>
-    <p class="hero-meta">Cocina Guatemalteca Contemporánea &nbsp;·&nbsp; Huehuetenango &nbsp;·&nbsp; Guatemala</p>
-    <div class="hero-divider"></div>
-    <div class="hero-stats">
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media"><img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="Salón principal del restaurante La Autoría, Huehuetenango" class="on" fetchpriority="high" decoding="async"></div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
       <div>
-        <div class="hero-stat-num">240 m²</div>
-        <div class="hero-stat-label">Área total</div>
+        <p class="hero-kicker">Restaurante · Cocina guatemalteca contemporánea · Huehuetenango</p>
+        <h1 class="hero-slogan">La <span>Autoría.</span></h1>
+        <p class="hero-sub">Un restaurante que convierte la cocina guatemalteca y el fuego en el protagonista del espacio.</p>
+        <div class="hero-actions">
+          <a href="diseno-estrategico.html#contacto-d" class="btn btn-light">Diseñemos tu restaurante →</a>
+          <a href="#concepto" class="link">Ver el concepto</a>
+        </div>
       </div>
       <div>
-        <div class="hero-stat-num">74</div>
-        <div class="hero-stat-label">Comensales</div>
-      </div>
-      <div>
-        <div class="hero-stat-num">2025</div>
-        <div class="hero-stat-label">Año</div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Diseño completado</dd></div>
+          <div><dt>Año</dt><dd>2025</dd></div>
+          <div><dt>Diseño</dt><dd>Build &amp; Create Studio</dd></div>
+        </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- OVERVIEW -->
-<div class="section reveal">
-  <div class="section-label">El proyecto</div>
-  <div class="overview-grid">
-    <div>
-      <p class="overview-lead">Un restaurante que convierte la cocina guatemalteca y el fuego en <em>el protagonista del espacio.</em></p>
-      <p class="overview-text">La Autoría nació del encargo de diseñar un concepto gastronómico de alto impacto en Huehuetenango, Guatemala. El cliente quería un espacio que expresara la identidad culinaria guatemalteca con autenticidad y sofisticación — un lugar donde la cocina abierta y el fuego real fueran tan parte de la experiencia como la comida misma.</p>
-      <p class="overview-text">La solución fue estructurar el programa alrededor de la cocina de fuego como elemento central y visible. El salón se organiza en torno a ella: los comensales comen mirando a los chefs trabajar sobre brasas reales, bajo techos de ladrillo en arco y una barra de degustación que conecta directamente la cocina con el salón.</p>
-      <p class="overview-text">La paleta de materiales — terracota, ladrillo visto, madera oscura y latón — responde a la identidad y los materiales propios del altiplano guatemalteco, elevando la experiencia sin perder el vínculo con la tierra.</p>
-      <div class="overview-callout">
-        "La Autoría es eso: la autoría del chef sobre su cocina y la nuestra sobre el espacio. Diseñamos para que ambas se vean."
-        <br><br><strong style="color:var(--gold);font-style:normal;font-size:11px;letter-spacing:.1em;">— Bryan Castro, Director de Diseño · BC Arq Studio</strong>
+<!-- ============================================================
+     CIFRAS Y PROYECTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Área total</dt><dd>240<small> m²</small></dd></div>
+      <div><dt class="mono">Comensales</dt><dd>74</dd></div>
+      <div><dt class="mono">Año</dt><dd>2025</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">El fuego como <b>arquitectura.</b></h2>
+      <div class="thesis-text">
+        <p>La Autoría nació del encargo de diseñar un concepto gastronómico de alto impacto en Huehuetenango. El cliente quería un espacio que expresara la identidad culinaria guatemalteca con autenticidad y sofisticación: un lugar donde la cocina abierta y el fuego real fueran tan parte de la experiencia como la comida misma.</p>
+        <p>La solución fue estructurar el programa alrededor de la cocina de fuego como elemento central y visible. El salón se organiza en torno a ella: los comensales miran a los chefs trabajar sobre brasas reales, bajo techos de ladrillo en arco y frente a una barra de degustación que conecta la cocina con el salón.</p>
+        <p><strong>La paleta de materiales (terracota, ladrillo visto, madera oscura y latón) responde a la identidad del altiplano guatemalteco.</strong></p>
       </div>
     </div>
-    <div class="spec-card">
-      <div class="spec-title">Ficha técnica</div>
-      <div class="spec-row"><span class="spec-label">Proyecto</span><span class="spec-value">La Autoría</span></div>
-      <div class="spec-row"><span class="spec-label">Tipología</span><span class="spec-value">Restaurante · Cocina abierta</span></div>
-      <div class="spec-row"><span class="spec-label">Ubicación</span><span class="spec-value">Huehuetenango, Guatemala</span></div>
-      <div class="spec-row"><span class="spec-label">Área construida</span><span class="spec-value big">240 m²</span></div>
-      <div class="spec-row"><span class="spec-label">Salón principal</span><span class="spec-value gold">145 m²</span></div>
-      <div class="spec-row"><span class="spec-label">Cocina abierta</span><span class="spec-value gold">58 m²</span></div>
-      <div class="spec-row"><span class="spec-label">Bar / recepción</span><span class="spec-value">37 m²</span></div>
-      <div class="spec-row"><span class="spec-label">Capacidad</span><span class="spec-value ember">74 comensales</span></div>
-      <div class="spec-row"><span class="spec-label">Chef · Cliente</span><span class="spec-value">Javier Buezo</span></div>
-      <div class="spec-row"><span class="spec-label">Año</span><span class="spec-value">2025</span></div>
-      <div class="spec-row"><span class="spec-label">Estado</span><span class="spec-value ember">Construido</span></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="gal">
+      <figure class="w7"><div class="frame"><img src="img/cocina.webp" srcset="img/cocina-960.webp 960w, img/cocina.webp 1344w" sizes="(max-width: 640px) 100vw, 60vw" width="1344" height="768" alt="Cocina abierta de fuego del restaurante La Autoría, Huehuetenango" loading="lazy" decoding="async"></div><figcaption><strong>Cocina abierta</strong><span class="mono">Parrilla de leña y horno de ladrillo</span></figcaption></figure>
+      <figure class="w5"><div class="frame"><img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="(max-width: 640px) 100vw, 40vw" width="1344" height="768" alt="Salón de comensales de La Autoría, Huehuetenango" loading="lazy" decoding="async"></div><figcaption><strong>Salón principal</strong><span class="mono">74 comensales</span></figcaption></figure>
+    </div>
+    <p class="gal-note">Renders del diseño entregado.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Concepto de diseño</span>
+        <h2 class="sec-title">La brasa como <span>razón de ser.</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>Cocina abierta como protagonista.</b> El área de preparación ocupa el centro visual del restaurante: los comensales ven, escuchan y sienten la cocina en tiempo real.</span></li>
+      <li><span class="n">02</span><span><b>Paleta de materiales de fuego.</b> Terracota, ladrillo visto en arco, madera oscura y latón: cada material habla del calor, la textura y la identidad latinoamericana.</span></li>
+      <li><span class="n">03</span><span><b>Vegetación integrada.</b> Plantas colgantes y elementos vivos que contrastan con la dureza del ladrillo y la terracota.</span></li>
+      <li><span class="n">04</span><span><b>Iluminación estratificada.</b> Luminarias de ratán, luz cálida sobre las mesas y retroiluminación de la barra: tres niveles que transforman el ambiente del almuerzo a la cena.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROGRAMA Y FICHA
+     ============================================================ -->
+<section class="section on-light" id="programa">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Programa arquitectónico</span>
+        <h2 class="sec-title">240 m² <span>bien repartidos.</span></h2>
+      </div>
+    </div>
+    <div class="program">
+      <div><span class="m">145 m²</span><h3>Salón principal</h3><p>74 comensales en mesas de 2, 4 y 6 personas. Barra alta con vista directa a la cocina.</p></div>
+      <div><span class="m">58 m²</span><h3>Cocina abierta</h3><p>Parrilla de leña, horno de ladrillo, estación fría y barra de degustación con asientos frente al chef.</p></div>
+      <div><span class="m">37 m²</span><h3>Bar y recepción</h3><p>Área de espera con coctelería, barra en latón y madera, y recepción de reservaciones.</p></div>
+      <div><span class="m">Incluido</span><h3>Servicios y bodega</h3><p>Bodega, área de lavado, cuarto frío y zona de personal independiente del área pública.</p></div>
+    </div>
+    <dl class="spec" style="margin-top:64px;border-color:var(--line-light)">
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Proyecto</dt><dd>La Autoría</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Tipología</dt><dd>Restaurante · Cocina abierta</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Ubicación</dt><dd>Huehuetenango, Guatemala</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Área construida</dt><dd>240 m²</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Chef · Cliente</dt><dd>Javier Buezo</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Rol de Build &amp; Create Studio</dt><dd>Diseño arquitectónico e interiorismo</dd></div>
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Diseño completado</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIERRE
+     ============================================================ -->
+<section class="section on-dark-2 quote-band">
+  <div class="wrap">
+    <p>La autoría del chef sobre su cocina y la nuestra sobre el espacio. <em>Diseñamos</em> para que ambas se vean.</p>
+    <div class="by"><img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro" loading="lazy" decoding="async"><div><strong>Bryan Castro</strong><br><span class="mono">Director de diseño · Build &amp; Create Studio</span></div></div>
+    <div class="cta-row">
+      <a href="diseno-estrategico.html#contacto-d" class="btn btn-light">Diseñemos tu restaurante →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
     </div>
   </div>
-</div>
+</section>
+</main>
 
-<!-- COCINA ABIERTA -->
-<div class="gallery-full reveal">
-  <div class="gallery-hero">
-    <img src="img/cocina.png" alt="La Autoría — Cocina abierta de fuego · Miami">
-  </div>
-</div>
-
-<!-- CONCEPTO -->
-<div class="concept-strip reveal">
-  <div class="concept-inner">
-    <div>
-      <div class="section-label">Concepto de diseño</div>
-      <p class="concept-quote">El fuego como <em>arquitectura.</em> La brasa como razón de existir del espacio.</p>
-    </div>
-    <ul class="concept-list">
-      <li class="concept-item">
-        <span class="concept-num">01</span>
-        <span>Cocina abierta como protagonista: el área de preparación ocupa el centro visual del restaurante. Los comensales ven, escuchan y sienten la cocina en tiempo real.</span>
-      </li>
-      <li class="concept-item">
-        <span class="concept-num">02</span>
-        <span>Paleta de materiales de fuego: terracota, ladrillo visto en arco, madera oscura y latón. Cada material habla del calor, la textura y la identidad latinoamericana.</span>
-      </li>
-      <li class="concept-item">
-        <span class="concept-num">03</span>
-        <span>Vegetación orgánica integrada: plantas colgantes y elementos vivos que contrastan la dureza del ladrillo y la terracota, generando calidez y frescura tropical.</span>
-      </li>
-      <li class="concept-item">
-        <span class="concept-num">04</span>
-        <span>Iluminación estratificada: luminarias de ratán, spots cálidos sobre mesas y retroiluminación de la barra. Tres niveles de luz que transforman el ambiente del almuerzo a la cena.</span>
-      </li>
-    </ul>
-  </div>
-</div>
-
-<!-- SALÓN -->
-<div class="gallery-full reveal" style="padding-top:4px;">
-  <div class="gallery-hero">
-    <img src="img/restaurante-interior.png" alt="La Autoría — Salón de comensales · Wynwood Miami">
-  </div>
-</div>
-
-<!-- PROGRAMA -->
-<div class="section reveal">
-  <div class="section-label">Programa arquitectónico</div>
-  <div class="program-grid">
-    <div class="program-cell">
-      <div class="program-cell-label">Salón principal</div>
-      <div class="program-cell-val">145 m²</div>
-      <div class="program-cell-desc">74 comensales en configuración mixta: mesas de 2, 4 y 6 personas. Barra alta con vista directa a la cocina.</div>
-    </div>
-    <div class="program-cell">
-      <div class="program-cell-label">Cocina abierta</div>
-      <div class="program-cell-val">58 m²</div>
-      <div class="program-cell-desc">Parrilla de leña, horno de ladrillo, estación fría y barra de degustación con asientos directos al chef.</div>
-    </div>
-    <div class="program-cell">
-      <div class="program-cell-label">Bar / recepción</div>
-      <div class="program-cell-val">37 m²</div>
-      <div class="program-cell-desc">Área de espera con coctelería, barra en latón y madera, y zona de recepción de reservaciones.</div>
-    </div>
-    <div class="program-cell">
-      <div class="program-cell-label">Servicios / bodega</div>
-      <div class="program-cell-val">Incluido</div>
-      <div class="program-cell-desc">Bodega, área de lavado, cuarto frío y zona de personal independiente del área pública.</div>
-    </div>
-  </div>
-</div>
-
-
-
-<!-- CREDITS -->
-<div class="credits reveal">
-  <div class="credits-text">
-    <strong style="color:var(--light);display:block;margin-bottom:6px;">BC ARQ STUDIO</strong>
-    Diseño arquitectónico, interiorismo y coordinación de obra<br>
-    Bryan Castro · Director de Proyecto<br>
-    Huehuetenango, Guatemala — 2025
-  </div>
-  <a href="diseno-estrategico.html" class="credits-back">← Ver todos los proyectos</a>
-</div>
-
-<!-- FOOTER -->
+<!-- ============================================================
+     PIE
+     ============================================================ -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div>
-      <svg class="footer-logo-svg" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img">
-        <title>BC Studio</title>
-        <defs><style>@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&amp;display=swap'); .fsvg{font-family:'Space Grotesk',sans-serif;font-weight:300;} .fsvg2{font-family:'Space Grotesk',sans-serif;font-weight:400;}</style></defs>
-        <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
-          <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
-          <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
-        </g>
-        <circle cx="78" cy="80" r="15" fill="currentColor" />
-        <circle cx="78" cy="190" r="15" fill="currentColor" />
-        <text x="17" y="370" fill="currentColor" class="fsvg" font-size="100" textLength="767" lengthAdjust="spacing">STUDIO</text>
-        <text x="17" y="430" fill="currentColor" class="fsvg2" font-size="20" opacity="0.55" textLength="767" lengthAdjust="spacing">BUILD &amp; CREATE STUDIO</text>
-      </svg>
-      <p class="footer-tagline">Del terreno al retorno.</p>
-      <p class="footer-desc">Arquitectura · Desarrollo inmobiliario · Inversión. Guatemala.</p>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"><path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245"/><path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245"/></g><circle cx="78" cy="80" r="15" fill="currentColor"/><circle cx="78" cy="190" r="15" fill="currentColor"/></svg>
+        <p class="slogan">Del terreno al retorno.</p>
+        <p>Build &amp; Create Studio. Arquitectura, prefactibilidad y desarrollo inmobiliario. Ciudad de Guatemala.</p>
+      </div>
+      <div>
+        <h4 class="mono">Servicios</h4>
+        <ul>
+          <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+          <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
+          <li><a href="index.html#modelos">Co-desarrollo e inversión</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Proyectos</h4>
+        <ul>
+          <li><a href="index.html#ona">ONA</a></li>
+          <li><a href="kishi-books.html">Kishi Books</a></li>
+          <li><a href="navante.html">Navante</a></li>
+          <li><a href="anker-logistics.html">Anker Logistics</a></li>
+          <li><a href="petshop-gt.html">Petshop GT</a></li>
+          <li><a href="casa-milpas-altas.html">Casa Milpas Altas</a></li>
+          <li><a href="once-once.html">Once Once</a></li>
+          <li><a href="remodelacion-el-prado.html">El Prado</a></li>
+          <li><a href="edificio-w.html">Edificio W</a></li>
+          <li><a href="la-autoria.html">La Autoría</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></li>
+          <li><a href="https://wa.me/50254131753" target="_blank" rel="noopener">WhatsApp +502 5413 1753</a></li>
+          <li><a href="https://calendar.app.google/bmpsEQCsqqF3ZQgA9" target="_blank" rel="noopener">Agendar llamada</a></li>
+        </ul>
+      </div>
     </div>
-    <div>
-      <div class="fcol-title">Proyectos</div>
-      <ul class="fcol-list">
-        <li><a href="index.html#ona">ONA — Zona 15</a></li>
-        <li><a href="sweetpop.html">SWEETPOP — Los Angeles</a></li>
-        <li><a href="la-autoria.html">La Autoría — Huehuetenango</a></li>
-        <li><a href="aesthetica-medica.html">Aesthetica Medica — Zona 16</a></li>
-        <li><a href="libreria-cayala.html">Barnes &amp; Noble Guatemala</a></li>
-        <li><a href="diseno-estrategico.html">Diseño Estratégico</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <span>© 2026 Build &amp; Create Studio · Ciudad de Guatemala</span>
+      <span>bcarqstudio.com</span>
     </div>
-    <div>
-      <div class="fcol-title">Estudio</div>
-      <ul class="fcol-list">
-        <li><a href="index.html#vision">Visión</a></li>
-        <li><a href="index.html#estudio">Equipo</a></li>
-        <li><a href="index.html#modelos">Modelos de trabajo</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="fcol-title">Contacto</div>
-      <ul class="fcol-list">
-        <li>info@bcarqstudio.com</li>
-        <li>bcarqstudio.com</li>
-        <li><a href="index.html#contacto" style="color:var(--gold);">Iniciar conversación →</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2024 BC Arq Studio · Build &amp; Create Studio</span>
-    <span>Proyecto confidencial · Uso interno</span>
   </div>
 </footer>
 
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/50254131753?text=Hola%2C%20me%20interesa%20un%20diagn%C3%B3stico%20de%20terreno." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.46A11.27 11.27 0 0 0 12.04.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.36 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg></a>
+
 <script>
-(function(){
-  var nav = document.getElementById('nav');
-  window.addEventListener('scroll', function(){ nav.classList.toggle('scrolled', window.scrollY > 60); });
+// ============================================================
+// CABECERA — fondo sólido al hacer scroll + menú móvil
+// ============================================================
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const setMenu = (open) => {
+  navMenu.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  nav.classList.toggle('solid', open || nav.dataset.solid === '1');
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+nav.dataset.solid = nav.classList.contains('solid') ? '1' : '';
+navToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-  var heroImg = document.getElementById('heroImg');
-  heroImg.addEventListener('load', function(){ this.classList.add('loaded'); });
-  if (heroImg.complete) heroImg.classList.add('loaded');
-  window.addEventListener('scroll', function(){
-    heroImg.style.transform = 'scale(1) translateY(' + (window.scrollY * 0.15) + 'px)';
-  });
-
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visible'); io.unobserve(e.target); } });
-  }, { threshold:0.1 });
-  document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
-})();
 </script>
+
 </body>
 </html>

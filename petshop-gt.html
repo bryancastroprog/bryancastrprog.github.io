@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Petshop GT, diseño de tienda de mascotas | Build &amp; Create Studio</title>
+<meta name="description" content="Petshop GT: diseño de tienda de mascotas de 70 m² en Vista Hermosa, Zona 15, Ciudad de Guatemala. Tienda, recepción, estancias y grooming. Diseño aprobado.">
+<meta name="theme-color" content="#0e0d0b">
+<link rel="canonical" href="https://bcarqstudio.com/petshop-gt.html">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="Build &amp; Create Studio">
+<meta property="og:url" content="https://bcarqstudio.com/petshop-gt.html">
+<meta property="og:title" content="Petshop GT, diseño de tienda de mascotas | Build &amp; Create Studio">
+<meta property="og:description" content="Petshop GT: diseño de tienda de mascotas de 70 m² en Vista Hermosa, Zona 15, Ciudad de Guatemala. Tienda, recepción, estancias y grooming. Diseño aprobado.">
+<meta property="og:image" content="https://bcarqstudio.com/img/petshop-gt-recepcion-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Petshop GT · Tienda de mascotas",
+    "description": "Petshop GT: diseño de tienda de mascotas de 70 m² en Vista Hermosa, Zona 15, Ciudad de Guatemala. Tienda, recepción, estancias y grooming. Diseño aprobado.",
+    "url": "https://bcarqstudio.com/petshop-gt.html",
+    "image": "https://bcarqstudio.com/img/petshop-gt-recepcion-og.jpg",
+    "creator": {
+      "@id": "https://bcarqstudio.com/#organizacion"
+    },
+    "inLanguage": "es",
+    "creativeWorkStatus": "Diseño aprobado",
+    "contentLocation": {
+      "@type": "Place",
+      "name": "Vista Hermosa, Zona 15, Ciudad de Guatemala"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://bcarqstudio.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Proyectos",
+        "item": "https://bcarqstudio.com/#proyectos"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Petshop GT",
+        "item": "https://bcarqstudio.com/petshop-gt.html"
+      }
+    ]
+  }
+]
+</script>
+
+<!-- ============ FUENTES (Archivo ancho variable + JetBrains Mono para datos) ============ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DIRECCION A — OBRA PRIMERO
+   Imagen a sangre, tipografía ancha (Archivo) y datos en mono.
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --ink: #0e0d0b;
+  --ink-2: #181613;
+  --paper: #f3f1ec;
+  --paper-2: #e8e4da;
+  --on-dark: #f3f1ec;
+  --on-dark-muted: #bdb7ab;
+  --on-light: #141311;
+  --on-light-muted: #4f4a41;
+  --gold: #d8c7a3;
+  --bronze: #6f5c3c;
+  --line-dark: rgba(243, 241, 236, 0.16);
+  --line-light: rgba(20, 19, 17, 0.14);
+  --font: 'Archivo', 'Arial Narrow', Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --wrap: 1320px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  color-scheme: dark;
+}
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); font-weight: 400; background: var(--ink); color: var(--on-dark); line-height: 1.55; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.wide { font-stretch: 125%; }
+
+/* ============================================================
+   CABECERA
+   ============================================================ */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(180deg, rgba(14, 13, 11, 0.55), rgba(14, 13, 11, 0));
+}
+.nav.scrolled, .nav.solid { background: rgba(14, 13, 11, 0.94); border-bottom-color: var(--line-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav-inner { display: flex; align-items: center; gap: 40px; height: 76px; }
+.brand { display: flex; align-items: center; gap: 14px; color: var(--on-dark); }
+.brand svg { height: 24px; width: auto; }
+.brand span { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; font-stretch: 110%; white-space: nowrap; }
+.nav-menu { display: flex; gap: 28px; list-style: none; margin-left: auto; }
+.nav-menu a { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--on-dark-muted); transition: color 0.3s; }
+.nav-menu a:hover, .nav-menu a[aria-current="page"] { color: var(--on-dark); }
+.nav-cta { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 12px 18px; background: var(--on-dark); color: var(--ink); white-space: nowrap; transition: background 0.3s; }
+.nav-cta:hover { background: var(--gold); }
+.nav-toggle { display: none; width: 44px; height: 44px; margin-left: auto; position: relative; }
+.nav-toggle span { position: absolute; left: 11px; right: 11px; height: 1.5px; background: var(--on-dark); transition: transform 0.3s, opacity 0.3s; }
+.nav-toggle span:nth-child(1) { top: 16px; } .nav-toggle span:nth-child(2) { top: 22px; } .nav-toggle span:nth-child(3) { top: 28px; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero { position: relative; min-height: max(640px, min(100svh, 920px)); display: flex; align-items: flex-end; overflow: hidden; background: var(--ink-2); color: var(--on-dark); }
+.hero-media { position: absolute; inset: 0; }
+.hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); transition: opacity 1s ease, transform 7s ease; }
+.hero-media img.on { opacity: 1; transform: scale(1); }
+.hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(14,13,11,0.72) 0%, rgba(14,13,11,0.38) 45%, rgba(14,13,11,0) 70%), linear-gradient(180deg, rgba(14,13,11,0.5) 0%, rgba(14,13,11,0) 24%, rgba(14,13,11,0.15) 50%, rgba(14,13,11,0.9) 100%); }
+.hero-body { position: relative; z-index: 2; width: 100%; padding-top: 140px; padding-bottom: 48px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 48px; align-items: end; }
+.hero-kicker { font-family: var(--mono); font-size: 13px; font-weight: 500; text-shadow: 0 1px 12px rgba(0,0,0,0.5); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; }
+.hero-slogan { font-weight: 800; font-stretch: 125%; font-size: clamp(52px, 8.8vw, 138px); line-height: 0.86; letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance; }
+.hero-slogan span { display: block; font-weight: 300; font-stretch: 62%; color: var(--gold); }
+.hero-sub { font-size: 18px; line-height: 1.55; color: rgba(243, 241, 236, 0.9); max-width: 48ch; margin-top: 26px; }
+.hero-actions { display: flex; gap: 14px 28px; align-items: center; flex-wrap: wrap; margin-top: 32px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; letter-spacing: 0.03em; padding: 17px 24px; transition: background 0.3s, color 0.3s, transform 0.3s; }
+.btn-light { background: var(--on-dark); color: var(--ink); }
+.btn-light:hover { background: var(--gold); transform: translateY(-2px); }
+.btn-dark { background: var(--ink); color: var(--on-dark); }
+.btn-dark:hover { background: var(--bronze); transform: translateY(-2px); }
+.link { font-size: 14px; font-weight: 500; padding: 6px 0; border-bottom: 1px solid currentColor; transition: color 0.3s; }
+.on-dark .link:hover, .hero .link:hover { color: var(--gold); }
+.on-light .link:hover { color: var(--bronze); }
+.hero-index { text-shadow: 0 1px 10px rgba(0,0,0,0.45); list-style: none; border-top: 1px solid rgba(243, 241, 236, 0.35); }
+.hero-index button { width: 100%; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; text-align: left; padding: 14px 0; border-bottom: 1px solid rgba(243, 241, 236, 0.35); color: rgba(243, 241, 236, 0.75); transition: color 0.3s, padding 0.3s; }
+.hero-index .n, .hero-index .st { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+.hero-index .name { font-size: 15px; font-weight: 500; }
+.hero-index button[aria-pressed="true"], .hero-index button:hover, .hero-index button:focus-visible { color: var(--on-dark); padding-left: 8px; }
+.hero-index button[aria-pressed="true"] .name { font-weight: 700; font-stretch: 125%; }
+.hero-open { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--gold); }
+.hero-open:hover { color: var(--on-dark); }
+
+/* ============================================================
+   SECCIONES
+   ============================================================ */
+.section { padding: 128px 0; }
+.on-dark { background: var(--ink); color: var(--on-dark); }
+.on-dark-2 { background: var(--ink-2); color: var(--on-dark); }
+.on-light { background: var(--paper); color: var(--on-light); }
+.on-light-2 { background: var(--paper-2); color: var(--on-light); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: end; margin-bottom: 64px; }
+.sec-label { display: block; margin-bottom: 18px; }
+.on-dark .sec-label, .on-dark-2 .sec-label { color: var(--gold); }
+.on-light .sec-label, .on-light-2 .sec-label { color: var(--bronze); }
+.sec-title { font-weight: 800; font-stretch: 125%; font-size: clamp(40px, 6vw, 88px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance; }
+.sec-title span { display: block; font-weight: 300; font-stretch: 62%; }
+.on-dark .sec-title span, .on-dark-2 .sec-title span { color: var(--gold); }
+.on-light .sec-title span, .on-light-2 .sec-title span { color: var(--bronze); }
+.sec-lead { font-size: 18px; line-height: 1.6; max-width: 52ch; }
+.on-dark .sec-lead, .on-dark-2 .sec-lead { color: var(--on-dark-muted); }
+.on-light .sec-lead, .on-light-2 .sec-lead { color: var(--on-light-muted); }
+
+/* ---------- PROYECTOS ---------- */
+.work { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px 24px; }
+.work-card { grid-column: span 4; display: flex; flex-direction: column; gap: 16px; }
+.work-card.big { grid-column: span 8; }
+.work-card.half { grid-column: span 6; }
+.work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: var(--radius); }
+.work-card.big .work-img { aspect-ratio: 16 / 10.6; }
+.work-card.half .work-img { aspect-ratio: 16 / 10; }
+.work-card.full { grid-column: span 12; }
+.work-card.full .work-img { aspect-ratio: 21 / 8; }
+.work-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.work-card:hover .work-img img { transform: scale(1.04); }
+.work-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.work-name { font-size: 24px; font-weight: 700; font-stretch: 112%; letter-spacing: -0.01em; }
+.work-card.big .work-name { font-size: 32px; }
+.work-info { color: var(--on-light-muted); }
+.status { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 9px; border-radius: 3px; border: 1px solid var(--line-light); color: var(--on-light); white-space: nowrap; }
+.status.built { background: var(--on-light); color: var(--paper); border-color: var(--on-light); }
+
+/* ---------- SERVICIOS ---------- */
+.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-dark); }
+.route { display: flex; flex-direction: column; gap: 18px; padding: 40px 32px 44px 0; border-right: 1px solid var(--line-dark); transition: background 0.4s; }
+.route + .route { padding-left: 32px; }
+.route:last-child { border-right: 0; }
+.route.lead-route { border-top: 2px solid var(--gold); margin-top: -1px; }
+.route-who { color: var(--gold); }
+.route-title { font-size: clamp(26px, 2.4vw, 34px); font-weight: 700; font-stretch: 112%; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+.route-text { color: var(--on-dark-muted); font-size: 16px; line-height: 1.6; }
+.route ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--on-dark); }
+.route li::before { content: '—'; color: var(--gold); margin-right: 10px; }
+.route .link { margin-top: auto; align-self: flex-start; }
+.specialties { margin-top: 72px; }
+.spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.spec-card { display: flex; flex-direction: column; gap: 12px; padding: 28px; border: 1px solid var(--line-dark); border-radius: var(--radius); transition: border-color 0.3s, background 0.3s; }
+.spec-card:hover, .spec-card:focus-visible { border-color: var(--gold); background: var(--ink-2); }
+.spec-card h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; }
+.spec-card p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
+.spec-card .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
+.spec-work { display: flex; gap: 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); color: var(--on-dark); }
+.spec-work-2 { border-top: 0; margin-top: -12px; }
+.spec-work img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius-sm); flex: none; }
+.spec-work > span { display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.spec-work .mono { font-size: 12px; color: var(--on-dark-muted); letter-spacing: 0.04em; }
+.spec-work:hover strong, .spec-work:focus-visible strong { color: var(--gold); }
+
+/* ---------- PROCESO ---------- */
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line-light); counter-reset: s; }
+.step { padding: 36px 28px 36px 0; border-right: 1px solid var(--line-light); }
+.step + .step { padding-left: 28px; }
+.step:last-child { border-right: 0; }
+.step-n { font-size: 64px; font-weight: 200; font-stretch: 62%; line-height: 1; color: var(--bronze); margin-bottom: 22px; }
+.step-name { font-size: 22px; font-weight: 700; font-stretch: 112%; line-height: 1.15; margin-bottom: 12px; }
+.step-text { font-size: 15px; color: var(--on-light-muted); line-height: 1.6; margin-bottom: 18px; }
+.step-deliv { font-size: 14px; line-height: 1.5; }
+.step-deliv b { display: block; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bronze); margin-bottom: 4px; }
+.cta-row { display: flex; gap: 16px 32px; align-items: center; flex-wrap: wrap; margin-top: 56px; }
+
+/* ---------- DIFERENCIAL / ONA ---------- */
+.thesis { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+.thesis-quote { font-weight: 300; font-stretch: 75%; font-size: clamp(36px, 4.6vw, 68px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; }
+.thesis-quote b { font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.thesis-text { color: var(--on-dark-muted); font-size: 17px; line-height: 1.65; display: flex; flex-direction: column; gap: 16px; }
+.thesis-text strong { color: var(--on-dark); font-weight: 500; }
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 96px 0 0; border-top: 1px solid var(--line-dark); }
+.figures div { padding: 26px 20px 0 0; }
+.figures dt { color: var(--on-dark-muted); margin-bottom: 12px; }
+.figures dd { font-size: clamp(34px, 4vw, 60px); font-weight: 300; font-stretch: 75%; line-height: 1; font-variant-numeric: tabular-nums; }
+.figures dd small { font-size: 0.5em; color: var(--gold); }
+.ona { margin-top: 96px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; }
+.ona-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; grid-auto-rows: 150px; }
+.ona-gallery figure { overflow: hidden; background: var(--ink); border-radius: var(--radius-sm); }
+.ona-gallery figure.g1, .ona-gallery figure.g5, .ona-gallery figure.g6 { border-radius: var(--radius); }
+.ona-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.ona-gallery figure:hover img { transform: scale(1.04); }
+.g1 { grid-column: span 6; grid-row: span 2; } .g2, .g3, .g4 { grid-column: span 2; } .g5, .g6 { grid-column: span 3; grid-row: span 2; }
+.ona-name { font-size: clamp(64px, 9vw, 128px); font-weight: 800; font-stretch: 125%; line-height: 0.85; letter-spacing: -0.03em; }
+.ona-tag { color: var(--gold); margin: 14px 0 26px; }
+.ona-text { color: var(--on-dark-muted); font-size: 16px; line-height: 1.65; margin-bottom: 28px; }
+.spec { border-top: 1px solid var(--line-dark); margin-bottom: 28px; }
+.spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; }
+.spec dt { color: var(--on-dark-muted); }
+.spec dd { text-align: right; }
+.disclaimer { font-size: 13px; color: var(--on-dark-muted); line-height: 1.55; margin-top: 18px; max-width: 52ch; }
+.models { margin-top: 96px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.model { border: 1px solid var(--line-dark); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.model h3 { font-size: 20px; font-weight: 700; font-stretch: 112%; }
+.model .who { color: var(--gold); }
+.model p { font-size: 15px; color: var(--on-dark-muted); line-height: 1.6; }
+.model .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
+
+/* ---------- ESTUDIO ---------- */
+.studio { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; }
+.studio-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: var(--radius); }
+.studio-photo figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 14px; }
+.studio-photo figcaption strong { font-size: 18px; font-weight: 700; font-stretch: 112%; }
+.studio-photo figcaption span { color: var(--bronze); }
+.studio-quote { font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 36px; text-wrap: balance; }
+.studio-bio { font-size: 17px; color: var(--on-light-muted); line-height: 1.7; display: flex; flex-direction: column; gap: 16px; max-width: 62ch; }
+.studio-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line-light); }
+.studio-meta dt { color: var(--bronze); margin-bottom: 8px; }
+.studio-meta dd { font-size: 15px; line-height: 1.6; }
+
+/* ---------- CONTACTO ---------- */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+.agenda { border: 1px solid var(--line-dark); padding: 32px; margin: 40px 0 32px; }
+.agenda h3 { font-size: 24px; font-weight: 700; font-stretch: 112%; margin: 10px 0 12px; }
+.host { display: flex; align-items: center; gap: 16px; margin: 20px 0 4px; }
+.host img { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius); flex-shrink: 0; }
+.host strong { display: block; font-size: 17px; font-weight: 700; font-stretch: 112%; }
+.host span { color: var(--gold); }
+.host-photo { margin: 36px 0 0; max-width: 360px; }
+.host-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); }
+.host-photo figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; }
+.host-photo figcaption strong { font-weight: 700; font-stretch: 112%; }
+.host-photo figcaption span { color: var(--gold); }
+.agenda p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
+.agenda ul { list-style: none; margin: 18px 0 24px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.agenda li::before { content: '—'; color: var(--gold); margin-right: 10px; }
+.channels { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.channels dt { color: var(--gold); margin-bottom: 6px; }
+.channels dd { font-size: 16px; }
+.channels a:hover { color: var(--gold); }
+.form { background: var(--ink-2); border: 1px solid var(--line-dark); padding: 40px; }
+.form-title { font-size: 26px; font-weight: 700; font-stretch: 112%; margin: 10px 0 28px; }
+.field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.field label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-dark-muted); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; font-size: 16px; color: var(--on-dark); background: transparent; border: 0; border-bottom: 1px solid rgba(243, 241, 236, 0.32); padding: 10px 0; border-radius: 0; }
+.field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23d8c7a3' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right center; padding-right: 24px; }
+.field select option { background: var(--ink); color: var(--on-dark); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(243, 241, 236, 0.5); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-bottom-color: var(--gold); }
+.field textarea { min-height: 96px; resize: vertical; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.form-submit { width: 100%; justify-content: center; margin-top: 8px; }
+.form-error { display: none; margin-top: 14px; font-size: 14px; color: #f0a58f; }
+.form-success { display: none; padding: 24px 0; }
+.form-success h3 { font-size: 26px; font-weight: 700; font-stretch: 112%; margin-bottom: 10px; }
+.form-success p { color: var(--on-dark-muted); }
+
+/* ---------- PIE ---------- */
+.footer { background: var(--ink); color: var(--on-dark); border-top: 1px solid var(--line-dark); padding: 72px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 40px; margin-bottom: 56px; }
+.footer-brand svg { height: 40px; width: auto; color: var(--on-dark); margin-bottom: 18px; }
+.footer-brand p { color: var(--on-dark-muted); font-size: 15px; max-width: 34ch; }
+.footer-brand .slogan { font-weight: 800; font-stretch: 125%; text-transform: uppercase; font-size: 15px; color: var(--on-dark); margin-bottom: 6px; }
+.footer h4 { color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+.footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: var(--on-dark-muted); }
+.footer ul a:hover { color: var(--on-dark); }
+.footer-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-dark); color: var(--on-dark-muted); font-size: 13px; }
+
+/* ---------- WHATSAPP FLOTANTE ---------- */
+.wa-float { position: fixed; z-index: 90; right: max(20px, env(safe-area-inset-right, 0px)); bottom: max(20px, env(safe-area-inset-bottom, 0px)); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--on-dark); color: var(--ink); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35); transition: background 0.3s, transform 0.3s; }
+.wa-float:hover { background: var(--gold); transform: translateY(-2px); }
+.wa-float svg { width: 26px; height: 26px; }
+
+/* ---------- PENDIENTES (solo vista previa: bloquean publicación) ---------- */
+.pending { display: inline-block; border: 1px dashed currentColor; padding: 3px 9px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; line-height: 1.5; }
+.on-dark .pending, .on-dark-2 .pending { color: var(--gold); }
+.on-light .pending, .on-light-2 .pending { color: var(--bronze); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1560px) and (min-width: 1280px) {
+  .brand span { display: none; }
+  .nav-inner { gap: 28px; }
+  .nav-menu { gap: 22px; }
+}
+@media (max-width: 1279px) {
+  .nav-menu, .nav-inner > .nav-cta { display: none; }
+  .nav-toggle { display: block; }
+  .nav-menu.open { display: flex; position: fixed; inset: 76px 0 0; flex-direction: column; gap: 0; margin: 0; padding: 16px max(24px, env(safe-area-inset-left, 0px)) 40px; background: var(--ink); overflow-y: auto; }
+  .nav-menu.open a { display: block; font-size: 22px; font-weight: 700; font-stretch: 112%; letter-spacing: 0; text-transform: none; color: var(--on-dark); padding: 18px 0; border-bottom: 1px solid var(--line-dark); }
+  .nav-menu.open .menu-cta a { margin-top: 24px; border: 0; background: var(--on-dark); color: var(--ink); text-align: center; font-size: 16px; padding: 18px; }
+}
+@media (max-width: 1100px) {
+  .hero-grid, .thesis, .ona, .studio, .contact, .sec-head { grid-template-columns: 1fr; }
+  .routes, .models, .spec-grid { grid-template-columns: 1fr; }
+  .route, .route + .route { padding: 36px 0; border-right: 0; border-bottom: 1px solid var(--line-dark); }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step, .step + .step { padding: 32px 24px 32px 0; border-right: 0; border-bottom: 1px solid var(--line-light); }
+  .step:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-light); }
+  .work-card, .work-card.big, .work-card.half { grid-column: span 6; }
+  .work-card.big, .work-card.full { grid-column: span 12; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1280px) { .menu-cta { display: none; } }
+@media (max-width: 640px) {
+  .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .section { padding: 88px 0; }
+  .brand span { display: none; }
+  .hero-body { padding-top: 120px; padding-bottom: 40px; }
+  /* En móvil la sección Proyectos sigue al hero: el índice sobra y choca con WhatsApp */
+  #heroIndex, #heroOpen { display: none; }
+  .hero::after { background: linear-gradient(180deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.6) 30%, rgba(14,13,11,0.62) 60%, rgba(14,13,11,0.92) 100%); }
+  .hero-sub { font-size: 16px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .work { grid-template-columns: 1fr; gap: 36px; }
+  .work-card, .work-card.big, .work-card.half, .work-card.full { grid-column: auto; }
+  .work-card.big .work-img, .work-card.half .work-img, .work-card.full .work-img { aspect-ratio: 4 / 3; }
+  .steps { grid-template-columns: 1fr; }
+  .step:nth-child(even) { padding-left: 0; border-left: 0; }
+  .figures { grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .figures div { padding-bottom: 20px; }
+  .ona-gallery { grid-auto-rows: 110px; }
+  .row, .channels, .studio-meta { grid-template-columns: 1fr; }
+  .form, .agenda { padding: 26px 20px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .hero-media img { transform: none; }
+}
+
+/* ---------- FICHA DE PROYECTO ---------- */
+.p-figures { grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: 0; }
+.gal { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 12px; }
+.gal figure { margin: 0; display: flex; flex-direction: column; gap: 10px; }
+.gal .frame { overflow: hidden; border-radius: var(--radius); background: var(--ink-2); }
+.gal img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16 / 10; transition: transform 1.2s var(--ease); }
+.gal figure:hover img { transform: scale(1.03); }
+.gal figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; color: var(--on-dark-muted); font-size: 14px; }
+.gal figcaption strong { color: var(--on-dark); font-weight: 600; }
+.gal .w7 { grid-column: span 7; } .gal .w5 { grid-column: span 5; } .gal .w4 { grid-column: span 4; } .gal .w12 { grid-column: span 12; }
+.gal .w12 img { aspect-ratio: 21 / 9; }
+.gal-note { margin-top: 18px; font-size: 13px; color: var(--on-dark-muted); }
+.plans { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.plan { margin: 0; background: #fff; border: 1px solid var(--line-light); border-radius: var(--radius); padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.plan img { width: 100%; height: auto; border-radius: var(--radius-sm); }
+.plan figcaption { color: var(--on-light-muted); }
+.types-row { margin-top: 72px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+.types { list-style: none; border-top: 1px solid var(--line-light); }
+.types li { display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 16px; align-items: center; padding: 16px 0; border-bottom: 1px solid var(--line-light); }
+.types .t { width: 44px; height: 44px; display: grid; place-items: center; border: 1px solid var(--bronze); color: var(--bronze); font-weight: 700; border-radius: 3px; }
+.types b { display: block; font-size: 17px; font-weight: 700; font-stretch: 112%; }
+.types small { color: var(--on-light-muted); }
+.types .m { font-size: clamp(26px, 3vw, 38px); font-weight: 300; font-stretch: 75%; font-variant-numeric: tabular-nums; }
+.types .m sub { font-size: 14px; vertical-align: baseline; color: var(--on-light-muted); }
+.trio { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; border-top: 1px solid var(--line-dark); padding-top: 24px; }
+.trio dt { color: var(--gold); margin-bottom: 8px; }
+.trio dd { font-size: 17px; }
+.eff { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 48px; align-items: center; }
+.eff-n { font-size: clamp(72px, 11vw, 160px); font-weight: 300; font-stretch: 75%; line-height: 0.9; color: var(--bronze); }
+.eff-n small { font-size: 0.35em; }
+.bar { display: flex; height: 56px; border-radius: var(--radius-sm); overflow: hidden; font-size: 13px; font-weight: 600; }
+.bar span { display: flex; align-items: center; padding: 0 16px; }
+.bar .a { flex: 89.6; background: var(--on-light); color: var(--paper); }
+.bar .b { flex: 10.4; background: var(--paper-2); color: var(--on-light); justify-content: center; padding: 0 4px; }
+.bar-legend { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 14px; color: var(--on-light-muted); font-size: 15px; }
+.bar-legend b { color: var(--on-light); }
+@media (max-width: 1100px) {
+  .p-figures { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .gal .w7, .gal .w5, .gal .w4 { grid-column: span 6; }
+  .plans, .eff, .trio, .types-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .p-figures { grid-template-columns: 1fr 1fr; }
+  .gal .w7, .gal .w5, .gal .w4, .gal .w12 { grid-column: span 12; }
+  .gal .w12 img { aspect-ratio: 16 / 10; }
+}
+
+/* ---------- DISEÑO PARA NEGOCIOS / FICHA DE PROYECTO ---------- */
+.svc-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-dark); }
+.svc { padding: 32px 28px 36px 0; border-bottom: 1px solid var(--line-dark); display: flex; flex-direction: column; gap: 10px; }
+.svc:nth-child(3n+2), .svc:nth-child(3n) { padding-left: 28px; border-left: 1px solid var(--line-dark); }
+.svc .n { color: var(--gold); }
+.svc h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; line-height: 1.15; }
+.svc p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
+.pillars { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; margin-top: 64px; border-top: 1px solid var(--line-light); padding-top: 28px; }
+.pillars h3 { font-size: 19px; font-weight: 700; font-stretch: 112%; margin-bottom: 8px; }
+.pillars p { color: var(--on-light-muted); font-size: 15px; line-height: 1.6; }
+.quote-band { text-align: left; }
+.quote-band p { font-weight: 300; font-stretch: 75%; font-size: clamp(30px, 4.2vw, 60px); line-height: 1.05; letter-spacing: -0.02em; max-width: 22ch; text-wrap: balance; }
+.quote-band p em { font-style: normal; font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.quote-band .by { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.quote-band .by img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius); }
+.quote-band .by span { color: var(--gold); }
+.concepts { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 1px solid var(--line-dark); }
+.concepts li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 12px; padding: 24px 0; border-bottom: 1px solid var(--line-dark); color: var(--on-dark-muted); font-size: 16px; line-height: 1.6; }
+.concepts li b { color: var(--on-dark); font-weight: 600; }
+.concepts .n { color: var(--gold); font-size: 30px; font-weight: 200; font-stretch: 62%; line-height: 1; }
+.program { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.program div { border: 1px solid var(--line-light); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; gap: 8px; }
+.program .m { font-size: 40px; font-weight: 300; font-stretch: 75%; line-height: 1; color: var(--bronze); }
+.program h3 { font-size: 18px; font-weight: 700; font-stretch: 112%; }
+.program p { color: var(--on-light-muted); font-size: 14px; line-height: 1.55; }
+@media (max-width: 1100px) {
+  .svc-grid { grid-template-columns: 1fr 1fr; }
+  .svc:nth-child(3n+2), .svc:nth-child(3n) { padding-left: 0; border-left: 0; }
+  .svc:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-dark); }
+  .pillars, .program { grid-template-columns: 1fr 1fr; }
+  .concepts { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .svc-grid, .pillars, .program { grid-template-columns: 1fr; }
+  .svc:nth-child(even) { padding-left: 0; border-left: 0; }
+}
+
+/* ===== GALERIA VERTICAL (fotografías de obra) ===== */
+.gal .w3 { grid-column: span 3; }
+.gal .w6 { grid-column: span 6; }
+.gal .tall img { aspect-ratio: 3 / 4; }
+.sede + .sede { margin-top: 120px; }
+.sede-meta { display: flex; flex-wrap: wrap; gap: 8px 28px; margin: 0 0 28px; padding: 16px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); }
+.sede-meta div { display: flex; gap: 10px; align-items: baseline; }
+.sede-meta dt { font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--on-dark-muted); }
+.sede-meta dd { margin: 0; color: var(--on-dark); font-size: 15px; }
+@media (max-width: 1100px) { .gal .w3 { grid-column: span 6; } }
+@media (max-width: 640px) { .gal .w3, .gal .w6 { grid-column: span 6; } .sede + .sede { margin-top: 80px; } }
+</style>
+</head>
+<body>
+<!-- ============================================================
+     CABECERA
+     ============================================================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Build &amp; Create Studio — Inicio"><svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"><path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245"/><path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245"/></g><circle cx="78" cy="80" r="15" fill="currentColor"/><circle cx="78" cy="190" r="15" fill="currentColor"/></svg><span>Build &amp; Create Studio</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html#servicios">Servicios</a></li>
+      <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+      <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
+      <li><a href="index.html#proyectos" aria-current="page">Proyectos</a></li>
+      <li><a href="index.html#ona">ONA</a></li>
+      <li><a href="index.html#estudio">Estudio</a></li>
+      <li><a href="index.html#contacto">Contacto</a></li>
+      <li class="menu-cta"><a href="prefactibilidad-inmobiliaria.html#solicitar">Solicitar diagnóstico de terreno</a></li>
+    </ul>
+    <a href="prefactibilidad-inmobiliaria.html#solicitar" class="nav-cta">Diagnóstico de terreno</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media"><img src="img/petshop-gt-recepcion.webp" srcset="img/petshop-gt-recepcion-960.webp 960w, img/petshop-gt-recepcion.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Render de la recepción de Petshop GT con mostrador curvo y estancias en vidrio" class="on" fetchpriority="high" decoding="async"></div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Comercio · Tienda de mascotas · Vista Hermosa, Zona 15</p>
+        <h1 class="hero-slogan">Petshop <span>GT.</span></h1>
+        <p class="hero-sub">Tienda de mascotas de 70 m² pensada como un espacio de bienestar: recepción, tienda, estancias en vidrio y grooming bajo un mismo lenguaje de madera, verde y luz.</p>
+        <div class="hero-actions">
+          <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-light">Diseñemos tu local →</a>
+          <a href="#galeria" class="link">Ver el diseño</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Diseño aprobado</dd></div>
+          <div><dt>Área</dt><dd>70 m²</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIFRAS Y CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Área</dt><dd>70<small> m²</small></dd></div>
+      <div><dt class="mono">Zonas</dt><dd>4</dd></div>
+      <div><dt class="mono">Estado</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Diseño aprobado</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">Una tienda que se siente <b>como un spa.</b></h2>
+      <div class="thesis-text">
+        <p>El concepto parte del bienestar animal: madera natural, verde profundo, blanco y plantas como base de todo el local. La mascota y su dueño entran a un espacio tranquilo, no a una bodega de productos.</p>
+        <p>En 70 m² conviven cuatro zonas: recepción con mostrador curvo, estancias en vidrio a la vista, tienda con exhibición a ambos lados y un área de grooming con baño elevado.</p>
+        <p><strong>Diseño de Build &amp; Create Studio, aprobado por el cliente.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (renders del diseño aprobado)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Diseño aprobado</span>
+        <h2 class="sec-title">Madera, verde <span>y bienestar.</span></h2>
+      </div>
+      <p class="sec-lead">Un mismo lenguaje recorre las cuatro zonas: madera natural, verde, luz lineal y vegetación.</p>
+    </div>
+    <div class="gal">
+      <figure class="w12"><div class="frame"><img src="img/petshop-gt-estancias.webp" srcset="img/petshop-gt-estancias-960.webp 960w, img/petshop-gt-estancias.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Render del recorrido de Petshop GT con estancias en vidrio para mascotas" loading="lazy" decoding="async"></div><figcaption><strong>Recorrido</strong><span class="mono">Estancias en vidrio a la vista</span></figcaption></figure>
+      <figure class="w7"><div class="frame"><img src="img/petshop-gt-tienda.webp" srcset="img/petshop-gt-tienda-960.webp 960w, img/petshop-gt-tienda.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1080" alt="Render de la tienda de Petshop GT con estanterías de producto a ambos lados" loading="lazy" decoding="async"></div><figcaption><strong>Tienda</strong><span class="mono">Exhibición a ambos lados</span></figcaption></figure>
+      <figure class="w5"><div class="frame"><img src="img/petshop-gt-grooming.webp" srcset="img/petshop-gt-grooming-960.webp 960w, img/petshop-gt-grooming.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1080" alt="Render del área de grooming de Petshop GT con baño elevado" loading="lazy" decoding="async"></div><figcaption><strong>Grooming</strong><span class="mono">Baño elevado y repisas</span></figcaption></figure>
+      <figure class="w12"><div class="frame"><img src="img/petshop-gt-concepto.webp" srcset="img/petshop-gt-concepto-960.webp 960w, img/petshop-gt-concepto.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Moodboard de Petshop GT con madera, verde, blanco y terrazo" loading="lazy" decoding="async"></div><figcaption><strong>Concepto</strong><span class="mono">Paleta y materiales</span></figcaption></figure>
+    </div>
+    <p class="gal-note">Renders del diseño aprobado.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Decisiones de diseño</span>
+        <h2 class="sec-title">Cuatro zonas, <span>70 m².</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>Recepción curva.</b> Un mostrador blanco de líneas suaves recibe y ordena el recorrido hacia el resto del local.</span></li>
+      <li><span class="n">02</span><span><b>Estancias a la vista.</b> Módulos en vidrio con estructura de madera: las mascotas quedan visibles y el local se siente abierto.</span></li>
+      <li><span class="n">03</span><span><b>Tienda en pasillo.</b> Estanterías a ambos lados aprovechan cada metro lineal para producto.</span></li>
+      <li><span class="n">04</span><span><b>Grooming integrado.</b> Baño elevado con escalones para la mascota, azulejo blanco y almacenamiento en verde.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      <div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Cliente</dt><dd>Petshop GT</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Tipología</dt><dd>Tienda de mascotas</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Ubicación</dt><dd>Vista Hermosa, Zona 15, Ciudad de Guatemala</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Área</dt><dd>70 m²</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Alcance de Build &amp; Create Studio</dt><dd>Diseño</dd></div><div style="border-color:var(--line-light)"><dt style="color:var(--on-light-muted)">Estado</dt><dd>Diseño aprobado</dd></div>
+    </dl>
+    <div class="cta-row">
+      <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-dark">Diseñemos tu local →</a>
+      <a href="index.html#proyectos" class="link">Ver todos los proyectos</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================================================
+     PIE
+     ============================================================ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"><path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245"/><path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245"/></g><circle cx="78" cy="80" r="15" fill="currentColor"/><circle cx="78" cy="190" r="15" fill="currentColor"/></svg>
+        <p class="slogan">Del terreno al retorno.</p>
+        <p>Build &amp; Create Studio. Arquitectura, prefactibilidad y desarrollo inmobiliario. Ciudad de Guatemala.</p>
+      </div>
+      <div>
+        <h4 class="mono">Servicios</h4>
+        <ul>
+          <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+          <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
+          <li><a href="index.html#modelos">Co-desarrollo e inversión</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Proyectos</h4>
+        <ul>
+          <li><a href="index.html#ona">ONA</a></li>
+          <li><a href="kishi-books.html">Kishi Books</a></li>
+          <li><a href="navante.html">Navante</a></li>
+          <li><a href="anker-logistics.html">Anker Logistics</a></li>
+          <li><a href="petshop-gt.html">Petshop GT</a></li>
+          <li><a href="casa-milpas-altas.html">Casa Milpas Altas</a></li>
+          <li><a href="once-once.html">Once Once</a></li>
+          <li><a href="remodelacion-el-prado.html">El Prado</a></li>
+          <li><a href="edificio-w.html">Edificio W</a></li>
+          <li><a href="la-autoria.html">La Autoría</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></li>
+          <li><a href="https://wa.me/50254131753" target="_blank" rel="noopener">WhatsApp +502 5413 1753</a></li>
+          <li><a href="https://calendar.app.google/bmpsEQCsqqF3ZQgA9" target="_blank" rel="noopener">Agendar llamada</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Build &amp; Create Studio · Ciudad de Guatemala</span>
+      <span>bcarqstudio.com</span>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/50254131753?text=Hola%2C%20me%20interesa%20un%20diagn%C3%B3stico%20de%20terreno." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.46A11.27 11.27 0 0 0 12.04.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.36 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg></a>
+
+<script>
+// ============================================================
+// CABECERA — fondo sólido al hacer scroll + menú móvil
+// ============================================================
+const nav = document.getElementById('nav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+const setMenu = (open) => {
+  navMenu.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  nav.classList.toggle('solid', open || nav.dataset.solid === '1');
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+nav.dataset.solid = nav.classList.contains('solid') ? '1' : '';
+navToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+</script>
+
+</body>
+</html>

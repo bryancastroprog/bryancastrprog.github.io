@@ -1,0 +1,13 @@
+# GitHub Pages (Jekyll) — solo se usa para excluir archivos internos del sitio publicado.
+# Sin esto, CLAUDE.md y docs/*.md se publicarían como páginas en bcarqstudio.com.
+exclude:
+  - CLAUDE.md
+  - docs/
+  - .claude/
+  - .qa-shots/
+  - node_modules/
+  # Originales PNG (6–9 MB): se conservan en el repo como fuente, pero el sitio usa las versiones .webp
+  - img/*.png
+  - img/placeholder.txt
+  # Originales de alta resolución (renders y planos): fuente, no se publican
+  - img/originales/

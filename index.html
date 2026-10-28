@@ -2,1773 +2,978 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="BC Arquitectura. Estudio de arquitectura, desarrollo inmobiliario e inversión. Del terreno al retorno.">
-<meta name="theme-color" content="#0a0a0a">
-<title>BC Arquitectura — Del terreno al retorno</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Estudio de arquitectura en Guatemala | Build &amp; Create Studio</title>
+<meta name="description" content="Arquitectura en Ciudad de Guatemala: diagnóstico de terreno, prefactibilidad, diseño arquitectónico y desarrollo inmobiliario. Del terreno al retorno.">
+<meta name="theme-color" content="#0e0d0b">
+<link rel="canonical" href="https://bcarqstudio.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_GT">
+<meta property="og:site_name" content="Build &amp; Create Studio">
+<meta property="og:url" content="https://bcarqstudio.com/">
+<meta property="og:title" content="Estudio de arquitectura en Guatemala | Build &amp; Create Studio">
+<meta property="og:description" content="Arquitectura en Ciudad de Guatemala: diagnóstico de terreno, prefactibilidad, diseño arquitectónico y desarrollo inmobiliario. Del terreno al retorno.">
+<meta property="og:image" content="https://bcarqstudio.com/img/ona-fachada-atardecer-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": "https://bcarqstudio.com/#organizacion",
+  "name": "Build & Create Studio",
+  "alternateName": "BC Studio",
+  "description": "Arquitectura en Ciudad de Guatemala: diagnóstico de terreno, prefactibilidad, diseño arquitectónico y desarrollo inmobiliario. Del terreno al retorno.",
+  "url": "https://bcarqstudio.com/",
+  "logo": "https://bcarqstudio.com/favicon.svg",
+  "image": "https://bcarqstudio.com/img/ona-fachada-atardecer-og.jpg",
+  "email": "info@bcarqstudio.com",
+  "telephone": "+502 5413 1753",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad de Guatemala",
+    "addressCountry": "GT"
+  },
+  "areaServed": [
+    {
+      "@type": "Country",
+      "name": "Guatemala"
+    },
+    {
+      "@type": "Country",
+      "name": "Honduras"
+    }
+  ],
+  "foundingDate": "2025",
+  "founder": {
+    "@type": "Person",
+    "name": "Bryan Castro",
+    "jobTitle": "Arquitecto y desarrollador inmobiliario",
+    "image": "https://bcarqstudio.com/img/bryan-castro-frontal.webp"
+  },
+  "knowsAbout": [
+    "Arquitectura",
+    "Prefactibilidad inmobiliaria",
+    "Desarrollo inmobiliario",
+    "Diseño interior",
+    "Remodelaciones",
+    "Mobiliario a la medida",
+    "Estructuración de inversión inmobiliaria"
+  ]
+}
+</script>
 
-<!-- ============ FUENTES (Fraunces serif editorial + Inter sans) ============ -->
+<!-- ============ FUENTES (Archivo ancho variable + JetBrains Mono para datos) ============ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,200..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 /* ============================================================
-   RESET + VARIABLES
+   DIRECCION A — OBRA PRIMERO
+   Imagen a sangre, tipografía ancha (Archivo) y datos en mono.
    ============================================================ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-
 :root {
-  /* PALETA - cambia aqui los colores principales si quieres ajustar */
-  --bg-dark: #0a0a0a;
-  --bg-dark-soft: #1a1814;
-  --bg-light: #f4f2ed;
-  --bg-light-alt: #fafaf6;
-  --text-light: #e8e6e1;
-  --text-light-muted: rgba(232, 230, 225, 0.65);
-  --text-light-faint: rgba(232, 230, 225, 0.45);
-  --text-dark: #0a0a0a;
-  --text-dark-muted: rgba(10, 10, 10, 0.7);
-  --accent-earth: #8b6f47;
-  --accent-gold: #c9b896;
-  --border-light-dark: rgba(232, 230, 225, 0.1);
-  --border-light-dark-strong: rgba(232, 230, 225, 0.2);
-  --border-dark-light: rgba(10, 10, 10, 0.12);
-
-  --font-serif: 'Fraunces', Georgia, serif;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  --transition-smooth: cubic-bezier(0.65, 0, 0.35, 1);
+  --ink: #0e0d0b;
+  --ink-2: #181613;
+  --paper: #f3f1ec;
+  --paper-2: #e8e4da;
+  --on-dark: #f3f1ec;
+  --on-dark-muted: #bdb7ab;
+  --on-light: #141311;
+  --on-light-muted: #4f4a41;
+  --gold: #d8c7a3;
+  --bronze: #6f5c3c;
+  --line-dark: rgba(243, 241, 236, 0.16);
+  --line-light: rgba(20, 19, 17, 0.14);
+  --font: 'Archivo', 'Arial Narrow', Arial, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(0.65, 0, 0.35, 1);
+  --wrap: 1320px;
+  --radius: 10px;
+  --radius-sm: 6px;
+  color-scheme: dark;
 }
-
-body {
-  font-family: var(--font-sans);
-  background: var(--bg-dark);
-  color: var(--text-light);
-  font-weight: 300;
-  line-height: 1.6;
-  overflow-x: hidden;
-}
-
-img { max-width: 100%; height: auto; display: block; }
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+body { font-family: var(--font); font-weight: 400; background: var(--ink); color: var(--on-dark); line-height: 1.55; overflow-x: hidden; }
+img { display: block; max-width: 100%; height: auto; }
 a { color: inherit; text-decoration: none; }
-button { font-family: inherit; cursor: pointer; border: none; background: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.wrap { max-width: var(--wrap); margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); }
+.mono { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
+.wide { font-stretch: 125%; }
 
 /* ============================================================
-   NAVEGACION
+   CABECERA
    ============================================================ */
 .nav {
-  position: fixed; top: 0; left: 0; right: 0;
-  display: flex; justify-content: flex-start; align-items: center;
-  gap: 60px;
-  padding: 20px 56px;
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 0.5px solid rgba(232, 230, 225, 0.08);
-  z-index: 100;
-  transition: padding 0.3s var(--transition-smooth);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  transition: background 0.4s ease, border-color 0.4s ease;
+  border-bottom: 1px solid transparent;
+  background: linear-gradient(180deg, rgba(14, 13, 11, 0.55), rgba(14, 13, 11, 0));
 }
-.nav.scrolled { padding: 14px 56px; }
-.nav-logo {
-  display: flex; align-items: center; height: auto; min-height: 32px;
-  color: var(--text-light);
-  transition: all 0.3s ease;
-  margin-right: 30px;
-}
-.nav-logo:hover { 
-  opacity: 1;
-  transform: translateY(-2px);
-}
-.nav-logo-svg {
-  height: 32px; width: auto; display: block;
-  filter: drop-shadow(0 2px 8px rgba(232, 230, 225, 0.3));
-  transition: all 0.3s ease;
-}
-.nav-logo:hover .nav-logo-svg {
-  filter: drop-shadow(0 4px 16px rgba(201, 184, 150, 0.5));
-}
-.nav-logo span { color: var(--accent-earth); }
-.nav-menu {
-  display: flex; gap: 36px; list-style: none;
-  font-size: 13px; color: var(--text-light-muted);
-  letter-spacing: 0.02em;
-}
-.nav-menu a { transition: color 0.3s ease; position: relative; }
-.nav-menu a::after {
-  content: ''; position: absolute; bottom: -4px; left: 0;
-  width: 0; height: 0.5px; background: var(--accent-gold);
-  transition: width 0.3s var(--transition-smooth);
-}
-.nav-menu a:hover { color: var(--text-light); }
-.nav-menu a:hover::after { width: 100%; }
-.nav-cta {
-  padding: 10px 20px; font-size: 13px; font-weight: 500;
-  color: var(--text-light); border: 0.5px solid rgba(232, 230, 225, 0.3);
-  letter-spacing: 0.02em; transition: all 0.3s ease;
-  margin-left: auto;
-}
-.nav-cta:hover { background: var(--text-light); color: var(--bg-dark); border-color: var(--text-light); }
-
-.nav-toggle {
-  display: none; flex-direction: column; gap: 5px;
-  cursor: pointer; padding: 4px;
-}
-.nav-toggle span {
-  width: 24px; height: 1px; background: var(--text-light);
-  transition: all 0.3s ease;
-}
+.nav.scrolled, .nav.solid { background: rgba(14, 13, 11, 0.94); border-bottom-color: var(--line-dark); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.nav-inner { display: flex; align-items: center; gap: 40px; height: 76px; }
+.brand { display: flex; align-items: center; gap: 14px; color: var(--on-dark); }
+.brand svg { height: 24px; width: auto; }
+.brand span { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; font-stretch: 110%; white-space: nowrap; }
+.nav-menu { display: flex; gap: 28px; list-style: none; margin-left: auto; }
+.nav-menu a { font-size: 13px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--on-dark-muted); transition: color 0.3s; }
+.nav-menu a:hover, .nav-menu a[aria-current="page"] { color: var(--on-dark); }
+.nav-cta { font-size: 13px; font-weight: 600; letter-spacing: 0.04em; padding: 12px 18px; background: var(--on-dark); color: var(--ink); white-space: nowrap; transition: background 0.3s; }
+.nav-cta:hover { background: var(--gold); }
+.nav-toggle { display: none; width: 44px; height: 44px; margin-left: auto; position: relative; }
+.nav-toggle span { position: absolute; left: 11px; right: 11px; height: 1.5px; background: var(--on-dark); transition: transform 0.3s, opacity 0.3s; }
+.nav-toggle span:nth-child(1) { top: 16px; } .nav-toggle span:nth-child(2) { top: 22px; } .nav-toggle span:nth-child(3) { top: 28px; }
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
 /* ============================================================
    HERO
    ============================================================ */
-.hero {
-  min-height: 100vh;
-  padding: 180px 56px 120px;
-  position: relative; overflow: hidden;
-  display: flex; align-items: center;
-}
-.hero-grid {
-  position: absolute; inset: 0; opacity: 0.06; pointer-events: none;
-}
-.hero-grid svg { width: 100%; height: 100%; }
-.hero-content { max-width: 1200px; position: relative; z-index: 2; }
-
-.hero-eyebrow {
-  font-size: 11px; letter-spacing: 0.3em; color: var(--accent-earth);
-  margin-bottom: 40px; text-transform: uppercase;
-  display: flex; align-items: center; gap: 16px;
-  opacity: 0; animation: fadeUp 0.8s var(--transition-smooth) 0.2s forwards;
-}
-.hero-eyebrow::before {
-  content: ''; width: 24px; height: 0.5px; background: var(--accent-earth);
-}
-.hero-title {
-  font-family: var(--font-serif);
-  font-size: clamp(48px, 9vw, 104px);
-  font-weight: 300; line-height: 0.98; letter-spacing: -0.04em;
-  margin-bottom: 48px; color: var(--text-light);
-  opacity: 0; animation: fadeUp 1s var(--transition-smooth) 0.4s forwards;
-}
-.hero-title em {
-  font-style: italic; color: var(--accent-gold); font-weight: 300;
-}
-.hero-sub {
-  font-size: clamp(17px, 2vw, 21px);
-  color: rgba(232, 230, 225, 0.75); max-width: 680px;
-  margin-bottom: 64px; line-height: 1.55;
-  opacity: 0; animation: fadeUp 1s var(--transition-smooth) 0.6s forwards;
-}
-.hero-actions {
-  display: flex; gap: 20px; align-items: center; flex-wrap: wrap;
-  opacity: 0; animation: fadeUp 1s var(--transition-smooth) 0.8s forwards;
-}
-.btn-primary {
-  padding: 20px 40px; font-size: 14px; font-weight: 500;
-  background: var(--text-light); color: var(--bg-dark);
-  letter-spacing: 0.05em; transition: all 0.3s var(--transition-smooth);
-  border: 0.5px solid var(--text-light);
-}
-.btn-primary:hover { background: var(--accent-gold); border-color: var(--accent-gold); transform: translateY(-2px); }
-.btn-link {
-  padding: 20px 0; font-size: 14px;
-  color: rgba(232, 230, 225, 0.8);
-  border-bottom: 0.5px solid rgba(232, 230, 225, 0.3);
-  letter-spacing: 0.03em; transition: all 0.3s ease;
-}
-.btn-link:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
+.hero { position: relative; min-height: max(640px, min(100svh, 920px)); display: flex; align-items: flex-end; overflow: hidden; background: var(--ink-2); color: var(--on-dark); }
+.hero-media { position: absolute; inset: 0; }
+.hero-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transform: scale(1.05); transition: opacity 1s ease, transform 7s ease; }
+.hero-media img.on { opacity: 1; transform: scale(1); }
+.hero::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(14,13,11,0.72) 0%, rgba(14,13,11,0.38) 45%, rgba(14,13,11,0) 70%), linear-gradient(180deg, rgba(14,13,11,0.5) 0%, rgba(14,13,11,0) 24%, rgba(14,13,11,0.15) 50%, rgba(14,13,11,0.9) 100%); }
+.hero-body { position: relative; z-index: 2; width: 100%; padding-top: 140px; padding-bottom: 48px; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); gap: 48px; align-items: end; }
+.hero-kicker { font-family: var(--mono); font-size: 13px; font-weight: 500; text-shadow: 0 1px 12px rgba(0,0,0,0.5); letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 22px; }
+.hero-slogan { font-weight: 800; font-stretch: 125%; font-size: clamp(52px, 8.8vw, 138px); line-height: 0.86; letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance; }
+.hero-slogan span { display: block; font-weight: 300; font-stretch: 62%; color: var(--gold); }
+.hero-sub { font-size: 18px; line-height: 1.55; color: rgba(243, 241, 236, 0.9); max-width: 48ch; margin-top: 26px; }
+.hero-actions { display: flex; gap: 14px 28px; align-items: center; flex-wrap: wrap; margin-top: 32px; }
+.btn { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; letter-spacing: 0.03em; padding: 17px 24px; transition: background 0.3s, color 0.3s, transform 0.3s; }
+.btn-light { background: var(--on-dark); color: var(--ink); }
+.btn-light:hover { background: var(--gold); transform: translateY(-2px); }
+.btn-dark { background: var(--ink); color: var(--on-dark); }
+.btn-dark:hover { background: var(--bronze); transform: translateY(-2px); }
+.link { font-size: 14px; font-weight: 500; padding: 6px 0; border-bottom: 1px solid currentColor; transition: color 0.3s; }
+.on-dark .link:hover, .hero .link:hover { color: var(--gold); }
+.on-light .link:hover { color: var(--bronze); }
+.hero-index { text-shadow: 0 1px 10px rgba(0,0,0,0.45); list-style: none; border-top: 1px solid rgba(243, 241, 236, 0.35); }
+.hero-index button { width: 100%; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: baseline; text-align: left; padding: 14px 0; border-bottom: 1px solid rgba(243, 241, 236, 0.35); color: rgba(243, 241, 236, 0.75); transition: color 0.3s, padding 0.3s; }
+.hero-index .n, .hero-index .st { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+.hero-index .name { font-size: 15px; font-weight: 500; }
+.hero-index button[aria-pressed="true"], .hero-index button:hover, .hero-index button:focus-visible { color: var(--on-dark); padding-left: 8px; }
+.hero-index button[aria-pressed="true"] .name { font-weight: 700; font-stretch: 125%; }
+.hero-open { display: inline-block; margin-top: 16px; font-size: 13px; font-weight: 600; color: var(--gold); }
+.hero-open:hover { color: var(--on-dark); }
 
 /* ============================================================
-   HERO LOGO - SVG BC Studio lado derecho (referencia visual)
+   SECCIONES
    ============================================================ */
-.hero-logo {
-  position: absolute;
-  right: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-  pointer-events: none;
-  opacity: 0;
-  animation: heroLogoFadeIn 1.2s var(--transition-smooth) 0.8s forwards;
-}
-.hero-logo-svg {
-  width: clamp(420px, 45vw, 620px);
-  height: auto;
-  display: block;
-  color: #F2F2F2;
-  opacity: 0.95;
-}
+.section { padding: 128px 0; }
+.on-dark { background: var(--ink); color: var(--on-dark); }
+.on-dark-2 { background: var(--ink-2); color: var(--on-dark); }
+.on-light { background: var(--paper); color: var(--on-light); }
+.on-light-2 { background: var(--paper-2); color: var(--on-light); }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px 64px; align-items: end; margin-bottom: 64px; }
+.sec-label { display: block; margin-bottom: 18px; }
+.on-dark .sec-label, .on-dark-2 .sec-label { color: var(--gold); }
+.on-light .sec-label, .on-light-2 .sec-label { color: var(--bronze); }
+.sec-title { font-weight: 800; font-stretch: 125%; font-size: clamp(40px, 6vw, 88px); line-height: 0.9; letter-spacing: -0.02em; text-transform: uppercase; text-wrap: balance; }
+.sec-title span { display: block; font-weight: 300; font-stretch: 62%; }
+.on-dark .sec-title span, .on-dark-2 .sec-title span { color: var(--gold); }
+.on-light .sec-title span, .on-light-2 .sec-title span { color: var(--bronze); }
+.sec-lead { font-size: 18px; line-height: 1.6; max-width: 52ch; }
+.on-dark .sec-lead, .on-dark-2 .sec-lead { color: var(--on-dark-muted); }
+.on-light .sec-lead, .on-light-2 .sec-lead { color: var(--on-light-muted); }
 
-@keyframes heroLogoFadeIn {
-  from { opacity: 0; transform: translateY(-45%); }
-  to { opacity: 1; transform: translateY(-50%); }
-}
+/* ---------- PROYECTOS ---------- */
+.work { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px 24px; }
+.work-card { grid-column: span 4; display: flex; flex-direction: column; gap: 16px; }
+.work-card.big { grid-column: span 8; }
+.work-card.half { grid-column: span 6; }
+.work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: var(--radius); }
+.work-card.big .work-img { aspect-ratio: 16 / 10.6; }
+.work-card.half .work-img { aspect-ratio: 16 / 10; }
+.work-card.full { grid-column: span 12; }
+.work-card.full .work-img { aspect-ratio: 21 / 8; }
+.work-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.work-card:hover .work-img img { transform: scale(1.04); }
+.work-meta { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.work-name { font-size: 24px; font-weight: 700; font-stretch: 112%; letter-spacing: -0.01em; }
+.work-card.big .work-name { font-size: 32px; }
+.work-info { color: var(--on-light-muted); }
+.status { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 9px; border-radius: 3px; border: 1px solid var(--line-light); color: var(--on-light); white-space: nowrap; }
+.status.built { background: var(--on-light); color: var(--paper); border-color: var(--on-light); }
+
+/* ---------- SERVICIOS ---------- */
+.routes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line-dark); }
+.route { display: flex; flex-direction: column; gap: 18px; padding: 40px 32px 44px 0; border-right: 1px solid var(--line-dark); transition: background 0.4s; }
+.route + .route { padding-left: 32px; }
+.route:last-child { border-right: 0; }
+.route.lead-route { border-top: 2px solid var(--gold); margin-top: -1px; }
+.route-who { color: var(--gold); }
+.route-title { font-size: clamp(26px, 2.4vw, 34px); font-weight: 700; font-stretch: 112%; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+.route-text { color: var(--on-dark-muted); font-size: 16px; line-height: 1.6; }
+.route ul { list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 14px; color: var(--on-dark); }
+.route li::before { content: '—'; color: var(--gold); margin-right: 10px; }
+.route .link { margin-top: auto; align-self: flex-start; }
+.specialties { margin-top: 72px; }
+.spec-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.spec-card { display: flex; flex-direction: column; gap: 12px; padding: 28px; border: 1px solid var(--line-dark); border-radius: var(--radius); transition: border-color 0.3s, background 0.3s; }
+.spec-card:hover, .spec-card:focus-visible { border-color: var(--gold); background: var(--ink-2); }
+.spec-card h3 { font-size: 22px; font-weight: 700; font-stretch: 112%; }
+.spec-card p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; }
+.spec-card .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
+.spec-work { display: flex; gap: 14px; align-items: center; padding: 12px 0; border-top: 1px solid var(--line-dark); border-bottom: 1px solid var(--line-dark); color: var(--on-dark); }
+.spec-work-2 { border-top: 0; margin-top: -12px; }
+.spec-work img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius-sm); flex: none; }
+.spec-work > span { display: flex; flex-direction: column; gap: 2px; font-size: 14px; }
+.spec-work .mono { font-size: 12px; color: var(--on-dark-muted); letter-spacing: 0.04em; }
+.spec-work:hover strong, .spec-work:focus-visible strong { color: var(--gold); }
+
+/* ---------- PROCESO ---------- */
+.steps { list-style: none; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--line-light); counter-reset: s; }
+.step { padding: 36px 28px 36px 0; border-right: 1px solid var(--line-light); }
+.step + .step { padding-left: 28px; }
+.step:last-child { border-right: 0; }
+.step-n { font-size: 64px; font-weight: 200; font-stretch: 62%; line-height: 1; color: var(--bronze); margin-bottom: 22px; }
+.step-name { font-size: 22px; font-weight: 700; font-stretch: 112%; line-height: 1.15; margin-bottom: 12px; }
+.step-text { font-size: 15px; color: var(--on-light-muted); line-height: 1.6; margin-bottom: 18px; }
+.step-deliv { font-size: 14px; line-height: 1.5; }
+.step-deliv b { display: block; font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bronze); margin-bottom: 4px; }
+.cta-row { display: flex; gap: 16px 32px; align-items: center; flex-wrap: wrap; margin-top: 56px; }
+
+/* ---------- DIFERENCIAL / ONA ---------- */
+.thesis { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 64px; align-items: start; }
+.thesis-quote { font-weight: 300; font-stretch: 75%; font-size: clamp(36px, 4.6vw, 68px); line-height: 1.02; letter-spacing: -0.02em; text-wrap: balance; }
+.thesis-quote b { font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.thesis-text { color: var(--on-dark-muted); font-size: 17px; line-height: 1.65; display: flex; flex-direction: column; gap: 16px; }
+.thesis-text strong { color: var(--on-dark); font-weight: 500; }
+.figures { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin: 96px 0 0; border-top: 1px solid var(--line-dark); }
+.figures div { padding: 26px 20px 0 0; }
+.figures dt { color: var(--on-dark-muted); margin-bottom: 12px; }
+.figures dd { font-size: clamp(34px, 4vw, 60px); font-weight: 300; font-stretch: 75%; line-height: 1; font-variant-numeric: tabular-nums; }
+.figures dd small { font-size: 0.5em; color: var(--gold); }
+.ona { margin-top: 96px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; }
+.ona-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; grid-auto-rows: 150px; }
+.ona-gallery figure { overflow: hidden; background: var(--ink); border-radius: var(--radius-sm); }
+.ona-gallery figure.g1, .ona-gallery figure.g5, .ona-gallery figure.g6 { border-radius: var(--radius); }
+.ona-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
+.ona-gallery figure:hover img { transform: scale(1.04); }
+.g1 { grid-column: span 6; grid-row: span 2; } .g2, .g3, .g4 { grid-column: span 2; } .g5, .g6 { grid-column: span 3; grid-row: span 2; }
+.ona-name { font-size: clamp(64px, 9vw, 128px); font-weight: 800; font-stretch: 125%; line-height: 0.85; letter-spacing: -0.03em; }
+.ona-tag { color: var(--gold); margin: 14px 0 26px; }
+.ona-text { color: var(--on-dark-muted); font-size: 16px; line-height: 1.65; margin-bottom: 28px; }
+.spec { border-top: 1px solid var(--line-dark); margin-bottom: 28px; }
+.spec div { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--line-dark); font-size: 14px; }
+.spec dt { color: var(--on-dark-muted); }
+.spec dd { text-align: right; }
+.disclaimer { font-size: 13px; color: var(--on-dark-muted); line-height: 1.55; margin-top: 18px; max-width: 52ch; }
+.models { margin-top: 96px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+.model { border: 1px solid var(--line-dark); padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.model h3 { font-size: 20px; font-weight: 700; font-stretch: 112%; }
+.model .who { color: var(--gold); }
+.model p { font-size: 15px; color: var(--on-dark-muted); line-height: 1.6; }
+.model .link { margin-top: auto; align-self: flex-start; font-size: 13px; }
+
+/* ---------- ESTUDIO ---------- */
+.studio { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; }
+.studio-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: var(--radius); }
+.studio-photo figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 14px; }
+.studio-photo figcaption strong { font-size: 18px; font-weight: 700; font-stretch: 112%; }
+.studio-photo figcaption span { color: var(--bronze); }
+.studio-quote { font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.2vw, 44px); line-height: 1.12; letter-spacing: -0.01em; margin-bottom: 36px; text-wrap: balance; }
+.studio-bio { font-size: 17px; color: var(--on-light-muted); line-height: 1.7; display: flex; flex-direction: column; gap: 16px; max-width: 62ch; }
+.studio-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 36px; padding-top: 28px; border-top: 1px solid var(--line-light); }
+.studio-meta dt { color: var(--bronze); margin-bottom: 8px; }
+.studio-meta dd { font-size: 15px; line-height: 1.6; }
+
+/* ---------- CONTACTO ---------- */
+.contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
+.agenda { border: 1px solid var(--line-dark); padding: 32px; margin: 40px 0 32px; }
+.agenda h3 { font-size: 24px; font-weight: 700; font-stretch: 112%; margin: 10px 0 12px; }
+.host { display: flex; align-items: center; gap: 16px; margin: 20px 0 4px; }
+.host img { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius); flex-shrink: 0; }
+.host strong { display: block; font-size: 17px; font-weight: 700; font-stretch: 112%; }
+.host span { color: var(--gold); }
+.host-photo { margin: 36px 0 0; max-width: 360px; }
+.host-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); }
+.host-photo figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; }
+.host-photo figcaption strong { font-weight: 700; font-stretch: 112%; }
+.host-photo figcaption span { color: var(--gold); }
+.agenda p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
+.agenda ul { list-style: none; margin: 18px 0 24px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
+.agenda li::before { content: '—'; color: var(--gold); margin-right: 10px; }
+.channels { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.channels dt { color: var(--gold); margin-bottom: 6px; }
+.channels dd { font-size: 16px; }
+.channels a:hover { color: var(--gold); }
+.form { background: var(--ink-2); border: 1px solid var(--line-dark); padding: 40px; }
+.form-title { font-size: 26px; font-weight: 700; font-stretch: 112%; margin: 10px 0 28px; }
+.field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
+.field label { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-dark-muted); }
+.field input, .field select, .field textarea { width: 100%; font: inherit; font-size: 16px; color: var(--on-dark); background: transparent; border: 0; border-bottom: 1px solid rgba(243, 241, 236, 0.32); padding: 10px 0; border-radius: 0; }
+.field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23d8c7a3' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right center; padding-right: 24px; }
+.field select option { background: var(--ink); color: var(--on-dark); }
+.field input::placeholder, .field textarea::placeholder { color: rgba(243, 241, 236, 0.5); }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-bottom-color: var(--gold); }
+.field textarea { min-height: 96px; resize: vertical; }
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+.form-submit { width: 100%; justify-content: center; margin-top: 8px; }
+.form-error { display: none; margin-top: 14px; font-size: 14px; color: #f0a58f; }
+.form-success { display: none; padding: 24px 0; }
+.form-success h3 { font-size: 26px; font-weight: 700; font-stretch: 112%; margin-bottom: 10px; }
+.form-success p { color: var(--on-dark-muted); }
+
+/* ---------- PIE ---------- */
+.footer { background: var(--ink); color: var(--on-dark); border-top: 1px solid var(--line-dark); padding: 72px 0 40px; }
+.footer-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 40px; margin-bottom: 56px; }
+.footer-brand svg { height: 40px; width: auto; color: var(--on-dark); margin-bottom: 18px; }
+.footer-brand p { color: var(--on-dark-muted); font-size: 15px; max-width: 34ch; }
+.footer-brand .slogan { font-weight: 800; font-stretch: 125%; text-transform: uppercase; font-size: 15px; color: var(--on-dark); margin-bottom: 6px; }
+.footer h4 { color: var(--gold); margin-bottom: 16px; font-weight: 500; }
+.footer ul { list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: var(--on-dark-muted); }
+.footer ul a:hover { color: var(--on-dark); }
+.footer-bottom { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 24px; border-top: 1px solid var(--line-dark); color: var(--on-dark-muted); font-size: 13px; }
+
+/* ---------- WHATSAPP FLOTANTE ---------- */
+.wa-float { position: fixed; z-index: 90; right: max(20px, env(safe-area-inset-right, 0px)); bottom: max(20px, env(safe-area-inset-bottom, 0px)); width: 54px; height: 54px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: var(--on-dark); color: var(--ink); box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35); transition: background 0.3s, transform 0.3s; }
+.wa-float:hover { background: var(--gold); transform: translateY(-2px); }
+.wa-float svg { width: 26px; height: 26px; }
+
+/* ---------- PENDIENTES (solo vista previa: bloquean publicación) ---------- */
+.pending { display: inline-block; border: 1px dashed currentColor; padding: 3px 9px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.02em; line-height: 1.5; }
+.on-dark .pending, .on-dark-2 .pending { color: var(--gold); }
+.on-light .pending, .on-light-2 .pending { color: var(--bronze); }
 
 /* ============================================================
-   BARRA DE METRICAS
+   RESPONSIVE
    ============================================================ */
-.metrics {
-  padding: 56px;
-  border-top: 0.5px solid rgba(232, 230, 225, 0.08);
-  border-bottom: 0.5px solid rgba(232, 230, 225, 0.08);
-}
-.metrics-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 0; align-items: center;
-}
-.metric { text-align: center; padding: 0 24px; position: relative; }
-.metric:not(:last-child)::after {
-  content: ''; position: absolute; right: 0; top: 50%;
-  transform: translateY(-50%); width: 0.5px; height: 56px;
-  background: rgba(232, 230, 225, 0.15);
-}
-.metric-value {
-  font-family: var(--font-serif); font-size: 40px;
-  font-weight: 300; letter-spacing: -0.02em;
-  color: var(--text-light); margin-bottom: 8px;
-}
-.metric-value.gold { color: var(--accent-gold); }
-.metric-value sup { font-size: 28px; }
-.metric-label {
-  font-size: 10px; letter-spacing: 0.2em;
-  color: rgba(232, 230, 225, 0.5); text-transform: uppercase;
-}
-
-/* ============================================================
-   SECCIONES BASE
-   ============================================================ */
-.section { padding: 160px 56px; position: relative; overflow: hidden; }
-.section-light { background: var(--bg-light); color: var(--text-dark); }
-.section-dark { background: var(--bg-dark); }
-.section-dark-soft { background: var(--bg-dark-soft); }
-
-.section-eyebrow {
-  font-size: 11px; letter-spacing: 0.3em;
-  color: var(--accent-earth); margin-bottom: 24px;
-  text-transform: uppercase;
-}
-.section-eyebrow.gold { color: var(--accent-gold); }
-.section-divider {
-  width: 40px; height: 0.5px;
-  background: var(--text-dark);
-  margin-bottom: 32px;
-}
-.section-divider.light { background: var(--text-light); }
-.section-divider.gold { background: var(--accent-gold); }
-
-/* ============================================================
-   SECCION VISION (Tesis)
-   ============================================================ */
-.vision-grid {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 2fr;
-  gap: 120px; align-items: start;
-}
-.vision-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(32px, 5vw, 58px);
-  font-weight: 300; line-height: 1.08; letter-spacing: -0.025em;
-  margin-bottom: 56px; color: var(--text-dark);
-}
-.vision-quote .muted { color: rgba(10, 10, 10, 0.35); }
-.vision-quote em {
-  font-style: italic; color: var(--accent-earth); font-weight: 300;
-}
-.vision-text {
-  font-size: 18px; color: var(--text-dark-muted);
-  line-height: 1.7; max-width: 680px;
-}
-.vision-text p { margin-bottom: 20px; }
-.vision-text p:last-child { color: var(--text-dark); font-weight: 400; margin-bottom: 0; }
-
-/* ============================================================
-   SECCION ONA
-   ============================================================ */
-.ona-header {
-  max-width: 1400px; margin: 0 auto 56px;
-  display: flex; justify-content: space-between; align-items: center;
-  flex-wrap: wrap; gap: 20px;
-}
-.ona-badge {
-  display: inline-flex; align-items: center; gap: 10px;
-  padding: 8px 16px;
-  border: 0.5px solid rgba(201, 184, 150, 0.4);
-  background: rgba(201, 184, 150, 0.06);
-}
-.ona-badge::before {
-  content: ''; width: 6px; height: 6px;
-  background: var(--accent-gold); border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
-.ona-badge span {
-  font-size: 11px; color: var(--accent-gold);
-  letter-spacing: 0.2em; text-transform: uppercase;
-}
-.ona-grid {
-  max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.1fr 1fr;
-  gap: 80px; align-items: center;
-}
-.ona-name {
-  font-family: var(--font-serif);
-  font-size: clamp(96px, 14vw, 180px);
-  font-weight: 300; line-height: 0.88; letter-spacing: -0.05em;
-  color: var(--text-light); margin-bottom: 20px;
-}
-.ona-tagline {
-  font-family: var(--font-serif); font-size: 24px;
-  font-style: italic; color: var(--accent-gold);
-  margin-bottom: 56px; letter-spacing: 0.02em;
-}
-.ona-text {
-  font-size: 18px; color: rgba(232, 230, 225, 0.8);
-  line-height: 1.65; margin-bottom: 24px; max-width: 560px;
-}
-.ona-text-small {
-  font-size: 16px; color: rgba(232, 230, 225, 0.6);
-  line-height: 1.7; margin-bottom: 40px; max-width: 560px;
-}
-.ona-callout {
-  background: rgba(232, 230, 225, 0.04);
-  border-left: 2px solid var(--accent-gold);
-  padding: 20px 24px; margin-bottom: 40px; max-width: 560px;
-}
-.ona-callout p {
-  font-size: 14px; color: rgba(232, 230, 225, 0.75);
-  line-height: 1.65;
-}
-.ona-actions { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
-.btn-gold {
-  padding: 16px 28px; font-size: 13px; font-weight: 500;
-  background: var(--accent-gold); color: var(--bg-dark);
-  letter-spacing: 0.05em; transition: all 0.3s var(--transition-smooth);
-  border: 0.5px solid var(--accent-gold);
-}
-.btn-gold:hover { background: var(--text-light); border-color: var(--text-light); transform: translateY(-2px); }
-.btn-link-gold {
-  padding: 16px 0; font-size: 13px;
-  color: rgba(232, 230, 225, 0.8);
-  border-bottom: 0.5px solid rgba(232, 230, 225, 0.3);
-  letter-spacing: 0.03em; transition: all 0.3s ease;
-}
-.btn-link-gold:hover { color: var(--accent-gold); border-color: var(--accent-gold); }
-
-.ona-spec {
-  background: var(--bg-dark);
-  border: 0.5px solid rgba(201, 184, 150, 0.25);
-  padding: 48px; position: relative;
-}
-.ona-spec::before, .ona-spec::after {
-  content: ''; position: absolute; width: 32px; height: 32px;
-}
-.ona-spec::before {
-  top: -1px; left: -1px;
-  border-top: 1px solid var(--accent-gold);
-  border-left: 1px solid var(--accent-gold);
-}
-.ona-spec::after {
-  bottom: -1px; right: -1px;
-  border-bottom: 1px solid var(--accent-gold);
-  border-right: 1px solid var(--accent-gold);
-}
-.ona-spec-title {
-  font-size: 10px; color: var(--accent-gold);
-  letter-spacing: 0.3em; text-transform: uppercase;
-  margin-bottom: 32px;
-}
-.spec-row {
-  display: grid; grid-template-columns: 1fr 1fr;
-  padding: 18px 0;
-  border-bottom: 0.5px solid var(--border-light-dark);
-}
-.spec-row:last-child { border-bottom: none; }
-.spec-label {
-  font-size: 12px; color: rgba(232, 230, 225, 0.5);
-  letter-spacing: 0.05em;
-}
-.spec-value {
-  font-size: 14px; color: var(--text-light); text-align: right;
-}
-.spec-value.big {
-  font-family: var(--font-serif); font-size: 22px;
-}
-.spec-value.gold {
-  font-family: var(--font-serif); font-size: 22px; color: var(--accent-gold);
-}
-.spec-value.italic {
-  font-size: 13px; color: rgba(201, 184, 150, 0.9); font-style: italic;
-}
-
-/* ============================================================
-   GALERIA ONA
-   ============================================================ */
-.gallery {
-  max-width: 1400px; margin: 0 auto; padding: 0 0;
-  margin-top: 120px;
-}
-.gallery-header {
-  text-align: center; margin-bottom: 64px;
-}
-.gallery-title {
-  font-family: var(--font-serif); font-size: 48px;
-  font-weight: 300; letter-spacing: -0.02em;
-  color: var(--text-light); margin-bottom: 16px;
-}
-.gallery-title em { font-style: italic; color: var(--accent-gold); }
-.gallery-sub {
-  font-size: 15px; color: rgba(232, 230, 225, 0.6);
-  max-width: 560px; margin: 0 auto;
-}
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: 200px;
-  gap: 12px;
-}
-.gallery-item {
-  position: relative; overflow: hidden;
-  cursor: pointer;
-  background: var(--bg-dark-soft);
-}
-.gallery-item img {
-  width: 100%; height: 100%; object-fit: cover;
-  transition: transform 1.2s var(--transition-smooth);
-}
-.gallery-item:hover img { transform: scale(1.05); }
-.gallery-item::after {
-  content: ''; position: absolute; inset: 0;
-  background: linear-gradient(180deg, transparent 50%, rgba(10, 10, 10, 0.7));
-  opacity: 0; transition: opacity 0.4s ease;
-}
-.gallery-item:hover::after { opacity: 1; }
-.gallery-caption {
-  position: absolute; bottom: 24px; left: 24px;
-  font-size: 11px; letter-spacing: 0.2em;
-  color: var(--text-light); text-transform: uppercase;
-  opacity: 0; transform: translateY(10px);
-  transition: all 0.4s var(--transition-smooth);
-  z-index: 2;
-}
-.gallery-item:hover .gallery-caption { opacity: 1; transform: translateY(0); }
-
-/* Layout asimetrico de galeria */
-.gallery-item-1 { grid-column: span 8; grid-row: span 2; }
-.gallery-item-2 { grid-column: span 4; grid-row: span 2; }
-.gallery-item-3 { grid-column: span 4; grid-row: span 2; }
-.gallery-item-4 { grid-column: span 4; grid-row: span 2; }
-.gallery-item-5 { grid-column: span 4; grid-row: span 2; }
-.gallery-item-6 { grid-column: span 6; grid-row: span 2; }
-.gallery-item-7 { grid-column: span 6; grid-row: span 2; }
-.gallery-item-8 { grid-column: span 4; grid-row: span 2; }
-.gallery-item-9 { grid-column: span 4; grid-row: span 2; }
-.gallery-item-10 { grid-column: span 4; grid-row: span 2; }
-
-/* ============================================================
-   SECCION ESTUDIO (con foto Bryan)
-   ============================================================ */
-.studio-header {
-  max-width: 1300px; margin: 0 auto 80px;
-  display: grid; grid-template-columns: 1fr 2fr;
-  gap: 80px; align-items: end;
-}
-.studio-title {
-  font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 300; line-height: 1.08; letter-spacing: -0.02em;
-}
-.studio-title em { font-style: italic; }
-
-.studio-content {
-  max-width: 1300px; margin: 0 auto;
-  display: grid; grid-template-columns: 0.85fr 1.15fr;
-  gap: 96px; align-items: start;
-}
-.studio-photo {
-  position: relative;
-}
-.studio-photo-img {
-  aspect-ratio: 4/5; background: #d8d4cb;
-  background-image: url('bryan-castro.jpg');
-  background-size: cover; background-position: center top;
-  position: relative; overflow: hidden;
-}
-.studio-photo-tag {
-  position: absolute; bottom: -24px; left: -24px;
-  background: var(--bg-dark);
-  padding: 20px 24px; max-width: 280px;
-}
-.studio-photo-tag-name {
-  font-family: var(--font-serif); font-size: 22px;
-  color: var(--text-light); margin-bottom: 4px;
-}
-.studio-photo-tag-role {
-  font-size: 11px; color: var(--accent-gold);
-  letter-spacing: 0.15em; text-transform: uppercase;
-}
-.studio-quote {
-  font-family: var(--font-serif);
-  font-size: clamp(20px, 2.5vw, 28px);
-  font-style: italic; color: var(--text-dark);
-  line-height: 1.4; margin-bottom: 40px;
-  font-weight: 300; letter-spacing: -0.01em;
-}
-.studio-divider {
-  height: 0.5px; background: rgba(10, 10, 10, 0.15);
-  margin-bottom: 40px; max-width: 80px;
-}
-.studio-bio {
-  font-size: 16px; color: var(--text-dark-muted);
-  line-height: 1.8;
-}
-.studio-bio p { margin-bottom: 20px; }
-.studio-meta {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 32px; padding-top: 32px; margin-top: 24px;
-  border-top: 0.5px solid rgba(10, 10, 10, 0.15);
-}
-.studio-meta-label {
-  font-size: 10px; color: var(--accent-earth);
-  letter-spacing: 0.2em; text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.studio-meta-value {
-  font-size: 14px; color: var(--text-dark-muted);
-  line-height: 1.7;
-}
-.studio-link {
-  margin-top: 32px; display: inline-block;
-  font-size: 13px; color: var(--accent-earth);
-  border-bottom: 0.5px solid var(--accent-earth);
-  padding-bottom: 4px; letter-spacing: 0.02em;
-  transition: all 0.3s ease;
-}
-.studio-link:hover { color: var(--text-dark); border-color: var(--text-dark); }
-
-/* ============================================================
-   SECCION MODELOS DE TRABAJO
-   ============================================================ */
-.models-section { background: #e8e6e1; color: var(--text-dark); }
-.models-header {
-  max-width: 1200px; margin: 0 auto 80px;
-  display: grid; grid-template-columns: 1fr 2fr;
-  gap: 80px; align-items: end;
-}
-.models-title {
-  font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 300; line-height: 1.08;
-  letter-spacing: -0.02em; margin-bottom: 24px;
-}
-.models-title em { font-style: italic; }
-.models-sub {
-  font-size: 17px; color: rgba(10, 10, 10, 0.65);
-  line-height: 1.6; max-width: 600px;
-}
-.models-grid {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 2px; background: rgba(10, 10, 10, 0.15);
-  border: 0.5px solid rgba(10, 10, 10, 0.15);
-}
-.model-card {
-  background: var(--bg-light);
-  padding: 56px 40px; position: relative;
-  transition: background 0.4s ease;
-}
-.model-card:hover { background: var(--bg-light-alt); }
-.model-card-featured { background: var(--bg-light-alt); }
-.model-badge {
-  position: absolute; top: 16px; right: 16px;
-  font-size: 9px; color: var(--accent-earth);
-  letter-spacing: 0.2em; text-transform: uppercase;
-  background: rgba(139, 111, 71, 0.08);
-  padding: 4px 10px;
-  border: 0.5px solid rgba(139, 111, 71, 0.3);
-}
-.model-num {
-  font-size: 10px; color: rgba(10, 10, 10, 0.5);
-  letter-spacing: 0.3em; margin-bottom: 24px;
-  text-transform: uppercase;
-}
-.model-title {
-  font-family: var(--font-serif); font-size: 32px;
-  font-weight: 400; margin-bottom: 16px;
-  letter-spacing: -0.01em;
-}
-.model-tagline {
-  font-size: 14px; color: rgba(10, 10, 10, 0.5);
-  line-height: 1.6; margin-bottom: 32px;
-  font-style: italic;
-}
-.model-text {
-  font-size: 14px; color: var(--text-dark-muted);
-  line-height: 1.7; margin-bottom: 40px;
-}
-.model-meta { padding-top: 24px; border-top: 0.5px solid var(--border-dark-light); }
-.model-meta-label {
-  font-size: 10px; color: var(--accent-earth);
-  letter-spacing: 0.2em; text-transform: uppercase;
-  margin-bottom: 12px;
-}
-.model-meta-text {
-  font-size: 13px; color: rgba(10, 10, 10, 0.65);
-  line-height: 1.6;
-}
-.model-link {
-  margin-top: 32px; display: inline-block;
-  font-size: 13px; color: var(--accent-earth);
-  border-bottom: 0.5px solid var(--accent-earth);
-  padding-bottom: 2px; letter-spacing: 0.02em;
-  transition: all 0.3s ease;
-}
-.model-link:hover { color: var(--text-dark); border-color: var(--text-dark); }
-
-/* ============================================================
-   SECCION AGENDAR CITA
-   ============================================================ */
-.agenda-section {
-  background: var(--bg-light);
-  color: var(--text-dark);
-  position: relative;
-  overflow: hidden;
-}
-.agenda-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 1.2fr 1fr;
-  gap: 100px; align-items: center;
-  position: relative; z-index: 2;
-}
-.agenda-title {
-  font-family: var(--font-serif);
-  font-size: clamp(36px, 5vw, 60px);
-  font-weight: 300; line-height: 1.05;
-  letter-spacing: -0.03em; margin-bottom: 28px;
-  color: var(--text-dark);
-}
-.agenda-title em { font-style: italic; color: var(--accent-earth); }
-.agenda-text {
-  font-size: 17px; color: rgba(10, 10, 10, 0.7);
-  line-height: 1.7; margin-bottom: 24px; max-width: 560px;
-}
-.agenda-list {
-  list-style: none; margin-bottom: 48px;
-}
-.agenda-list li {
-  font-size: 15px; color: rgba(10, 10, 10, 0.75);
-  padding: 12px 0;
-  border-bottom: 0.5px solid rgba(10, 10, 10, 0.1);
-  display: flex; align-items: center; gap: 12px;
-}
-.agenda-list li::before {
-  content: '';
-  width: 6px; height: 6px;
-  background: var(--accent-earth); border-radius: 50%;
-  flex-shrink: 0;
-}
-.agenda-cta-block {
-  background: var(--bg-dark);
-  padding: 56px 48px;
-  position: relative;
-}
-.agenda-cta-block::before, .agenda-cta-block::after {
-  content: ''; position: absolute; width: 28px; height: 28px;
-}
-.agenda-cta-block::before {
-  top: -1px; left: -1px;
-  border-top: 1px solid var(--accent-earth);
-  border-left: 1px solid var(--accent-earth);
-}
-.agenda-cta-block::after {
-  bottom: -1px; right: -1px;
-  border-bottom: 1px solid var(--accent-earth);
-  border-right: 1px solid var(--accent-earth);
-}
-.agenda-cta-eyebrow {
-  font-size: 10px; color: var(--accent-gold);
-  letter-spacing: 0.3em; text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.agenda-cta-title {
-  font-family: var(--font-serif);
-  font-size: 28px; font-weight: 300;
-  color: var(--text-light); margin-bottom: 16px;
-  letter-spacing: -0.01em; line-height: 1.2;
-}
-.agenda-cta-text {
-  font-size: 14px; color: rgba(232, 230, 225, 0.65);
-  line-height: 1.65; margin-bottom: 32px;
-}
-.agenda-duration {
-  display: flex; align-items: center; gap: 8px;
-  font-size: 12px; color: rgba(232, 230, 225, 0.5);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 32px; padding-bottom: 24px;
-  border-bottom: 0.5px solid rgba(232, 230, 225, 0.1);
-}
-.agenda-duration::before {
-  content: '⏱';
-}
-.btn-agenda {
-  display: block; width: 100%;
-  padding: 18px 24px; font-size: 13px; font-weight: 500;
-  background: var(--accent-earth); color: var(--text-light);
-  letter-spacing: 0.05em; text-align: center;
-  transition: all 0.3s var(--transition-smooth);
-  margin-bottom: 12px;
-  border: 0.5px solid var(--accent-earth);
-}
-.btn-agenda:hover { background: var(--accent-gold); border-color: var(--accent-gold); color: var(--bg-dark); transform: translateY(-2px); }
-.agenda-note {
-  font-size: 11px; color: rgba(232, 230, 225, 0.4);
-  text-align: center; letter-spacing: 0.05em;
-}
-
-/* Form success / error states */
-.form-success {
-  display: none; text-align: center; padding: 48px 24px;
-}
-.form-success-icon {
-  font-size: 48px; margin-bottom: 16px;
-}
-.form-success-title {
-  font-family: var(--font-serif); font-size: 24px;
-  color: var(--text-light); margin-bottom: 12px;
-}
-.form-success-text {
-  font-size: 14px; color: rgba(232, 230, 225, 0.65); line-height: 1.65;
-}
-.form-error-msg {
-  display: none; margin-top: 12px;
-  font-size: 12px; color: #e07070; text-align: center;
-  letter-spacing: 0.03em;
-}
-
-@media (max-width: 1024px) {
-  .agenda-inner { grid-template-columns: 1fr; gap: 60px; }
-}
+@media (max-width: 1560px) and (min-width: 1280px) {
+  .brand span { display: none; }
+  .nav-inner { gap: 28px; }
+  .nav-menu { gap: 22px; }
+}
+@media (max-width: 1279px) {
+  .nav-menu, .nav-inner > .nav-cta { display: none; }
+  .nav-toggle { display: block; }
+  .nav-menu.open { display: flex; position: fixed; inset: 76px 0 0; flex-direction: column; gap: 0; margin: 0; padding: 16px max(24px, env(safe-area-inset-left, 0px)) 40px; background: var(--ink); overflow-y: auto; }
+  .nav-menu.open a { display: block; font-size: 22px; font-weight: 700; font-stretch: 112%; letter-spacing: 0; text-transform: none; color: var(--on-dark); padding: 18px 0; border-bottom: 1px solid var(--line-dark); }
+  .nav-menu.open .menu-cta a { margin-top: 24px; border: 0; background: var(--on-dark); color: var(--ink); text-align: center; font-size: 16px; padding: 18px; }
+}
+@media (max-width: 1100px) {
+  .hero-grid, .thesis, .ona, .studio, .contact, .sec-head { grid-template-columns: 1fr; }
+  .routes, .models, .spec-grid { grid-template-columns: 1fr; }
+  .route, .route + .route { padding: 36px 0; border-right: 0; border-bottom: 1px solid var(--line-dark); }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step, .step + .step { padding: 32px 24px 32px 0; border-right: 0; border-bottom: 1px solid var(--line-light); }
+  .step:nth-child(even) { padding-left: 24px; border-left: 1px solid var(--line-light); }
+  .work-card, .work-card.big, .work-card.half { grid-column: span 6; }
+  .work-card.big, .work-card.full { grid-column: span 12; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1280px) { .menu-cta { display: none; } }
 @media (max-width: 640px) {
-  .agenda-cta-block { padding: 32px 24px; }
+  .wrap { padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px)); }
+  .section { padding: 88px 0; }
+  .brand span { display: none; }
+  .hero-body { padding-top: 120px; padding-bottom: 40px; }
+  /* En móvil la sección Proyectos sigue al hero: el índice sobra y choca con WhatsApp */
+  #heroIndex, #heroOpen { display: none; }
+  .hero::after { background: linear-gradient(180deg, rgba(14,13,11,0.55) 0%, rgba(14,13,11,0.6) 30%, rgba(14,13,11,0.62) 60%, rgba(14,13,11,0.92) 100%); }
+  .hero-sub { font-size: 16px; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+  .work { grid-template-columns: 1fr; gap: 36px; }
+  .work-card, .work-card.big, .work-card.half, .work-card.full { grid-column: auto; }
+  .work-card.big .work-img, .work-card.half .work-img, .work-card.full .work-img { aspect-ratio: 4 / 3; }
+  .steps { grid-template-columns: 1fr; }
+  .step:nth-child(even) { padding-left: 0; border-left: 0; }
+  .figures { grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .figures div { padding-bottom: 20px; }
+  .ona-gallery { grid-auto-rows: 110px; }
+  .row, .channels, .studio-meta { grid-template-columns: 1fr; }
+  .form, .agenda { padding: 26px 20px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+  .hero-media img { transform: none; }
 }
 
-/* ============================================================
-   SECCION CONTACTO
-   ============================================================ */
-.contact-section {
-  background: var(--bg-dark-soft);
-  position: relative; overflow: hidden;
-}
-.contact-bg-circles {
-  position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-  opacity: 0.06; pointer-events: none;
-}
-.contact-grid {
-  max-width: 1200px; margin: 0 auto;
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 100px; align-items: start;
-  position: relative; z-index: 2;
-}
-.contact-title {
-  font-family: var(--font-serif);
-  font-size: clamp(40px, 5vw, 64px);
-  font-weight: 300; line-height: 1.05;
-  letter-spacing: -0.03em; margin-bottom: 40px;
-  color: var(--text-light);
-}
-.contact-title em { font-style: italic; color: var(--accent-gold); }
-.contact-text {
-  font-size: 17px; color: rgba(232, 230, 225, 0.75);
-  line-height: 1.7; margin-bottom: 24px;
-}
-.contact-text-small {
-  font-size: 15px; color: rgba(232, 230, 225, 0.6);
-  line-height: 1.7; margin-bottom: 40px;
-}
-.contact-info {
-  padding-top: 32px;
-  border-top: 0.5px solid rgba(232, 230, 225, 0.12);
-}
-.contact-info-item { margin-bottom: 24px; }
-.contact-info-label {
-  font-size: 11px; color: var(--accent-gold);
-  letter-spacing: 0.2em; text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.contact-info-value {
-  font-size: 15px; color: var(--text-light); font-weight: 300;
-}
-
-.contact-form {
-  background: var(--bg-dark);
-  border: 0.5px solid rgba(201, 184, 150, 0.25);
-  padding: 48px;
-}
-.contact-form-eyebrow {
-  font-size: 10px; color: var(--accent-gold);
-  letter-spacing: 0.3em; text-transform: uppercase;
-  margin-bottom: 28px;
-}
-.contact-form-title {
-  font-family: var(--font-serif); font-size: 28px;
-  font-weight: 400; margin-bottom: 32px;
-  color: var(--text-light); letter-spacing: -0.01em;
-  line-height: 1.2;
-}
-.form-group { margin-bottom: 24px; }
-.form-label {
-  display: block;
-  font-size: 11px; color: rgba(232, 230, 225, 0.5);
-  letter-spacing: 0.1em; text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.form-input, .form-textarea, .form-select {
-  width: 100%;
-  background: transparent;
-  border: none;
-  border-bottom: 0.5px solid rgba(232, 230, 225, 0.2);
-  padding: 12px 0;
-  font-size: 14px; color: var(--text-light);
-  font-family: inherit; font-weight: 300;
-  transition: border-color 0.3s ease;
-}
-.form-input:focus, .form-textarea:focus, .form-select:focus {
-  outline: none;
-  border-color: var(--accent-gold);
-}
-.form-textarea { resize: vertical; min-height: 80px; }
-.form-select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23c9b896' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right center; padding-right: 24px; }
-.form-select option { background: var(--bg-dark); color: var(--text-light); }
-.form-input::placeholder, .form-textarea::placeholder { color: rgba(232, 230, 225, 0.3); }
-
-.form-submit {
-  width: 100%; padding: 18px;
-  font-size: 13px; font-weight: 500;
-  background: var(--accent-gold); color: var(--bg-dark);
-  letter-spacing: 0.05em;
-  transition: all 0.3s var(--transition-smooth);
-  margin-top: 8px;
-  cursor: pointer;
-}
-.form-submit:hover {
-  background: var(--text-light);
-  transform: translateY(-2px);
-}
-
-/* ============================================================
-   FOOTER
-   ============================================================ */
-.footer {
-  background: var(--bg-dark);
-  padding: 80px 56px 40px;
-  border-top: 0.5px solid rgba(232, 230, 225, 0.08);
-}
-.footer-grid {
-  max-width: 1400px; margin: 0 auto;
-  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 56px; margin-bottom: 64px;
-}
-.footer-logo {
-  display: flex; align-items: center; height: auto; min-height: 80px; margin-bottom: 16px;
-  color: var(--text-light);
-  transition: all 0.3s ease;
-}
-.footer-logo:hover {
-  transform: translateY(-2px);
-}
-.footer-logo-svg {
-  height: 80px; width: auto; display: block;
-  filter: drop-shadow(0 4px 12px rgba(232, 230, 225, 0.2));
-  transition: all 0.3s ease;
-}
-.footer-logo:hover .footer-logo-svg {
-  filter: drop-shadow(0 8px 24px rgba(201, 184, 150, 0.6));
-}
-.footer-logo span { color: var(--accent-earth); }
-.footer-tagline {
-  font-size: 14px; color: rgba(232, 230, 225, 0.6);
-  line-height: 1.6; margin-bottom: 24px;
-  font-style: italic; max-width: 360px;
-}
-.footer-desc {
-  font-size: 13px; color: rgba(232, 230, 225, 0.5);
-  line-height: 1.6; max-width: 360px;
-}
-.footer-col-title {
-  font-size: 11px; letter-spacing: 0.25em;
-  color: rgba(232, 230, 225, 0.5);
-  text-transform: uppercase; margin-bottom: 20px;
-}
-.footer-col-list {
-  font-size: 14px; line-height: 2.2;
-  color: rgba(232, 230, 225, 0.75); list-style: none;
-}
-.footer-col-list a:hover { color: var(--accent-gold); }
-.footer-col-list .accent { color: var(--accent-gold); margin-top: 8px; display: block; }
-.footer-bottom {
-  max-width: 1400px; margin: 0 auto;
-  display: flex; justify-content: space-between; align-items: center;
-  padding-top: 32px;
-  border-top: 0.5px solid rgba(232, 230, 225, 0.08);
-  font-size: 11px; color: rgba(232, 230, 225, 0.4);
-  letter-spacing: 0.05em;
-}
-.footer-bottom-links { display: flex; gap: 24px; }
-
-/* ============================================================
-   ANIMACIONES
-   ============================================================ */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
-}
-.reveal {
-  opacity: 0; transform: translateY(40px);
-  transition: opacity 1s var(--transition-smooth), transform 1s var(--transition-smooth);
-}
-.reveal.visible { opacity: 1; transform: translateY(0); }
-
-/* ============================================================
-   RESPONSIVE - TABLET
-   ============================================================ */
-@media (max-width: 1024px) {
-  .nav { padding: 16px 32px; }
-  .nav.scrolled { padding: 12px 32px; }
-  .nav-menu { display: none; }
-  .nav-toggle { display: flex; }
-  .nav-cta { display: none; }
-
-  .section { padding: 100px 32px; }
-  .hero { padding: 140px 32px 80px; }
-
-  /* Watermark se reposiciona en tablet */
-  .hero-logo { right: 20px; }
-  .hero-logo-svg { width: clamp(320px, 35vw, 420px); opacity: 0.9; }
-
-  .metrics-inner { grid-template-columns: repeat(2, 1fr); gap: 40px 0; }
-  .metric:nth-child(2)::after { display: none; }
-
-  .vision-grid { grid-template-columns: 1fr; gap: 40px; }
-  .ona-grid { grid-template-columns: 1fr; gap: 60px; }
-  .studio-content { grid-template-columns: 1fr; gap: 60px; }
-  .studio-header { grid-template-columns: 1fr; gap: 32px; }
-  .models-header { grid-template-columns: 1fr; gap: 32px; }
-  .models-grid { grid-template-columns: 1fr; gap: 1px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 60px; }
-
-  .gallery-grid { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 180px; }
-  .gallery-item-1 { grid-column: span 6; }
-  .gallery-item-2, .gallery-item-3, .gallery-item-4, .gallery-item-5 { grid-column: span 3; }
-  .gallery-item-6, .gallery-item-7 { grid-column: span 6; }
-  .gallery-item-8, .gallery-item-9, .gallery-item-10 { grid-column: span 2; }
-
-  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-}
-
-/* ============================================================
-   RESPONSIVE - MOBILE
-   ============================================================ */
-@media (max-width: 640px) {
-  .nav { padding: 14px 20px; }
-  .nav-logo { font-size: 18px; }
-
-  .section { padding: 80px 20px; }
-  .hero { padding: 120px 20px 60px; }
-
-  /* Watermark oculto en mobile - no compite con CTAs */
-  .hero-logo { display: none; }
-
-  .hero-eyebrow { font-size: 10px; margin-bottom: 28px; }
-  .hero-sub { margin-bottom: 40px; }
-  .hero-actions { flex-direction: column; align-items: stretch; gap: 16px; }
-  .btn-primary, .btn-link { text-align: center; padding: 18px 24px; }
-
-  .metrics { padding: 40px 20px; }
-  .metric { padding: 0 8px; }
-  .metric-value { font-size: 30px; }
-  .metric-label { font-size: 9px; }
-
-  .vision-text { font-size: 16px; }
-
-  .ona-spec { padding: 32px 24px; }
-  .ona-actions { flex-direction: column; align-items: stretch; gap: 16px; }
-  .btn-gold, .btn-link-gold { text-align: center; }
-  .ona-callout { padding: 16px 20px; }
-
-  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 220px; gap: 8px; }
-  .gallery-item-1, .gallery-item-2, .gallery-item-3, .gallery-item-4,
-  .gallery-item-5, .gallery-item-6, .gallery-item-7,
-  .gallery-item-8, .gallery-item-9, .gallery-item-10 {
-    grid-column: span 1; grid-row: span 1;
-  }
-  .gallery-item-1 { grid-column: span 2; grid-row: span 1; }
-  .gallery-title { font-size: 32px; }
-
-  .studio-photo-tag { left: 0; bottom: -16px; padding: 16px 20px; }
-
-  .model-card { padding: 40px 28px; }
-
-  .contact-form { padding: 32px 24px; }
-
-  .footer { padding: 60px 20px 32px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 40px; }
-  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
-}
+/* ===== TESTIMONIO ===== */
+.testi { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
+.testi-img { margin: 0; overflow: hidden; border-radius: var(--radius); }
+.testi-img img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.testi blockquote { margin: 0; }
+.testi blockquote p { margin: 18px 0 0; font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.4vw, 50px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; }
+.testi blockquote p em { font-style: normal; font-weight: 800; font-stretch: 125%; color: var(--gold); }
+.testi .by { display: flex; align-items: center; gap: 14px; margin-top: 32px; }
+.testi .by img { width: 56px; height: 56px; object-fit: cover; border-radius: var(--radius); }
+.testi .by .mono { color: var(--gold); }
+@media (max-width: 900px) { .testi { grid-template-columns: 1fr; gap: 36px; } }
 </style>
 </head>
 <body>
-
 <!-- ============================================================
-     NAVEGACION
+     CABECERA
      ============================================================ -->
-<nav class="nav" id="nav">
-  <a href="#" class="nav-logo" aria-label="BC Studio">
-    <svg class="nav-logo-svg" viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" role="img">
-      <title>BC Studio</title>
-      <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
-        <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
-        <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
-      </g>
-      <circle cx="78" cy="80" r="15" fill="currentColor" />
-      <circle cx="78" cy="190" r="15" fill="currentColor" />
-    </svg>
-  </a>
-  <ul class="nav-menu">
-    <li><a href="#vision">Visión</a></li>
-    <li><a href="#ona">ONA</a></li>
-    <li><a href="#estudio">Estudio</a></li>
-    <li><a href="#modelos">Modelos</a></li>
-    <li><a href="diseno-estrategico.html">Diseño Estratégico</a></li>
-    <li><a href="#agenda">Agenda</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-  <a href="#contacto" class="nav-cta">Iniciar conversación</a>
-  <div class="nav-toggle" id="navToggle">
-    <span></span><span></span><span></span>
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand" aria-label="Build &amp; Create Studio — Inicio"><svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"><path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245"/><path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245"/></g><circle cx="78" cy="80" r="15" fill="currentColor"/><circle cx="78" cy="190" r="15" fill="currentColor"/></svg><span>Build &amp; Create Studio</span></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+      <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#ona">ONA</a></li>
+      <li><a href="#estudio">Estudio</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+      <li class="menu-cta"><a href="prefactibilidad-inmobiliaria.html#solicitar">Solicitar diagnóstico de terreno</a></li>
+    </ul>
+    <a href="prefactibilidad-inmobiliaria.html#solicitar" class="nav-cta">Diagnóstico de terreno</a>
+    <button type="button" class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMenu"><span></span><span></span><span></span></button>
   </div>
-</nav>
+</header>
 
+<main>
 <!-- ============================================================
-     HERO PRINCIPAL
-     CAMBIAR AQUI: titulo, subtitulo, botones
+     01 · HERO — EL TRABAJO A PANTALLA COMPLETA
      ============================================================ -->
-<section class="hero" id="inicio">
-  <div class="hero-grid">
-    <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
-      <g stroke="#e8e6e1" stroke-width="0.3" fill="none">
-        <line x1="0" y1="100" x2="1440" y2="100"/>
-        <line x1="0" y1="200" x2="1440" y2="200"/>
-        <line x1="0" y1="300" x2="1440" y2="300"/>
-        <line x1="0" y1="400" x2="1440" y2="400"/>
-        <line x1="0" y1="500" x2="1440" y2="500"/>
-        <line x1="160" y1="0" x2="160" y2="600"/>
-        <line x1="320" y1="0" x2="320" y2="600"/>
-        <line x1="480" y1="0" x2="480" y2="600"/>
-        <line x1="640" y1="0" x2="640" y2="600"/>
-        <line x1="800" y1="0" x2="800" y2="600"/>
-        <line x1="960" y1="0" x2="960" y2="600"/>
-        <line x1="1120" y1="0" x2="1120" y2="600"/>
-        <line x1="1280" y1="0" x2="1280" y2="600"/>
-      </g>
-      <g stroke="#8b6f47" stroke-width="0.5" fill="none" opacity="0.5">
-        <path d="M 160 400 L 160 200 L 320 200 L 320 100 L 480 100 L 480 250 L 640 250 L 640 350 L 800 350 L 800 180 L 960 180 L 960 320 L 1120 320 L 1120 400"/>
-        <circle cx="320" cy="100" r="4"/>
-        <circle cx="640" cy="350" r="4"/>
-        <circle cx="960" cy="180" r="4"/>
-      </g>
-    </svg>
+<section class="hero" id="inicio" aria-label="Proyectos destacados">
+  <div class="hero-media" id="heroMedia">
+    <img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Edificio W, uso mixto en esquina, San Pedro Sula, Honduras" class="on" fetchpriority="high" decoding="async">
+    <img src="img/kishi-books-escalera.webp" srcset="img/kishi-books-escalera-960.webp 960w, img/kishi-books-escalera.webp 1920w" sizes="100vw" width="1920" height="1442" alt="Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala" loading="lazy" decoding="async">
+    <img src="img/navante-lampara.webp" srcset="img/navante-lampara-960.webp 960w, img/navante-lampara.webp 1920w" sizes="100vw" width="1920" height="1407" alt="Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante" loading="lazy" decoding="async">
+    <img src="img/ona-fachada-atardecer.jpg" width="1365" height="768" alt="Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala" loading="lazy" decoding="async">
+    <img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="100vw" width="1344" height="768" alt="Salón del restaurante La Autoría con cocina de fuego, Huehuetenango" loading="lazy" decoding="async">
   </div>
-  <div class="hero-content">
-    <div class="hero-eyebrow">Arquitectura · Desarrollo · Inversión</div>
-    <h1 class="hero-title">
-      Del <em>terreno</em><br>
-      al <em>retorno.</em>
-    </h1>
-    <p class="hero-sub">
-      Diseñamos, desarrollamos y co-invertimos en activos inmobiliarios de alta rentabilidad. Cerramos el circuito completo en un solo equipo.
-    </p>
-    <div class="hero-actions">
-      <a href="#ona" class="btn-primary">Conocer ONA →</a>
-      <a href="#modelos" class="btn-link">Explorar modelos de trabajo</a>
-    </div>
-  </div>
-
-  <!-- ============================================================
-       HERO LOGO - SVG completo BC Studio lado derecho
-       ============================================================ -->
-  <div class="hero-logo" aria-hidden="true">
-    <svg class="hero-logo-svg" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <style type="text/css">
-          @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&amp;display=swap');
-          .hero-svg-text { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 300; }
-          .hero-svg-tagline { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 400; }
-        </style>
-      </defs>
-      <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
-        <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
-        <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
-      </g>
-      <circle cx="78" cy="80" r="15" fill="currentColor" />
-      <circle cx="78" cy="190" r="15" fill="currentColor" />
-      <text x="17" y="370" fill="currentColor" class="hero-svg-text" font-size="100" textLength="767" lengthAdjust="spacing">STUDIO</text>
-      <text x="17" y="430" fill="currentColor" class="hero-svg-tagline" font-size="20" opacity="0.55" textLength="767" lengthAdjust="spacing">BUILD &amp; CREATE STUDIO</text>
-    </svg>
-  </div>
-</section>
-
-<!-- ============================================================
-     BARRA DE METRICAS
-     CAMBIAR AQUI: numeros y labels cuando tengas mas data
-     ============================================================ -->
-<section class="metrics">
-  <div class="metrics-inner">
-    <div class="metric">
-      <div class="metric-value">2025</div>
-      <div class="metric-label">Fundación</div>
-    </div>
-    <div class="metric">
-      <div class="metric-value">18,792</div>
-      <div class="metric-label">m² en desarrollo</div>
-    </div>
-    <div class="metric">
-      <div class="metric-value gold">91.9<sup>%</sup></div>
-      <div class="metric-label">Eficiencia ONA</div>
-    </div>
-    <div class="metric">
-      <div class="metric-value">3</div>
-      <div class="metric-label">Líneas de negocio</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <h1 class="hero-kicker">Arquitectura, diseño comercial y prefactibilidad en Guatemala y Honduras</h1>
+        <p class="hero-slogan">Del terreno <span>al retorno.</span></p>
+        <p class="hero-sub">Te decimos qué puedes construir en tu terreno y si los números cierran. Después lo diseñamos y lo desarrollamos contigo.</p>
+        <div class="hero-actions">
+          <a href="prefactibilidad-inmobiliaria.html" class="btn btn-light">Solicitar diagnóstico de terreno →</a>
+          <a href="#proyectos" class="link">Ver proyectos</a>
+        </div>
+      </div>
+      <div>
+        <ol class="hero-index" id="heroIndex" aria-label="Elegir proyecto">
+          <li><button type="button" aria-pressed="true" data-i="0" data-href="edificio-w.html"><span class="n">01</span><span class="name">Edificio W · San Pedro Sula</span><span class="st">En aprobación</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="1" data-href="kishi-books.html"><span class="n">02</span><span class="name">Kishi Books · 3 sedes</span><span class="st">Construido</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="2" data-href="navante.html"><span class="n">03</span><span class="name">Navante · Oficina</span><span class="st">Construido</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="3" data-href="#ona"><span class="n">04</span><span class="name">ONA · Zona 15</span><span class="st">En desarrollo</span></button></li>
+          <li><button type="button" aria-pressed="false" data-i="4" data-href="la-autoria.html"><span class="n">05</span><span class="name">La Autoría · Salón</span><span class="st">Diseño completado</span></button></li>
+        </ol>
+        <a href="edificio-w.html" class="hero-open" id="heroOpen">Ver proyecto →</a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     SECCION 02 - VISION (TESIS)
-     CAMBIAR AQUI: copy de la tesis
+     02 · PROYECTOS
      ============================================================ -->
-<section class="section section-light reveal" id="vision">
-  <div class="vision-grid">
-    <div>
-      <div class="section-eyebrow">01 — Tesis</div>
-      <div class="section-divider"></div>
+<section class="section on-light" id="proyectos">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Proyectos · 08</span>
+        <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
+      </div>
+      <p class="sec-lead">Mobiliario comercial, oficinas, comercio, uso mixto, vivienda, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
+    <div class="work">
+      <a href="edificio-w.html" class="work-card full">
+        <div class="work-img"><img src="img/edificio-w-aerea.webp" srcset="img/edificio-w-aerea-960.webp 960w, img/edificio-w-aerea.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Vista aérea del Edificio W en esquina, San Pedro Sula, Honduras" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
+        <p class="work-info">Uso mixto · 8 apartamentos + 2 locales · 591.86 m² · San Pedro Sula, Honduras</p>
+      </a>
+      <a href="kishi-books.html" class="work-card half">
+        <div class="work-img"><img src="img/kishi-books-escalera.webp" srcset="img/kishi-books-escalera-960.webp 960w, img/kishi-books-escalera.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Kiosco de madera curvada de Kishi Books, Peri Roosevelt" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Kishi Books</span><span class="status built">Construido · 3 sedes</span></div>
+        <p class="work-info">Mobiliario comercial · Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula · Diseño y ejecución · 2024–2026</p>
+      </a>
+      <a href="navante.html" class="work-card half">
+        <div class="work-img"><img src="img/navante-lampara.webp" srcset="img/navante-lampara-960.webp 960w, img/navante-lampara.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1407" alt="Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
+        <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
+      </a>
+      <a href="anker-logistics.html" class="work-card half">
+        <div class="work-img"><img src="img/anker-logistics-area-trabajo.webp" srcset="img/anker-logistics-area-trabajo-960.webp 960w, img/anker-logistics-area-trabajo.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1442" alt="Área de trabajo de Anker Logistics con muro azul curvo, Torres Pradera, Zona 10" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Anker Logistics</span><span class="status built">Construido</span></div>
+        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario · 2025</p>
+      </a>
+      <a href="petshop-gt.html" class="work-card half">
+        <div class="work-img"><img src="img/petshop-gt-recepcion.webp" srcset="img/petshop-gt-recepcion-960.webp 960w, img/petshop-gt-recepcion.webp 1920w" sizes="(max-width: 640px) 100vw, 50vw" width="1920" height="1080" alt="Render de la recepción de Petshop GT, Vista Hermosa, Zona 15" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Petshop GT</span><span class="status">Diseño aprobado</span></div>
+        <p class="work-info">Tienda de mascotas · 70 m² · Vista Hermosa, Zona 15</p>
+      </a>
+      <a href="#ona" class="work-card half">
+        <div class="work-img"><img src="img/ona-fachada-atardecer.jpg" width="1365" height="768" alt="Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">ONA</span><span class="status">En fase de desarrollo</span></div>
+        <p class="work-info">Residencial vertical · 18,792 m² · Zona 15, Vista Hermosa I</p>
+      </a>
+      <a href="la-autoria.html" class="work-card half">
+        <div class="work-img"><img src="img/restaurante-interior.webp" srcset="img/restaurante-interior-960.webp 960w, img/restaurante-interior.webp 1344w" sizes="(max-width: 640px) 100vw, 50vw" width="1344" height="768" alt="Salón del restaurante La Autoría, Huehuetenango" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
+        <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
+      </a>
+      <a href="casa-milpas-altas.html" class="work-card full">
+        <div class="work-img"><img src="img/casa-milpas-altas-fachada.webp" srcset="img/casa-milpas-altas-fachada-960.webp 960w, img/casa-milpas-altas-fachada.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Render de Casa Milpas Altas en la ladera, San Miguel Milpas Altas, Sacatepéquez" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">Casa Milpas Altas</span><span class="status">Diseño completado</span></div>
+        <p class="work-info">Vivienda · 120 m² · San Miguel Milpas Altas, Sacatepéquez</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIO
+     ============================================================ -->
+<section class="section on-dark-2" id="testimonio">
+  <div class="wrap testi">
+    <figure class="testi-img"><img src="img/kishi-books-inauguracion.webp" srcset="img/kishi-books-inauguracion-960.webp 960w, img/kishi-books-inauguracion.webp 1920w" sizes="(max-width: 900px) 100vw, 40vw" width="1920" height="1442" alt="Ady Hernández, fundadora de Kishi Books, con Bryan Castro en la inauguración del kiosco de Peri Roosevelt" loading="lazy" decoding="async"></figure>
     <div>
-      <blockquote class="vision-quote">
-        No somos <span class="muted">arquitectos</span><br>
-        que <span class="muted">construyen.</span><br>
-        Somos <em>desarrolladores</em><br>
-        que <em>diseñan.</em>
+      <span class="mono sec-label">Testimonio · Cliente desde 2024</span>
+      <blockquote>
+        <p>«Gracias al diseño bien implementado, hemos logrado transmitir con mayor fuerza <em>la esencia de la marca</em>, abriéndonos puertas en más centros comerciales del país. Vamos por nuestra cuarta tienda con BC Studio.»</p>
+        <footer class="by"><img src="img/kishi-books-clienta-avatar.webp" width="320" height="320" alt="Ady Hernández, fundadora de Kishi Books" loading="lazy" decoding="async"><div><strong>Ady Hernández</strong><br><span class="mono">Fundadora · Kishi Books</span></div></footer>
       </blockquote>
-      <div class="vision-text">
+        <div class="cta-row"><a href="kishi-books.html" class="link">Ver el proyecto Kishi Books</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     03 · SERVICIOS — TRES PUNTOS DE PARTIDA
+     ============================================================ -->
+<section class="section on-dark" id="servicios">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Servicios</span>
+        <h2 class="sec-title">¿Qué necesitas <span>resolver?</span></h2>
+      </div>
+      <p class="sec-lead">Elige tu punto de partida. Cada ruta empieza con un diagnóstico honesto y termina en un proyecto que se puede construir y vender.</p>
+    </div>
+    <div class="routes">
+      <article class="route lead-route">
+        <span class="mono route-who">Tengo un terreno</span>
+        <h3 class="route-title">Prefactibilidad y diagnóstico de terreno</h3>
+        <p class="route-text">Antes de invertir en diseño, sabes qué permite la normativa, cuánto puedes construir y si los números cierran.</p>
+        <ul><li>Normativa y cabida</li><li>Programa de áreas</li><li>Números preliminares y recomendación</li></ul>
+        <a href="prefactibilidad-inmobiliaria.html" class="link">Ver diagnóstico de terreno →</a>
+      </article>
+      <article class="route">
+        <span class="mono route-who">Tengo un negocio</span>
+        <h3 class="route-title">Diseño de oficinas, clínicas y comercios</h3>
+        <p class="route-text">El espacio donde operas es tu primer argumento de ventas. Diseñamos desde cómo funciona tu negocio.</p>
+        <ul><li>Oficinas y clínicas</li><li>Retail y restaurantes</li><li>Diseño interior, remodelaciones y mobiliario</li></ul>
+        <a href="diseno-estrategico.html" class="link">Ver diseño para negocios →</a>
+      </article>
+      <article class="route">
+        <span class="mono route-who">Quiero desarrollar o invertir</span>
+        <h3 class="route-title">Diseño inmobiliario, co-desarrollo e inversión</h3>
+        <p class="route-text">Arquitectura con lectura financiera para desarrolladores, socios con terreno e inversionistas.</p>
+        <ul><li>Anteproyecto con pro forma</li><li>Alianzas de co-desarrollo</li><li>Lista de interés de proyectos propios</li></ul>
+        <a href="#modelos" class="link">Ver modelos de trabajo →</a>
+      </article>
+    </div>
+
+    <div class="specialties">
+      <span class="mono sec-label">También diseñamos</span>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h3>Diseño interior</h3>
+          <p>Paleta de materiales, iluminación, mobiliario y acabados alineados con tu identidad.</p>
+          <a href="navante.html" class="spec-work"><img src="img/navante-lampara-960.webp" width="960" height="703" alt="Oficina de Navante con lámpara colgante curva" loading="lazy" decoding="async"><span><strong>Navante</strong><span class="mono">Oficina · 96 m² · Construido</span></span></a>
+          <a href="anker-logistics.html" class="spec-work spec-work-2"><img src="img/anker-logistics-recepcion-960.webp" width="960" height="721" alt="Recepción de Anker Logistics con listones de madera y logotipo" loading="lazy" decoding="async"><span><strong>Anker Logistics</strong><span class="mono">Oficina · 76 m² · Construido</span></span></a>
+          <a href="remodelacion-el-prado.html" class="spec-work spec-work-2"><img src="img/remodelacion-el-prado-repisas-960.webp" width="960" height="1705" alt="Estudio remodelado El Prado con repisas de madera iluminadas" loading="lazy" decoding="async"><span><strong>El Prado</strong><span class="mono">Estudio en casa · Construido</span></span></a>
+          <a href="la-autoria.html" class="spec-work spec-work-2"><img src="img/restaurante-interior-960.webp" width="960" height="549" alt="Salón del restaurante La Autoría" loading="lazy" decoding="async"><span><strong>La Autoría</strong><span class="mono">Restaurante · Diseño completado</span></span></a>
+          <a href="?tipo=diseño-interior#contacto" class="link">Cotizar diseño interior →</a>
+        </div>
+        <div class="spec-card">
+          <h3>Remodelaciones</h3>
+          <p>Transformamos espacios existentes con una intervención precisa y eficiente.</p>
+          <a href="once-once.html" class="spec-work"><img src="img/once-once-barra-logo-960.webp" width="960" height="1705" alt="Barra remodelada del restaurante Once Once" loading="lazy" decoding="async"><span><strong>Once Once</strong><span class="mono">Barra de restaurante · Antigua Guatemala · 2024</span></span></a>
+          <a href="remodelacion-el-prado.html" class="spec-work spec-work-2"><img src="img/remodelacion-el-prado-repisas-960.webp" width="960" height="1705" alt="Estudio remodelado El Prado con repisas de madera iluminadas" loading="lazy" decoding="async"><span><strong>El Prado</strong><span class="mono">Estudio en casa · Construido</span></span></a>
+          <a href="?tipo=remodelación#contacto" class="link">Cotizar remodelación →</a>
+        </div>
+        <div class="spec-card">
+          <h3>Mobiliario estratégico</h3>
+          <p>Mobiliario diseñado a la medida de tu operación: exhibición, atención y almacenaje pensados para cómo funciona tu espacio.</p>
+          <a href="kishi-books.html" class="spec-work"><img src="img/kishi-books-escalera-960.webp" width="960" height="721" alt="Kiosco de madera curvada de Kishi Books" loading="lazy" decoding="async"><span><strong>Kishi Books</strong><span class="mono">3 kioscos de librería · Construido</span></span></a>
+          <a href="?tipo=mobiliario-estratégico#contacto" class="link">Cotizar mobiliario →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 · PROCESO — DEL TERRENO A LA OBRA
+     ============================================================ -->
+<section class="section on-light-2" id="proceso">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Cómo trabajamos</span>
+        <h2 class="sec-title">Del terreno <span>a la obra.</span></h2>
+      </div>
+      <p class="sec-lead">Cuatro etapas, cada una con un entregable concreto. Puedes contratar solo la primera o el proceso completo. Si los números no cierran en la etapa 01, te lo decimos antes de que gastes en diseño.</p>
+    </div>
+    <ol class="steps">
+      <li class="step"><div class="step-n">01</div><h3 class="step-name">Diagnóstico de terreno</h3><p class="step-text">Normativa aplicable, cabida, programa de áreas y números preliminares.</p><p class="step-deliv"><b>Recibes</b>Informe de prefactibilidad y recomendación.</p></li>
+      <li class="step"><div class="step-n">02</div><h3 class="step-name">Anteproyecto con pro forma</h3><p class="step-text">Distribución, volumetría y eficiencia de planta, validadas contra los números.</p><p class="step-deliv"><b>Recibes</b>Plantas, renders y pro forma del proyecto.</p></li>
+      <li class="step"><div class="step-n">03</div><h3 class="step-name">Proyecto ejecutivo</h3><p class="step-text">Planos, memorias, especificaciones y expediente técnico para licitación y permisos.</p><p class="step-deliv"><b>Recibes</b>Juego de planos y expediente completo.</p></li>
+      <li class="step"><div class="step-n">04</div><h3 class="step-name">Acompañamiento en obra</h3><p class="step-text">Supervisión para que lo construido corresponda a lo diseñado.</p><p class="step-deliv"><b>Recibes</b>Visitas y control de diseño en obra.</p></li>
+    </ol>
+    <div class="cta-row">
+      <a href="prefactibilidad-inmobiliaria.html" class="btn btn-dark">Empezar por el diagnóstico →</a>
+      <a href="#contacto" class="link">Agendar llamada de 30 minutos</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 · DIFERENCIAL — TESIS, CIFRAS, ONA Y MODELOS
+     ============================================================ -->
+<section class="section on-dark-2" id="vision">
+  <div class="wrap">
+    <span class="mono sec-label">Por qué Build &amp; Create</span>
+    <div class="thesis">
+      <h2 class="thesis-quote">No somos arquitectos que construyen. Somos <b>desarrolladores</b> que <b>diseñan.</b></h2>
+      <div class="thesis-text">
         <p>Esa diferencia define todo lo que hacemos.</p>
-        <p>Cada metro cuadrado que dibujamos pasa por tres filtros: viabilidad técnica, viabilidad comercial, viabilidad financiera. Si los tres no cierran, el proyecto no sale.</p>
-        <p>Trabajamos con terrenos seleccionados, desarrolladores alineados, e inversionistas que entienden que la arquitectura correcta es la variable que más valor crea en un activo.</p>
+        <p>Cada metro cuadrado que dibujamos pasa por tres filtros: viabilidad técnica, viabilidad comercial y viabilidad financiera. Si los tres no cierran, el proyecto no sale.</p>
+        <p><strong>Trabajamos con terrenos seleccionados, desarrolladores alineados e inversionistas que entienden que la arquitectura correcta es la variable que más valor crea en un activo.</strong></p>
+      </div>
+    </div>
+
+    <dl class="figures" style="grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">m² en desarrollo · ONA</dt><dd>18,792</dd></div>
+      <div><dt class="mono">Eficiencia de planta · ONA</dt><dd>91.9<small>%</small></dd></div>
+      <div><dt class="mono">Líneas de negocio</dt><dd>3</dd></div>
+    </dl>
+
+    <div class="ona" id="ona">
+      <div class="ona-gallery">
+        <figure class="g1"><img src="img/ona-rooftop-pergolas.jpg" width="1365" height="768" alt="Rooftop de ONA con pérgolas iluminadas al atardecer" loading="lazy" decoding="async"></figure>
+        <figure class="g2"><img src="img/ona-fachada-organica.jpg" width="1365" height="768" alt="Fachada orgánica de ONA en vista contrapicada" loading="lazy" decoding="async"></figure>
+        <figure class="g3"><img src="img/ona-lobby.jpg" width="1365" height="768" alt="Lobby principal de ONA" loading="lazy" decoding="async"></figure>
+        <figure class="g4"><img src="img/ona-rooftop-yoga.jpg" width="1365" height="768" alt="Deck de yoga en el rooftop de ONA" loading="lazy" decoding="async"></figure>
+        <figure class="g5"><img src="img/ona-planta-tipo.jpg" width="1266" height="832" alt="Planta arquitectónica tipo de ONA" loading="lazy" decoding="async"></figure>
+        <figure class="g6"><img src="img/ona-planta-jardin.jpg" width="1076" height="976" alt="Planta de ONA con jardín integrado" loading="lazy" decoding="async"></figure>
+      </div>
+      <div>
+        <span class="mono sec-label">Proyecto propio · En desarrollo · Inicio 2026</span>
+        <h2 class="ona-name">ONA</h2>
+        <p class="mono ona-tag">Movimiento. Vida. Balance.</p>
+        <p class="ona-text">Nuestro primer proyecto como arquitectos-desarrolladores: residencial vertical en Zona 15 de Ciudad de Guatemala. Originación estratégica del terreno, diseño optimizado para rentabilidad y ejecución bajo control propio.</p>
+        <dl class="spec">
+          <div><dt>Ubicación</dt><dd>Zona 15, Vista Hermosa I</dd></div>
+          <div><dt>Tipología</dt><dd>Residencial vertical</dd></div>
+          <div><dt>m² construidos</dt><dd>18,792</dd></div>
+          <div><dt>m² vendibles</dt><dd>17,267</dd></div>
+          <div><dt>Eficiencia de planta (vendible/construido)</dt><dd>91.9%</dd></div>
+          <div><dt>Fase actual</dt><dd>En fase de desarrollo</dd></div>
+          <div><dt>Estructura de inversión</dt><dd>En estructuración final</dd></div>
+        </dl>
+        <a href="#contacto" class="btn btn-light">Unirme a la lista de inversionistas →</a>
+        <p class="disclaimer">Cuando el vehículo de inversión esté estructurado y los números validados externamente, los inversionistas de la lista serán los primeros en conocer la oportunidad. La información es referencial y no constituye una oferta pública de valores ni asesoría financiera.</p>
+      </div>
+    </div>
+
+    <div class="models" id="modelos">
+      <article class="model">
+        <span class="mono who">Para desarrolladores con equipo propio</span>
+        <h3>Diseño estratégico</h3>
+        <p>Tú desarrollas, nosotros diseñamos. Diagnóstico de terreno, anteproyecto con pro forma, proyecto ejecutivo y acompañamiento en obra.</p>
+        <a href="#contacto" class="link">Proponer proyecto →</a>
+      </article>
+      <article class="model">
+        <span class="mono who">Para dueños de terreno que buscan socio</span>
+        <h3>Co-desarrollo integral</h3>
+        <p>Aportamos diseño, gestión del proyecto y entre 10 y 30 por ciento del capital, según tamaño y etapa. Participamos en la utilidad proporcionalmente.</p>
+        <a href="#contacto" class="link">Explorar alianza →</a>
+      </article>
+      <article class="model">
+        <span class="mono who">Para inversionistas calificados</span>
+        <h3>Inversión en proyectos propios</h3>
+        <p>Estructuramos vehículos de inversión para proyectos que originamos, diseñamos y ejecutamos. ONA será el primero cuando la estructura esté lista.</p>
+        <a href="#contacto" class="link">Unirme a la lista →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 · ESTUDIO
+     ============================================================ -->
+<section class="section on-light" id="estudio">
+  <div class="wrap">
+    <div class="studio">
+      <figure class="studio-photo">
+        <img src="img/bryan-castro-retrato.webp" srcset="img/bryan-castro-retrato-960.webp 960w, img/bryan-castro-retrato.webp 1200w" sizes="(max-width: 1100px) 100vw, 40vw" width="1200" height="1800" alt="Bryan Castro, arquitecto y fundador de Build &amp; Create Studio" loading="lazy" decoding="async">
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Fundador</span></figcaption>
+      </figure>
+      <div>
+        <span class="mono sec-label">El estudio</span>
+        <p class="studio-quote">“Diseño desde la perspectiva de quien va a poner capital en el proyecto. Esa es la única arquitectura que sé hacer.”</p>
+        <div class="studio-bio">
+          <p>Bryan Castro es arquitecto y desarrollador inmobiliario. Fundó Build &amp; Create Studio con una convicción simple: la arquitectura sin lectura financiera es decoración cara, y el desarrollo inmobiliario sin diseño estratégico es capital subutilizado.</p>
+          <p>El estudio opera bajo esa premisa. Cada proyecto se origina, diseña y desarrolla con un criterio único: maximizar el valor del activo desde el primer trazo.</p>
+          <p>Ese criterio ya está construido: tres kioscos para Kishi Books, la oficina de Navante y proyectos en desarrollo en Guatemala y Honduras, como ONA y Edificio W.</p>
+        </div>
+        <dl class="studio-meta">
+          <div><dt class="mono">Disciplinas</dt><dd>Arquitectura · Desarrollo inmobiliario · Estructuración de inversión</dd></div>
+          <div><dt class="mono">Base de operaciones</dt><dd>Ciudad de Guatemala · Latinoamérica</dd></div>
+        </dl>
+        <div class="cta-row" style="margin-top:36px">
+          <a href="https://linkedin.com/in/bryan-castro" target="_blank" rel="noopener" class="link">Conectar en LinkedIn →</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     SECCION 03 - ONA (PROYECTO BANDERA)
-     CAMBIAR AQUI: copy de ONA y datos de ficha tecnica
+     07 · CONTACTO — AGENDA, FORMULARIO Y WHATSAPP
      ============================================================ -->
-<section class="section section-dark-soft reveal" id="ona">
-  <div class="ona-header">
+<section class="section on-dark" id="contacto">
+  <div class="wrap contact">
     <div>
-      <div class="section-eyebrow gold">02 — Proyecto propio</div>
-      <div class="section-divider gold"></div>
+      <span class="mono sec-label">Contacto</span>
+      <h2 class="sec-title">Hablemos de <span>tu proyecto.</span></h2>
+      <div class="agenda" id="agenda">
+        <span class="mono" style="color:var(--gold)">Consulta inicial · 30 min · Videollamada · Sin costo</span>
+        <div class="host">
+          <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de Build &amp; Create Studio" loading="lazy" decoding="async">
+          <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
+        </div>
+        <h3>Agenda una llamada con Bryan Castro</h3>
+        <p>Sin presentaciones de venta. Evaluamos juntos si tu terreno, proyecto o capital encajan con lo que hacemos.</p>
+        <ul>
+          <li>Diagnóstico rápido de viabilidad</li>
+          <li>Revisión del potencial de tu terreno</li>
+          <li>Alineación sobre modelos de trabajo</li>
+          <li>Respuesta honesta: si no encaja, te lo decimos</li>
+        </ul>
+        <a href="https://calendar.app.google/bmpsEQCsqqF3ZQgA9" target="_blank" rel="noopener" class="btn btn-light" id="btnAgenda">Elegir horario →</a>
+      </div>
+      <dl class="channels">
+        <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
+        <div><dt class="mono">WhatsApp</dt><dd><a href="https://wa.me/50254131753" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
+        <div><dt class="mono">Base</dt><dd>Ciudad de Guatemala</dd></div>
+        <div><dt class="mono">Respuesta</dt><dd>Menos de 24 horas hábiles</dd></div>
+      </dl>
     </div>
-    <div class="ona-badge">
-      <span>En desarrollo · Inicio 2026</span>
-    </div>
-  </div>
-
-  <div class="ona-grid">
-    <div>
-      <h2 class="ona-name">ONA</h2>
-      <p class="ona-tagline">Movimiento. Vida. Balance.</p>
-      <p class="ona-text">
-        Nuestro primer proyecto como arquitectos-desarrolladores. Residencial vertical de 18,792 m² en zona 15 de Ciudad de Guatemala.
-      </p>
-      <p class="ona-text-small">
-        ONA no es un producto financiero que te estamos vendiendo. Es la demostración tangible de cómo pensamos: originación estratégica del terreno, diseño optimizado para rentabilidad, ejecución bajo control propio.
-      </p>
-      <div class="ona-callout">
-        <p>Por qué te importa: cuando hayamos estructurado el vehículo de inversión y los números estén validados externamente, los inversionistas en nuestra lista serán los primeros en conocer la oportunidad.</p>
-      </div>
-      <div class="ona-actions">
-        <a href="#contacto" class="btn-gold">Solicitar más información →</a>
-        <a href="#contacto" class="btn-link-gold">Unirme a la lista de inversionistas</a>
-      </div>
-    </div>
-
-    <div class="ona-spec">
-      <div class="ona-spec-title">Ficha técnica</div>
-      <div class="spec-row">
-        <div class="spec-label">Ubicación</div>
-        <div class="spec-value">Zona 15, Vista Hermosa I</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">Tipología</div>
-        <div class="spec-value">Residencial vertical</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">m² construidos</div>
-        <div class="spec-value big">18,792</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">m² vendibles</div>
-        <div class="spec-value gold">17,267</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">Eficiencia estructural</div>
-        <div class="spec-value gold">91.9%</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">Fase actual</div>
-        <div class="spec-value">Anteproyecto aprobado</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">Inicio de construcción</div>
-        <div class="spec-value">2026</div>
-      </div>
-      <div class="spec-row">
-        <div class="spec-label">Estructura de inversión</div>
-        <div class="spec-value italic">En estructuración final</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ============================================================
-       GALERIA DE ONA
-       CAMBIAR AQUI: imagenes en /img/  (ya optimizadas)
-       ============================================================ -->
-  <div class="gallery">
-    <div class="gallery-header">
-      <h3 class="gallery-title">El proyecto en <em>imágenes</em></h3>
-      <p class="gallery-sub">
-        Renders editoriales del proyecto en su fase de anteproyecto aprobado.
-      </p>
-    </div>
-    <div class="gallery-grid">
-      <div class="gallery-item gallery-item-1">
-        <img src="ona-rooftop-pergolas.jpg" alt="ONA rooftop pergolas atardecer" loading="lazy" onerror="this.onerror=null;this.src='img/ona-rooftop-pergolas.jpg';">
-        <div class="gallery-caption">Rooftop · Pérgolas iluminadas</div>
-      </div>
-      <div class="gallery-item gallery-item-2">
-        <img src="ona-fachada-organica.jpg" alt="Fachada orgánica vista contrapicada" loading="lazy" onerror="this.onerror=null;this.src='img/ona-fachada-organica.jpg';">
-        <div class="gallery-caption">Fachada · Detalle vertical</div>
-      </div>
-      <div class="gallery-item gallery-item-3">
-        <img src="ona-fachada-atardecer.jpg" alt="Torre ONA atardecer" loading="lazy" onerror="this.onerror=null;this.src='img/ona-fachada-atardecer.jpg';">
-        <div class="gallery-caption">Volumetría · Atardecer</div>
-      </div>
-      <div class="gallery-item gallery-item-4">
-        <img src="ona-lobby.jpg" alt="Lobby principal ONA" loading="lazy" onerror="this.onerror=null;this.src='img/ona-lobby.jpg';">
-        <div class="gallery-caption">Acceso principal</div>
-      </div>
-      <div class="gallery-item gallery-item-5">
-        <img src="ona-rooftop-yoga.jpg" alt="Rooftop yoga deck" loading="lazy" onerror="this.onerror=null;this.src='img/ona-rooftop-yoga.jpg';">
-        <div class="gallery-caption">Amenidad · Yoga deck</div>
-      </div>
-      <div class="gallery-item gallery-item-6">
-        <img src="ona-planta-tipo.jpg" alt="Planta arquitectónica tipo" loading="lazy" onerror="this.onerror=null;this.src='img/ona-planta-tipo.jpg';">
-        <div class="gallery-caption">Planta tipo</div>
-      </div>
-      <div class="gallery-item gallery-item-7">
-        <img src="ona-planta-amplia.jpg" alt="Planta arquitectónica amplia" loading="lazy" onerror="this.onerror=null;this.src='img/ona-planta-amplia.jpg';">
-        <div class="gallery-caption">Planta · Distribución amplia</div>
-      </div>
-      <div class="gallery-item gallery-item-8">
-        <img src="ona-planta-jardin.jpg" alt="Planta con jardín integrado" loading="lazy" onerror="this.onerror=null;this.src='img/ona-planta-jardin.jpg';">
-        <div class="gallery-caption">Planta · Jardín integrado</div>
-      </div>
-      <div class="gallery-item gallery-item-9">
-        <img src="ona-fachada-detalle.jpg" alt="Detalle arquitectónico fachada" loading="lazy" onerror="this.onerror=null;this.src='img/ona-fachada-detalle.jpg';">
-        <div class="gallery-caption">Carácter arquitectónico</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECCION 04 - ESTUDIO (BC + BRYAN)
-     CAMBIAR AQUI: bio y datos del estudio
-     ============================================================ -->
-<section class="section section-light reveal" id="estudio">
-  <div class="studio-header">
-    <div>
-      <div class="section-eyebrow">03 — El estudio</div>
-      <div class="section-divider"></div>
-    </div>
-    <h2 class="studio-title">
-      Una sola <em>visión.</em><br>
-      Un solo <em>criterio.</em>
-    </h2>
-  </div>
-
-  <div class="studio-content">
-    <div class="studio-photo">
-      <!-- Foto Bryan ya optimizada en /img/bryan-castro.jpg -->
-      <div class="studio-photo-img"></div>
-      <div class="studio-photo-tag">
-        <div class="studio-photo-tag-name">Bryan Castro</div>
-        <div class="studio-photo-tag-role">Fundador</div>
-      </div>
-    </div>
-
-    <div>
-      <p class="studio-quote">
-        "Diseño desde la perspectiva de quien va a poner capital en el proyecto. Esa es la única arquitectura que sé hacer."
-      </p>
-      <div class="studio-divider"></div>
-      <div class="studio-bio">
-        <p>Bryan Castro es arquitecto y desarrollador inmobiliario. Fundó BC Arquitectura con una convicción simple: la arquitectura sin lectura financiera es decoración cara, y el desarrollo inmobiliario sin diseño estratégico es capital subutilizado.</p>
-        <p>BC Arquitectura opera bajo esa premisa. Cada proyecto se origina, diseña y desarrolla con un criterio único: maximizar el valor del activo desde el primer trazo.</p>
-        <p>ONA es la primera materialización de ese criterio. Otros proyectos están en pipeline.</p>
-      </div>
-
-      <div class="studio-meta">
-        <div>
-          <div class="studio-meta-label">Disciplinas</div>
-          <div class="studio-meta-value">
-            Arquitectura · Desarrollo inmobiliario · Estructuración de inversión
+    <form class="form" id="contactForm" novalidate>
+        <input type="hidden" name="_subject" value="Nuevo mensaje — Build &amp; Create Studio">
+        
+        <div id="formBody">
+          <span class="mono" style="color:var(--gold)">Formulario de contacto</span>
+          <h3 class="form-title">Cuéntanos qué traes al estudio</h3>
+          <div class="field">
+            <label for="name">Nombre completo</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre" autocomplete="name">
           </div>
-        </div>
-        <div>
-          <div class="studio-meta-label">Base de operaciones</div>
-          <div class="studio-meta-value">
-            Ciudad de Guatemala<br>Latinoamérica
+          <div class="row">
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" required placeholder="tu@empresa.com" autocomplete="email">
+            </div>
+            <div class="field">
+              <label for="phone">Teléfono o WhatsApp</label>
+              <input type="tel" id="phone" name="telefono" placeholder="+502 0000 0000" autocomplete="tel">
+            </div>
           </div>
+          <div class="field">
+            <label for="type">Tipo de proyecto</label>
+            <select id="type" name="project_type" required>
+              <option value="">Selecciona una opción</option>
+              <option value="diagnostico-terreno">Diagnóstico de terreno / prefactibilidad</option>
+              <option value="diseño-estratégico">Diseño estratégico para desarrolladores</option>
+              <option value="diseño-comercial">Diseño de oficinas, clínicas o comercios</option>
+              <option value="diseño-interior">Diseño interior</option>
+              <option value="remodelación">Remodelación</option>
+              <option value="mobiliario-estratégico">Mobiliario estratégico</option>
+              <option value="co-desarrollo">Co-desarrollo integral (tengo un terreno)</option>
+              <option value="inversión">Inversión en proyectos propios</option>
+              <option value="otro">Otro / Conversación inicial</option>
+            </select>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="location">Ubicación</label>
+              <input type="text" id="location" name="ubicacion" placeholder="Zona o municipio">
+            </div>
+            <div class="field">
+              <label for="area">m² aproximados</label>
+              <input type="text" id="area" name="metros_cuadrados" placeholder="Aproximado" inputmode="numeric">
+            </div>
+          </div>
+          
+          <div class="field">
+            <label for="stage">Etapa</label>
+            <select id="stage" name="etapa">
+              <option value="">Selecciona una opción</option>
+              <option value="evaluando-terreno">Evaluando comprar un terreno</option>
+              <option value="tengo-terreno">Tengo el terreno, sin diseño</option>
+              <option value="tengo-anteproyecto">Tengo anteproyecto o planos</option>
+              <option value="espacio-existente">Tengo un espacio para diseñar o remodelar</option>
+              <option value="inversion">Busco invertir</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" placeholder="Cuéntanos brevemente qué buscas" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-light form-submit" id="formSubmitBtn">Enviar mensaje →</button>
+          <p class="form-error" id="formError" role="alert">Revisa los campos obligatorios o escríbenos a info@bcarqstudio.com</p>
         </div>
-      </div>
-
-      <a href="https://linkedin.com/in/bryan-castro" target="_blank" rel="noopener" class="studio-link">
-        Conectar en LinkedIn →
-      </a>
-    </div>
+        <div class="form-success" id="formSuccess" role="status">
+          <h3>Mensaje recibido</h3>
+          <p>Te respondemos en menos de 24 horas hábiles. Revisa también tu carpeta de spam.</p>
+        </div>
+      </form>
   </div>
 </section>
+</main>
 
 <!-- ============================================================
-     SECCION 05 - MODELOS DE TRABAJO
-     CAMBIAR AQUI: copy de los 3 modelos
-     ============================================================ -->
-<section class="section models-section reveal" id="modelos">
-  <div class="models-header">
-    <div>
-      <div class="section-eyebrow">04 — Modelos</div>
-      <div class="section-divider"></div>
-    </div>
-    <div>
-      <h2 class="models-title">
-        Tres formas de<br><em>trabajar juntos.</em>
-      </h2>
-      <p class="models-sub">
-        Cada modelo responde a un tipo distinto de socio. En todos, nuestro éxito está atado al tuyo.
-      </p>
-    </div>
-  </div>
-
-  <div class="models-grid">
-    <!-- MODELO 01 -->
-    <div class="model-card">
-      <div class="model-num">Modelo 01</div>
-      <h3 class="model-title">Diseño<br>estratégico</h3>
-      <p class="model-tagline">Tú desarrollas. Nosotros diseñamos.</p>
-      <p class="model-text">
-        Honorarios de diseño optimizados para proyectos inmobiliarios. Entregamos diagnóstico de terreno, anteproyecto con pro forma, proyecto ejecutivo y acompañamiento en obra.
-      </p>
-      <div class="model-meta">
-        <div class="model-meta-label">Ideal para</div>
-        <p class="model-meta-text">Desarrolladores con equipo propio que buscan arquitectura que entienda el negocio.</p>
-      </div>
-      <a href="#contacto" class="model-link">Proponer proyecto →</a>
-    </div>
-
-    <!-- MODELO 02 (DESTACADO) -->
-    <div class="model-card model-card-featured">
-      <div class="model-badge">Más solicitado</div>
-      <div class="model-num">Modelo 02</div>
-      <h3 class="model-title">Co-desarrollo<br>integral</h3>
-      <p class="model-tagline">Desarrollamos juntos. Ganamos juntos.</p>
-      <p class="model-text">
-        Aportamos diseño, gestión del proyecto y entre 10 y 30 por ciento del capital, según tamaño y etapa. Participamos en la utilidad proporcionalmente.
-      </p>
-      <div class="model-meta">
-        <div class="model-meta-label">Ideal para</div>
-        <p class="model-meta-text">Desarrolladores con terreno que buscan un socio alineado, no un proveedor.</p>
-      </div>
-      <a href="#contacto" class="model-link">Explorar alianza →</a>
-    </div>
-
-    <!-- MODELO 03 -->
-    <div class="model-card">
-      <div class="model-num">Modelo 03</div>
-      <h3 class="model-title">Inversión en<br>proyectos propios</h3>
-      <p class="model-tagline">Nuestro proyecto. Tu oportunidad.</p>
-      <p class="model-text">
-        Estructuramos vehículos de inversión para proyectos que nosotros originamos, diseñamos y ejecutamos. ONA será el primero cuando la estructura esté lista.
-      </p>
-      <div class="model-meta">
-        <div class="model-meta-label">Ideal para</div>
-        <p class="model-meta-text">Inversionistas calificados con interés en exposición inmobiliaria estructurada.</p>
-      </div>
-      <a href="#contacto" class="model-link">Unirme a la lista →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECCION 05b - AGENDAR CITA
-     CAMBIAR AQUI: reemplaza GOOGLE_CALENDAR_LINK con tu enlace de
-     Google Calendar → Citas → "Copiar enlace de reserva"
-     ============================================================ -->
-<section class="section agenda-section reveal" id="agenda">
-  <div class="agenda-inner">
-    <div>
-      <div class="section-eyebrow">05 — Agenda</div>
-      <div class="section-divider"></div>
-      <h2 class="agenda-title">
-        30 minutos que<br>pueden cambiar<br>la <em>rentabilidad</em><br>de tu proyecto.
-      </h2>
-      <p class="agenda-text">
-        Sin presentaciones de venta. Una conversación directa donde evaluamos juntos si tu terreno, proyecto o capital encajan con lo que hacemos.
-      </p>
-      <ul class="agenda-list">
-        <li>Diagnóstico rápido de viabilidad de tu proyecto</li>
-        <li>Revisión del potencial de tu terreno</li>
-        <li>Alineación sobre modelos de trabajo</li>
-        <li>Respuesta honesta: si no encaja, te lo decimos</li>
-      </ul>
-    </div>
-
-    <div class="agenda-cta-block">
-      <div class="agenda-cta-eyebrow">Consulta inicial</div>
-      <h3 class="agenda-cta-title">Agendar llamada<br>con Bryan Castro</h3>
-      <p class="agenda-cta-text">
-        Selecciona el horario que mejor te funcione directamente en el calendario. Sin intermediarios.
-      </p>
-      <div class="agenda-duration">30 minutos · Videollamada · Sin costo</div>
-      <a href="https://calendar.app.google/bmpsEQCsqqF3ZQgA9" target="_blank" rel="noopener" class="btn-agenda" id="btnAgenda">
-        Elegir horario →
-      </a>
-      <p class="agenda-note">Recibirás confirmación automática por correo</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     SECCION 06 - CONTACTO
-     CAMBIAR AQUI: reemplaza TU_FORM_ID con tu ID de Formspree
-     Crear cuenta gratis en formspree.io → "New Form" → copiar ID
-     ============================================================ -->
-<section class="section contact-section reveal" id="contacto">
-  <svg class="contact-bg-circles" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMid slice">
-    <g stroke="#c9b896" stroke-width="0.4" fill="none">
-      <circle cx="200" cy="400" r="400"/>
-      <circle cx="200" cy="400" r="280"/>
-      <circle cx="200" cy="400" r="160"/>
-      <circle cx="200" cy="400" r="60"/>
-    </g>
-  </svg>
-
-  <div class="contact-grid">
-    <div>
-      <div class="section-eyebrow gold">05 — Contacto</div>
-      <div class="section-divider gold"></div>
-      <h2 class="contact-title">
-        Iniciemos<br>una <em>conversación.</em>
-      </h2>
-      <p class="contact-text">
-        En 30 minutos podemos evaluar si tu terreno, proyecto o capital encajan con lo que hacemos. Sin presentaciones de venta. Una conversación directa.
-      </p>
-      <p class="contact-text-small">
-        Respondemos en menos de 24 horas hábiles a cada mensaje. Cada uno se atiende personalmente.
-      </p>
-
-      <div class="contact-info">
-        <div class="contact-info-item">
-          <div class="contact-info-label">Email</div>
-          <div class="contact-info-value">info@bcarqstudio.com</div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">Web</div>
-          <div class="contact-info-value">bcarqstudio.com</div>
-        </div>
-        <div class="contact-info-item">
-          <div class="contact-info-label">Base</div>
-          <div class="contact-info-value">Ciudad de Guatemala</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- ============================================================
-         FORMULARIO
-         CONECTAR FORMSPREE: cambiar action="https://formspree.io/f/TU_FORM_ID"
-         Crea cuenta gratis en formspree.io, copia tu form ID
-         ============================================================ -->
-    <form class="contact-form" id="contactForm" novalidate>
-      <input type="hidden" name="_subject" value="Nuevo mensaje — BC Arquitectura">
-
-      <div id="formBody">
-        <div class="contact-form-eyebrow">Formulario de contacto</div>
-        <h3 class="contact-form-title">Cuéntanos qué traes al estudio</h3>
-
-        <div class="form-group">
-          <label class="form-label" for="name">Nombre completo</label>
-          <input type="text" id="name" name="name" class="form-input" required placeholder="Tu nombre">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" class="form-input" required placeholder="tu@empresa.com">
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="type">Tipo de proyecto</label>
-          <select id="type" name="project_type" class="form-select" required>
-            <option value="">Selecciona una opción</option>
-            <option value="diseño-estratégico">Diseño estratégico</option>
-            <option value="diseño-comercial">Diseño comercial (centros comerciales)</option>
-            <option value="co-desarrollo">Co-desarrollo integral (tengo un terreno)</option>
-            <option value="inversión">Inversión en proyectos propios</option>
-            <option value="otro">Otro / Conversación inicial</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label class="form-label" for="message">Mensaje</label>
-          <textarea id="message" name="message" class="form-textarea" required placeholder="Cuéntanos brevemente qué buscas"></textarea>
-        </div>
-
-        <button type="submit" class="form-submit" id="formSubmitBtn">
-          Enviar mensaje →
-        </button>
-        <div class="form-error-msg" id="formError">
-          Hubo un error al enviar. Por favor escríbenos a info@bcarqstudio.com
-        </div>
-      </div>
-
-      <div class="form-success" id="formSuccess">
-        <div class="form-success-icon">✦</div>
-        <div class="form-success-title">Mensaje recibido</div>
-        <p class="form-success-text">
-          Te respondemos en menos de 24 horas hábiles.<br>
-          Revisa también tu carpeta de spam.
-        </p>
-      </div>
-    </form>
-  </div>
-</section>
-
-<!-- ============================================================
-     FOOTER
+     PIE
      ============================================================ -->
 <footer class="footer">
-  <div class="footer-grid">
-    <div>
-      <div class="footer-logo">
-        <svg class="footer-logo-svg" viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="BC Studio">
-          <title>BC Studio</title>
-          <defs>
-            <style type="text/css">
-              @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&amp;display=swap');
-              .footer-svg-text { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 300; }
-              .footer-svg-tagline { font-family: 'Space Grotesk', 'Inter', sans-serif; font-weight: 400; }
-            </style>
-          </defs>
-          <g fill="none" stroke="currentColor" stroke-width="15" stroke-linecap="butt" stroke-linejoin="round">
-            <path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245" />
-            <path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245" />
-          </g>
-          <circle cx="78" cy="80" r="15" fill="currentColor" />
-          <circle cx="78" cy="190" r="15" fill="currentColor" />
-          <text x="17" y="370" fill="currentColor" class="footer-svg-text" font-size="100" textLength="767" lengthAdjust="spacing">STUDIO</text>
-          <text x="17" y="430" fill="currentColor" class="footer-svg-tagline" font-size="20" opacity="0.55" textLength="767" lengthAdjust="spacing">BUILD &amp; CREATE STUDIO</text>
-        </svg>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <svg viewBox="0 0 800 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="15" stroke-linejoin="round"><path d="M 17,25 L 320,25 Q 378,25 378,80 Q 378,135 320,135 L 17,135 L 320,135 Q 378,135 378,190 Q 378,245 320,245 L 17,245"/><path d="M 784,25 L 475,25 Q 417,25 417,80 L 417,190 Q 417,245 475,245 L 784,245"/></g><circle cx="78" cy="80" r="15" fill="currentColor"/><circle cx="78" cy="190" r="15" fill="currentColor"/></svg>
+        <p class="slogan">Del terreno al retorno.</p>
+        <p>Build &amp; Create Studio. Arquitectura, prefactibilidad y desarrollo inmobiliario. Ciudad de Guatemala.</p>
       </div>
-      <p class="footer-tagline">Del terreno al retorno.</p>
-      <p class="footer-desc">Estudio de arquitectura, desarrollo inmobiliario e inversión. Guatemala.</p>
+      <div>
+        <h4 class="mono">Servicios</h4>
+        <ul>
+          <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+          <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
+          <li><a href="#modelos">Co-desarrollo e inversión</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Proyectos</h4>
+        <ul>
+          <li><a href="#ona">ONA</a></li>
+          <li><a href="kishi-books.html">Kishi Books</a></li>
+          <li><a href="navante.html">Navante</a></li>
+          <li><a href="anker-logistics.html">Anker Logistics</a></li>
+          <li><a href="petshop-gt.html">Petshop GT</a></li>
+          <li><a href="casa-milpas-altas.html">Casa Milpas Altas</a></li>
+          <li><a href="once-once.html">Once Once</a></li>
+          <li><a href="remodelacion-el-prado.html">El Prado</a></li>
+          <li><a href="edificio-w.html">Edificio W</a></li>
+          <li><a href="la-autoria.html">La Autoría</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mono">Contacto</h4>
+        <ul>
+          <li><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></li>
+          <li><a href="https://wa.me/50254131753" target="_blank" rel="noopener">WhatsApp +502 5413 1753</a></li>
+          <li><a href="https://calendar.app.google/bmpsEQCsqqF3ZQgA9" target="_blank" rel="noopener">Agendar llamada</a></li>
+        </ul>
+      </div>
     </div>
-
-    <div>
-      <div class="footer-col-title">Explorar</div>
-      <ul class="footer-col-list">
-        <li><a href="#vision">Visión</a></li>
-        <li><a href="#ona">ONA</a></li>
-        <li><a href="#estudio">Estudio</a></li>
-        <li><a href="#modelos">Modelos</a></li>
-        <li><a href="diseno-estrategico.html">Diseño Estratégico</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">Contacto</div>
-      <ul class="footer-col-list">
-        <li>info@bcarqstudio.com</li>
-        <li>bcarqstudio.com</li>
-        <li><a href="#contacto" class="accent">Iniciar conversación →</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <div class="footer-col-title">Social</div>
-      <ul class="footer-col-list">
-        <li><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-        <li><a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div>© 2026 BC Arquitectura · Todos los derechos reservados</div>
-    <div class="footer-bottom-links">
-      <span>Aviso legal</span>
-      <span>Privacidad</span>
-      <span>Términos</span>
+    <div class="footer-bottom">
+      <span>© 2026 Build &amp; Create Studio · Ciudad de Guatemala</span>
+      <span>bcarqstudio.com</span>
     </div>
   </div>
 </footer>
 
+<!-- WHATSAPP FLOTANTE -->
+<a href="https://wa.me/50254131753?text=Hola%2C%20me%20interesa%20un%20diagn%C3%B3stico%20de%20terreno." class="wa-float" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.06 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.69.63.71.23 1.36.2 1.87.12.57-.08 1.75-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35zM12.04 21.5h-.01a9.4 9.4 0 0 1-4.8-1.31l-.34-.2-3.57.93.95-3.48-.22-.36a9.4 9.4 0 0 1-1.44-5.02c0-5.2 4.23-9.43 9.44-9.43 2.52 0 4.89.98 6.67 2.77a9.37 9.37 0 0 1 2.76 6.67c0 5.2-4.24 9.43-9.44 9.43zm8.03-17.46A11.27 11.27 0 0 0 12.04.7C5.78.7.68 5.8.68 12.06c0 2 .52 3.96 1.52 5.68L.58 23.7l6.1-1.6a11.33 11.33 0 0 0 5.36 1.37h.01c6.26 0 11.36-5.1 11.36-11.36 0-3.04-1.18-5.89-3.33-8.04z"/></svg></a>
+
 <script>
 // ============================================================
-// NAVEGACION - cambio de estado al hacer scroll
+// CABECERA — fondo sólido al hacer scroll + menú móvil
 // ============================================================
 const nav = document.getElementById('nav');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 50) {
-    nav.classList.add('scrolled');
-  } else {
-    nav.classList.remove('scrolled');
-  }
-});
-
-// ============================================================
-// MENU MOBILE - toggle simple
-// ============================================================
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
 const navToggle = document.getElementById('navToggle');
-const navMenu = document.querySelector('.nav-menu');
-navToggle.addEventListener('click', () => {
-  if (navMenu.style.display === 'flex') {
-    navMenu.style.display = 'none';
-  } else {
-    navMenu.style.display = 'flex';
-    navMenu.style.position = 'absolute';
-    navMenu.style.top = '100%';
-    navMenu.style.left = '0';
-    navMenu.style.right = '0';
-    navMenu.style.flexDirection = 'column';
-    navMenu.style.background = 'rgba(10,10,10,0.95)';
-    navMenu.style.padding = '24px';
-    navMenu.style.gap = '16px';
-    navMenu.style.borderBottom = '0.5px solid rgba(232,230,225,0.1)';
-  }
-});
+const navMenu = document.getElementById('navMenu');
+const setMenu = (open) => {
+  navMenu.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  navToggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  nav.classList.toggle('solid', open || nav.dataset.solid === '1');
+  document.body.style.overflow = open ? 'hidden' : '';
+};
+nav.dataset.solid = nav.classList.contains('solid') ? '1' : '';
+navToggle.addEventListener('click', () => setMenu(!navMenu.classList.contains('open')));
+navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
 
-// Cerrar menu al hacer click en un link (mobile)
-document.querySelectorAll('.nav-menu a').forEach(link => {
-  link.addEventListener('click', () => {
-    if (window.innerWidth <= 1024) {
-      navMenu.style.display = 'none';
-    }
+// ============================================================
+// HERO — el índice de proyectos cambia la imagen
+// ============================================================
+const heroImgs = document.querySelectorAll('#heroMedia img');
+const heroBtns = document.querySelectorAll('#heroIndex button');
+const heroOpen = document.getElementById('heroOpen');
+const showProject = (i) => {
+  heroImgs.forEach((im, k) => {
+    if (k === i) im.loading = 'eager';
+    im.classList.toggle('on', k === i);
   });
+  heroBtns.forEach((b, k) => b.setAttribute('aria-pressed', String(k === i)));
+  heroOpen.href = heroBtns[i].dataset.href;
+};
+heroBtns.forEach((b, i) => {
+  b.addEventListener('click', () => showProject(i));
+  b.addEventListener('mouseenter', () => showProject(i));
+  b.addEventListener('focus', () => showProject(i));
 });
-
-// ============================================================
-// REVEAL ON SCROLL - animacion de entrada de secciones
-// ============================================================
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => {
-  revealObserver.observe(el);
-});
-
-// ============================================================
-// SMOOTH SCROLL - desplazamiento suave a anclas
-// ============================================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const href = this.getAttribute('href');
-    if (href === '#') return;
-    const target = document.querySelector(href);
-    if (target) {
-      e.preventDefault();
-      const offsetTop = target.offsetTop - 60;
-      window.scrollTo({ top: offsetTop, behavior: 'smooth' });
-    }
-  });
-});
+// Precarga discreta del resto de imágenes del hero cuando la página termina de cargar
+window.addEventListener('load', () => heroImgs.forEach(im => { im.loading = 'eager'; }));
 
 // ============================================================
 // FORMULARIO — Formspree AJAX
-// Reemplaza TU_FORM_ID con tu ID real de formspree.io
 // ============================================================
 const FORMSPREE_ID = 'xbdbdlay';
 const form = document.getElementById('contactForm');
-const formBody = document.getElementById('formBody');
-const formSuccess = document.getElementById('formSuccess');
-const formError = document.getElementById('formError');
-const submitBtn = document.getElementById('formSubmitBtn');
-
-form.addEventListener('submit', async function(e) {
-  e.preventDefault();
-
-  if (FORMSPREE_ID === 'TU_FORM_ID') {
-    alert('Formulario en configuración. Escríbenos directamente a info@bcarqstudio.com');
-    return;
+if (form) {
+  const tipoParam = new URLSearchParams(location.search).get('tipo');
+  const tipoSel = document.getElementById('type');
+  if (tipoParam && tipoSel) {
+    const opt = tipoSel.querySelector(`option[value="${CSS.escape(tipoParam)}"]`);
+    if (opt) opt.selected = true;
   }
-
-  submitBtn.textContent = 'Enviando…';
-  submitBtn.disabled = true;
-  formError.style.display = 'none';
-
-  const data = new FormData(form);
-
-  try {
-    const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-      method: 'POST',
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (res.ok) {
-      formBody.style.display = 'none';
-      formSuccess.style.display = 'block';
-    } else {
-      throw new Error('server');
+  const btn = document.getElementById('formSubmitBtn');
+  const err = document.getElementById('formError');
+  const label = btn.textContent;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (!form.checkValidity()) { err.style.display = 'block'; form.reportValidity(); return; }
+    btn.textContent = 'Enviando…';
+    btn.disabled = true;
+    err.style.display = 'none';
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' }
+      });
+      if (!res.ok) throw new Error('server');
+      document.getElementById('formBody').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+    } catch {
+      btn.textContent = label;
+      btn.disabled = false;
+      err.style.display = 'block';
     }
-  } catch {
-    submitBtn.textContent = 'Enviar mensaje →';
-    submitBtn.disabled = false;
-    formError.style.display = 'block';
-  }
-});
-
-
-// ============================================================
-// FALLBACK RUTAS IMAGEN BRYAN: prueba raíz y luego /img/
-// ============================================================
-(function() {
-  const studioPhoto = document.querySelector('.studio-photo-img');
-  if (!studioPhoto) return;
-  const test = new Image();
-  test.onload = function() { studioPhoto.style.backgroundImage = "url('bryan-castro.jpg')"; };
-  test.onerror = function() { studioPhoto.style.backgroundImage = "url('img/bryan-castro.jpg')"; };
-  test.src = 'bryan-castro.jpg';
-})();
+  });
+}
 
 </script>
 
