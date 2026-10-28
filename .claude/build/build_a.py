@@ -642,10 +642,10 @@ home_ld = {
     "knowsAbout": ["Arquitectura", "Prefactibilidad inmobiliaria", "Desarrollo inmobiliario", "Diseño interior", "Remodelaciones", "Mobiliario a la medida", "Estructuración de inversión inmobiliaria"]}
 
 # ================================================================== TESTIMONIO (Kishi Books)
-# Texto propuesto por el estudio: publicar solo con la aprobación escrita de la clienta.
+# Texto aprobado por la clienta (Ady Hernández, fundadora de Kishi Books).
 TESTI_QUOTE = 'Gracias a un diseño bien implementado y ejecutado, hemos logrado posicionar <em>Kishi Books</em> en más centros comerciales del país. Ya vamos por nuestro cuarto proyecto con BC Studio.'
-TESTI_NAME = '<span class="pending">[DATO PENDIENTE: nombre de la clienta]</span>'
-TESTI_ROLE = '<span class="pending">[DATO PENDIENTE: cargo]</span> · Kishi Books'
+TESTI_NAME = 'Ady Hernández'
+TESTI_ROLE = 'Fundadora · Kishi Books'
 TESTI_CSS = """
 /* ===== TESTIMONIO ===== */
 .testi { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
@@ -663,12 +663,12 @@ def testimonio(link=True):
     more = '\n        <div class="cta-row"><a href="kishi-books.html" class="link">Ver el proyecto Kishi Books</a></div>' if link else ''
     return f"""<section class="section on-dark-2" id="testimonio">
   <div class="wrap testi">
-    <figure class="testi-img">{img('kishi-books-inauguracion', 'Inauguración del kiosco Kishi Books en Peri Roosevelt con Bryan Castro', 1920, 1442, sizes='(max-width: 900px) 100vw, 40vw')}</figure>
+    <figure class="testi-img">{img('kishi-books-inauguracion', 'Ady Hernández, fundadora de Kishi Books, con Bryan Castro en la inauguración del kiosco de Peri Roosevelt', 1920, 1442, sizes='(max-width: 900px) 100vw, 40vw')}</figure>
     <div>
       <span class="mono sec-label">Testimonio · Cliente desde 2024</span>
       <blockquote>
         <p>«{TESTI_QUOTE}»</p>
-        <footer class="by"><img src="img/kishi-books-clienta-avatar.webp" width="320" height="320" alt="Clienta de Kishi Books" loading="lazy" decoding="async"><div><strong>{TESTI_NAME}</strong><br><span class="mono">{TESTI_ROLE}</span></div></footer>
+        <footer class="by"><img src="img/kishi-books-clienta-avatar.webp" width="320" height="320" alt="Ady Hernández, fundadora de Kishi Books" loading="lazy" decoding="async"><div><strong>{TESTI_NAME}</strong><br><span class="mono">{TESTI_ROLE}</span></div></footer>
       </blockquote>{more}
     </div>
   </div>
