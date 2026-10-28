@@ -193,8 +193,13 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
         <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
         <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
       </a>
-      <a href="petshop-gt.html" class="work-card full">
-        <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='100vw')}</div>
+      <a href="anker-logistics.html" class="work-card half">
+        <div class="work-img">{img('anker-logistics-area-trabajo', 'Área de trabajo de Anker Logistics con muro azul curvo, Torres Pradera, Zona 10', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Anker Logistics</span><span class="status built">Construido</span></div>
+        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario</p>
+      </a>
+      <a href="petshop-gt.html" class="work-card half">
+        <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Petshop GT</span><span class="status">Diseño aprobado</span></div>
         <p class="work-info">Tienda de mascotas · 70 m² · Vista Hermosa, Zona 15</p>
       </a>
@@ -1090,3 +1095,130 @@ OPAGE = head(O_TITLE, O_DESC, O_URL, 'img/once-once-barra-logo-og.jpg', o_ld) + 
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 OPAGE = OPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
 open('once-once.html', 'w', encoding='utf-8').write(OPAGE)
+
+# ================================================================== ANKER LOGISTICS (oficina construida)
+A_URL = SITE + 'anker-logistics.html'
+A_TITLE = 'Anker Logistics, oficina en Zona 10 | Build &amp; Create Studio'
+A_DESC = 'Anker Logistics: oficina de 76 m² en Torres Pradera, Zona 10, Ciudad de Guatemala. Diseño interior, ejecución y mobiliario para una empresa de logística.'
+a_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Anker Logistics · Oficina", "description": A_DESC,
+     "url": A_URL, "image": SITE + "img/anker-logistics-area-trabajo-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Construido", "contentLocation": {"@type": "Place", "name": "Torres Pradera, Zona 10, Ciudad de Guatemala"}},
+    crumbs("Anker Logistics", A_URL)]
+
+def afig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
+    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1442, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
+
+APAGE = head(A_TITLE, A_DESC, A_URL, 'img/anker-logistics-area-trabajo-og.jpg', a_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('anker-logistics-area-trabajo', 'Área de trabajo abierta de Anker Logistics con muro azul curvo y equipo trabajando', 1920, 1442, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Oficina corporativa · Torres Pradera, Zona 10</p>
+        <h1 class="hero-slogan">Anker <span>Logistics.</span></h1>
+        <p class="hero-sub">Oficina de 76 m² para una empresa de logística y carga: la identidad de la marca en cada muro, área abierta, oficinas privadas y una sala que mira al mundo. Diseño interior, ejecución y mobiliario.</p>
+        <div class="hero-actions">
+          <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-light">Diseñemos tu oficina →</a>
+          <a href="#galeria" class="link">Ver fotografías</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Construido</dd></div>
+          <div><dt>Área</dt><dd>76 m²</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño interior, ejecución y mobiliario</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CIFRAS Y CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <dl class="figures" style="margin-top:0;grid-template-columns:repeat(3,minmax(0,1fr))">
+      <div><dt class="mono">Área</dt><dd>76<small> m²</small></dd></div>
+      <div><dt class="mono">Ubicación</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Zona 10</dd></div>
+      <div><dt class="mono">Alcance</dt><dd style="font-size:clamp(24px,2.6vw,38px)">Llave en mano</dd></div>
+    </dl>
+    <div class="thesis" style="margin-top:96px">
+      <h2 class="thesis-quote">La marca, <b>en cada muro.</b></h2>
+      <div class="thesis-text">
+        <p>Anker Logistics es una empresa de logística y carga. Su oficina en Torres Pradera lo cuenta desde la entrada: listones de madera con el logotipo en la recepción, el azul de la marca recorriendo los muros y una sala de reuniones con relojes de distintos husos horarios y un mapa del mundo.</p>
+        <p>En 76 m² conviven recepción, área de trabajo abierta, oficinas privadas con luz natural, sala de reuniones y cocineta, con mobiliario blanco y madera que mantiene el espacio limpio y ordenado.</p>
+        <p><strong>Diseño interior, ejecución y mobiliario de {BRAND}: un solo responsable de principio a fin.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (fotografías de obra construida)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Fotografías del proyecto construido</span>
+        <h2 class="sec-title">Una oficina <span>en uso.</span></h2>
+      </div>
+      <p class="sec-lead">Fotografías de la oficina funcionando, con el equipo de Anker Logistics en su día a día.</p>
+    </div>
+    <div class="gal">
+      {afig('anker-logistics-recepcion', 'Recepción de Anker Logistics con muro de listones de madera y logotipo', 'Recepción', 'Listones de madera y logotipo', 'w5')}
+      {afig('anker-logistics-sala-reuniones', 'Sala de reuniones de Anker Logistics con relojes de husos horarios y mapa del mundo', 'Sala de reuniones', 'Relojes y mapa del mundo', 'w7')}
+      {afig('anker-logistics-oficina-marca', 'Oficina de Anker Logistics con gráfica de marca Do Good Things en el muro', 'Oficina con gráfica', 'Do good things', 'w7')}
+      {afig('anker-logistics-oficina-privada', 'Oficina privada de Anker Logistics con ventanal y vista a la ciudad', 'Oficina privada', 'Luz natural y vista', 'w5')}
+      {afig('anker-logistics-cocineta', 'Cocineta de Anker Logistics con gabinetes blancos y cubierta de madera', 'Cocineta', 'Gabinetes y cubierta de madera', 'w12', '100vw')}
+    </div>
+    <p class="gal-note">Fotografías de la oficina construida.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="concepto">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Decisiones de diseño</span>
+        <h2 class="sec-title">Cuatro decisiones, <span>76 m².</span></h2>
+      </div>
+    </div>
+    <ol class="concepts">
+      <li><span class="n">01</span><span><b>Recepción con identidad.</b> Listones de madera y el logotipo en relieve: la marca se presenta antes que nadie.</span></li>
+      <li><span class="n">02</span><span><b>El azul de la marca.</b> Muros y una curva de color recorren la oficina y unifican cada ambiente.</span></li>
+      <li><span class="n">03</span><span><b>Un negocio global.</b> La sala de reuniones lleva relojes de distintos husos horarios y un mapa del mundo: el espacio habla del servicio.</span></li>
+      <li><span class="n">04</span><span><b>Mobiliario a la medida.</b> Estaciones, almacenamiento y cocineta en blanco y madera, pensados para el área disponible.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      {ficha([('Cliente', 'Anker Logistics'), ('Giro', 'Logística y carga'), ('Tipología', 'Oficina corporativa'), ('Ubicación', 'Torres Pradera, Zona 10, Ciudad de Guatemala'),
+              ('Área', '76 m²'), (f'Alcance de {BRAND}', 'Diseño interior, ejecución y mobiliario'), ('Estado', 'Construido')])}
+    </dl>
+    <div class="cta-row">
+      <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-dark">Diseñemos tu oficina →</a>
+      <a href="navante.html" class="link">Ver otra oficina: Navante</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+APAGE = APAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+open('anker-logistics.html', 'w', encoding='utf-8').write(APAGE)

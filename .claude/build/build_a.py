@@ -437,6 +437,7 @@ def footer(p):
           <li><a href="{p}#ona">ONA</a></li>
           <li><a href="kishi-books.html">Kishi Books</a></li>
           <li><a href="navante.html">Navante</a></li>
+          <li><a href="anker-logistics.html">Anker Logistics</a></li>
           <li><a href="petshop-gt.html">Petshop GT</a></li>
           <li><a href="casa-milpas-altas.html">Casa Milpas Altas</a></li>
           <li><a href="once-once.html">Once Once</a></li>
@@ -735,7 +736,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="mono sec-label">Proyectos · 07</span>
+        <span class="mono sec-label">Proyectos · 08</span>
         <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
       </div>
       <p class="sec-lead">Mobiliario comercial, oficinas, comercio, uso mixto, vivienda, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
@@ -756,6 +757,11 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
         <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
       </a>
+      <a href="anker-logistics.html" class="work-card half">
+        <div class="work-img">{img('anker-logistics-area-trabajo', 'Área de trabajo de Anker Logistics con muro azul curvo, Torres Pradera, Zona 10', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Anker Logistics</span><span class="status built">Construido</span></div>
+        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario</p>
+      </a>
       <a href="petshop-gt.html" class="work-card half">
         <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Petshop GT</span><span class="status">Diseño aprobado</span></div>
@@ -771,8 +777,8 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
       </a>
-      <a href="casa-milpas-altas.html" class="work-card half">
-        <div class="work-img">{img('casa-milpas-altas-fachada', 'Render de Casa Milpas Altas en la ladera, San Miguel Milpas Altas, Sacatepéquez', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+      <a href="casa-milpas-altas.html" class="work-card full">
+        <div class="work-img">{img('casa-milpas-altas-fachada', 'Render de Casa Milpas Altas en la ladera, San Miguel Milpas Altas, Sacatepéquez', 1920, 1080, sizes='100vw')}</div>
         <div class="work-meta"><span class="work-name">Casa Milpas Altas</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Vivienda · 120 m² · San Miguel Milpas Altas, Sacatepéquez</p>
       </a>
@@ -1516,4 +1522,4 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
 WPAGE = WPAGE.replace('</style>', W_CSS + '</style>', 1)
 open('edificio-w.html', 'w', encoding='utf-8').write(WPAGE)
 exec(open(os.path.join('.claude', 'build', 'paginas_a.py'), encoding='utf-8').read())
-print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE), len(MPAGE), len(OPAGE))
+print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE), len(MPAGE), len(OPAGE), len(APAGE))
