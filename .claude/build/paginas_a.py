@@ -65,7 +65,15 @@ PAGE_A_CSS = """
 """
 
 # Proyecto construido que respalda cada servicio (enlace bajo la descripción)
-SVC_WORK = {'Remodelaciones': '<a href="once-once.html" class="link" style="display:inline-block;margin-top:14px;font-size:13px">Ver remodelación Once Once →</a>'}
+_lk = lambda h, t: f'<a href="{h}" class="link" style="display:inline-block;margin:14px 18px 0 0;font-size:13px">{t} →</a>'
+SVC_WORK = {
+    'Oficinas corporativas': _lk('navante.html', 'Navante') + _lk('anker-logistics.html', 'Anker Logistics'),
+    'Diseño comercial y retail': _lk('kishi-books.html', 'Kishi Books') + _lk('petshop-gt.html', 'Petshop GT'),
+    'Restaurantes y gastronomía': _lk('la-autoria.html', 'La Autoría') + _lk('once-once.html', 'Once Once'),
+    'Diseño interior': _lk('remodelacion-el-prado.html', 'El Prado'),
+    'Remodelaciones': _lk('once-once.html', 'Once Once') + _lk('remodelacion-el-prado.html', 'El Prado'),
+    'Mobiliario estratégico': _lk('kishi-books.html', 'Kishi Books'),
+}
 
 svc_html = '\n'.join(
     f'      <article class="svc"><span class="mono n">{i + 1:02d}</span><h3>{n}</h3><p>{t}</p>{SVC_WORK.get(n, "")}</article>'
@@ -1222,3 +1230,100 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/anker-logistics-area-trabajo-og.jpg', 
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 APAGE = APAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
 open('anker-logistics.html', 'w', encoding='utf-8').write(APAGE)
+
+# ================================================================== REMODELACION EL PRADO (interior residencial construido)
+E_URL = SITE + 'remodelacion-el-prado.html'
+E_TITLE = 'Remodelación El Prado, estudio en casa | Build &amp; Create Studio'
+E_DESC = 'Remodelación El Prado: estudio en casa con escritorio, gabinetes y repisas de madera iluminadas en Ciudad de Guatemala. Diseño, ejecución y mobiliario.'
+e_ld = [
+    {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Remodelación El Prado · Estudio en casa", "description": E_DESC,
+     "url": E_URL, "image": SITE + "img/remodelacion-el-prado-estudio-og.jpg", "creator": ORG, "inLanguage": "es",
+     "creativeWorkStatus": "Construido", "contentLocation": {"@type": "Place", "name": "Ciudad de Guatemala"}},
+    crumbs("Remodelación El Prado", E_URL)]
+
+EPAGE = head(E_TITLE, E_DESC, E_URL, 'img/remodelacion-el-prado-estudio-og.jpg', e_ld) + nav('Proyectos', 'index.html') + f"""
+<main>
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="inicio">
+  <div class="hero-media">{img('remodelacion-el-prado-estudio', 'Estudio El Prado con gabinetes blancos, escritorio y repisas de madera iluminadas', 1200, 2131, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Remodelación · Diseño interior · Ciudad de Guatemala</p>
+        <h1 class="hero-slogan">El <span>Prado.</span></h1>
+        <p class="hero-sub">Un estudio dentro de casa resuelto como una sola pieza de mobiliario: escritorio, almacenamiento y repisas de madera con luz integrada.</p>
+        <div class="hero-actions">
+          <a href="index.html?tipo=remodelaci%C3%B3n#contacto" class="btn btn-light">Cotiza tu remodelación →</a>
+          <a href="#galeria" class="link">Ver fotografías</a>
+        </div>
+      </div>
+      <div>
+        <dl class="spec">
+          <div><dt>Estado</dt><dd>Construido</dd></div>
+          <div><dt>Tipo</dt><dd>Remodelación residencial</dd></div>
+          <div><dt>Alcance</dt><dd>Diseño, ejecución y mobiliario</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONCEPTO
+     ============================================================ -->
+<section class="section on-dark-2" id="proyecto">
+  <div class="wrap">
+    <div class="thesis" style="margin-top:0">
+      <h2 class="thesis-quote">Un rincón que <b>trabaja.</b></h2>
+      <div class="thesis-text">
+        <p>La remodelación convierte un muro de la casa en un estudio completo. Gabinetes blancos de piso a techo guardan todo sin saturar el espacio; en el centro, un panel de madera con repisas exhibe los objetos personales del propietario.</p>
+        <p>Tiras de luz integradas bajo los gabinetes y en cada repisa iluminan el escritorio y dan calidez al espacio, sin lámparas adicionales.</p>
+        <p><strong>Diseño, ejecución y mobiliario de {BRAND}.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     GALERIA (fotografías de obra construida)
+     ============================================================ -->
+<section class="section on-dark" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Fotografías del proyecto construido</span>
+        <h2 class="sec-title">Madera, blanco <span>y luz integrada.</span></h2>
+      </div>
+      <p class="sec-lead">Almacenamiento, escritorio y exhibición en un solo mueble a la medida.</p>
+    </div>
+    <div class="gal">
+      {vfig('remodelacion-el-prado-estudio', 'Vista general del estudio El Prado con gabinetes blancos, escritorio y nichos iluminados', 'Vista general', 'Gabinetes de piso a techo')}
+      {vfig('remodelacion-el-prado-repisas', 'Repisas de madera con iluminación integrada y objetos personales, estudio El Prado', 'Repisas iluminadas', 'Panel de madera')}
+      {vfig('remodelacion-el-prado-escritorio', 'Escritorio blanco bajo gabinetes con luz integrada, estudio El Prado', 'Escritorio', 'Luz bajo gabinete')}
+    </div>
+    <p class="gal-note">Fotografías del proyecto construido.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FICHA
+     ============================================================ -->
+<section class="section on-light" id="ficha">
+  <div class="wrap">
+    <span class="mono sec-label">Ficha técnica</span>
+    <dl class="spec" style="border-color:var(--line-light)">
+      {ficha([('Proyecto', 'Remodelación El Prado'), ('Tipología', 'Residencial · Estudio en casa'), ('Ubicación', 'Ciudad de Guatemala'),
+              ('Tipo de intervención', 'Remodelación y diseño interior'), (f'Alcance de {BRAND}', 'Diseño, ejecución y mobiliario'), ('Estado', 'Construido')])}
+    </dl>
+    <div class="cta-row">
+      <a href="index.html?tipo=remodelaci%C3%B3n#contacto" class="btn btn-dark">Cotiza tu remodelación →</a>
+      <a href="once-once.html" class="link">Ver otra remodelación: Once Once</a>
+    </div>
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
+EPAGE = EPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+open('remodelacion-el-prado.html', 'w', encoding='utf-8').write(EPAGE)
