@@ -454,6 +454,7 @@ def footer(p):
           <li><a href="{WA}" target="_blank" rel="noopener">WhatsApp +502 5413 1753</a></li>
           <li><a href="{CAL}" target="_blank" rel="noopener">Agendar llamada</a></li>
           <li>Reuniones con cita en Zona 10</li>
+          <li><a href="https://www.instagram.com/buildandcreatestudio/" target="_blank" rel="noopener">Instagram @buildandcreatestudio</a></li>
         </ul>
       </div>
     </div>
@@ -650,6 +651,7 @@ home_ld = {
     "name": BRAND_TXT, "alternateName": "BC Studio", "description": HOME_DESC, "url": SITE,
     "logo": SITE + "favicon.svg", "image": SITE + "img/ona-fachada-atardecer-og.jpg",
     "email": "info@bcarqstudio.com", "telephone": "+502 5413 1753",
+    "sameAs": ["https://www.instagram.com/buildandcreatestudio/"],
     "address": {"@type": "PostalAddress", "addressLocality": "Ciudad de Guatemala", "addressCountry": "GT"},
     "areaServed": [{"@type": "Country", "name": "Guatemala"}, {"@type": "Country", "name": "Honduras"}], "foundingDate": "2025",
     "founder": {"@type": "Person", "name": "Bryan Castro", "jobTitle": "Arquitecto y desarrollador inmobiliario", "image": SITE + "img/bryan-castro-frontal.webp"},
