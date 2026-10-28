@@ -20,6 +20,10 @@ Objetivo del sitio: **captar consultas calificadas** de empresas (diseño de esp
 | `diseno-estrategico.html` | Servicios de diseño para negocios + grilla de proyectos + formulario |
 | `aesthetica-medica.html`, `la-autoria.html`, `libreria-cayala.html`, `sweetpop.html` | Fichas de proyecto (misma plantilla) |
 
+## Generador de páginas (dirección visual A)
+
+`index.html`, `prefactibilidad-inmobiliaria.html` y `edificio-w.html` se generan con `python3 .claude/build/build_a.py` (CSS compartido, cabecera, pie y formularios). **Editar el generador, no el HTML de salida**, y volver a ejecutarlo. La capa de movimiento de prefactibilidad está en `.claude/build/motion_pref.py`. Las demás páginas (`diseno-estrategico.html`, `la-autoria.html`) todavía son HTML manual con el diseño anterior.
+
 ## Reglas obligatorias
 
 1. **No modificar el diseño visual** (colores, tipografías, layout, animaciones, estilo) sin autorización explícita. Correcciones técnicas invisibles (SEO, peso de imágenes, accesibilidad sin impacto visual, JS roto) sí están permitidas dentro de una tarea aprobada.
