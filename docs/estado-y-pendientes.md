@@ -10,7 +10,9 @@ Producción (`main` → bcarqstudio.com): **sin cambios**. Nada se ha publicado.
 | 1 | `fase-1-diagnostico-seo` | Diagnóstico, `CLAUDE.md`, 5 Skills, informe en `docs/fase-1-diagnostico.md` |
 | 2 | `fase-2-correcciones-tecnicas` | WebP (22–37 MB → < 1 MB por página), menú móvil, 404 corregidos, SEO técnico, sitemap, robots, favicon |
 | 3 | `fase-3-conversion` | Página de prefactibilidad, formularios calificados, WhatsApp flotante |
-| 4 | `fase-4-direccion-a` | Dirección visual A (Obra primero) en home y prefactibilidad, home en 7 bloques, marca **Build & Create Studio**, radio de imagen 10 px |
+| 4 | `fase-4-direccion-a` | Dirección visual A (Obra primero) en home y prefactibilidad, home en 7 bloques, marca **Build & Create Studio**, radio de imagen 10 px, etiqueta «Diseño completado» |
+
+Estados confirmados por el cliente (28-oct): Aesthetica Medica, La Autoría y SweetPop = **Diseño completado** (entregados, no construidos). Librería · Avia = **Propuesta**. ONA = **Anteproyecto aprobado**. Ningún proyecto está marcado como construido.
 
 Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79hHi
 
@@ -22,8 +24,8 @@ Vista previa navegable (privada): https://claude.ai/artifact/YTk8VKhAY1dGG1psD79
 4. Cifras «15+ años», «+30 %», «15–40 %»: fuente.
 5. «Proyecto confidencial / Uso interno» en La Autoría, Librería y SweetPop: ¿se retira?
 6. Aviso legal de inversión en ONA: validar con abogado.
-7. Renders de SweetPop con letrero «BOOKSTORE»: versión corregida o fotos reales.
-8. Opcional, alto impacto: fotos reales de obra construida, 2–3 testimonios reales, perfiles reales de LinkedIn/Instagram, número de colegiado.
+7. Renders de SweetPop con letrero «BOOKSTORE»: versión corregida.
+8. Opcional, alto impacto: 2–3 testimonios reales, perfiles reales de LinkedIn/Instagram, número de colegiado.
 
 ## Siguiente trabajo técnico
 
