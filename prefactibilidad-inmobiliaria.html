@@ -268,6 +268,15 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .contact { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 72px; align-items: start; }
 .agenda { border: 1px solid var(--line-dark); padding: 32px; margin: 40px 0 32px; }
 .agenda h3 { font-size: 24px; font-weight: 700; font-stretch: 112%; margin: 10px 0 12px; }
+.host { display: flex; align-items: center; gap: 16px; margin: 20px 0 4px; }
+.host img { width: 64px; height: 64px; object-fit: cover; border-radius: var(--radius); flex-shrink: 0; }
+.host strong { display: block; font-size: 17px; font-weight: 700; font-stretch: 112%; }
+.host span { color: var(--gold); }
+.host-photo { margin: 36px 0 0; max-width: 360px; }
+.host-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center 30%; border-radius: var(--radius); }
+.host-photo figcaption { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding-top: 12px; }
+.host-photo figcaption strong { font-weight: 700; font-stretch: 112%; }
+.host-photo figcaption span { color: var(--gold); }
 .agenda p { color: var(--on-dark-muted); font-size: 15px; line-height: 1.6; margin-bottom: 8px; }
 .agenda ul { list-style: none; margin: 18px 0 24px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; }
 .agenda li::before { content: '—'; color: var(--gold); margin-right: 10px; }
@@ -576,6 +585,10 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
       <span class="mono sec-label">Solicitar</span>
       <h2 class="sec-title">Cuéntanos de <span>tu terreno.</span></h2>
       <p class="sec-lead" style="margin-top:28px">Con estos datos preparamos la primera llamada. Respondemos en menos de 24 horas hábiles.</p>
+      <figure class="host-photo">
+        <img src="img/bryan-castro-reloj.webp" srcset="img/bryan-castro-reloj-960.webp 960w, img/bryan-castro-reloj.webp 1200w" sizes="(max-width: 1100px) 100vw, 30vw" width="1200" height="1800" alt="Bryan Castro, arquitecto, revisando la hora" loading="lazy" decoding="async">
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Atiende cada solicitud personalmente</span></figcaption>
+      </figure>
       <dl class="channels" style="margin-top:40px">
         <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
         <div><dt class="mono">WhatsApp</dt><dd><a href="https://wa.me/50254131753" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
