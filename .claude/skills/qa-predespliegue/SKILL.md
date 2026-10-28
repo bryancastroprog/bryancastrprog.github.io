@@ -3,7 +3,7 @@ name: qa-predespliegue
 description: Control de calidad y verificación previa al despliegue de bcarqstudio.com. Usar antes de cada commit que vaya a fusionarse en main, antes de abrir un pull request, o cuando se pida "verificar", "revisar antes de publicar" o "QA" del sitio. Ejecuta chequeos automáticos (enlaces, imágenes, SEO, fugas de texto, menú móvil) y una revisión visual en navegador.
 ---
 
-# QA previo al despliegue — BC Arquitectura
+# QA previo al despliegue — Build & Create Studio
 
 GitHub Pages publica automáticamente **todo lo que llega a `main`**. Por eso:
 - Nunca hacer push directo a `main`. Trabajar en rama y abrir PR para que el cliente apruebe.

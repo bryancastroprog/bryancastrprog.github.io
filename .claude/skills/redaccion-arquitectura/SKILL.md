@@ -3,7 +3,7 @@ name: redaccion-arquitectura
 description: Redacción y edición profesional de textos de arquitectura, prefactibilidad y desarrollo inmobiliario para bcarqstudio.com, en español de Guatemala. Usar al escribir o reescribir titulares, textos de servicios, fichas de proyecto, páginas para inversionistas, CTAs, meta descriptions o artículos, y al revisar que un texto no contenga datos sin verificar.
 ---
 
-# Redacción profesional — BC Arquitectura
+# Redacción profesional — Build & Create Studio
 
 ## 1. Regla cero: veracidad
 
@@ -38,7 +38,7 @@ description: Redacción y edición profesional de textos de arquitectura, prefac
 
 ## 5. Microcopy SEO
 
-- `<title>`: `Keyword principal en Guatemala | BC Arquitectura` (≤ 65 caracteres).
+- `<title>`: `Keyword principal en Guatemala | Build & Create Studio` (≤ 65 caracteres).
 - Meta description: beneficio + prueba + CTA, 140–160 caracteres.
 - `alt`: descriptivo y específico ("Recepción curva en travertino, clínica en Zona 16, Ciudad de Guatemala"), sin relleno de keywords.
 

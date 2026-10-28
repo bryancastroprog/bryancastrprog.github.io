@@ -3,7 +3,7 @@ name: seo-local-contenido
 description: Estrategia de SEO local para Guatemala y arquitectura de contenido de bcarqstudio.com. Usar cuando se planifiquen páginas nuevas, se elijan palabras clave, se defina la estructura de URLs o el enlazado interno, se trabaje Google Business Profile, NAP, datos de ubicación por zona, o se decida qué contenido crear para captar clientes de arquitectura, prefactibilidad, desarrollo inmobiliario o inversionistas.
 ---
 
-# SEO local y arquitectura de contenido — BC Arquitectura
+# SEO local y arquitectura de contenido — Build & Create Studio
 
 Objetivo de negocio: que el sitio genere **consultas calificadas** de tres audiencias:
 1. **Empresas** que necesitan diseñar un espacio (oficinas, clínicas, retail, restaurantes).
@@ -61,7 +61,7 @@ Las URLs actuales (`*.html`) se conservan como puentes (ver skill `seo-tecnico` 
 
 ## 5. NAP y marca
 
-Un solo nombre comercial en todo el sitio, JSON-LD y perfiles. Hoy conviven "BC Arquitectura", "BC Arq Studio", "BC Studio" y "Build & Create Studio": **pedir al cliente que defina el nombre oficial antes de implementar**.
+Un solo nombre comercial en todo el sitio, JSON-LD y perfiles. Nombre oficial: **Build & Create Studio** (definido por el cliente). "BC Studio" solo como marca gráfica del logo; no usar "BC Arquitectura" ni "BC Arq Studio".
 
 ## 6. Plan de contenido
 

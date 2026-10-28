@@ -3,7 +3,7 @@ name: ux-accesibilidad
 description: Auditoría de experiencia de usuario, accesibilidad (WCAG 2.1 AA), diseño responsive y conversión de bcarqstudio.com en navegador real. Usar cuando se revise cómo se ve o funciona el sitio en móvil o escritorio, el menú, formularios, contraste, tamaños de texto, CTAs, recorridos de usuario, o después de cualquier cambio de HTML/CSS.
 ---
 
-# Auditoría UX, accesibilidad y responsive — BC Arquitectura
+# Auditoría UX, accesibilidad y responsive — Build & Create Studio
 
 **Restricción**: el diseño visual (paleta, tipografías, composición, estilo editorial oscuro) no se modifica sin autorización explícita del cliente. Las correcciones de accesibilidad se proponen primero con el ajuste mínimo (p. ej. subir la opacidad de un texto de 0.45 a 0.65) y se presentan con captura antes/después.
 

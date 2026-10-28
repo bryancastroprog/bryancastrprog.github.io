@@ -1,9 +1,9 @@
 ---
 name: seo-tecnico
-description: Auditoría y corrección de SEO técnico del sitio estático de BC Arquitectura (bcarqstudio.com, GitHub Pages). Usar cuando se pida revisar indexación, títulos, meta descriptions, canonical, Open Graph, datos estructurados JSON-LD, sitemap.xml, robots.txt, velocidad de carga, peso de imágenes, Core Web Vitals o enlaces rotos, o antes de publicar una página nueva.
+description: Auditoría y corrección de SEO técnico del sitio estático de Build & Create Studio (bcarqstudio.com, GitHub Pages). Usar cuando se pida revisar indexación, títulos, meta descriptions, canonical, Open Graph, datos estructurados JSON-LD, sitemap.xml, robots.txt, velocidad de carga, peso de imágenes, Core Web Vitals o enlaces rotos, o antes de publicar una página nueva.
 ---
 
-# Auditoría SEO técnica — BC Arquitectura
+# Auditoría SEO técnica — Build & Create Studio
 
 Sitio HTML estático sin build, servido por GitHub Pages con dominio `bcarqstudio.com` (archivo `CNAME`).
 No hay servidor: no existen redirecciones 301 ni cabeceras HTTP configurables. Todo se resuelve en HTML.
@@ -49,7 +49,7 @@ Home (`ProfessionalService` + `Organization`):
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "@id": "https://bcarqstudio.com/#organizacion",
-  "name": "BC Arquitectura",
+  "name": "Build & Create Studio",
   "url": "https://bcarqstudio.com/",
   "logo": "https://bcarqstudio.com/img/bc-logo-studio.svg",
   "image": "https://bcarqstudio.com/img/og-home.jpg",

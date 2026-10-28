@@ -1,6 +1,6 @@
-# CLAUDE.md — bcarqstudio.com (BC Arquitectura)
+# CLAUDE.md — bcarqstudio.com (Build & Create Studio)
 
-Sitio web de BC Arquitectura, estudio de arquitectura, prefactibilidad y desarrollo inmobiliario en Ciudad de Guatemala.
+Sitio web de Build & Create Studio, estudio de arquitectura, prefactibilidad y desarrollo inmobiliario en Ciudad de Guatemala.
 Objetivo del sitio: **captar consultas calificadas** de empresas (diseño de espacios), propietarios de terreno/desarrolladores (prefactibilidad, diseño, co-desarrollo) e inversionistas (proyectos propios como ONA).
 
 ## Stack y despliegue
