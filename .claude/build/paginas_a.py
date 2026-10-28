@@ -196,7 +196,7 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
       <a href="anker-logistics.html" class="work-card half">
         <div class="work-img">{img('anker-logistics-area-trabajo', 'Área de trabajo de Anker Logistics con muro azul curvo, Torres Pradera, Zona 10', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Anker Logistics</span><span class="status built">Construido</span></div>
-        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario</p>
+        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario · 2025</p>
       </a>
       <a href="petshop-gt.html" class="work-card half">
         <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
@@ -1002,11 +1002,11 @@ open('casa-milpas-altas.html', 'w', encoding='utf-8').write(MPAGE)
 # ================================================================== ONCE ONCE (remodelación construida)
 O_URL = SITE + 'once-once.html'
 O_TITLE = 'Once Once, remodelación de restaurante | Build &amp; Create Studio'
-O_DESC = 'Once Once: remodelación interior de la barra de un restaurante en Guatemala. Diseño, ejecución y mobiliario de Build & Create Studio, construida en 2024.'
+O_DESC = 'Once Once: remodelación de la barra de un restaurante en Antigua Guatemala. Diseño, ejecución y mobiliario de Build & Create Studio, construida en 2024.'
 o_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Once Once · Remodelación de barra", "description": O_DESC,
      "url": O_URL, "image": SITE + "img/once-once-barra-logo-og.jpg", "creator": ORG, "inLanguage": "es",
-     "creativeWorkStatus": "Construido", "dateCreated": "2024"},
+     "creativeWorkStatus": "Construido", "dateCreated": "2024", "contentLocation": {"@type": "Place", "name": "Antigua Guatemala, Sacatepéquez"}},
     crumbs("Once Once", O_URL)]
 
 OPAGE = head(O_TITLE, O_DESC, O_URL, 'img/once-once-barra-logo-og.jpg', o_ld) + nav('Proyectos', 'index.html') + f"""
@@ -1019,7 +1019,7 @@ OPAGE = head(O_TITLE, O_DESC, O_URL, 'img/once-once-barra-logo-og.jpg', o_ld) + 
   <div class="hero-body">
     <div class="wrap hero-grid">
       <div>
-        <p class="hero-kicker">Remodelación interior · Restaurante</p>
+        <p class="hero-kicker">Remodelación interior · Restaurante · Antigua Guatemala</p>
         <h1 class="hero-slogan">Once <span>Once.</span></h1>
         <p class="hero-sub">Remodelación de la barra de un restaurante: una pieza de concreto con luz indirecta que se vuelve el centro del lugar, bajo un techo de madera y caña con lámparas tejidas.</p>
         <div class="hero-actions">
@@ -1082,7 +1082,7 @@ OPAGE = head(O_TITLE, O_DESC, O_URL, 'img/once-once-barra-logo-og.jpg', o_ld) + 
   <div class="wrap">
     <span class="mono sec-label">Ficha técnica</span>
     <dl class="spec" style="border-color:var(--line-light)">
-      {ficha([('Proyecto', 'Once Once'), ('Tipología', 'Restaurante · Barra'), ('Tipo de intervención', 'Remodelación interior'),
+      {ficha([('Proyecto', 'Once Once'), ('Tipología', 'Restaurante · Barra'), ('Ubicación', 'Antigua Guatemala, Sacatepéquez'), ('Tipo de intervención', 'Remodelación interior'),
               (f'Alcance de {BRAND}', 'Diseño, ejecución y mobiliario'), ('Año', '2024'), ('Estado', 'Construido')])}
     </dl>
     <div class="cta-row">
@@ -1103,7 +1103,7 @@ A_DESC = 'Anker Logistics: oficina de 76 m² en Torres Pradera, Zona 10, Ciudad 
 a_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Anker Logistics · Oficina", "description": A_DESC,
      "url": A_URL, "image": SITE + "img/anker-logistics-area-trabajo-og.jpg", "creator": ORG, "inLanguage": "es",
-     "creativeWorkStatus": "Construido", "contentLocation": {"@type": "Place", "name": "Torres Pradera, Zona 10, Ciudad de Guatemala"}},
+     "creativeWorkStatus": "Construido", "dateCreated": "2025", "contentLocation": {"@type": "Place", "name": "Torres Pradera, Zona 10, Ciudad de Guatemala"}},
     crumbs("Anker Logistics", A_URL)]
 
 def afig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
@@ -1129,7 +1129,7 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/anker-logistics-area-trabajo-og.jpg', 
       </div>
       <div>
         <dl class="spec">
-          <div><dt>Estado</dt><dd>Construido</dd></div>
+          <div><dt>Estado</dt><dd>Construido · 2025</dd></div>
           <div><dt>Área</dt><dd>76 m²</dd></div>
           <div><dt>Alcance</dt><dd>Diseño interior, ejecución y mobiliario</dd></div>
         </dl>
@@ -1210,7 +1210,7 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/anker-logistics-area-trabajo-og.jpg', 
     <span class="mono sec-label">Ficha técnica</span>
     <dl class="spec" style="border-color:var(--line-light)">
       {ficha([('Cliente', 'Anker Logistics'), ('Giro', 'Logística y carga'), ('Tipología', 'Oficina corporativa'), ('Ubicación', 'Torres Pradera, Zona 10, Ciudad de Guatemala'),
-              ('Área', '76 m²'), (f'Alcance de {BRAND}', 'Diseño interior, ejecución y mobiliario'), ('Estado', 'Construido')])}
+              ('Área', '76 m²'), (f'Alcance de {BRAND}', 'Diseño interior, ejecución y mobiliario'), ('Año', '2025'), ('Estado', 'Construido')])}
     </dl>
     <div class="cta-row">
       <a href="diseno-estrategico.html?tipo=dise%C3%B1o%20interior#contacto-d" class="btn btn-dark">Diseñemos tu oficina →</a>

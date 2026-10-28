@@ -760,7 +760,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       <a href="anker-logistics.html" class="work-card half">
         <div class="work-img">{img('anker-logistics-area-trabajo', 'Área de trabajo de Anker Logistics con muro azul curvo, Torres Pradera, Zona 10', 1920, 1442, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Anker Logistics</span><span class="status built">Construido</span></div>
-        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario</p>
+        <p class="work-info">Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario · 2025</p>
       </a>
       <a href="petshop-gt.html" class="work-card half">
         <div class="work-img">{img('petshop-gt-recepcion', 'Render de la recepción de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
@@ -838,7 +838,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="spec-card">
           <h3>Remodelaciones</h3>
           <p>Transformamos espacios existentes con una intervención precisa y eficiente.</p>
-          <a href="once-once.html" class="spec-work"><img src="img/once-once-barra-logo-960.webp" width="960" height="1705" alt="Barra remodelada del restaurante Once Once" loading="lazy" decoding="async"><span><strong>Once Once</strong><span class="mono">Barra de restaurante · Construido 2024</span></span></a>
+          <a href="once-once.html" class="spec-work"><img src="img/once-once-barra-logo-960.webp" width="960" height="1705" alt="Barra remodelada del restaurante Once Once" loading="lazy" decoding="async"><span><strong>Once Once</strong><span class="mono">Barra de restaurante · Antigua Guatemala · 2024</span></span></a>
           <a href="?tipo=remodelación#contacto" class="link">Cotizar remodelación →</a>
         </div>
         <a href="?tipo=mobiliario-estratégico#contacto" class="spec-card">
