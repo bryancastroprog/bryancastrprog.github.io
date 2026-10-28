@@ -82,6 +82,8 @@
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(0.65, 0, 0.35, 1);
   --wrap: 1320px;
+  --radius: 10px;
+  --radius-sm: 6px;
   color-scheme: dark;
 }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -177,7 +179,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .work-card { grid-column: span 4; display: flex; flex-direction: column; gap: 16px; }
 .work-card.big { grid-column: span 8; }
 .work-card.half { grid-column: span 6; }
-.work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); }
+.work-img { overflow: hidden; aspect-ratio: 4 / 3; background: var(--paper-2); border-radius: var(--radius); }
 .work-card.big .work-img { aspect-ratio: 16 / 10.6; }
 .work-card.half .work-img { aspect-ratio: 16 / 10; }
 .work-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
@@ -186,7 +188,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .work-name { font-size: 24px; font-weight: 700; font-stretch: 112%; letter-spacing: -0.01em; }
 .work-card.big .work-name { font-size: 32px; }
 .work-info { color: var(--on-light-muted); }
-.status { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 9px; border: 1px solid var(--line-light); color: var(--on-light); white-space: nowrap; }
+.status { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 9px; border-radius: 3px; border: 1px solid var(--line-light); color: var(--on-light); white-space: nowrap; }
 .status.built { background: var(--on-light); color: var(--paper); border-color: var(--on-light); }
 
 /* ---------- SERVICIOS ---------- */
@@ -227,7 +229,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .figures dd small { font-size: 0.5em; color: var(--gold); }
 .ona { margin-top: 96px; display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; }
 .ona-gallery { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 8px; grid-auto-rows: 150px; }
-.ona-gallery figure { overflow: hidden; background: var(--ink); }
+.ona-gallery figure { overflow: hidden; background: var(--ink); border-radius: var(--radius-sm); }
+.ona-gallery figure.g1, .ona-gallery figure.g5, .ona-gallery figure.g6 { border-radius: var(--radius); }
 .ona-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .ona-gallery figure:hover img { transform: scale(1.04); }
 .g1 { grid-column: span 6; grid-row: span 2; } .g2, .g3, .g4 { grid-column: span 2; } .g5, .g6 { grid-column: span 3; grid-row: span 2; }
@@ -248,7 +251,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 
 /* ---------- ESTUDIO ---------- */
 .studio { display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 72px; align-items: start; }
-.studio-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+.studio-photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; border-radius: var(--radius); }
 .studio-photo figcaption { display: flex; justify-content: space-between; gap: 12px; padding-top: 14px; }
 .studio-photo figcaption strong { font-size: 18px; font-weight: 700; font-stretch: 112%; }
 .studio-photo figcaption span { color: var(--bronze); }
