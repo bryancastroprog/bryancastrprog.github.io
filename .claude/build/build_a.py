@@ -440,7 +440,6 @@ def footer(p):
           <li><a href="navante.html">Navante</a></li>
           <li><a href="anker-logistics.html">Anker Logistics</a></li>
           <li><a href="petshop-gt.html">Petshop GT</a></li>
-          <li><a href="casa-milpas-altas.html">Casa Milpas Altas</a></li>
           <li><a href="once-once.html">Once Once</a></li>
           <li><a href="remodelacion-el-prado.html">El Prado</a></li>
           <li><a href="edificio-w.html">Edificio W</a></li>
@@ -741,10 +740,10 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="mono sec-label">Proyectos · 08</span>
+        <span class="mono sec-label">Proyectos · 07</span>
         <h2 class="sec-title">Trabajo <span>reciente.</span></h2>
       </div>
-      <p class="sec-lead">Mobiliario comercial, oficinas, comercio, uso mixto, vivienda, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
+      <p class="sec-lead">Mobiliario comercial, oficinas, comercio, uso mixto, residencial vertical y gastronomía, en Guatemala y Honduras. Cada ficha indica el estado real del proyecto.</p>
     </div>
     <div class="work">
       <a href="edificio-w.html" class="work-card full">
@@ -781,11 +780,6 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="work-img">{img('restaurante-interior', 'Salón del restaurante La Autoría, Huehuetenango', 1344, 768, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">La Autoría</span><span class="status">Diseño completado</span></div>
         <p class="work-info">Restaurante · 240 m² · Huehuetenango</p>
-      </a>
-      <a href="casa-milpas-altas.html" class="work-card full">
-        <div class="work-img">{img('casa-milpas-altas-fachada', 'Render de Casa Milpas Altas en la ladera, San Miguel Milpas Altas, Sacatepéquez', 1920, 1080, sizes='100vw')}</div>
-        <div class="work-meta"><span class="work-name">Casa Milpas Altas</span><span class="status">Diseño completado</span></div>
-        <p class="work-info">Vivienda · 120 m² · San Miguel Milpas Altas, Sacatepéquez</p>
       </a>
     </div>
   </div>
@@ -1533,4 +1527,4 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
 WPAGE = WPAGE.replace('</style>', W_CSS + '</style>', 1)
 open('edificio-w.html', 'w', encoding='utf-8').write(WPAGE)
 exec(open(os.path.join('.claude', 'build', 'paginas_a.py'), encoding='utf-8').read())
-print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE), len(MPAGE), len(OPAGE), len(APAGE), len(EPAGE))
+print('ok', len(HOME), len(PREF), len(WPAGE), len(DPAGE), len(LPAGE), len(KPAGE), len(NPAGE), len(PPAGE), len(OPAGE), len(APAGE), len(EPAGE))
