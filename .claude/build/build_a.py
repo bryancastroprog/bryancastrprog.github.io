@@ -785,10 +785,6 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
   </div>
 </section>
 
-<!-- ============================================================
-     TESTIMONIO
-     ============================================================ -->
-{testimonio()}
 
 <!-- ============================================================
      03 · SERVICIOS — TRES PUNTOS DE PARTIDA
@@ -982,6 +978,11 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
     </div>
   </div>
 </section>
+
+<!-- ============================================================
+     TESTIMONIO
+     ============================================================ -->
+{testimonio()}
 
 <!-- ============================================================
      07 · CONTACTO — AGENDA, FORMULARIO Y WHATSAPP
