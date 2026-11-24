@@ -57,3 +57,6 @@ Siguiente trabajo técnico (rama `fase-5-seo`):
 3. Página «Remodelaciones e interiores» (Once Once, El Prado).
 4. Revisar Search Console a las 2 semanas: páginas indexadas y primeras búsquedas.
 5. Opcional: validación legal del aviso de inversión de ONA.
+
+## Navante: fotos nuevas (24-nov-2026)
+Fotos con cámara Sony (horizontales, 6192×3480) en `img/originales/navante/`: `navante-lampara-curva` (portada, tarjetas y Open Graph), `navante-equipo-cocineta`, `navante-gabinetes-turquesa` y `navante-pared-amarilla` (galería). Reemplazan las fotos verticales de celular, que se eliminaron de `img/` (los originales de celular siguen en `img/originales/navante/`). Las fotos muestran al equipo de Navante trabajando.
