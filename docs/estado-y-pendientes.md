@@ -60,3 +60,6 @@ Siguiente trabajo técnico (rama `fase-5-seo`):
 
 ## Navante: fotos nuevas (24-nov-2026)
 Fotos con cámara Sony (horizontales, 6192×3480) en `img/originales/navante/`: `navante-lampara-curva` (portada, tarjetas y Open Graph), `navante-equipo-cocineta`, `navante-gabinetes-turquesa` y `navante-pared-amarilla` (galería). Reemplazan las fotos verticales de celular, que se eliminaron de `img/` (los originales de celular siguen en `img/originales/navante/`). Las fotos muestran al equipo de Navante trabajando.
+
+## Kishi Books Chiquimula: fotos de cámara (24-nov-2026)
+7 fotos horizontales (2000×1124) de `bryancastroprog/videos-reels`, rama `portico-marca-y-motor`, carpeta `entregas/kishi_chiquimula_jpeg` (`kbchiq-*` en `img/originales/kishi-books-chiquimula/`). Reemplazan las 6 fotos de celular en la sección Plaza Girasoles de `kishi-books.html`; la fachada también es la imagen Open Graph de esa sede. Las WebP de celular se eliminaron de `img/` (los originales siguen en `img/originales/`). Pendiente: medidas del kiosco de Plaza Girasoles.

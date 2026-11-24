@@ -461,7 +461,7 @@ K_DESC = 'Kishi Books: tres kioscos de librería en madera curvada en Peri Roose
 KISHI_SEDES = [
     ("Kishi Books · Peri Roosevelt", "Peri Roosevelt, Ciudad de Guatemala", "2024", "img/kishi-books-escalera-og.jpg"),
     ("Kishi Books · Naranjo Mall", "Naranjo Mall", "2025", SITE + "img/kishi-books-naranjo-vista-general.webp"),
-    ("Kishi Books · Plaza Girasoles", "Plaza Girasoles, Chiquimula", "2026", "img/kishi-books-chiquimula-vista-frontal-og.jpg"),
+    ("Kishi Books · Plaza Girasoles", "Plaza Girasoles, Chiquimula", "2026", "img/kbchiq-fachada-og.jpg"),
 ]
 k_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kishi Books · Kioscos de librería", "description": K_DESC,
@@ -469,6 +469,9 @@ k_ld = [
      "hasPart": [{"@type": "CreativeWork", "name": n, "dateCreated": y, "creativeWorkStatus": "Construido", "creator": ORG,
                   "image": im if im.startswith('http') else SITE + im, "contentLocation": {"@type": "Place", "name": p}} for n, p, y, im in KISHI_SEDES]},
     crumbs("Kishi Books", K_URL)]
+
+def nfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
+    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1079, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
 
 def kfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
     return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1442, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
@@ -574,12 +577,13 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
       </div>
       {sede_meta(('Ubicación', 'Plaza Girasoles, Chiquimula'), ('Año', '2026'))}
       <div class="gal">
-        {vfig('kishi-books-chiquimula-pasillo', 'Pasillo curvo entre los muebles de madera de Kishi Books, Plaza Girasoles, Chiquimula', 'Pasillo curvo', 'Recorrido interior')}
-        {vfig('kishi-books-chiquimula-recorrido', 'Recorrido del kiosco Kishi Books con luz lineal en la base, Chiquimula', 'Recorrido', 'Luz lineal en la base')}
-        {vfig('kishi-books-chiquimula-esquina', 'Esquina del kiosco Kishi Books con el logotipo de la marca, Chiquimula', 'Remate con marca', 'Identidad en el mueble')}
-        {vfig('kishi-books-chiquimula-vista-frontal', 'Vista frontal del kiosco Kishi Books en Plaza Girasoles, Chiquimula', 'Vista frontal', 'Exhibición escalonada')}
-        {vfig('kishi-books-chiquimula-isla', 'Isla de exhibición de Kishi Books con la mascota de la marca, Chiquimula', 'Isla de acceso', 'Señal visible a distancia')}
-        {vfig('kishi-books-chiquimula-remate', 'Remate curvo del kiosco Kishi Books con exhibición en niveles, Chiquimula', 'Remate curvo', 'Exhibición en niveles')}
+        {nfig('kbchiq-fachada', 'Fachada del kiosco Kishi Books en Plaza Girasoles, Chiquimula, con el logotipo de la marca iluminado', 'Fachada', 'Logotipo iluminado y exhibición en niveles', 'w12', '100vw')}
+        {nfig('kbchiq-libros-que-inspiran', 'Frente del kiosco Kishi Books con el rótulo «Libros que inspiran» y estantería de madera curvada, Chiquimula', 'Libros que inspiran', 'Rótulo y luz lineal en la base', 'w7')}
+        {nfig('kbchiq-interior', 'Interior del kiosco Kishi Books con estanterías de madera curvada y luz lineal, Chiquimula', 'Interior', 'Recorrido entre estanterías', 'w5')}
+        {nfig('kbchiq-recorrido', 'Recorrido interior del kiosco Kishi Books entre muebles de madera curvada con plantas, Chiquimula', 'Recorrido', 'Madera, luz y plantas', 'w5')}
+        {nfig('kbchiq-esquina-curva', 'Esquina curva del kiosco Kishi Books con exhibición de libros y luz cálida en la base, Chiquimula', 'Esquina curva', 'Madera curvada con luz integrada', 'w7')}
+        {nfig('kbchiq-estanteria-planta', 'Estantería curva de Kishi Books con libros, maceta y rótulo luminoso, Chiquimula', 'Estantería', 'Exhibición frontal inclinada', 'w6')}
+        {nfig('kbchiq-estanteria', 'Estantería de madera curvada con libros y luz lineal, Kishi Books Chiquimula', 'Detalle', 'Estantes con luz integrada', 'w6')}
       </div>
     </article>
     <p class="gal-note">Fotografías de los kioscos construidos e instalados.</p>
@@ -644,9 +648,6 @@ n_ld = [
      "url": N_URL, "image": SITE + "img/navante-lampara-curva-og.jpg", "creator": ORG, "inLanguage": "es",
      "creativeWorkStatus": "Construido", "dateCreated": "2026"},
     crumbs("Navante", N_URL)]
-
-def nfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
-    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1079, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
 
 NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-curva-og.jpg', n_ld) + nav('Proyectos', 'index.html') + f"""
 <main>
