@@ -675,15 +675,15 @@ TESTI_CSS = """
 .testi .by .mono { color: var(--gold); }
 @media (max-width: 900px) { .testi { grid-template-columns: 1fr; gap: 36px; } }
 """
-# Testimonio de Navante: la frase es una propuesta y el cargo falta. NO publicar hasta que
-# Darisabel Arreaga Vega apruebe por escrito el texto, el cargo y el uso de su foto.
+# Testimonio de Navante: la frase es una propuesta. NO publicar hasta que Darisabel Arreaga Vega
+# (CEO de Navante) apruebe por escrito la frase, su nombre y el uso de su foto.
 TESTIS = {
     'kishi': dict(sec='testimonio', cls='', eyebrow='Testimonio · Cliente desde 2024', quote=TESTI_QUOTE, name=TESTI_NAME, role=TESTI_ROLE,
         photo=("kishi-books-inauguracion", 'Ady Hernández, fundadora de Kishi Books, con Bryan Castro en la inauguración del kiosco de Peri Roosevelt', 1920, 1442),
         avatar=('img/kishi-books-clienta-avatar.webp', 'Ady Hernández, fundadora de Kishi Books'), href='kishi-books.html', more='Ver el proyecto Kishi Books'),
     'navante': dict(sec='testimonio-navante', cls=' testi-right', eyebrow='Testimonio · Oficina Navante', name='Darisabel Arreaga Vega',
         quote='En mi experiencia trabajando con <em>Build &amp; Create Studio</em>, los proyectos quedan igual que en los modelos 3D.',
-        role='<span class="pending">[DATO PENDIENTE: cargo]</span> · Navante',
+        role='CEO · Navante',
         photo=("navante-testimonio-darisabel", 'Darisabel Arreaga Vega con Bryan Castro en la oficina de Navante', 1920, 1078),
         avatar=('img/navante-darisabel-avatar.webp', 'Darisabel Arreaga Vega, Navante'), href='navante.html', more='Ver el proyecto Navante'),
 }
