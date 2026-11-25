@@ -197,7 +197,7 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
         <p class="work-info">Mobiliario comercial · 3 kioscos de librería · Diseño y ejecución · 2024–2026</p>
       </a>
       <a href="navante.html" class="work-card half">
-        <div class="work-img">{img('navante-lampara', 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 1920, 1407, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-img">{img('navante-lampara-curva', 'Lámpara colgante lineal curva en el techo de la oficina de Navante', 1920, 1079, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
         <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
       </a>
@@ -461,7 +461,7 @@ K_DESC = 'Kishi Books: tres kioscos de librería en madera curvada en Peri Roose
 KISHI_SEDES = [
     ("Kishi Books · Peri Roosevelt", "Peri Roosevelt, Ciudad de Guatemala", "2024", "img/kishi-books-escalera-og.jpg"),
     ("Kishi Books · Naranjo Mall", "Naranjo Mall", "2025", SITE + "img/kishi-books-naranjo-vista-general.webp"),
-    ("Kishi Books · Plaza Girasoles", "Plaza Girasoles, Chiquimula", "2026", "img/kishi-books-chiquimula-vista-frontal-og.jpg"),
+    ("Kishi Books · Plaza Girasoles", "Plaza Girasoles, Chiquimula", "2026", "img/kbchiq-fachada-og.jpg"),
 ]
 k_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Kishi Books · Kioscos de librería", "description": K_DESC,
@@ -469,6 +469,9 @@ k_ld = [
      "hasPart": [{"@type": "CreativeWork", "name": n, "dateCreated": y, "creativeWorkStatus": "Construido", "creator": ORG,
                   "image": im if im.startswith('http') else SITE + im, "contentLocation": {"@type": "Place", "name": p}} for n, p, y, im in KISHI_SEDES]},
     crumbs("Kishi Books", K_URL)]
+
+def nfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
+    return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1079, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
 
 def kfig(stem, alt, title, sub, cls, sizes='(max-width: 640px) 100vw, 50vw'):
     return f'<figure class="{cls}"><div class="frame">{img(stem, alt, 1920, 1442, sizes=sizes)}</div><figcaption><strong>{title}</strong><span class="mono">{sub}</span></figcaption></figure>'
@@ -574,12 +577,13 @@ KPAGE = head(K_TITLE, K_DESC, K_URL, 'img/kishi-books-escalera-og.jpg', k_ld) + 
       </div>
       {sede_meta(('Ubicación', 'Plaza Girasoles, Chiquimula'), ('Año', '2026'))}
       <div class="gal">
-        {vfig('kishi-books-chiquimula-pasillo', 'Pasillo curvo entre los muebles de madera de Kishi Books, Plaza Girasoles, Chiquimula', 'Pasillo curvo', 'Recorrido interior')}
-        {vfig('kishi-books-chiquimula-recorrido', 'Recorrido del kiosco Kishi Books con luz lineal en la base, Chiquimula', 'Recorrido', 'Luz lineal en la base')}
-        {vfig('kishi-books-chiquimula-esquina', 'Esquina del kiosco Kishi Books con el logotipo de la marca, Chiquimula', 'Remate con marca', 'Identidad en el mueble')}
-        {vfig('kishi-books-chiquimula-vista-frontal', 'Vista frontal del kiosco Kishi Books en Plaza Girasoles, Chiquimula', 'Vista frontal', 'Exhibición escalonada')}
-        {vfig('kishi-books-chiquimula-isla', 'Isla de exhibición de Kishi Books con la mascota de la marca, Chiquimula', 'Isla de acceso', 'Señal visible a distancia')}
-        {vfig('kishi-books-chiquimula-remate', 'Remate curvo del kiosco Kishi Books con exhibición en niveles, Chiquimula', 'Remate curvo', 'Exhibición en niveles')}
+        {nfig('kbchiq-fachada', 'Fachada del kiosco Kishi Books en Plaza Girasoles, Chiquimula, con el logotipo de la marca iluminado', 'Fachada', 'Logotipo iluminado y exhibición en niveles', 'w12', '100vw')}
+        {nfig('kbchiq-libros-que-inspiran', 'Frente del kiosco Kishi Books con el rótulo «Libros que inspiran» y estantería de madera curvada, Chiquimula', 'Libros que inspiran', 'Rótulo y luz lineal en la base', 'w7')}
+        {nfig('kbchiq-interior', 'Interior del kiosco Kishi Books con estanterías de madera curvada y luz lineal, Chiquimula', 'Interior', 'Recorrido entre estanterías', 'w5')}
+        {nfig('kbchiq-recorrido', 'Recorrido interior del kiosco Kishi Books entre muebles de madera curvada con plantas, Chiquimula', 'Recorrido', 'Madera, luz y plantas', 'w5')}
+        {nfig('kbchiq-esquina-curva', 'Esquina curva del kiosco Kishi Books con exhibición de libros y luz cálida en la base, Chiquimula', 'Esquina curva', 'Madera curvada con luz integrada', 'w7')}
+        {nfig('kbchiq-estanteria-planta', 'Estantería curva de Kishi Books con libros, maceta y rótulo luminoso, Chiquimula', 'Estantería', 'Exhibición frontal inclinada', 'w6')}
+        {nfig('kbchiq-estanteria', 'Estantería de madera curvada con libros y luz lineal, Kishi Books Chiquimula', 'Detalle', 'Estantes con luz integrada', 'w6')}
       </div>
     </article>
     <p class="gal-note">Fotografías de los kioscos construidos e instalados.</p>
@@ -641,17 +645,17 @@ N_TITLE = 'Navante, diseño de oficina de 96 m² | Build &amp; Create Studio'
 N_DESC = 'Navante: oficina de 96 m² para una empresa de logística marítima y aérea. Diseño interior, ejecución y mobiliario de Build & Create Studio, construida en 2026.'
 n_ld = [
     {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Navante · Oficina", "description": N_DESC,
-     "url": N_URL, "image": SITE + "img/navante-lampara-og.jpg", "creator": ORG, "inLanguage": "es",
+     "url": N_URL, "image": SITE + "img/navante-lampara-curva-og.jpg", "creator": ORG, "inLanguage": "es",
      "creativeWorkStatus": "Construido", "dateCreated": "2026"},
     crumbs("Navante", N_URL)]
 
-NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-og.jpg', n_ld) + nav('Proyectos', 'index.html') + f"""
+NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-curva-og.jpg', n_ld) + nav('Proyectos', 'index.html') + f"""
 <main>
 <!-- ============================================================
      HERO
      ============================================================ -->
 <section class="hero" id="inicio">
-  <div class="hero-media">{img('navante-lampara', 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 1920, 1407, lazy=False, cls='on')}</div>
+  <div class="hero-media">{img('navante-lampara-curva', 'Lámpara colgante lineal curva en el techo de la oficina de Navante', 1920, 1079, lazy=False, cls='on')}</div>
   <div class="hero-body">
     <div class="wrap hero-grid">
       <div>
@@ -688,7 +692,7 @@ NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-og.jpg', n_ld) + nav('
       <h2 class="thesis-quote">Una oficina que <b>se mueve como su negocio.</b></h2>
       <div class="thesis-text">
         <p>Navante es una empresa de logística marítima y aérea. Su oficina reúne en 96 m² un área de trabajo abierta, salas privadas para llamadas y reuniones, y una cocineta para el equipo.</p>
-        <p>Las luminarias lineales curvas recorren el techo y ordenan las zonas de trabajo. El color marca cada función: turquesa en el almacenamiento, naranja en la cocineta, amarillo en el acceso. Las salas privadas se cierran con vidrio y perfil negro para no perder luz ni amplitud.</p>
+        <p>Las luminarias lineales curvas recorren el techo y ordenan las zonas de trabajo. El color marca cada zona: gabinetes turquesa y amarillos sobre las estaciones, un muro azul detrás del equipo y salpicadero naranja en la cocineta. Las salas privadas se cierran con vidrio y perfil negro para no perder luz ni amplitud.</p>
         <p><strong>Diseño interior, ejecución y mobiliario de {BRAND}: un solo responsable de principio a fin.</strong></p>
       </div>
     </div>
@@ -708,10 +712,9 @@ NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-og.jpg', n_ld) + nav('
       <p class="sec-lead">96 m² con área abierta, salas privadas y cocineta, resueltos con un mismo sistema de luz y mobiliario.</p>
     </div>
     <div class="gal">
-      {vfig('navante-acceso', 'Acceso a la oficina de Navante con puerta de vidrio y muro amarillo', 'Acceso', 'Vidrio y perfil negro', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
-      {vfig('navante-estaciones', 'Estaciones de trabajo de Navante bajo luminarias lineales curvas', 'Estaciones de trabajo', 'Luz lineal curva', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
-      {vfig('navante-cocineta', 'Cocineta de Navante con salpicadero naranja y gabinetes blancos', 'Cocineta', 'Color por función', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
-      {vfig('navante-area-abierta', 'Área abierta de la oficina de Navante con salas privadas en vidrio', 'Área abierta', 'Salas privadas en vidrio', 'w3 tall', '(max-width: 1100px) 50vw, 25vw')}
+      {nfig('navante-equipo-cocineta', 'Equipo de Navante trabajando en la oficina, con luminaria curva, gabinetes turquesa y cocineta con salpicadero naranja', 'Oficina en uso', 'Estaciones, sala de vidrio y cocineta', 'w12', '100vw')}
+      {nfig('navante-gabinetes-turquesa', 'Gabinetes turquesa sobre un muro azul y estaciones de trabajo de Navante junto al ventanal', 'Gabinetes turquesa', 'Muro azul y luz natural', 'w7')}
+      {nfig('navante-pared-amarilla', 'Estación de trabajo de Navante frente a gabinetes amarillos con luz lineal integrada', 'Gabinetes amarillos', 'Luz lineal bajo el mueble', 'w5')}
     </div>
     <p class="gal-note">Fotografías de la oficina construida.</p>
   </div>
@@ -730,7 +733,7 @@ NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-og.jpg', n_ld) + nav('
     </div>
     <ol class="concepts">
       <li><span class="n">01</span><span><b>Luz que ordena.</b> Luminarias lineales curvas suspendidas sobre cada grupo de trabajo, en lugar de una retícula uniforme.</span></li>
-      <li><span class="n">02</span><span><b>Color por función.</b> Turquesa, naranja y amarillo identifican almacenamiento, cocineta y acceso sin necesidad de señalética.</span></li>
+      <li><span class="n">02</span><span><b>Color por zona.</b> Turquesa, amarillo, azul y naranja dan identidad a las estaciones, el almacenamiento y la cocineta sin necesidad de señalética.</span></li>
       <li><span class="n">03</span><span><b>Privacidad sin perder luz.</b> Salas cerradas con vidrio y perfil negro: espacios privados que no cortan la luz ni la amplitud.</span></li>
       <li><span class="n">04</span><span><b>Mobiliario integrado.</b> Estaciones, gabinetes y cocineta definidos junto con el diseño interior, como un solo proyecto.</span></li>
     </ol>

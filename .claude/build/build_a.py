@@ -692,7 +692,7 @@ def testimonio(link=True):
 HERO_PROJECTS = [
     ('edificio-w-aerea', 'webp', 1920, 1080, 'Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 'Edificio W · San Pedro Sula', 'En aprobación', 'edificio-w.html'),
     ('kishi-books-escalera', 'webp', 1920, 1442, 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt, Ciudad de Guatemala', 'Kishi Books · 3 sedes', 'Construido', 'kishi-books.html'),
-    ('navante-lampara', 'webp', 1920, 1407, 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 'Navante · Oficina', 'Construido', 'navante.html'),
+    ('navante-lampara-curva', 'webp', 1920, 1079, 'Lámpara colgante lineal curva en el techo de la oficina de Navante', 'Navante · Oficina', 'Construido', 'navante.html'),
     ('ona-fachada-atardecer', 'jpg', 1365, 768, 'Torre residencial ONA al atardecer, Zona 15, Ciudad de Guatemala', 'ONA · Zona 15', 'En desarrollo', '#ona'),
     ('restaurante-interior', 'webp', 1344, 768, 'Salón del restaurante La Autoría con cocina de fuego, Huehuetenango', 'La Autoría · Salón', 'Diseño completado', 'la-autoria.html'),
 ]
@@ -757,7 +757,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <p class="work-info">Mobiliario comercial · Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula · Diseño y ejecución · 2024–2026</p>
       </a>
       <a href="navante.html" class="work-card half">
-        <div class="work-img">{img('navante-lampara', 'Lámpara colgante lineal curva sobre las estaciones de trabajo de Navante', 1920, 1407, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-img">{img('navante-lampara-curva', 'Lámpara colgante lineal curva en el techo de la oficina de Navante', 1920, 1079, sizes='(max-width: 640px) 100vw, 50vw')}</div>
         <div class="work-meta"><span class="work-name">Navante</span><span class="status built">Construido</span></div>
         <p class="work-info">Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026</p>
       </a>
@@ -828,7 +828,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <div class="spec-card">
           <h3>Diseño interior</h3>
           <p>Paleta de materiales, iluminación, mobiliario y acabados alineados con tu identidad.</p>
-          <a href="navante.html" class="spec-work"><img src="img/navante-lampara-960.webp" width="960" height="703" alt="Oficina de Navante con lámpara colgante curva" loading="lazy" decoding="async"><span><strong>Navante</strong><span class="mono">Oficina · 96 m² · Construido</span></span></a>
+          <a href="navante.html" class="spec-work"><img src="img/navante-lampara-curva-960.webp" width="960" height="540" alt="Lámpara colgante lineal curva en el techo de la oficina de Navante" loading="lazy" decoding="async"><span><strong>Navante</strong><span class="mono">Oficina · 96 m² · Construido</span></span></a>
           <a href="anker-logistics.html" class="spec-work spec-work-2"><img src="img/anker-logistics-recepcion-960.webp" width="960" height="721" alt="Recepción de Anker Logistics con listones de madera y logotipo" loading="lazy" decoding="async"><span><strong>Anker Logistics</strong><span class="mono">Oficina · 76 m² · Construido</span></span></a>
           <a href="remodelacion-el-prado.html" class="spec-work spec-work-2"><img src="img/remodelacion-el-prado-repisas-960.webp" width="960" height="1705" alt="Estudio remodelado El Prado con repisas de madera iluminadas" loading="lazy" decoding="async"><span><strong>El Prado</strong><span class="mono">Estudio en casa · Construido</span></span></a>
           <a href="la-autoria.html" class="spec-work spec-work-2"><img src="img/restaurante-interior-960.webp" width="960" height="549" alt="Salón del restaurante La Autoría" loading="lazy" decoding="async"><span><strong>La Autoría</strong><span class="mono">Restaurante · Diseño completado</span></span></a>
