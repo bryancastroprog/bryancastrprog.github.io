@@ -721,9 +721,14 @@ NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-curva-og.jpg', n_ld) +
 </section>
 
 <!-- ============================================================
+     TESTIMONIO
+     ============================================================ -->
+{testimonio("navante", link=False)}
+
+<!-- ============================================================
      CONCEPTO
      ============================================================ -->
-<section class="section on-dark-2" id="concepto">
+<section class="section on-dark" id="concepto">
   <div class="wrap">
     <div class="sec-head">
       <div>
@@ -758,7 +763,7 @@ NPAGE = head(N_TITLE, N_DESC, N_URL, 'img/navante-lampara-curva-og.jpg', n_ld) +
 </section>
 </main>
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
-NPAGE = NPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
+NPAGE = NPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + TESTI_CSS + '</style>', 1)
 open('navante.html', 'w', encoding='utf-8').write(NPAGE)
 
 # ================================================================== PETSHOP GT (diseño aprobado)

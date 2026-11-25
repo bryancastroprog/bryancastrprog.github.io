@@ -666,6 +666,7 @@ TESTI_CSS = """
 .testi { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 64px; align-items: center; }
 .testi-img { margin: 0; overflow: hidden; border-radius: var(--radius); }
 .testi-img img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.testi-img.testi-right img { object-position: 72% 50%; }
 .testi blockquote { margin: 0; }
 .testi blockquote p { margin: 18px 0 0; font-weight: 300; font-stretch: 75%; font-size: clamp(28px, 3.4vw, 50px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; }
 .testi blockquote p em { font-style: normal; font-weight: 800; font-stretch: 125%; color: var(--gold); }
@@ -674,16 +675,30 @@ TESTI_CSS = """
 .testi .by .mono { color: var(--gold); }
 @media (max-width: 900px) { .testi { grid-template-columns: 1fr; gap: 36px; } }
 """
-def testimonio(link=True):
-    more = '\n        <div class="cta-row"><a href="kishi-books.html" class="link">Ver el proyecto Kishi Books</a></div>' if link else ''
-    return f"""<section class="section on-dark-2" id="testimonio">
+# Testimonio de Navante: la frase es una propuesta y el cargo falta. NO publicar hasta que
+# Darisabel Arreaga Vega apruebe por escrito el texto, el cargo y el uso de su foto.
+TESTIS = {
+    'kishi': dict(sec='testimonio', cls='', eyebrow='Testimonio · Cliente desde 2024', quote=TESTI_QUOTE, name=TESTI_NAME, role=TESTI_ROLE,
+        photo=("kishi-books-inauguracion", 'Ady Hernández, fundadora de Kishi Books, con Bryan Castro en la inauguración del kiosco de Peri Roosevelt', 1920, 1442),
+        avatar=('img/kishi-books-clienta-avatar.webp', 'Ady Hernández, fundadora de Kishi Books'), href='kishi-books.html', more='Ver el proyecto Kishi Books'),
+    'navante': dict(sec='testimonio-navante', cls=' testi-right', eyebrow='Testimonio · Oficina Navante', name='Darisabel Arreaga Vega',
+        quote='En mi experiencia trabajando con <em>Build &amp; Create Studio</em>, los proyectos quedan igual que en los modelos 3D.',
+        role='<span class="pending">[DATO PENDIENTE: cargo]</span> · Navante',
+        photo=("navante-testimonio-darisabel", 'Darisabel Arreaga Vega con Bryan Castro en la oficina de Navante', 1920, 1078),
+        avatar=('img/navante-darisabel-avatar.webp', 'Darisabel Arreaga Vega, Navante'), href='navante.html', more='Ver el proyecto Navante'),
+}
+def testimonio(key='kishi', link=True, section='on-dark-2'):
+    t = TESTIS[key]
+    more = f'\n        <div class="cta-row"><a href="{t["href"]}" class="link">{t["more"]}</a></div>' if link else ''
+    stem, alt, w, h = t['photo']
+    return f"""<section class="section {section}" id="{t['sec']}">
   <div class="wrap testi">
-    <figure class="testi-img">{img('kishi-books-inauguracion', 'Ady Hernández, fundadora de Kishi Books, con Bryan Castro en la inauguración del kiosco de Peri Roosevelt', 1920, 1442, sizes='(max-width: 900px) 100vw, 40vw')}</figure>
+    <figure class="testi-img{t['cls']}">{img(stem, alt, w, h, sizes='(max-width: 900px) 100vw, 40vw')}</figure>
     <div>
-      <span class="mono sec-label">Testimonio · Cliente desde 2024</span>
+      <span class="mono sec-label">{t['eyebrow']}</span>
       <blockquote>
-        <p>«{TESTI_QUOTE}»</p>
-        <footer class="by"><img src="img/kishi-books-clienta-avatar.webp" width="320" height="320" alt="Ady Hernández, fundadora de Kishi Books" loading="lazy" decoding="async"><div><strong>{TESTI_NAME}</strong><br><span class="mono">{TESTI_ROLE}</span></div></footer>
+        <p>«{t['quote']}»</p>
+        <footer class="by"><img src="{t['avatar'][0]}" width="320" height="320" alt="{t['avatar'][1]}" loading="lazy" decoding="async"><div><strong>{t['name']}</strong><br><span class="mono">{t['role']}</span></div></footer>
       </blockquote>{more}
     </div>
   </div>
@@ -983,6 +998,8 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
      TESTIMONIO
      ============================================================ -->
 {testimonio()}
+
+{testimonio("navante", section="on-dark")}
 
 <!-- ============================================================
      07 · CONTACTO — AGENDA, FORMULARIO Y WHATSAPP
