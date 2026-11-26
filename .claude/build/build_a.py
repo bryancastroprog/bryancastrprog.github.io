@@ -822,6 +822,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <h3 class="route-title">Diseño inmobiliario, co-desarrollo e inversión</h3>
         <p class="route-text">Arquitectura con lectura financiera para desarrolladores, socios con terreno e inversionistas.</p>
         <ul><li>Anteproyecto con pro forma</li><li>Alianzas de co-desarrollo</li><li>Lista de interés de proyectos propios</li></ul>
+        <a href="diseno-arquitectonico-edificios.html" class="link">Ver diseño de edificios →</a>
         <a href="#modelos" class="link">Ver modelos de trabajo →</a>
       </article>
     </div>
@@ -836,6 +837,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
           <a href="anker-logistics.html" class="spec-work spec-work-2"><img src="img/anker-logistics-recepcion-960.webp" width="960" height="721" alt="Recepción de Anker Logistics con listones de madera y logotipo" loading="lazy" decoding="async"><span><strong>Anker Logistics</strong><span class="mono">Oficina · 76 m² · Construido</span></span></a>
           <a href="remodelacion-el-prado.html" class="spec-work spec-work-2"><img src="img/remodelacion-el-prado-repisas-960.webp" width="960" height="1705" alt="Estudio remodelado El Prado con repisas de madera iluminadas" loading="lazy" decoding="async"><span><strong>El Prado</strong><span class="mono">Estudio en casa · Construido</span></span></a>
           <a href="la-autoria.html" class="spec-work spec-work-2"><img src="img/restaurante-interior-960.webp" width="960" height="549" alt="Salón del restaurante La Autoría" loading="lazy" decoding="async"><span><strong>La Autoría</strong><span class="mono">Restaurante · Diseño completado</span></span></a>
+          <a href="diseno-oficinas.html" class="link">Ver diseño de oficinas →</a>
           <a href="?tipo=diseño-interior#contacto" class="link">Cotizar diseño interior →</a>
         </div>
         <div class="spec-card">
@@ -843,12 +845,14 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
           <p>Transformamos espacios existentes con una intervención precisa y eficiente.</p>
           <a href="once-once.html" class="spec-work"><img src="img/once-once-barra-logo-960.webp" width="960" height="1705" alt="Barra remodelada del restaurante Once Once" loading="lazy" decoding="async"><span><strong>Once Once</strong><span class="mono">Barra de restaurante · Antigua Guatemala · 2024</span></span></a>
           <a href="remodelacion-el-prado.html" class="spec-work spec-work-2"><img src="img/remodelacion-el-prado-repisas-960.webp" width="960" height="1705" alt="Estudio remodelado El Prado con repisas de madera iluminadas" loading="lazy" decoding="async"><span><strong>El Prado</strong><span class="mono">Estudio en casa · Construido</span></span></a>
+          <a href="remodelaciones.html" class="link">Ver remodelaciones →</a>
           <a href="?tipo=remodelación#contacto" class="link">Cotizar remodelación →</a>
         </div>
         <div class="spec-card">
           <h3>Mobiliario estratégico</h3>
           <p>Mobiliario diseñado a la medida de tu operación: exhibición, atención y almacenaje pensados para cómo funciona tu espacio.</p>
           <a href="kishi-books.html" class="spec-work"><img src="img/kishi-books-escalera-960.webp" width="960" height="721" alt="Kiosco de madera curvada de Kishi Books" loading="lazy" decoding="async"><span><strong>Kishi Books</strong><span class="mono">3 kioscos de librería · Construido</span></span></a>
+          <a href="diseno-locales-kioscos.html" class="link">Ver locales y kioscos →</a>
           <a href="?tipo=mobiliario-estratégico#contacto" class="link">Cotizar mobiliario →</a>
         </div>
       </div>
