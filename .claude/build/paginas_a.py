@@ -1210,12 +1210,12 @@ open('remodelacion-el-prado.html', 'w', encoding='utf-8').write(EPAGE)
 
 # ================================================================== DISEÑO ARQUITECTÓNICO DE EDIFICIOS
 A_URL = SITE + 'diseno-arquitectonico-edificios.html'
-A_TITLE = 'Diseño arquitectónico rentable | Build &amp; Create Studio'
+A_TITLE = 'Diseño arquitectónico de edificios | Build &amp; Create Studio'
 A_DESC = 'Diseño arquitectónico de edificios enfocado en generar mayor rentabilidad, en Guatemala y Honduras: del análisis del terreno a los planos de construcción.'
 A_SERVICES = [
     ('Prefactibilidad del terreno', 'Antes de dibujar, medimos qué puede construirse y qué rendimiento tiene. Evita diseñar un edificio que el terreno no soporta.'),
     ('Anteproyecto', 'Volumetría, distribución por nivel, tipologías de unidad y cuadro de áreas con eficiencia de planta, listo para evaluar con tu socio o tu banco.'),
-    ('Residencial vertical', 'Apartamentos y torres donde cada metro construido se piensa para ser vendible o rentable.'),
+    ('Residencial vertical', 'Apartamentos y torres donde cada metro construido se piensa para ser vendible o rentarse.'),
     ('Uso mixto', 'Comercio a la calle, vivienda arriba y accesos independientes, resueltos en un mismo volumen.'),
     ('Planificación y documentación', 'Planos, memorias, permisos y expediente técnico completo para construcción.'),
     ('Supervisión de obra', 'Control de que lo construido corresponda a lo diseñado.'),
@@ -1265,7 +1265,7 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/edificio-w-aerea-og.jpg', a_ld) + nav(
         <span class="mono sec-label">Servicios</span>
         <h2 class="sec-title">Qué <span>incluye.</span></h2>
       </div>
-      <p class="sec-lead">Un edificio rentable se decide al inicio: qué cabe en el terreno y cuántos metros se pueden vender o rentar. Por eso empezamos por ahí y terminamos con los planos listos para construir.</p>
+      <p class="sec-lead">El rendimiento de un edificio se decide al inicio: qué cabe en el terreno y cuántos metros se pueden vender o rentar. Por eso empezamos por ahí y terminamos con los planos listos para construir.</p>
     </div>
     <div class="svc-grid">
 {a_svc_html}
@@ -1282,15 +1282,15 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/edificio-w-aerea-og.jpg', a_ld) + nav(
       </div>
       <div class="sec-lead" style="display:flex;flex-direction:column;gap:16px">
         <p>Un edificio bien dibujado puede ser un mal negocio. La eficiencia de planta es el porcentaje de los metros construidos que se pueden vender o rentar. Se define en el diseño, no después.</p>
-        <p>Rentable no significa económico. Un edificio no rinde más por usar materiales baratos, sino porque cada metro está bien aprovechado: más metros que se venden o se rentan en el mismo terreno.</p>
+        <p>Más rentabilidad no significa un diseño económico. Un edificio no rinde más por usar materiales baratos, sino porque cada metro está bien aprovechado: más metros que se venden o se rentan en el mismo terreno.</p>
         <p>Por eso cada anteproyecto incluye su cuadro de áreas. Estos son dos edificios que hemos trabajado, con las cifras de sus fichas.</p>
       </div>
     </div>
     <div class="program">
       <div><span class="m">91.9%</span><h3>ONA · Eficiencia de planta</h3><p>17,267 m² vendibles de 18,792 m² construidos. Residencial vertical en Zona 15, Ciudad de Guatemala. Proyecto propio, en fase de desarrollo.</p></div>
-      <div><span class="m">89.6%</span><h3>Edificio W · Área rentable</h3><p>507.51 m² rentables de 591.86 m² construidos. Uso mixto en San Pedro Sula, Honduras. Anteproyecto en aprobación.</p></div>
+      <div><span class="m">89.6%</span><h3>Edificio W · Área de renta</h3><p>507.51 m² de renta sobre 591.86 m² construidos. Uso mixto en San Pedro Sula, Honduras. Anteproyecto en aprobación.</p></div>
       <div><span class="m">8</span><h3>Apartamentos y 2 locales</h3><p>Edificio W: cuatro tipologías de 25 a 67 m² en dos niveles, y dos locales a la calle con acceso independiente.</p></div>
-      <div><span class="m">3 + 1</span><h3>Niveles y rooftop</h3><p>Edificio W: tres niveles más un rooftop social de 25.58 m² que suma como amenidad sin restar al área rentable.</p></div>
+      <div><span class="m">3 + 1</span><h3>Niveles y rooftop</h3><p>Edificio W: tres niveles más un rooftop social de 25.58 m² que suma como amenidad sin restar al área de renta.</p></div>
     </div>
   </div>
 </section>
