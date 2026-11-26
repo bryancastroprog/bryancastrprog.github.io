@@ -1211,7 +1211,7 @@ open('remodelacion-el-prado.html', 'w', encoding='utf-8').write(EPAGE)
 # ================================================================== DISEÑO ARQUITECTÓNICO DE EDIFICIOS
 A_URL = SITE + 'diseno-arquitectonico-edificios.html'
 A_TITLE = 'Diseño arquitectónico de edificios | Build &amp; Create Studio'
-A_DESC = 'Diseño arquitectónico de edificios enfocado en generar mayor rentabilidad, en Guatemala y Honduras: del análisis del terreno a los planos de construcción.'
+A_DESC = 'Diseño arquitectónico de edificios enfocado en generar mayor valor, en Guatemala y Honduras: del análisis del terreno a los planos de construcción.'
 A_SERVICES = [
     ('Prefactibilidad del terreno', 'Antes de dibujar, medimos qué puede construirse y qué rendimiento tiene. Evita diseñar un edificio que el terreno no soporta.'),
     ('Anteproyecto', 'Volumetría, distribución por nivel, tipologías de unidad y cuadro de áreas con eficiencia de planta, listo para evaluar con tu socio o tu banco.'),
@@ -1247,7 +1247,7 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/edificio-w-aerea-og.jpg', a_ld) + nav(
     <div class="wrap hero-grid">
       <div>
         <p class="hero-kicker">Diseño arquitectónico de edificios · Guatemala y Honduras</p>
-        <h1 class="hero-slogan page-slogan">Diseño arquitectónico <span>enfocado a generar mayor rentabilidad.</span></h1>
+        <h1 class="hero-slogan page-slogan">Diseño arquitectónico <span>enfocado a generar mayor valor.</span></h1>
         <p class="hero-sub">Diseñamos edificios de apartamentos y de uso mixto (comercio abajo, vivienda arriba) pensando en cuántos metros se pueden vender o rentar. Primero revisamos qué cabe en tu terreno; después dibujamos el edificio y entregamos los planos para construirlo. Cada decisión de diseño busca que el edificio valga más. Somos arquitectos y también desarrolladores.</p>
         <div class="hero-actions">
           <a href="#contacto-a" class="btn btn-light">Agendar una consulta →</a>
