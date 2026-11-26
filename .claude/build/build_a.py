@@ -1002,10 +1002,10 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       <h2 class="sec-title">Hablemos de <span>tu proyecto.</span></h2>
       <div class="agenda" id="agenda">
         <span class="mono" style="color:var(--gold)">Consulta inicial · 30 min · Videollamada · Sin costo</span>
-        <div class="host">
-          <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de Build &amp; Create Studio" loading="lazy" decoding="async">
-          <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
-        </div>
+        <figure class="host-photo">
+        {img('bryan-castro-retrato', 'Bryan Castro, arquitecto y fundador de Build &amp; Create Studio', 1200, 1800, sizes='(max-width: 640px) 100vw, 360px')}
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></figcaption>
+      </figure>
         <h3>Agenda una llamada con Bryan Castro</h3>
         <p>Sin presentaciones de venta. Evaluamos juntos si tu terreno, proyecto o capital encajan con lo que hacemos.</p>
         <ul>
@@ -1516,10 +1516,10 @@ WPAGE = head(W_TITLE, W_DESC, W_URL, 'img/edificio-w-aerea-og.jpg', w_ld) + nav(
       <h2 class="sec-title">Disponible para <span>desarrollo e inversión.</span></h2>
       <p class="sec-lead" style="margin-top:28px">El anteproyecto está disponible para desarrollo, inversión y comercialización. Agenda una llamada y revisamos el proyecto contigo.</p>
       <p class="disclaimer">La información es referencial y no constituye una oferta pública de valores ni asesoría financiera.</p>
-      <div class="host">
-          <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de Build &amp; Create Studio" loading="lazy" style="margin-top:28px" decoding="async">
-          <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
-        </div>
+      <figure class="host-photo">
+        {img('bryan-castro-retrato', 'Bryan Castro, arquitecto y fundador de Build &amp; Create Studio', 1200, 1800, sizes='(max-width: 640px) 100vw, 360px')}
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></figcaption>
+      </figure>
       <div class="cta-row">
         <a href="index.html?tipo=inversión#contacto" class="btn btn-light">Solicitar información →</a>
         <a href="{CAL}" target="_blank" rel="noopener" class="link">Agendar llamada de 30 minutos</a>
