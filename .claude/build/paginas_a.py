@@ -1207,3 +1207,368 @@ EPAGE = head(E_TITLE, E_DESC, E_URL, 'img/remodelacion-el-prado-estudio-og.jpg',
 """ + footer('index.html') + BASE_JS.replace('%EXTRA%', '')
 EPAGE = EPAGE.replace('</style>', W_CSS + PAGE_A_CSS + TALL_CSS + '</style>', 1)
 open('remodelacion-el-prado.html', 'w', encoding='utf-8').write(EPAGE)
+
+# ================================================================== DISEÑO ARQUITECTÓNICO DE EDIFICIOS
+A_URL = SITE + 'diseno-arquitectonico-edificios.html'
+A_TITLE = 'Diseño arquitectónico de edificios | Build &amp; Create Studio'
+A_DESC = 'Diseño arquitectónico de edificios residenciales y de uso mixto en Guatemala y Honduras, desde el análisis del terreno hasta el expediente de construcción.'
+A_SERVICES = [
+    ('Prefactibilidad del terreno', 'Antes de dibujar, medimos qué puede construirse y qué rendimiento tiene. Evita diseñar un edificio que el terreno no soporta.'),
+    ('Anteproyecto', 'Volumetría, distribución por nivel, tipologías de unidad y cuadro de áreas con eficiencia de planta, listo para evaluar con tu socio o tu banco.'),
+    ('Residencial vertical', 'Apartamentos y torres donde cada metro construido se piensa para ser vendible o rentable.'),
+    ('Uso mixto', 'Comercio a la calle, vivienda arriba y accesos independientes, resueltos en un mismo volumen.'),
+    ('Planificación y documentación', 'Planos, memorias, permisos y expediente técnico completo para construcción.'),
+    ('Supervisión de obra', 'Control de que lo construido corresponda a lo diseñado.'),
+]
+a_ld = [
+    {"@context": "https://schema.org", "@type": "Service", "name": "Diseño arquitectónico de edificios",
+     "description": A_DESC, "url": A_URL, "provider": ORG,
+     "areaServed": [{"@type": "Country", "name": "Guatemala"}, {"@type": "Country", "name": "Honduras"}],
+     "serviceType": [n for n, _ in A_SERVICES]},
+    {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE},
+        {"@type": "ListItem", "position": 2, "name": "Diseño arquitectónico de edificios", "item": A_URL}]}]
+a_svc_html = '\n'.join(
+    f'      <article class="svc"><span class="mono n">{i + 1:02d}</span><h3>{n}</h3><p>{t}</p>'
+    + (_lk('prefactibilidad-inmobiliaria.html', 'Ver servicio') if i == 0 else '') + '</article>'
+    for i, (n, t) in enumerate(A_SERVICES))
+A_FORM = D_FORM.replace('Consulta Diseño para negocios', 'Consulta Diseño arquitectónico de edificios')
+A_FORM = A_FORM[:A_FORM.index('<option value="">')] + '''<option value="">Selecciona una opción</option>
+''' + '\n'.join(f'              <option value="{n.lower()}">{n}</option>' for n, _ in A_SERVICES) + '''
+              <option value="otro">Otro / Consulta general</option>
+            </select>
+          </div>''' + A_FORM[A_FORM.index('</select>') + len('</select>\n          </div>'):]
+
+APAGE = head(A_TITLE, A_DESC, A_URL, 'img/edificio-w-aerea-og.jpg', a_ld) + nav('Diseño de edificios', 'index.html') + f"""
+<main>
+<section class="hero" id="inicio" style="min-height:max(600px,min(88svh,820px))">
+  <div class="hero-media">{img('edificio-w-aerea', 'Vista aérea del Edificio W, uso mixto en esquina, San Pedro Sula, Honduras', 1920, 1080, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">Diseño arquitectónico de edificios · Guatemala y Honduras</p>
+        <h1 class="hero-slogan page-slogan">Edificios que se diseñan <span>desde el retorno.</span></h1>
+        <p class="hero-sub">Diseño arquitectónico de edificios residenciales y de uso mixto, desde el análisis del terreno hasta el expediente de construcción. Somos arquitectos y también desarrolladores: diseñamos pensando en cuántos metros se venden o se rentan.</p>
+        <div class="hero-actions">
+          <a href="#contacto-a" class="btn btn-light">Agendar una consulta →</a>
+          <a href="{WA}?text=Hola%2C%20quiero%20consultar%20sobre%20el%20dise%C3%B1o%20arquitect%C3%B3nico%20de%20un%20edificio." target="_blank" rel="noopener" class="link">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-dark" id="servicios-a">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Servicios</span>
+        <h2 class="sec-title">De la idea <span>al expediente.</span></h2>
+      </div>
+      <p class="sec-lead">Un edificio rentable se decide en las primeras semanas: qué cabe en el terreno, cuántos metros son vendibles y qué tipología se absorbe mejor. Por eso empezamos por ahí.</p>
+    </div>
+    <div class="svc-grid">
+{a_svc_html}
+    </div>
+  </div>
+</section>
+
+<section class="section on-light" id="criterio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Criterio</span>
+        <h2 class="sec-title">Diseño con <span>números en la mesa.</span></h2>
+      </div>
+      <div class="sec-lead" style="display:flex;flex-direction:column;gap:16px">
+        <p>Un edificio bien dibujado puede ser un mal negocio. La eficiencia de planta, es decir, cuántos metros construidos son vendibles o rentables, se resuelve en el diseño, no después.</p>
+        <p>Por eso cada anteproyecto incluye su cuadro de áreas. Estos son dos edificios que hemos trabajado, con las cifras que ya publicamos en sus fichas.</p>
+      </div>
+    </div>
+    <div class="program">
+      <div><span class="m">91.9%</span><h3>ONA · Eficiencia de planta</h3><p>17,267 m² vendibles de 18,792 m² construidos. Residencial vertical en Zona 15, Ciudad de Guatemala. Proyecto propio, en fase de desarrollo.</p></div>
+      <div><span class="m">89.6%</span><h3>Edificio W · Área rentable</h3><p>507.51 m² rentables de 591.86 m² construidos. Uso mixto en San Pedro Sula, Honduras. Anteproyecto en aprobación.</p></div>
+      <div><span class="m">8</span><h3>Apartamentos y 2 locales</h3><p>Edificio W: cuatro tipologías de 25 a 67 m² en dos niveles, y dos locales a la calle con acceso independiente.</p></div>
+      <div><span class="m">3 + 1</span><h3>Niveles y rooftop</h3><p>Edificio W: tres niveles más un rooftop social de 25.58 m² que suma como amenidad sin restar al área rentable.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-light-2" id="trabajo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Proyectos</span>
+        <h2 class="sec-title">Edificios <span>en nuestra mesa.</span></h2>
+      </div>
+      <p class="sec-lead">Cada ficha indica el estado real del proyecto.</p>
+    </div>
+    <div class="work">
+      <a href="edificio-w.html" class="work-card half">
+        <div class="work-img">{img('edificio-w-fachada', 'Fachada del Edificio W con celosía de madera, piedra y jardín vertical', 1920, 1080, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">Edificio W</span><span class="status">Anteproyecto · En aprobación</span></div>
+        <p class="work-info">Uso mixto · 591.86 m² · San Pedro Sula, Honduras</p>
+      </a>
+      <a href="index.html#ona" class="work-card half">
+        <div class="work-img"><img src="img/ona-fachada-organica.jpg" width="1365" height="768" alt="Fachada orgánica de ONA, residencial vertical en Zona 15" loading="lazy" decoding="async"></div>
+        <div class="work-meta"><span class="work-name">ONA</span><span class="status">Proyecto propio · En desarrollo</span></div>
+        <p class="work-info">Residencial vertical · 18,792 m² construidos · Zona 15, Ciudad de Guatemala</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section on-light" id="proceso-a">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Proceso</span>
+        <h2 class="sec-title">Cómo <span>trabajamos.</span></h2>
+      </div>
+    </div>
+    <ol class="steps">
+      <li class="step"><div class="step-n">01</div><h3 class="step-name">Reunión inicial</h3><p class="step-text">Escuchamos tu terreno, tu objetivo y tu presupuesto. Sin compromiso.</p></li>
+      <li class="step"><div class="step-n">02</div><h3 class="step-name">Prefactibilidad</h3><p class="step-text">Verificamos qué puede construirse y qué rendimiento tiene. Te entregamos un diagnóstico honesto.</p></li>
+      <li class="step"><div class="step-n">03</div><h3 class="step-name">Anteproyecto</h3><p class="step-text">Volumetría, plantas, tipologías y cuadro de áreas. Después, planos, especificaciones y expediente para permisos.</p></li>
+      <li class="step"><div class="step-n">04</div><h3 class="step-name">Supervisión</h3><p class="step-text">Control de que lo construido corresponda a lo diseñado.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section on-dark" id="contacto-a">
+  <div class="wrap contact">
+    <div>
+      <span class="mono sec-label">Contacto</span>
+      <h2 class="sec-title">Hablemos de <span>tu edificio.</span></h2>
+      <p class="sec-lead" style="margin-top:28px">Una primera reunión para evaluar el terreno y los objetivos del proyecto. Sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
+      <div class="host">
+        <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de {BRAND}" loading="lazy" decoding="async">
+        <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
+      </div>
+      <dl class="channels" style="margin-top:32px">
+        <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
+        <div><dt class="mono">WhatsApp</dt><dd><a href="{WA}" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
+      </dl>
+    </div>
+    {A_FORM}
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', FORM_JS)
+APAGE = APAGE.replace('</style>', PAGE_A_CSS + '\n.page-slogan { font-size: clamp(34px, 6vw, 96px); }\n@media (max-width: 640px) { .page-slogan { font-size: clamp(28px, 8.6vw, 40px); } }\n</style>', 1)
+open('diseno-arquitectonico-edificios.html', 'w', encoding='utf-8').write(APAGE)
+
+# ================================================================== PÁGINAS DE SERVICIO (oficinas, locales y kioscos, remodelaciones)
+def _servicio(fname, title, desc, og, crumb, nav_label, kicker, h1a, h1b, sub, hero, svcs, crit_t, crit_ps, cards, projs, steps, form_subj, wa_txt, cta_t, ctitle_a, ctitle_b, lead_s):
+    url = SITE + fname
+    ld = [{"@context": "https://schema.org", "@type": "Service", "name": crumb, "description": desc, "url": url, "provider": ORG,
+           "areaServed": [{"@type": "Country", "name": "Guatemala"}, {"@type": "Country", "name": "Honduras"}],
+           "serviceType": [n for n, _ in svcs]},
+          {"@type": "BreadcrumbList", "@context": "https://schema.org", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Inicio", "item": SITE},
+              {"@type": "ListItem", "position": 2, "name": crumb, "item": url}]}]
+    crit_ps = '\n'.join(crit_ps)
+    sh = '\n'.join(f'      <article class="svc"><span class="mono n">{i + 1:02d}</span><h3>{n}</h3><p>{t}</p></article>' for i, (n, t) in enumerate(svcs))
+    ch = '\n'.join(f'      <div><span class="m">{m}</span><h3>{h}</h3><p>{p}</p></div>' for m, h, p in cards)
+    ph = '\n'.join(f'''      <a href="{u}" class="work-card half">
+        <div class="work-img">{img(s, a, w, h, sizes='(max-width: 640px) 100vw, 50vw')}</div>
+        <div class="work-meta"><span class="work-name">{n}</span><span class="status{' built' if b else ''}">{st}</span></div>
+        <p class="work-info">{inf}</p>
+      </a>''' for (u, s, a, w, h, n, b, st, inf) in projs)
+    sp = '\n'.join(f'      <li class="step"><div class="step-n">{i + 1:02d}</div><h3 class="step-name">{n}</h3><p class="step-text">{t}</p></li>' for i, (n, t) in enumerate(steps))
+    form = D_FORM.replace('Consulta Diseño para negocios', form_subj)
+    form = form[:form.index('<option value="">')] + '<option value="">Selecciona una opción</option>\n' + '\n'.join(
+        f'              <option value="{n.lower()}">{n}</option>' for n, _ in svcs) + '''
+              <option value="otro">Otro / Consulta general</option>
+            </select>
+          </div>''' + form[form.index('</select>') + len('</select>\n          </div>'):]
+    hs, ha, hw, hh = hero
+    page = head(title, desc, url, og, ld) + nav(nav_label, 'index.html') + f"""
+<main>
+<section class="hero" id="inicio" style="min-height:max(600px,min(88svh,820px))">
+  <div class="hero-media">{img(hs, ha, hw, hh, lazy=False, cls='on')}</div>
+  <div class="hero-body">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="hero-kicker">{kicker}</p>
+        <h1 class="hero-slogan page-slogan">{h1a} <span>{h1b}</span></h1>
+        <p class="hero-sub">{sub}</p>
+        <div class="hero-actions">
+          <a href="#contacto-s" class="btn btn-light">Agendar una consulta →</a>
+          <a href="{WA}?text={wa_txt}" target="_blank" rel="noopener" class="link">Escribir por WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-dark" id="servicios-s">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Servicios</span>
+        <h2 class="sec-title">{cta_t}</h2>
+      </div>
+      <p class="sec-lead">{lead_s}</p>
+    </div>
+    <div class="svc-grid">
+{sh}
+    </div>
+  </div>
+</section>
+
+<section class="section on-light" id="criterio">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Criterio</span>
+        <h2 class="sec-title">{crit_t}</h2>
+      </div>
+      <div class="sec-lead" style="display:flex;flex-direction:column;gap:16px">
+{crit_ps}
+      </div>
+    </div>
+    <div class="program">
+{ch}
+    </div>
+  </div>
+</section>
+
+<section class="section on-light-2" id="trabajo">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Proyectos</span>
+        <h2 class="sec-title">Trabajo <span>construido.</span></h2>
+      </div>
+      <p class="sec-lead">Cada ficha indica el estado real del proyecto.</p>
+    </div>
+    <div class="work">
+{ph}
+    </div>
+  </div>
+</section>
+
+<section class="section on-light" id="proceso-s">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="mono sec-label">Proceso</span>
+        <h2 class="sec-title">Cómo <span>trabajamos.</span></h2>
+      </div>
+    </div>
+    <ol class="steps">
+{sp}
+    </ol>
+  </div>
+</section>
+
+<section class="section on-dark" id="contacto-s">
+  <div class="wrap contact">
+    <div>
+      <span class="mono sec-label">Contacto</span>
+      <h2 class="sec-title">{ctitle_a} <span>{ctitle_b}</span></h2>
+      <p class="sec-lead" style="margin-top:28px">Una primera reunión para evaluar el espacio y los objetivos. Sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
+      <div class="host">
+        <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de {BRAND}" loading="lazy" decoding="async">
+        <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
+      </div>
+      <dl class="channels" style="margin-top:32px">
+        <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
+        <div><dt class="mono">WhatsApp</dt><dd><a href="{WA}" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
+      </dl>
+    </div>
+    {form}
+  </div>
+</section>
+</main>
+""" + footer('index.html') + BASE_JS.replace('%EXTRA%', FORM_JS)
+    page = page.replace('</style>', PAGE_A_CSS + '\n.page-slogan { font-size: clamp(34px, 6vw, 96px); }\n@media (max-width: 640px) { .page-slogan { font-size: clamp(28px, 8.6vw, 40px); } }\n</style>', 1)
+    open(fname, 'w', encoding='utf-8').write(page)
+
+_P = lambda t: f'        <p>{t}</p>'
+_STEPS = [('Reunión inicial', 'Escuchamos el negocio, el espacio y el presupuesto. Sin compromiso.'),
+          ('Diagnóstico', 'Analizamos el espacio, restricciones técnicas y normativas. Te entregamos un diagnóstico honesto.'),
+          ('Diseño y documentación', 'Distribución, materialidad y mobiliario. Después, planos, especificaciones y expediente para permisos.'),
+          ('Ejecución', 'Ejecución de obra y control de que lo construido corresponda a lo diseñado.')]
+
+_servicio('diseno-oficinas.html',
+    'Diseño de oficinas en Guatemala | Build &amp; Create Studio',
+    'Diseño de oficinas en Guatemala: distribución, diseño interior, ejecución y mobiliario a la medida. Oficinas construidas en Zona 10 y Ciudad de Guatemala.',
+    'img/navante-lampara-curva-og.jpg', 'Diseño de oficinas', 'Diseño de oficinas',
+    'Diseño de oficinas · Guatemala', 'Oficinas que ordenan', 'el trabajo del equipo.',
+    'Diseño interior, ejecución y mobiliario a la medida para oficinas. Un solo equipo desde la distribución hasta la entrega.',
+    ('navante-lampara-curva', 'Lámpara colgante lineal curva en el techo de la oficina de Navante', 1920, 1079),
+    [('Distribución y programa', 'Puestos, reuniones, atención y almacenaje organizados según cómo trabaja tu equipo.'),
+     ('Diseño interior', 'Materiales, iluminación y color alineados con la identidad de tu empresa.'),
+     ('Mobiliario a la medida', 'Mobiliario diseñado para tu operación, fabricado para el espacio.'),
+     ('Ejecución de obra', 'Construimos lo que diseñamos, con control de calidad y de alcance.'),
+     ('Remodelación de oficinas existentes', 'Intervención precisa sobre el espacio que ya ocupas.'),
+     ('Planificación y documentación', 'Planos, memorias y expediente técnico para construcción.')],
+    'Una oficina es <span>una herramienta.</span>',
+    [_P('Una oficina mal distribuida cuesta tiempo todos los días: circulaciones largas, salas que no alcanzan y puestos que no corresponden a cómo trabaja el equipo.'),
+     _P('Diseñamos desde la operación y la marca, y entregamos el espacio terminado. Estas son dos oficinas construidas.')],
+    [('2', 'Oficinas construidas', 'Navante (2026) y Anker Logistics (2025), las dos de logística y carga.'),
+     ('96 m²', 'Navante', 'Oficina de logística marítima y aérea. Diseño interior, ejecución y mobiliario.'),
+     ('76 m²', 'Anker Logistics', 'Oficina en Torres Pradera, Zona 10. Diseño interior, ejecución y mobiliario.'),
+     ('1', 'Equipo', 'Diseño, ejecución y mobiliario con un solo equipo.')],
+    [('navante.html', 'navante-lampara-curva', 'Lámpara colgante lineal curva en el techo de la oficina de Navante', 1920, 1079, 'Navante', True, 'Construido', 'Oficina · 96 m² · Diseño interior, ejecución y mobiliario · 2026'),
+     ('anker-logistics.html', 'anker-logistics-recepcion', 'Recepción de la oficina de Anker Logistics, Torres Pradera, Zona 10', 1920, 1442, 'Anker Logistics', True, 'Construido', 'Oficina · 76 m² · Torres Pradera, Zona 10 · Diseño interior, ejecución y mobiliario · 2025')],
+    _STEPS, 'Consulta Diseño de oficinas — Build &amp; Create Studio',
+    'Hola%2C%20quiero%20consultar%20sobre%20el%20dise%C3%B1o%20de%20una%20oficina.',
+    'Lo que hacemos <span>en tu oficina.</span>', 'Hablemos de', 'tu oficina.',
+    'Distribución, diseño interior, ejecución y mobiliario con un solo equipo.')
+
+_servicio('diseno-locales-kioscos.html',
+    'Diseño de locales y kioscos comerciales | Build &amp; Create Studio',
+    'Diseño de locales comerciales y kioscos en Guatemala: mobiliario comercial, exhibición y ejecución. Tres kioscos construidos para una misma marca.',
+    'img/kishi-books-escalera-og.jpg', 'Diseño de locales y kioscos comerciales', 'Locales y kioscos',
+    'Locales y kioscos comerciales · Guatemala', 'Espacios pequeños', 'que venden más.',
+    'Diseño y ejecución de locales y kioscos comerciales, con mobiliario de exhibición a la medida del producto y del flujo de clientes.',
+    ('kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442),
+    [('Kioscos comerciales', 'Módulos compactos que muestran el producto y resuelven almacenaje y atención.'),
+     ('Locales comerciales', 'Distribución y exhibición pensadas para convertir visitas en ventas.'),
+     ('Mobiliario de exhibición', 'Mobiliario a la medida del producto, de la marca y del espacio.'),
+     ('Diseño de marca en el espacio', 'La identidad se traduce en materiales, color e iluminación.'),
+     ('Ejecución de obra', 'Construimos lo que diseñamos.'),
+     ('Planificación y documentación', 'Planos, especificaciones y expediente técnico.')],
+    'En un espacio chico, <span>cada centímetro cuenta.</span>',
+    [_P('Un kiosco o un local pequeño no tiene espacio para errores: lo que no se exhibe, no se vende, y lo que no cabe, estorba.'),
+     _P('Diseñamos el módulo y su mobiliario como un solo sistema, y lo construimos. Estos son los proyectos.')],
+    [('3', 'Kioscos construidos', 'Kishi Books: Peri Roosevelt, Naranjo Mall y Plaza Girasoles, Chiquimula. Misma marca, 2024–2026.'),
+     ('1.40 × 9 m', 'Peri Roosevelt', 'Kiosco de librería en madera curvada. Diseño y ejecución, 2024.'),
+     ('2 × 4 m', 'Naranjo Mall', 'Kiosco de librería. Diseño y ejecución, 2025.'),
+     ('70 m²', 'Petshop GT', 'Tienda de mascotas en Vista Hermosa, Zona 15. Diseño aprobado.')],
+    [('kishi-books.html', 'kishi-books-escalera', 'Kiosco de madera curvada de Kishi Books, Peri Roosevelt', 1920, 1442, 'Kishi Books', True, 'Construido · 3 sedes', 'Mobiliario comercial · 3 kioscos de librería · Diseño y ejecución · 2024–2026'),
+     ('petshop-gt.html', 'petshop-gt-tienda', 'Render de la tienda de Petshop GT, Vista Hermosa, Zona 15', 1920, 1080, 'Petshop GT', False, 'Diseño aprobado', 'Tienda de mascotas · 70 m² · Vista Hermosa, Zona 15')],
+    _STEPS, 'Consulta Locales y kioscos — Build &amp; Create Studio',
+    'Hola%2C%20quiero%20consultar%20sobre%20el%20dise%C3%B1o%20de%20un%20local%20o%20kiosco.',
+    'Lo que hacemos <span>en tu local.</span>', 'Hablemos de', 'tu local.',
+    'Del concepto a la obra terminada, con mobiliario de exhibición incluido.')
+
+_servicio('remodelaciones.html',
+    'Remodelaciones comerciales en Guatemala | Build &amp; Create Studio',
+    'Remodelaciones en Guatemala: restaurantes, oficinas y espacios de trabajo. Diseño, ejecución y mobiliario con un solo equipo. Proyectos construidos.',
+    'img/remodelacion-el-prado-estudio-og.jpg', 'Remodelaciones', 'Remodelaciones',
+    'Remodelaciones · Guatemala', 'Remodelaciones', 'precisas y eficientes.',
+    'Transformamos espacios existentes con una intervención medida: diseño, ejecución y mobiliario a la medida con el mismo equipo.',
+    ('once-once-terraza', 'Terraza del restaurante Once Once, Antigua Guatemala', 1200, 2131),
+    [('Remodelación de restaurantes y barras', 'Barras, salones y áreas de servicio que mejoran la operación y la experiencia.'),
+     ('Remodelación de espacios de trabajo', 'Estudios y oficinas adaptados a cómo se trabaja hoy.'),
+     ('Diseño interior', 'Materiales, iluminación y acabados alineados con tu identidad.'),
+     ('Mobiliario a la medida', 'Piezas fabricadas para el espacio y el uso.'),
+     ('Ejecución de obra', 'Construimos lo que diseñamos, con control del alcance.'),
+     ('Planificación y documentación', 'Planos, especificaciones y expediente técnico.')],
+    'Cambiar lo <span>que suma.</span>',
+    [_P('Remodelar bien es decidir qué se conserva y qué se transforma. Una intervención precisa cuesta menos y se entrega antes que una obra completa.'),
+     _P('Diseñamos, ejecutamos y fabricamos el mobiliario. Estas son dos remodelaciones construidas.')],
+    [('2', 'Remodelaciones construidas', 'Once Once (2024) y El Prado, ambas con diseño, ejecución y mobiliario.'),
+     ('Barra', 'Once Once', 'Remodelación de la barra de un restaurante en Antigua Guatemala, 2024.'),
+     ('Estudio', 'El Prado', 'Estudio en casa en Ciudad de Guatemala. Construido.'),
+     ('1', 'Equipo', 'Diseño, ejecución y mobiliario con un solo equipo.')],
+    [('once-once.html', 'once-once-barra-lateral', 'Barra lateral del restaurante Once Once, Antigua Guatemala', 1200, 2131, 'Once Once', True, 'Construido', 'Restaurante · Remodelación de barra · Antigua Guatemala · 2024'),
+     ('remodelacion-el-prado.html', 'remodelacion-el-prado-estudio', 'Estudio en casa de la remodelación El Prado, Ciudad de Guatemala', 1200, 2131, 'Remodelación El Prado', True, 'Construido', 'Estudio en casa · Ciudad de Guatemala · Diseño, ejecución y mobiliario')],
+    _STEPS, 'Consulta Remodelaciones — Build &amp; Create Studio',
+    'Hola%2C%20quiero%20consultar%20sobre%20una%20remodelaci%C3%B3n.',
+    'Lo que hacemos <span>en tu remodelación.</span>', 'Hablemos de', 'tu remodelación.',
+    'Diseño, ejecución y mobiliario con el mismo equipo.')
