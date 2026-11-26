@@ -429,6 +429,9 @@ def footer(p):
         <ul>
           <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
           <li><a href="diseno-arquitectonico-edificios.html">Diseño de edificios</a></li>
+          <li><a href="diseno-oficinas.html">Diseño de oficinas</a></li>
+          <li><a href="diseno-locales-kioscos.html">Locales y kioscos</a></li>
+          <li><a href="remodelaciones.html">Remodelaciones</a></li>
           <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
           <li><a href="{p}#modelos">Co-desarrollo e inversión</a></li>
         </ul>
