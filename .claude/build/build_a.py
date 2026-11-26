@@ -428,7 +428,7 @@ def footer(p):
         <h4 class="mono">Servicios</h4>
         <ul>
           <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
-          <li><a href="diseno-arquitectonico-edificios.html">Diseño de edificios</a></li>
+          <li><a href="diseno-arquitectonico-edificios.html">Diseño arquitectónico</a></li>
           <li><a href="diseno-oficinas.html">Diseño de oficinas</a></li>
           <li><a href="diseno-locales-kioscos.html">Locales y kioscos</a></li>
           <li><a href="remodelaciones.html">Remodelaciones</a></li>
@@ -822,7 +822,7 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
         <h3 class="route-title">Diseño inmobiliario, co-desarrollo e inversión</h3>
         <p class="route-text">Arquitectura con lectura financiera para desarrolladores, socios con terreno e inversionistas.</p>
         <ul><li>Anteproyecto con pro forma</li><li>Alianzas de co-desarrollo</li><li>Lista de interés de proyectos propios</li></ul>
-        <a href="diseno-arquitectonico-edificios.html" class="link">Ver diseño de edificios →</a>
+        <a href="diseno-arquitectonico-edificios.html" class="link">Ver diseño arquitectónico →</a>
         <a href="#modelos" class="link">Ver modelos de trabajo →</a>
       </article>
     </div>
