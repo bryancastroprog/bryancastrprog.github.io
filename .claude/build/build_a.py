@@ -819,9 +819,9 @@ HOME = head(HOME_TITLE, HOME_DESC, SITE, 'img/ona-fachada-atardecer-og.jpg', hom
       </article>
       <article class="route">
         <span class="mono route-who">Quiero desarrollar o invertir</span>
-        <h3 class="route-title">Diseño inmobiliario, co-desarrollo e inversión</h3>
+        <h3 class="route-title">Diseño arquitectónico, co-desarrollo e inversión</h3>
         <p class="route-text">Arquitectura con lectura financiera para desarrolladores, socios con terreno e inversionistas.</p>
-        <ul><li>Anteproyecto con pro forma</li><li>Alianzas de co-desarrollo</li><li>Lista de interés de proyectos propios</li></ul>
+        <ul><li>Diseño arquitectónico de edificios</li><li>Anteproyecto con pro forma</li><li>Alianzas de co-desarrollo e inversión</li></ul>
         <a href="diseno-arquitectonico-edificios.html" class="link">Ver diseño arquitectónico →</a>
         <a href="#modelos" class="link">Ver modelos de trabajo →</a>
       </article>
