@@ -264,10 +264,10 @@ DPAGE = head(D_TITLE, D_DESC, D_URL, 'img/restaurante-interior-og.jpg', d_ld) + 
       <span class="mono sec-label">Contacto</span>
       <h2 class="sec-title">Hablemos de <span>tu proyecto.</span></h2>
       <p class="sec-lead" style="margin-top:28px">Una primera reunión para evaluar el espacio, el negocio y los objetivos. Sin compromiso y sin presentaciones de venta. Respondemos en menos de 24 horas hábiles.</p>
-      <div class="host">
-        <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de {BRAND}" loading="lazy" decoding="async">
-        <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
-      </div>
+      <figure class="host-photo">
+        {img('bryan-castro-retrato', 'Bryan Castro, arquitecto y fundador de Build &amp; Create Studio', 1200, 1800, sizes='(max-width: 640px) 100vw, 360px')}
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></figcaption>
+      </figure>
       <dl class="channels" style="margin-top:32px">
         <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
         <div><dt class="mono">WhatsApp</dt><dd><a href="{WA}" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
@@ -1342,10 +1342,10 @@ APAGE = head(A_TITLE, A_DESC, A_URL, 'img/edificio-w-aerea-og.jpg', a_ld) + nav(
       <span class="mono sec-label">Contacto</span>
       <h2 class="sec-title">Hablemos de <span>tu edificio.</span></h2>
       <p class="sec-lead" style="margin-top:28px">Una primera reunión para evaluar el terreno y los objetivos del proyecto. Sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
-      <div class="host">
-        <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de {BRAND}" loading="lazy" decoding="async">
-        <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
-      </div>
+      <figure class="host-photo">
+        {img('bryan-castro-retrato', 'Bryan Castro, arquitecto y fundador de Build &amp; Create Studio', 1200, 1800, sizes='(max-width: 640px) 100vw, 360px')}
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></figcaption>
+      </figure>
       <dl class="channels" style="margin-top:32px">
         <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
         <div><dt class="mono">WhatsApp</dt><dd><a href="{WA}" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
@@ -1470,10 +1470,10 @@ def _servicio(fname, title, desc, og, crumb, nav_label, kicker, h1a, h1b, sub, h
       <span class="mono sec-label">Contacto</span>
       <h2 class="sec-title">{ctitle_a} <span>{ctitle_b}</span></h2>
       <p class="sec-lead" style="margin-top:28px">Una primera reunión para evaluar el espacio y los objetivos. Sin compromiso. Respondemos en menos de 24 horas hábiles.</p>
-      <div class="host">
-        <img src="img/bryan-castro-avatar.webp" width="320" height="320" alt="Bryan Castro, arquitecto y fundador de {BRAND}" loading="lazy" decoding="async">
-        <div><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></div>
-      </div>
+      <figure class="host-photo">
+        {img('bryan-castro-retrato', 'Bryan Castro, arquitecto y fundador de Build &amp; Create Studio', 1200, 1800, sizes='(max-width: 640px) 100vw, 360px')}
+        <figcaption><strong>Bryan Castro</strong><span class="mono">Arquitecto · Fundador</span></figcaption>
+      </figure>
       <dl class="channels" style="margin-top:32px">
         <div><dt class="mono">Email</dt><dd><a href="mailto:info@bcarqstudio.com">info@bcarqstudio.com</a></dd></div>
         <div><dt class="mono">WhatsApp</dt><dd><a href="{WA}" target="_blank" rel="noopener">+502 5413 1753</a></dd></div>
