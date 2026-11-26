@@ -428,6 +428,7 @@ def footer(p):
         <h4 class="mono">Servicios</h4>
         <ul>
           <li><a href="prefactibilidad-inmobiliaria.html">Prefactibilidad</a></li>
+          <li><a href="diseno-arquitectonico-edificios.html">Diseño de edificios</a></li>
           <li><a href="diseno-estrategico.html">Diseño para negocios</a></li>
           <li><a href="{p}#modelos">Co-desarrollo e inversión</a></li>
         </ul>
